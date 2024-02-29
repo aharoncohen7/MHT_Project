@@ -1,0 +1,140 @@
+import React,{ useState, useEffect } from 'react';
+import Swal from 'sweetalert2';
+import { json } from 'react-router';
+
+
+const CommentList = ({ postId, showComments, setMessage }) => {
+  const urlComments = `http://localhost:4002/api/comments/${postId}`;
+  const [comments, setComments] = useState([]);
+
+
+  function logOut(){
+    localStorage.removeItem('auth');
+    localStorage.removeItem('Authorization');
+    window.location.href = "http://localhost:5173/"
+ }
+
+  // הוספת חדש
+  async function addNewComment() {
+    try {
+      const result = await Swal.fire({
+        title: "כתוב תגובה",
+        html: '<textarea id="body"  style=" background-color: rgba(172, 192, 389, 0.74); width: 350px; text-align: right; font-size: 26px;" class="swal2-input" placeholder="כתוב תגובה (עד 20 תווים)">',
+        showCancelButton: true,
+        confirmButtonText: 'אישור',
+        cancelButtonText: 'ביטול',
+        preConfirm: () => {
+          const body = document.getElementById('body').value;
+          if (!body) {
+            Swal.showValidationMessage('אנא מלא את השדות');
+          }
+          return { body };
+        }
+      });
+      if (result.value) {
+        const { body } = result.value;
+        const response = await fetch('http://localhost:4002/api/comments', {
+          method: 'POST',
+          body: JSON.stringify({
+            postId,
+            body
+          }),
+          headers: {
+            'Content-Type': 'application/json',
+            'auth': localStorage.getItem('auth') || '',
+            'authorization': localStorage.getItem('Authorization') || ''
+          },
+        });
+        if (!response.ok) {
+          setMessage("Failed to add comment")
+          if(response.status==401){
+            logOut()
+        }
+          throw new Error(`Failed to add comment! Status: ${response.status}`);
+
+        }
+        const [newComment] = await response.json();
+        // console.log(newComment);
+        setComments(prevOriginalData => [...prevOriginalData, newComment], () => {
+          console.log("Created", comments);
+        });
+        setMessage('Comment added successfully');
+
+
+      }
+    }
+    catch (error) {
+      console.error(error.message);
+    }
+  }
+
+  // מחיקה
+  async function deleteComment(commentId, email) {
+    const response = await fetch(`http://localhost:4002/api/comments/${commentId}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+        'auth': localStorage.getItem('auth') || '',
+        'authorization': localStorage.getItem('Authorization') || ''
+      },
+    });
+    if (!response.ok) {
+      setMessage(`Failed to delete comment! Status: ${response.status}`);
+      return;
+    }
+    setComments(prevFilteredData => prevFilteredData.filter(obj => obj.id !== commentId));
+    setMessage(`comment ${commentId} deleted`)
+  }
+
+
+  // קבלת תגובות לפוסט
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const requestOptions = {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            'auth': localStorage.getItem('auth') || ''.getItem('auth') || '',
+            'authorization': localStorage.getItem('Authorization') || ''
+          },
+        };
+        const response = await fetch(urlComments, requestOptions);
+        const data = await response.json();
+        setComments(data)
+      } catch (error) {
+        setMessage("Error fetching comments!")
+        console.error("Error fetching comments:", error);
+      }
+    };
+    fetchData();
+  }, [postId]);
+
+
+
+
+  return (
+    <ul style={showComments ? { display: "block" } : { display: "none" }}>
+      <button onClick={addNewComment}> כתוב תגובה</button>
+      {/* <button onClick={loadComments}> טען תגובות לפוסט</button> */}
+
+      {comments
+        // .slice(0, counter)
+        .map((comment) => (
+
+          <div style={style.comments}>
+            <h5>{comment.id}</h5>
+            <span> {comment.body}</span>
+            <h6>name: {comment.name}</h6>
+            <h6>email: {comment.email}</h6>
+            <button onClick={() => deleteComment(comment.id, comment.email)}> מחק תגובה</button>
+          </div>
+        ))}
+
+
+    </ul>
+
+  );
+};
+
+export default CommentList;
