@@ -4,17 +4,13 @@ import axios from "axios";
 import Content from './Content'
 import DataContext from "../../contexts";
 import Navbar from "./Navbar";
-import { chipClasses } from "@mui/material";
 import { getCurrentDate, getNextWeekDate, getParasha } from '../../functions';
-import ParashasNav from "./ParashasNav";
+import Cookies from "js-cookie";
 
 
-
-
-
-const Layout = ({userId}) => {
-  const { logOut } = useContext(DataContext)
+const Layout = () => {
   const [parasha, setParasha] = useState(null);
+  const { logOut, setMessage} = useContext(DataContext)
 
 // קבלת פרשה
   useEffect(() => {
@@ -45,10 +41,12 @@ const Layout = ({userId}) => {
         console.log(response.status);
         if (response.status !== 200) {
           console.log(response.status);
+          setMessage("הסשן הסתיים, נא להכנס שוב")
           logOut();
         }
       } catch (error) {
         console.log(error.message);
+        setMessage("התרחשה תקלה בניסיון האימות" ,error.message )
         logOut();
       }
     }
@@ -61,7 +59,7 @@ const Layout = ({userId}) => {
   return (
       <span >
         <Navbar parasha={parasha} />
-        <Content userId={userId} parasha={parasha}/>
+        <Content parasha={parasha}/>
       </span>
   )
 }

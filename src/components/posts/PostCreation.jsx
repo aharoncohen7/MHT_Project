@@ -3,12 +3,17 @@ import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import Select from './Select'
 import DataContext from '../../contexts';
+import DataContext2 from '../../contexts/index2';
 import { useNavigate } from 'react-router-dom';
 import { error } from 'pdf-lib';
+import Cookies from "js-cookie";
 
 
 export default function PostCreation({ send, setComplete, setMessage, setShowEditor, setSend}) {
-  const { setOriginalData, setFilteredData, logOut, userId } = useContext(DataContext)
+  const { logOut, userId, message} = useContext(DataContext)
+  const { setOriginalData, setFilteredData} = useContext(DataContext2)
+ 
+  console.log(userId, message);
   const navigate = useNavigate();
   const [selectedBook, setSelectedBook] = useState(null);
   const [selectedPortion, setSelectedPortion] = useState(null);
@@ -119,7 +124,7 @@ export default function PostCreation({ send, setComplete, setMessage, setShowEdi
         }),
         headers: {
           'Content-type': 'application/json; charset=UTF-8',
-          'auth': localStorage.getItem('auth') || '',
+          // 'auth': localStorage.getItem('auth') || '',
           'authorization': localStorage.getItem('Authorization') || ''
         },
       });
@@ -160,7 +165,7 @@ export default function PostCreation({ send, setComplete, setMessage, setShowEdi
       <Select selectedBook={selectedBook} setSelectedBook={setSelectedBook} selectedPortion={selectedPortion} setSelectedPortion={setSelectedPortion} />
       {selectedBook && selectedPortion && 
       <div >
-        <input className=' relative w-full inline-flex  justify-center gap-x-5.5 px-3 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-600 hover:bg-gray-50 py-2 pl-3 pr-10 text-right bg-white rounded-md shadow-sm cursor-pointer focus:outline-none focus:ring focus:ring-blue-500 focus:ring-opacity-50' type="text" value={title} onChange={(e) => setTitle(e.target.value)} placeholder='בחר כותרת למאמר באורך של 20 תווים ומעלה' />
+        <input className='overflow-wrap-normal whitespace-normal relative w-full inline-flex  justify-center gap-x-5.5 px-3 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-600 hover:bg-gray-50 py-2 pl-3 pr-10 text-right bg-white rounded-md shadow-sm cursor-pointer focus:outline-none focus:ring focus:ring-blue-500 focus:ring-opacity-50' type="text" value={title} onChange={(e) => setTitle(e.target.value)} placeholder='בחר כותרת למאמר באורך של 20 תווים ומעלה' maxlength="40"/>
         {title && title.length > 19 &&
           <ReactQuill  theme="snow" onChange={handleContentChange} modules={module} value={body} />}
         
@@ -192,6 +197,7 @@ export default function PostCreation({ send, setComplete, setMessage, setShowEdi
           )}
         </div>
       </div>}
+      {message && <p style={{ color: 'red' }}>{message}</p>}
     </>
   )
 }

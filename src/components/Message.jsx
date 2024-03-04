@@ -1,13 +1,14 @@
-import { Fragment, useRef, useState } from 'react'
+import { Fragment, useRef, useState, useContext } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
-import { ExclamationTriangleIcon } from '@heroicons/react/24/outline'
 import { CheckCircleIcon } from '@heroicons/react/20/solid'
 import { FiAlertTriangle } from "react-icons/fi";
+import DataContext from '../contexts';
 
-export default function Message({message}) {
+export default function Message() {
+  const {message } = useContext(DataContext)
   const [open, setOpen] = useState(true)
-
   const cancelButtonRef = useRef(null)
+
 
   return (
     <Transition.Root show={open} as={Fragment}>

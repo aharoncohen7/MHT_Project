@@ -8,35 +8,22 @@ import { error } from 'pdf-lib'
 import axios from 'axios'
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
+import Cookies from "js-cookie";
+import DataContext2 from '../../contexts/index2';
 
 
-
-export default function PostEditor({ send, setComplete, setMessage, setShowEditor, setSend }) {
-    // const [oldPost, setOldPost] = useState({})
-    // const [newitem, setNewItem] = useState({});
-    // const [message, setMessage] = useState('');
-    
-    // const { setMessage, setOriginalData, originalData, setFilteredData, filteredData, userId } = useContext(DataContext)
-    const { originalData, setOriginalData, setFilteredData, logOut, userId } = useContext(DataContext)
-    console.log(originalData) ;
+export default function PostEditor({ send, setComplete, setShowEditor, setSend }) {
+    const { setMessage } = useContext(DataContext)
+    const { originalData, setOriginalData, setFilteredData } = useContext(DataContext2)
+    // console.log(originalData) ;
     const navigate = useNavigate();
     const { postId } = useParams()
-    const [selectedBook, setSelectedBook] = useState(null);
-    const [selectedPortion, setSelectedPortion] = useState(null);
+    const [selectedBook, setSelectedBook] = useState(undefined);
+    const [selectedPortion, setSelectedPortion] = useState(undefined);
     const [isAddingTag, setIsAddingTag] = useState(false);
     const [body, setBody] = useState('');
     const [title, setTitle] = useState('');
     const [tags, setTags] = useState([]);
-
-
-    //   //  הודעות מערכת
-    //   useEffect(() => {
-    //     if (message !== "") {
-    //         setTimeout(() => {
-    //             setMessage("");
-    //         }, 3000);
-    //     }
-    // }, [message]);
 
 
     // מצא פוסט בודד מתוך הרשימה
@@ -46,16 +33,21 @@ export default function PostEditor({ send, setComplete, setMessage, setShowEdito
             const postToEdit = originalData.find(post => post.id == postId);
             console.log(originalData);
             console.log(postToEdit);
-            // if (!postToEdit) {
-            //     navigate(`/notfound`)
-            // }
-            // else {
-                // setOldPost(response.data);
-                setSelectedBook(postToEdit.data.topic)
-                setSelectedPortion(postToEdit.data.subtopic)
-                setTitle(postToEdit.data.title)
-                setBody(postToEdit.data.body)
-            // }
+
+
+            if (postToEdit) {
+                setTitle(postToEdit.title)
+                setBody(postToEdit.body)
+                if (postToEdit.topic) {
+                    setSelectedBook(postToEdit.topic)
+                }
+                if (postToEdit.subtopic) {
+                    setSelectedPortion(postToEdit.subtopic)
+                }
+            }
+            else {
+                navigate(`/home`)
+            }
         }
         fetchData();
     }, [postId, originalData]);
@@ -64,34 +56,35 @@ export default function PostEditor({ send, setComplete, setMessage, setShowEdito
 
 
 
-// אם לא נמצא, בקשת הט מהשרת
-    useEffect(() => {
-        if(originalData.length == 0){
-        axios.get('http://localhost:4002/api/posts/' + postId, {
-            headers: {
-                'auth': localStorage.getItem('auth') || '',
-                'authorization': localStorage.getItem('Authorization') || ''
-            }
-        })
-            .then(response => {
-                console.log(response);
-                if (response.data.length == 0) {
-                    navigate(`/notfound`)
-                }
-                // setOldPost(response.data);
-                setSelectedBook(response.data.topic)
-                setSelectedPortion(response.data.subtopic)
-                setTitle(response.data.title)
-                setBody(response.data.body)
-                // setTags(response.data)
-            })
-            .catch(error => {
+    // // אם לא נמצא, בקשת הט מהשרת
+    // useEffect(() => {
+    //     if (originalData.length == 0) {
+    //         axios.get('http://localhost:4002/api/posts/' + postId, {
+    //             headers: {
+    //                 // 'auth': localStorage.getItem('auth') || '',
+    //                 'authorization': localStorage.getItem('Authorization') || ''
+    //             }
+    //         })
+    //             .then(response => {
+    //                 console.log(response);
+    //                 if (response.data.length == 0) {
+    //                     navigate(`/notfound`)
+    //                 }
+    //                 // setOldPost(response.data);
+    //                 setSelectedBook(response.data.topic)
+    //                 setSelectedPortion(response.data.subtopic)
+    //                 setTitle(response.data.title)
+    //                 setBody(response.data.body)
+    //                 // setTags(response.data)
+    //             })
+    //             .catch(error => {
 
-                console.error('Error fetching data:', error);
-                navigate(`/notfound`)
-            });}
+    //                 console.error('Error fetching data:', error);
+    //                 navigate(`/notfound`)
+    //             });
+    //     }
 
-    }, []);
+    // }, []);
 
 
 
@@ -218,7 +211,7 @@ export default function PostEditor({ send, setComplete, setMessage, setShowEdito
                 }),
                 headers: {
                     'Content-type': 'application/json; charset=UTF-8',
-                    'auth': localStorage.getItem('auth') || '',
+                    // 'auth': localStorage.getItem('auth') || '',
                     'authorization': localStorage.getItem('Authorization') || ''
                 },
             });
@@ -237,7 +230,7 @@ export default function PostEditor({ send, setComplete, setMessage, setShowEdito
                 // navigate(`/post/${postId}`)
                 alert('Post not updated')
                 throw new Error(`Failed to update post! Status: ${response.status}`);
-                
+
             }
             const newPost = await response.json();
             console.log(newPost);

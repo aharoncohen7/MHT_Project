@@ -1,31 +1,29 @@
 import React, { useContext, useState } from 'react';
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
-import FormControlLabel from "@mui/material/FormControlLabel";
 import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
+import Cookies from "js-cookie";
 import DataContext from '../../contexts';
 
 
 export default function Login({ setIsNew }) {
-  localStorage.removeItem('auth');
   localStorage.removeItem('Authorization');
-  const { setMessage, navigate, message, setUserID, setUserName, setIsAdmin } = useContext(DataContext)
+  const { setMessage, setUserId, setUserName, setIsAdmin, navigate, message } = useContext(DataContext)
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  // פונקציות
   //on input change
   const handleInput = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
-      username: data.get("username"),
-      password: data.get("password"),
-    });
+    // console.log({
+    //   username: data.get("username"),
+    //   password: data.get("password"),
+    // });
     setUsername(data.get("username"))
     setPassword(data.get("password"))
   };
@@ -47,13 +45,13 @@ export default function Login({ setIsNew }) {
       if (response.ok) {
         const user = await response.json();
         if (user) {
-          console.log(user);
+          // console.log(user);
           setMessage('Login successful');
-          setUserID(user.id)
+          setUserId(user.id)
           setUserName(user.username)
           setIsAdmin(user.isAdmin)
           localStorage.setItem("Authorization", user.token)
-          localStorage.setItem("auth", `${username}:${password}:${user.id}`);
+          Cookies.set("Authorization", user.token)
           navigate(`/home`);
         }
       }
@@ -78,7 +76,7 @@ export default function Login({ setIsNew }) {
         }}
       >
         <Typography component="h1" variant="h5">
-          Sign in
+          התחברות
         </Typography>
         <Box component="form" onChange={handleInput} onSubmit={handleLogin} noValidate sx={{ mt: 1 }}>
           <TextField
@@ -108,7 +106,7 @@ export default function Login({ setIsNew }) {
             sx={{ mt: 3, mb: 2 }}
             onClick={handleLogin}
           >
-            Sign In
+            הכנס
           </Button>
           <Grid container>
             <Grid item xs>
@@ -122,7 +120,7 @@ export default function Login({ setIsNew }) {
                 onClick={() => { setIsNew(false) }}
                 variant="body2"
               >
-                Don't have an account? Sign Up
+                עדיין אינך רשום? הרשם עכשיו
               </Link>
             </Grid>
           </Grid>

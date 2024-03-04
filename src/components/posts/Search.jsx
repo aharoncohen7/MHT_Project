@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useContext } from "react";
 import { FiEyeOff } from "react-icons/fi";
-import DataContext from '../../contexts'
+import DataContext2 from '../../contexts/index2'
 
 export default function Search({ setMyPosts, tag, subtopic }) {
     let en = null;
     // console.log(tag, subtopic);
-    const { originalData, filteredData, setFilteredData } = useContext(DataContext)
+    const { originalData, filteredData, setFilteredData } = useContext(DataContext2)
     const [showSearch, setShowSearch] = useState(true)
     const [titleFormInput, setTitleFormInput] = useState('');
     const [selectedOption, setSelectedOption] = useState(true);
@@ -26,6 +26,7 @@ export default function Search({ setMyPosts, tag, subtopic }) {
         const sort_posts = () => {
             // console.log("ggggggggggggggggggggggggggggg", filteredData);
             const filteredPosts = sortBy(filteredData, filter);
+            console.log(filteredData);
             setMyPosts(filteredPosts);
         };
         if (originalData !== '') {

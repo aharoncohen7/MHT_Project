@@ -3,6 +3,7 @@ import {useNavigate } from 'react-router-dom'
 
 export default function TagList({ postTags }) {
     const nav = useNavigate();
+    
     return (
         postTags!=null && 
         <div className=" items-center rounded-md bg-gray-300 px-2 py-1 font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">

@@ -1,15 +1,18 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Modal from 'react-modal';
 import PostCreation from './posts/PostCreation';
 import Button from '@mui/material/Button';
 import DeleteIcon from '@mui/icons-material/Delete';
 import SendIcon from '@mui/icons-material/Send';
 import Message from './Message';
+import DataContext from '../contexts';
 
-export default function AdditionPopUp({ showEditor, setShowEditor }) {
+export default function AdditionPopUp({ showEditor, setShowEditor, userId }) {
   const [complete, setComplete] = useState(false)
   const [send, setSend] = useState(false)
   const [message, setMessage] = useState(null);
+  // const { userId } = useContext(DataContext)
+  console.log(userId);
 
 
     // איפוס הודעות מערכת
@@ -44,7 +47,7 @@ export default function AdditionPopUp({ showEditor, setShowEditor }) {
       }}
     >
 
-      <PostCreation send={send} setComplete={setComplete} setShowEditor={setShowEditor} setMessage={setMessage} setSend={setSend} />
+      <PostCreation send={send} setComplete={setComplete} setShowEditor={setShowEditor} setMessage={setMessage} setSend={setSend} userId={userId}/>
       <div style={{ position: "absolute", bottom: "10px", display: "flex", gap: "1rem" }}>
         <Button variant="outlined" startIcon={<DeleteIcon />} onClick={() => setShowEditor(false)}>סגור</Button>
         <Button disabled={!complete} variant="contained" endIcon={<SendIcon />} onClick={() => {

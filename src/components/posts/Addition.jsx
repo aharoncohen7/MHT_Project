@@ -9,24 +9,13 @@ import Message from '../Message'
 
 
 export default function Addition() {
-  const { userId, navigate } = useContext(DataContext)
+  const { navigate, message, setMessage } = useContext(DataContext)
   const [showEditor, setShowEditor] = useState(false);
   const [complete, setComplete] = useState(false)
   const [send, setSend] = useState(false)
-  const [message, setMessage] = useState(null);
-
-  // איפוס הודעות מערכת
-  useEffect(() => {
-    if (message !== "") {
-      setTimeout(() => {
-        setMessage(null);
-      }, 8000);
-    }
-  }, [message]);
 
 
   return (
-
     <>
       <div className=" max-w-md p-6 mx-auto bg-white rounded-lg shadow-md ">
         {!showEditor &&

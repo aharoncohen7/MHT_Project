@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Modal from 'react-modal';
+import ReactDOM from 'react-dom';
 import PostEditor from './posts/PostEditor';
 import Button from '@mui/material/Button';
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -11,6 +12,7 @@ export default function EditorPopUp({ showEditor, setShowEditor }) {
   const [send, setSend] = useState(false)
   const [message, setMessage] = useState(null);
 
+  Modal.setAppElement('#root')
 
     // איפוס הודעות מערכת
     useEffect(() => {
@@ -23,7 +25,7 @@ export default function EditorPopUp({ showEditor, setShowEditor }) {
 
 
   return (
-
+<>
     <Modal
       isOpen={showEditor}
       onRequestClose={setShowEditor}
@@ -56,7 +58,7 @@ export default function EditorPopUp({ showEditor, setShowEditor }) {
     </Modal>
 
 
-
+    </>
 
 
   );

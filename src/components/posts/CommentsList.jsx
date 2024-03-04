@@ -1,6 +1,7 @@
 import React,{ useState, useEffect } from 'react';
 import Swal from 'sweetalert2';
 import { json } from 'react-router';
+import Cookies from "js-cookie";
 
 
 const CommentList = ({ postId, showComments, setMessage }) => {
@@ -9,7 +10,7 @@ const CommentList = ({ postId, showComments, setMessage }) => {
 
 
   function logOut(){
-    localStorage.removeItem('auth');
+    // localStorage.removeItem('auth');
     localStorage.removeItem('Authorization');
     window.location.href = "http://localhost:5173/"
  }
@@ -41,7 +42,7 @@ const CommentList = ({ postId, showComments, setMessage }) => {
           }),
           headers: {
             'Content-Type': 'application/json',
-            'auth': localStorage.getItem('auth') || '',
+            // 'auth': localStorage.getItem('auth') || '',
             'authorization': localStorage.getItem('Authorization') || ''
           },
         });
@@ -74,7 +75,7 @@ const CommentList = ({ postId, showComments, setMessage }) => {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
-        'auth': localStorage.getItem('auth') || '',
+        // 'auth': localStorage.getItem('auth') || '',
         'authorization': localStorage.getItem('Authorization') || ''
       },
     });
@@ -95,7 +96,7 @@ const CommentList = ({ postId, showComments, setMessage }) => {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
-            'auth': localStorage.getItem('auth') || ''.getItem('auth') || '',
+            // 'auth': localStorage.getItem('auth') || ''.getItem('auth') || '',
             'authorization': localStorage.getItem('Authorization') || ''
           },
         };

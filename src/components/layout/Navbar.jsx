@@ -1,4 +1,4 @@
-import { Fragment, useContext } from 'react'
+import { Fragment, useContext, useEffect } from 'react'
 import DataContext from '../../contexts';
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
@@ -19,14 +19,14 @@ function classNames(...classes) {
 
 // זריקה החוצה
 function logOut() {
-    localStorage.removeItem('auth');
+    // localStorage.removeItem('auth');
     localStorage.removeItem('Authorization');
     window.location.href = "http://localhost:5173/"
 }
 
 export default function Navbar({ parasha }) {
-    const { userName, isAdmin, adminMode, setAdminMode } = useContext(DataContext)
-    console.log(parasha, userName, isAdmin);
+    const { userName, isAdmin, adminMode, setAdminMode, } = useContext(DataContext)
+    // console.log(" :שם הפרשה", parasha,"userName: ", userName,"isAdmin: ", isAdmin);
     const navigate = useNavigate()
 
 
@@ -93,7 +93,7 @@ export default function Navbar({ parasha }) {
                                 </button> */}
 
     
-                         { !!isAdmin &&  <span className="text-white hidden sm:ml-6 sm:block">{ adminMode ? "Admin mode" : "User mode"}
+                         {!!isAdmin &&  <span className="text-white hidden sm:ml-6 sm:block">{ adminMode ? "Admin mode" : "User mode"}
                             <Switch
                                 className='hidden sm:ml-6 sm:block'
                                 checked={adminMode}
