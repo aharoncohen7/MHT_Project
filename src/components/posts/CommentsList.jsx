@@ -10,7 +10,6 @@ const CommentList = ({ postId, showComments, setMessage }) => {
 
 
   function logOut(){
-    // localStorage.removeItem('auth');
     localStorage.removeItem('Authorization');
     window.location.href = "http://localhost:5173/"
  }

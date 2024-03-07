@@ -6,11 +6,12 @@ import DataContext from "../../contexts";
 import Navbar from "./Navbar";
 import { getCurrentDate, getNextWeekDate, getParasha } from '../../functions';
 import Cookies from "js-cookie";
+import Message from '../../components/Message'
 
 
 const Layout = () => {
   const [parasha, setParasha] = useState(null);
-  const { logOut, setMessage} = useContext(DataContext)
+  const { logOut, setMessage, message } = useContext(DataContext)
 
 // קבלת פרשה
   useEffect(() => {
@@ -60,6 +61,7 @@ const Layout = () => {
       <span >
         <Navbar parasha={parasha} />
         <Content parasha={parasha}/>
+        {message && <Message message={message} />}
       </span>
   )
 }

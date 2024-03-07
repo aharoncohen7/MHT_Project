@@ -1,28 +1,18 @@
 import React, { useContext, useEffect, useState } from 'react'
 import Modal from 'react-modal';
-import PostCreation from './posts/PostCreation';
+import PostEditor from './posts/PostEditor';
 import Button from '@mui/material/Button';
 import DeleteIcon from '@mui/icons-material/Delete';
 import SendIcon from '@mui/icons-material/Send';
-import Message from './Message';
 import DataContext from '../contexts';
 
-export default function AdditionPopUp({ showEditor, setShowEditor, userId }) {
+export default function PopUp({ showEditor, setShowEditor}) {
   const [complete, setComplete] = useState(false)
   const [send, setSend] = useState(false)
   const [message, setMessage] = useState(null);
-  // const { userId } = useContext(DataContext)
+  const { userId } = useContext(DataContext)
   console.log(userId);
-
-
-    // איפוס הודעות מערכת
-    useEffect(() => {
-      if (message !== "") {
-        setTimeout(() => {
-          setMessage(null);
-        }, 8000);
-      }
-    }, [message]);
+  Modal.setAppElement('#root')
 
 
   return (
@@ -47,15 +37,14 @@ export default function AdditionPopUp({ showEditor, setShowEditor, userId }) {
       }}
     >
 
-      <PostCreation send={send} setComplete={setComplete} setShowEditor={setShowEditor} setMessage={setMessage} setSend={setSend} userId={userId}/>
+      <PostEditor send={send} setSend={setSend} setComplete={setComplete} setShowEditor={setShowEditor} />
       <div style={{ position: "absolute", bottom: "10px", display: "flex", gap: "1rem" }}>
-        <Button variant="outlined" startIcon={<DeleteIcon />} onClick={() => setShowEditor(false)}>סגור</Button>
+        <Button variant="outlined" startIcon={<DeleteIcon />} onClick={() => setShowEditor(false)}>⭐️⭐️⭐️⭐️⭐סגור</Button>
         <Button disabled={!complete} variant="contained" endIcon={<SendIcon />} onClick={() => {
           // addNewPost();
           setSend(true)
         }}  >שלח</Button>
       </div>
-      {message && <Message message={message} />}
     </Modal>
 
 

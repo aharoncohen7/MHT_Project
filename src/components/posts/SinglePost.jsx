@@ -2,19 +2,22 @@ import React, { useState, useContext, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { Button } from '@mui/material';
 import DataContext from '../../contexts';
-import PostRating from './PostRating'
+import MyRating from '../MyRating'
 import TagList from './TagList';
 import ParashasNav from '../layout/ParashasNav';
 import Cookies from "js-cookie";
 import DataContext2 from '../../contexts/index2';
+import { deletePost2 } from "../../functions/postFunctions"
+
+
 
 // פוסט בודד בעמוד נפרד - חדש
 export default function SinglePost() {
   const navigate = useNavigate();
   const [item, setItem] = useState(null);
   const { postId } = useParams()
-  const { setMessage, isAdmin, adminMode } = useContext(DataContext)
-  const { setOriginalData, originalData, setFilteredData, } = useContext(DataContext2)
+  const { setMessage,message, adminMode } = useContext(DataContext)
+  const { setOriginalData, originalData } = useContext(DataContext2)
 
   // מצא פוסט בודד מתוך הרשימה
   useEffect(() => {
@@ -28,124 +31,11 @@ export default function SinglePost() {
   }, [postId, originalData]);
 
 
-  //עריכה 
-  async function editPost() {
-    try {
-      const oldTitle = item.title;
-      const oldBody = item.body;
-      const result = await Swal.fire({
-        title: 'ערוך פוסט',
-        html: '<textarea id="title" style="background-color: rgba(172, 192, 389, 0.74); width: 350px; text-align: center;" class="swal2-input" placeholder="ערוך כותרת (עד 20 תווים)">' + oldTitle + '</textarea>' +
-          '<textarea id="body" style="height: 300px; background-color: rgba(172, 592, 189, 0.74); width: 350px; text-align: center;" class="swal2-input" placeholder=" ערוך פוסט (עד 40 תווים)">' + oldBody + '</textarea>',
-        showCancelButton: true,
-        confirmButtonText: 'אישור',
-        cancelButtonText: 'ביטול',
-        preConfirm: () => {
-          const title = document.getElementById('title').value;
-          const body = document.getElementById('body').value;
-          if (!title || !body) {
-            Swal.showValidationMessage('אנא מלא את כל השדות');
-          }
-          return { title, body };
-        }
-      });
-      if (!result.value) { return }
-      let response = await fetch(`http://localhost:4002/api/posts/${item.id}`, {
-        method: 'PATCH',
-        body: JSON.stringify({
-          title: result.value.title,
-          body: result.value.body
-        }),
-        headers: {
-          'Content-type': 'application/json; charset=UTF-8',
-          // 'auth': localStorage.getItem('auth') || '',
-          'authorization': localStorage.getItem('Authorization') || ''
-        },
-      })
+// מחיקה
+  function importedDelete() {
+    deletePost2(item, setOriginalData, setMessage, logOut, navigate)
+}
 
-      if (!response.ok) {
-        setMessage("Failed to edit post")
-        throw new Error(`Failed to edit post! Status: ${response.status}`);
-      }
-
-      setOriginalData(prevOriginalData => {
-        const updatedData = [...prevOriginalData].map(obj => {
-          if (obj.id === item.id) {
-            return { ...obj, title: result.value.title, body: result.value.title.body };
-          }
-          return obj;
-        });
-        return updatedData;
-      });
-
-      setFilteredData(prevFilteredData => {
-        const updatedData2 = [...prevFilteredData].map(obj => {
-          if (obj.id === item.id) {
-            return { ...obj, title: result.value.title, body: result.value.body };
-          }
-          return obj;
-        });
-        return updatedData2;
-      });
-    }
-    catch (error) {
-      console.error(error.message);
-
-    }
-  }
-
-  // מחיקה
-  async function deletePost() {
-
-    try {
-      let response = await fetch(`http://localhost:4002/api/posts/${item.id}`, {
-        method: 'DELETE',
-        headers: {
-          'Content-Type': 'application/json',
-          // 'auth': localStorage.getItem('auth') || '',
-          'authorization': localStorage.getItem('Authorization') || ''
-        },
-      });
-      if (!response.ok) {
-        console.log("problem deleting post");
-        throw new Error(`Failed to delete post! Status: ${response.status}`);
-      }
-      // alert(`Post ${item.id} deleted`) 
-      setOriginalData(prevOriginalData => prevOriginalData.filter(obj => obj.id !== item.id));
-      setFilteredData(prevFilteredData => prevFilteredData.filter(obj => obj.id !== item.id));
-      setMessage(`Post ${item.id} deleted`)
-      alert(`Post ${item.id} deleted`)
-      navigate(`/home`)
-    }
-    catch (error) {
-      alert(`Post ${item.id} not deleted`)
-      console.error(error.message);
-
-    }
-  }
-
-
-
-
-
-
-
-  // function processString(string) {
-  //   const words = string.split(" ");
-  //   if (words.length >= 2) {
-  //     if (words.length >= 3) {
-  //       words[1] = words[2].replace(" ", "-");
-  //     } else {
-  //       words[0] = words[1];
-  //     }
-  //     return words.slice(1).join(" ");
-  //   }
-  //   return string;
-  // }
-
-
-  // useEffect(() => { console.log(originalData, userId) }
-  //   ,[postId, originalData])
 
 
   return (
@@ -185,7 +75,7 @@ export default function SinglePost() {
             <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
               <div className="lg:pr-38">
                 <div className="lg:max-w-lg">
-                  <p onClick={() => console.log(item)} className="text-base font-semibold leading-7 text-indigo-600">
+                  <p onClick={ () =>{if(item.subtopic) navigate(`/home/?parasha=${item.subtopic}`)}} className="text-base font-semibold leading-7 text-indigo-600">
                     {item.subtopic ? item.subtopic : "שם הפרשה"}
                   </p>
                   <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{item.title}</h1>
@@ -194,12 +84,12 @@ export default function SinglePost() {
               </div>
             </div>
             <div className="-ml-8 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2  lg:row-start-1 lg:overflow-hidden">
-              <img
+              {item.subtopic && <img
                 className=" mb-5
                 w-[48rem]  rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] "
                 src={`https://www.breslev.org/wp-content/uploads/2019/07/${item.subtopic.replace(" ", "-")}.jpg`}
-                alt="ggggg"
-              />
+                alt="תמונת הפרשה"
+              />}
               <span className='hidden sm:ml-6 sm:block'>
                 <ParashasNav /></span>
             </div>
@@ -214,7 +104,7 @@ export default function SinglePost() {
                   </div>
                 </div>
                 <div>
-                  <PostRating item={item} />
+                  <MyRating item={item} />
                 </div>
 
                 <div>
@@ -225,23 +115,16 @@ export default function SinglePost() {
                 <div className="EditButtons">
                   <label htmlFor="edit-delete">
                     <Button variant="contained" onClick={() => navigate(`/home/`)}>חזור</Button>
-                    {adminMode && <>
-                    <Button value="delete" onClick={deletePost} variant="contained">🗑️</Button>
-                      <Button variant="contained" onClick={() => navigate(`/edit/${item.id}`)}>ערוך מאמר</Button>
-                      </>}
-                    {/* <Button value="edit"  onClick={editPost} variant="contained">✏️</Button> */}
-
+                    {message && <p style={{ color: 'red' }}>{message}</p>}
+                    {adminMode &&
+                    <>
+                    <Button value="delete" onClick={importedDelete} variant="contained">🗑️</Button>
+                    <Button variant="contained" onClick={() => navigate(`/edit/${item.id}`)}>ערוך מאמר</Button>
+                    </>}
+                   
                   </label>
                 </div>
-                {/* <span className='absolute left-8 md:left-48 mt-6'>
-                  <Button variant="contained" onClick={() => navigate(`/home/`)}>חזור</Button>
-                  <label htmlFor="edit-delete">
-                    <Button value="delete" onClick={deletePost} variant="contained">🗑️</Button>
-                    <Button value="edit" onClick={editPost} variant="contained">✏️</Button>
-                  </label>
-                </span> */}
-
-
+                
                 {/* <div className="hidden sm:ml-6 sm:block" style={{ top: '60px', right: '0px' }}><ParashasNav /></div> */}
               </div>
             </div>
@@ -253,3 +136,55 @@ export default function SinglePost() {
     </>
   )
 }
+
+
+
+
+
+
+  // function processString(string) {
+  //   const words = string.split(" ");
+  //   if (words.length >= 2) {
+  //     if (words.length >= 3) {
+  //       words[1] = words[2].replace(" ", "-");
+  //     } else {
+  //       words[0] = words[1];
+  //     }
+  //     return words.slice(1).join(" ");
+  //   }
+  //   return string;
+  // }
+
+
+  // useEffect(() => { console.log(originalData, userId) }
+  //   ,[postId, originalData])
+
+
+  // // מחיקה
+  // async function deletePost() {
+
+  //   try {
+  //     let response = await fetch(`http://localhost:4002/api/posts/${item.id}`, {
+  //       method: 'DELETE',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //         // 'auth': localStorage.getItem('auth') || '',
+  //         'authorization': localStorage.getItem('Authorization') || ''
+  //       },
+  //     });
+  //     if (!response.ok) {
+  //       console.log("problem deleting post");
+  //       throw new Error(`Failed to delete post! Status: ${response.status}`);
+  //     }
+  //     // alert(`Post ${item.id} deleted`) 
+  //     setOriginalData(prevOriginalData => prevOriginalData.filter(obj => obj.id !== item.id));
+  //     setMessage(`Post ${item.id} deleted`)
+  //     alert(`Post ${item.id} deleted`)
+  //     navigate(`/home`)
+  //   }
+  //   catch (error) {
+  //     alert(`Post ${item.id} not deleted`)
+  //     console.error(error.message);
+
+  //   }
+  // }

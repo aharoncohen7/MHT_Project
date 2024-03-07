@@ -1,16 +1,6 @@
-import { Fragment } from 'react'
-import { Menu, Transition } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { torah } from '../../data/parshiot.json';
 
 
-// function classNames(...classes) {
-//   return classes.filter(Boolean).join(' ')
-// }
-
-
-
-// סלקט
 export default function Select({ selectedBook, setSelectedBook, selectedPortion, setSelectedPortion }) {
 
   // פונקציה לבניית רשימת אפשרויות לסלקט
@@ -21,11 +11,13 @@ export default function Select({ selectedBook, setSelectedBook, selectedPortion,
       </option>
     ));
   }
+
   // אירוע בחירת חומש
   const handleBookChange = (event) => {
     setSelectedBook(event.target.value);
     setSelectedPortion(null); // לאחר בחירת חומש, איפוס בחירת הפרשיה
   };
+
 
   return (
     <div className=" flex flex-row-reverse">
@@ -54,6 +46,26 @@ export default function Select({ selectedBook, setSelectedBook, selectedPortion,
   );
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+import { Fragment } from 'react'
+import { Menu, Transition } from '@headlessui/react'
+import { ChevronDownIcon } from '@heroicons/react/20/solid'
+
+// function classNames(...classes) {
+//   return classes.filter(Boolean).join(' ')
+// }
 
 
 {/* <Menu as="div" className="space-y-4">

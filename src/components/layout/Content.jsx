@@ -2,8 +2,7 @@ import React, { useEffect, useState, useContext } from "react";
 import { Routes, Route } from 'react-router-dom';
 import AllPosts from "../posts/AllPosts";
 import SinglePost from "../posts/SinglePost";
-import Addition from "../posts/Addition";
-import Aaa from "../posts/Aaa";
+import Addition from "../Addition";
 import NotFound from '../NotFound'
 import DataContext from '../../contexts';
 import DataContext2 from '../../contexts/index2';
@@ -13,9 +12,9 @@ import Cookies from "js-cookie";
 import { Edit } from "../Edit";
 
 
-const Content = ({ parasha}) => {
-  const {userId, logOut, setMessage, adminMode} = useContext(DataContext)
-  console.log(userId); 
+const Content = ({ parasha }) => {
+  const { userId, logOut, setMessage, adminMode } = useContext(DataContext)
+  console.log(userId);
   const [originalData, setOriginalData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
   // console.log(parasha || "שם הפרשה")
@@ -43,9 +42,7 @@ const Content = ({ parasha}) => {
           throw new Error(`Network response was not ok! status: ${response.status}`);
         }
         const data = await response.json();
-        // console.log(data);
         setOriginalData(data);
-        setFilteredData(data);
         // console.log(data);
       } catch (error) {
         console.error("Error fetching posts:", error);
@@ -55,18 +52,22 @@ const Content = ({ parasha}) => {
   }, []);
 
 
+  useEffect(() => {
+    setFilteredData(originalData)
+   }, [originalData])
+
+
   return (
-    <DataContext2.Provider value={{ originalData, setOriginalData, filteredData, setFilteredData}}>
-        <Routes>
-          <Route path="home/*" element={<AllPosts parasha={parasha} userId={userId} adminMode={adminMode}/>} />
-          <Route path="post/:postId" element={<SinglePost />} />
-          {/* <Route path="edit/:postId" element={< Aaa />} /> */}
-          <Route path="edit/:postId" element={< Edit />} />
-          <Route path="addition" element={<Addition />} />
-          <Route path="about" element={<AboutUs />} />
-          <Route path="login" element={<SignIn />} />
-          <Route path='/*' element={<NotFound />} />
-        </Routes>
+    <DataContext2.Provider value={{ originalData, setOriginalData, filteredData, setFilteredData }}>
+      <Routes>
+        <Route path="home/*" element={<AllPosts parasha={parasha} userId={userId} adminMode={adminMode} />} />
+        <Route path="post/:postId" element={<SinglePost />} />
+        <Route path="edit/:postId" element={< Edit />} />
+        <Route path="addition" element={<Addition />} />
+        <Route path="about" element={<AboutUs />} />
+        <Route path="login" element={<SignIn />} />
+        <Route path='/*' element={<NotFound />} />
+      </Routes>
     </DataContext2.Provider>
 
   )

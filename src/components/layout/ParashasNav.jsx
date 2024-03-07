@@ -10,8 +10,11 @@ import { useNavigate } from 'react-router-dom';
 export default function ParashasNav() {
   const navigate = useNavigate();
 
-  // אחראי שבכל רגע לא היהי פתוח יותר משלב אחד
+  // אחראי שבכל רגע לא יהיה פתוח יותר משלב אחד
   const [expanded, setExpanded] = React.useState(false);
+
+
+  // אחראי על פתיחת האקורדיון
   const handleChange = (panel) => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
@@ -29,7 +32,6 @@ export default function ParashasNav() {
           </AccordionSummary>
           <AccordionDetails>
             {parshiot.map((parasha) => (
-              // <div onClick={() => navigate(`/topic/${parasha}`)} key={parasha}>
               <div onClick={() => navigate(`/home/?parasha=${parasha}`)} key={parasha}>
                 {parasha}
               </div>
@@ -40,28 +42,4 @@ export default function ParashasNav() {
     </div>
   );
 }
-
-//   return (
-//     <div className="fixed" style={{ top: '60px' }}>
-//       {Object.entries(torah).map(([chometName, parshiot], index) => (
-//         <Accordion expanded={expanded === `panel${index + 4}`} onChange={handleChange(`panel${index + 4}`)} key={chometName}>
-//           <AccordionSummary
-//             expandIcon={<ExpandMoreIcon />}
-//             aria-controls={`panel${index + 4}bh-content`}
-//             id={`panel${index + 4}bh-header`}
-//           >
-//             <Typography sx={{ width: '33%', flexShrink: 0 }}>{chometName}</Typography>
-//           </AccordionSummary>
-//           <AccordionDetails>
-//             {parshiot.map((parasha) => (
-//               <div style={{ width: "100px", height: "35px", margin: "10px" }} onClick={() => navigate(`/topic/${parasha}`)} key={parasha}>
-//                 {parasha}
-//               </div>
-//             ))}
-//           </AccordionDetails>
-//         </Accordion>
-//       ))}
-//     </div>
-//   );
-// }
 

@@ -1,13 +1,13 @@
 import React, { useContext } from 'react'
 import Rating from '@mui/material/Rating';
 import Stack from '@mui/material/Stack';
-import DataContext from '../../contexts';
+import DataContext from '../contexts';
 import Cookies from "js-cookie";
-import DataContext2 from '../../contexts/index2';
+import DataContext2 from '../contexts/index2';
 
-export default function PostRating({ item }) {
+export default function MyRating({ item }) {
     const { logOut, setMessage } = useContext(DataContext)
-    const { setOriginalData, setFilteredData} = useContext(DataContext2)
+    const { setOriginalData} = useContext(DataContext2)
 
         // דירוג פוסט
         async function updateRating(event) {
@@ -30,13 +30,17 @@ export default function PostRating({ item }) {
                         setMessage("פעולת הדירוג לא הצליחה")
                         logOut()
                     }
+                    if (response.status == 404) {
+                        setMessage("דירוג כפול נחסם")
+                        return
+            
+                    }
+
                     setMessage("פעולת הדירוג לא הצליחה")
-                    // alert("Failed to update rating")
-                    throw new Error(`Failed to update rating! Status: ${response.status}`);
+                    // throw new Error(`Failed to update rating! Status: ${response.status}`);
                 }
                 const editedPost = await response.json();
                 setMessage("דירוג בוצע בהצלחה")
-                // alert("The rating is update")
                 setOriginalData(prevOriginalData => {
                     const updatedOriginalData = [...prevOriginalData].map(obj => {
                         if (obj.id === item.id) {
@@ -46,15 +50,7 @@ export default function PostRating({ item }) {
                     });
                     return updatedOriginalData;
                 });
-                setFilteredData(prevFilteredData => {
-                    const updatedFilteredData = [...prevFilteredData].map(obj => {
-                        if (obj.id === item.id) {
-                            return { ...obj, rating: editedPost.rating };
-                        }
-                        return obj;
-                    });
-                    return updatedFilteredData;
-                });
+            
             }
             catch (error) {
                 setMessage("שגיאה" + error.message)
@@ -66,7 +62,7 @@ export default function PostRating({ item }) {
 
     return (
         <Stack spacing={1}>
-            <Rating name="half-rating" value={item.rating} defaultValue={0.0} precision={0.5} onChange={updateRating} />
+            <Rating name="half-rating" value={parseFloat(item.rating)} defaultValue={0.0} precision={0.5} onChange={updateRating} />
         </Stack>
     )
 }

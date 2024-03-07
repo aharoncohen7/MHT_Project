@@ -24,9 +24,7 @@ export default function Search({ setMyPosts, tag, subtopic }) {
     //פונקציית המיון
     useEffect(() => {
         const sort_posts = () => {
-            // console.log("ggggggggggggggggggggggggggggg", filteredData);
             const filteredPosts = sortBy(filteredData, filter);
-            console.log(filteredData);
             setMyPosts(filteredPosts);
         };
         if (originalData !== '') {
