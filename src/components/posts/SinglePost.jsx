@@ -4,7 +4,7 @@ import { Button } from '@mui/material';
 import DataContext from '../../contexts';
 import MyRating from '../MyRating'
 import TagList from './TagList';
-import ParashasNav from '../layout/ParashasNav';
+import ParashaNav from '../layout/ParashaNav';
 import Cookies from "js-cookie";
 import DataContext2 from '../../contexts/index2';
 import { deletePost2 } from "../../functions/postFunctions"
@@ -92,7 +92,7 @@ export default function SinglePost() {
                 alt="תמונת הפרשה"
               />}
               <span className='hidden sm:ml-6 sm:block'>
-                <ParashasNav /></span>
+                <ParashaNav /></span>
             </div>
             <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
               <div className="lg:pr-4">
@@ -126,7 +126,7 @@ export default function SinglePost() {
                   </label>
                 </div>
                 
-                {/* <div className="hidden sm:ml-6 sm:block" style={{ top: '60px', right: '0px' }}><ParashasNav /></div> */}
+                {/* <div className="hidden sm:ml-6 sm:block" style={{ top: '60px', right: '0px' }}><ParashaNav /></div> */}
               </div>
             </div>
           </div>

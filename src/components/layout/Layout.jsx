@@ -13,7 +13,7 @@ const Layout = () => {
   const [parasha, setParasha] = useState(null);
   const { logOut, setMessage, message } = useContext(DataContext)
 
-// קבלת פרשה
+  // קבלת פרשה
   useEffect(() => {
     async function fetchData() {
       try {
@@ -28,7 +28,7 @@ const Layout = () => {
   }, []);
 
 
-// בדיקת טוקן
+  // בדיקת טוקן
   useEffect(() => {
     async function checkToken() {
       try {
@@ -58,11 +58,12 @@ const Layout = () => {
 
 
   return (
-      <span >
-        <Navbar parasha={parasha} />
-        <Content parasha={parasha}/>
-        {message[0] && <Message message={message} />}
-      </span>
+    <span >
+      <Navbar parasha={parasha} />
+      <Content parasha={parasha} />
+      {message[0] &&
+        <Message message={message} />}
+    </span>
   )
 }
 

@@ -65,7 +65,7 @@ function App() {
 
   return (
     <DataContext.Provider value={{ navigate, logOut, setUserId, setUserName, setMessage, setIsAdmin, setAdminMode,  userId, userName, isAdmin, adminMode, message}}>
-      <div>
+      <>
         <Routes>
           <Route
             path="/*"
@@ -78,7 +78,7 @@ function App() {
             }
           />
         </Routes>
-      </div>
+      </>
     </DataContext.Provider>
   )
 }

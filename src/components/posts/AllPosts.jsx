@@ -5,7 +5,7 @@ import DataContext2 from '../../contexts/index2';
 import Search from "./Search"
 import PopUp from '../PopUp';
 import Swal from 'sweetalert2';
-import ParashasNav from '../layout/ParashasNav';
+import ParashaNav from '../layout/ParashaNav';
 import { FiFeather } from 'react-icons/fi';
 import { FiTrash2 } from "react-icons/fi";
 import { deletePost2 } from "../../functions/postFunctions"
@@ -177,7 +177,7 @@ export default function AllPosts() {
                             </article>
                         ))}
                     </div>
-                    <ParashasNav />
+                    <ParashaNav />
                 </div>
                
 
