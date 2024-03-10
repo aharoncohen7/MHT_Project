@@ -15,7 +15,7 @@ export default function Search({ setSortedList }) {
     const [selectedOption, setSelectedOption] = useState(true);
     const [filter, setFilter] = useState('creation date ↑');
     const [input, setInput] = useState('');
-    const [idToSerch, setIdToSerch] = useState('');
+    const [idToSearch, setIdToSearch] = useState('');
     const searchParams = new URLSearchParams(window.location.search);
     const tag = searchParams.get('tag');
     const subtopic = searchParams.get('parasha');
@@ -33,6 +33,10 @@ export default function Search({ setSortedList }) {
             }
             // אם יש פרשה בנתיב
             if (subtopic !== null) {
+                if (subtopic==="all"){
+                    setSortedList(sortBy(filter))
+                    return
+                }
                 setSortedList(sortBy(filter).filter((elm) => elm.subtopic != null && elm.subtopic == subtopic));
                 return
             }
@@ -96,12 +100,12 @@ export default function Search({ setSortedList }) {
 
     //  - סינון לפי מזהה - עבור אדמין
     useEffect(() => {
-        if (idToSerch === "") {
+        if (idToSearch === "") {
             setFilteredData(originalData)
             return
         }
-        setFilteredData(originalData.filter((elm) => elm.id === parseInt(idToSerch)));
-    }, [idToSerch]);
+        setFilteredData(originalData.filter((elm) => elm.id === parseInt(idToSearch)));
+    }, [idToSearch]);
 
 
 
@@ -138,7 +142,7 @@ export default function Search({ setSortedList }) {
                                 id="input1"
                                 type="text"
                                 className="block w-full px-4 py-2 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 text-right rtl"
-                                onChange={(event) => setIdToSerch(event.target.value)}
+                                onChange={(event) => setIdToSearch(event.target.value)}
                                 placeholder="חפש לפי מזהה"
                             />
                         </div>

@@ -9,7 +9,8 @@ export default function Navbar({ parasha }) {
     const { userName,logOut, isAdmin, adminMode, setAdminMode, navigate,  } = useContext(DataContext)
 
     const navigation = [
-        { name: 'בית', href: `/home/?parasha=${parasha.split(' ')[1]}`, current: true },
+        { name: `על ${parasha}`, href: `home/`, current: true },
+        { name: "הכל", href: 'home/?parasha=all', current: false },
         { name: 'הוספת מאמר', href: '/addition', current: false },
         { name: 'אודות', href: '/about', current: false },
     ]
@@ -47,7 +48,7 @@ export default function Navbar({ parasha }) {
                                 <div className="flex items-center flex-shrink-0">
                                     <img
                                         className="w-auto h-10"
-                                        src="https://i.postimg.cc/3rPkvYTs/logo.png"
+                                        src="http://www.uploads.co.il/uploads/images/29333571.png"
                                         alt="לוגו"
                                     />
                                 </div>

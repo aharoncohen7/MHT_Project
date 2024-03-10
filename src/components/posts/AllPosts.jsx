@@ -177,8 +177,9 @@ export default function AllPosts() {
                             </article>
                         ))}
                     </div>
+                    <ParashasNav />
                 </div>
-                <ParashasNav />
+               
 
             </div>
             {showEditor &&

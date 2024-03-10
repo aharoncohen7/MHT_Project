@@ -1,4 +1,9 @@
 import { torah } from '../../data/parshiot.json';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormHelperText from '@mui/material/FormHelperText';
+import FormControl from '@mui/material/FormControl';
+// import Select from '@mui/material/Select';
 
 
 export default function Select({ selectedBook, setSelectedBook, selectedPortion, setSelectedPortion }) {
@@ -27,6 +32,8 @@ export default function Select({ selectedBook, setSelectedBook, selectedPortion,
         <option className='block w-full px-4 text-right text-gray-900 bg-gray-100 py-21' value="" >בחר חומש</option>
         {buildOptions(torah)}
       </select>
+
+
 
       {/* סלקט הפרשיות  */}
       <select className='relative py-2 pl-3 pr-10 mr-2 text-right bg-white rounded-md shadow-sm cursor-pointer focus:outline-none focus:ring focus:ring-blue-500 focus:ring-opacity-50' disabled={!selectedBook} value={selectedPortion} onChange={(event) => { setSelectedPortion(event.target.value) }}>
