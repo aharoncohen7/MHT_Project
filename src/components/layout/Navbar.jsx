@@ -4,25 +4,24 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Switch from '@mui/material/Switch';
 
-const navigation = [
-    { name: 'בית', href: '/home', current: true },
-    { name: 'הוספת מאמר', href: '/addition', current: false },
-    { name: 'אודות', href: '/about', current: false },
-]
-
-
-function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
-}
-
-// זריקה החוצה
-function logOut() {
-    localStorage.removeItem('Authorization');
-    window.location.href = "http://localhost:5173/"
-}
 
 export default function Navbar({ parasha }) {
-    const { userName, isAdmin, adminMode, setAdminMode, navigate } = useContext(DataContext)
+    const { userName,logOut, isAdmin, adminMode, setAdminMode, navigate,  } = useContext(DataContext)
+
+    const navigation = [
+        { name: 'בית', href: `/home/?parasha=${parasha.split(' ')[1]}`, current: true },
+        { name: 'הוספת מאמר', href: '/addition', current: false },
+        { name: 'אודות', href: '/about', current: false },
+    ]
+
+
+    function classNames(...classes) {
+        return classes.filter(Boolean).join(' ')
+    }
+
+
+
+
 
 
     return (
@@ -73,7 +72,7 @@ export default function Navbar({ parasha }) {
                             </div>
 
                             <div className="min-w-0 flex-1">
-                                <h2 className="text-m font-bold leading-7 text-white sm:truncate sm:text-2xl sm:tracking-tight">{parasha}</h2>
+                                <h2 className="text-center  font-bold leading-7 text-white sm:truncate sm:text-2xl sm:tracking-right">{parasha}</h2>
 
                             </div>
 

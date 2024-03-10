@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import Modal from 'react-modal';
-import PostEditor from './posts/PostEditor';
+import Editor from './posts/Editor';
 import Button from '@mui/material/Button';
 import DeleteIcon from '@mui/icons-material/Delete';
 import SendIcon from '@mui/icons-material/Send';
@@ -9,7 +9,6 @@ import DataContext from '../contexts';
 export default function PopUp({ showEditor, setShowEditor}) {
   const [complete, setComplete] = useState(false)
   const [send, setSend] = useState(false)
-  const [message, setMessage] = useState(null);
   const { userId } = useContext(DataContext)
   console.log(userId);
   Modal.setAppElement('#root')
@@ -37,11 +36,10 @@ export default function PopUp({ showEditor, setShowEditor}) {
       }}
     >
 
-      <PostEditor send={send} setSend={setSend} setComplete={setComplete} setShowEditor={setShowEditor} />
+      <Editor send={send} setSend={setSend} setComplete={setComplete} setShowEditor={setShowEditor} />
       <div style={{ position: "absolute", bottom: "10px", display: "flex", gap: "1rem" }}>
         <Button variant="outlined" startIcon={<DeleteIcon />} onClick={() => setShowEditor(false)}>⭐️⭐️⭐️⭐️⭐סגור</Button>
         <Button disabled={!complete} variant="contained" endIcon={<SendIcon />} onClick={() => {
-          // addNewPost();
           setSend(true)
         }}  >שלח</Button>
       </div>

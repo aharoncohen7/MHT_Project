@@ -75,13 +75,14 @@ export default function SinglePost() {
             <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
               <div className="lg:pr-38">
                 <div className="lg:max-w-lg">
-                  <p onClick={ () =>{if(item.subtopic) navigate(`/home/?parasha=${item.subtopic}`)}} className="text-base font-semibold leading-7 text-indigo-600">
+                  <button onClick={ () =>{if(item.subtopic) navigate(`/home/?parasha=${item.subtopic}`)}} className="text-base font-semibold leading-7 text-indigo-600">
                     {item.subtopic ? item.subtopic : "שם הפרשה"}
-                  </p>
-                  <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{item.title}</h1>
-                  <p style={{ wordWrap: "break-word" }} className="mt-6 text-xl leading-8 text-gray-700">{item.title}</p>
+                  </button>
+                  <h2   className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{item.title}</h2>
+                  <button onClick={ () =>{ navigate(`/home/?author=${item.userId}`)}}  className="mt-6 text-xl font-bold leading-8 text-gray-700"> {item.author} :מחבר</button>
                 </div>
               </div>
+             
             </div>
             <div className="-ml-8 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2  lg:row-start-1 lg:overflow-hidden">
               {item.subtopic && <img
@@ -168,7 +169,7 @@ export default function SinglePost() {
   //       method: 'DELETE',
   //       headers: {
   //         'Content-Type': 'application/json',
-  //         // 'auth': localStorage.getItem('auth') || '',
+  //        
   //         'authorization': localStorage.getItem('Authorization') || ''
   //       },
   //     });
@@ -178,7 +179,7 @@ export default function SinglePost() {
   //     }
   //     // alert(`Post ${item.id} deleted`) 
   //     setOriginalData(prevOriginalData => prevOriginalData.filter(obj => obj.id !== item.id));
-  //     setMessage(`Post ${item.id} deleted`)
+  //     setMessage([`Post ${item.id} deleted`, true])
   //     alert(`Post ${item.id} deleted`)
   //     navigate(`/home`)
   //   }

@@ -41,12 +41,12 @@ export default function Message() {
                   <div className="sm:flex sm:items-start">
                     <div className="flex items-center justify-center flex-shrink-0 w-12 h-12 mx-auto bg-red-100 rounded-full sm:mx-0 sm:h-10 sm:w-10">
                       {/* <ExclamationTriangleIcon className="w-6 h-6 text-red-600" aria-hidden="true" /> */}
-                      {message=='Post created successfully' ? <CheckCircleIcon className="w-6 h-6 text-green-500" aria-hidden="true"/> :
+                      {message[1] ? <CheckCircleIcon className="w-6 h-6 text-green-500" aria-hidden="true"/> :
                       <FiAlertTriangle className=" w-6 h-6 text-red-500" />}
                     </div>
                     <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
                       <Dialog.Title as="h3" className="text-base font-semibold leading-6 text-gray-900">
-                        {message}
+                        {message[0]}
                       </Dialog.Title>
                       {/* <div className="mt-2">
                         <p className="text-sm text-gray-500">

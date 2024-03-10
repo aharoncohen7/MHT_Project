@@ -13,12 +13,10 @@ import { Edit } from "../Edit";
 
 
 const Content = ({ parasha }) => {
-  const { userId, logOut, setMessage, adminMode } = useContext(DataContext)
-  console.log(userId);
+  const {  logOut, setMessage } = useContext(DataContext)
   const [originalData, setOriginalData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
-  // console.log(parasha || "שם הפרשה")
-  // console.log(adminMode);
+ 
 
   // קבלת פוסטים
   useEffect(() => {
@@ -29,7 +27,7 @@ const Content = ({ parasha }) => {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
-            // 'auth': localStorage.getItem('auth') || '',
+           
             'authorization': localStorage.getItem('Authorization') || ''
           },
         };
@@ -38,7 +36,7 @@ const Content = ({ parasha }) => {
           if (response.status == 401) {
             logOut()
           }
-          setMessage("Network response was not ok!")
+          setMessage(["Network response was not ok!", false])
           throw new Error(`Network response was not ok! status: ${response.status}`);
         }
         const data = await response.json();
@@ -58,9 +56,9 @@ const Content = ({ parasha }) => {
 
 
   return (
-    <DataContext2.Provider value={{ originalData, setOriginalData, filteredData, setFilteredData }}>
+    <DataContext2.Provider value={{ originalData, setOriginalData, filteredData, setFilteredData, parasha }}>
       <Routes>
-        <Route path="home/*" element={<AllPosts parasha={parasha} userId={userId} adminMode={adminMode} />} />
+        <Route path="home/*" element={<AllPosts />} />
         <Route path="post/:postId" element={<SinglePost />} />
         <Route path="edit/:postId" element={< Edit />} />
         <Route path="addition" element={<Addition />} />

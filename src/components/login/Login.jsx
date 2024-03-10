@@ -46,20 +46,20 @@ export default function Login({ setIsNew }) {
         const user = await response.json();
         if (user) {
           // console.log(user);
-          setMessage('Login successful');
+          setMessage(['Login successful',true]);
           setUserId(user.id)
           setUserName(user.username)
           setIsAdmin(user.isAdmin)
           localStorage.setItem("Authorization", user.token)
           Cookies.set("Authorization", user.token)
-          navigate(`/home`);
+          navigate(`/home/${parasha}`);
         }
       }
       else {
-        setMessage(`Error during login: ${response.statusText}`);
+        setMessage([`Error during login: ${response.statusText}`, false]);
       }
     } catch (error) {
-      setMessage(`Error during login: ${"///"}`);
+      setMessage([`Error during login: ${error.message}`, false]);
       console.log(`Error during login: ${error.message}`);
     }
   };

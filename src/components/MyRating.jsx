@@ -21,26 +21,26 @@ export default function MyRating({ item }) {
                     }),
                     headers: {
                         'Content-type': 'application/json; charset=UTF-8',
-                        // 'auth': localStorage.getItem('auth') || '',
+            
                         'authorization': localStorage.getItem('Authorization') || ''
                     }
                 })
                 if (!response.ok) {
                     if (response.status == 401) {
-                        setMessage("פעולת הדירוג לא הצליחה")
+                        setMessage(["פעולת הדירוג לא הצליחה", false])
                         logOut()
                     }
                     if (response.status == 404) {
-                        setMessage("דירוג כפול נחסם")
+                        setMessage(["דירוג כפול נחסם", false])
                         return
             
                     }
 
-                    setMessage("פעולת הדירוג לא הצליחה")
+                    setMessage(["פעולת הדירוג לא הצליחה", false])
                     // throw new Error(`Failed to update rating! Status: ${response.status}`);
                 }
                 const editedPost = await response.json();
-                setMessage("דירוג בוצע בהצלחה")
+                setMessage(["דירוג בוצע בהצלחה", true])
                 setOriginalData(prevOriginalData => {
                     const updatedOriginalData = [...prevOriginalData].map(obj => {
                         if (obj.id === item.id) {
@@ -53,7 +53,7 @@ export default function MyRating({ item }) {
             
             }
             catch (error) {
-                setMessage("שגיאה" + error.message)
+                setMessage(["שגיאה" + error.message, false]);
                 console.error(error.message);
             }
     

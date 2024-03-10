@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react'
-import PostEditor from './posts/PostEditor';
+import Editor from './posts/Editor';
 import Button from '@mui/material/Button';
 import DeleteIcon from '@mui/icons-material/Delete';
 import SendIcon from '@mui/icons-material/Send';
@@ -57,7 +57,7 @@ export default function Addition() {
         {showEditor &&
           <>
             <div style={{ position: "fixed", top: "100px" }}>
-              <PostEditor setShowEditor={setShowEditor} setMessage={setMessage} send={send} setComplete={setComplete} setSend={setSend}/>
+              <Editor setShowEditor={setShowEditor} send={send} setComplete={setComplete} setSend={setSend}/>
             </div>
             <div style={{ position: "absolute", left: "200px", bottom: "10px", display: "flex", gap: "1rem" }}>
               <Button variant="outlined" startIcon={<DeleteIcon />} onClick={() => setShowEditor(false)}>סגור</Button>

@@ -15,7 +15,7 @@ import Cookies from "js-cookie";
 
 
 
-export default function PostEditor({ send, setSend, setComplete, setShowEditor, initialPost }) {
+export default function Editor({ send, setSend, setComplete, setShowEditor, initialPost }) {
     const { postId } = useParams()
     const {  logOut, userId, setMessage, message, navigate } = useContext(DataContext)
     const { originalData, setOriginalData } = useContext(DataContext2)
@@ -218,7 +218,7 @@ export default function PostEditor({ send, setSend, setComplete, setShowEditor, 
 //             }),
 //             headers: {
 //                 'Content-type': 'application/json; charset=UTF-8',
-//                 // 'auth': localStorage.getItem('auth') || '',
+//                
 //                 'authorization': localStorage.getItem('Authorization') || ''
 //             },
 //         });
@@ -227,7 +227,7 @@ export default function PostEditor({ send, setSend, setComplete, setShowEditor, 
 //             console.log("400/404");
 //             const errorMessage = await response.text();
 //             console.log('Post not updated' + errorMessage);
-//             setMessage('Post not updated ' + errorMessage);
+//             setMessage(['Post not updated ' + errorMessage, false]);
 //             alert('Post not updated ' + errorMessage)
 //             setSend(false)
 //             setShowEditor(false)
@@ -242,7 +242,7 @@ export default function PostEditor({ send, setSend, setComplete, setShowEditor, 
 //         const newPost = await response.json();
 //         console.log(newPost);
 //         setOriginalData(prevOriginalData => [...prevOriginalData, newPost]);
-//         setMessage('Post updated successfully');
+//         setMessage(['Post updated successfully', true]);
 //         alert('Post updated successfully')
 //         setSend(false)
 //         setShowEditor(false)
@@ -263,7 +263,7 @@ export default function PostEditor({ send, setSend, setComplete, setShowEditor, 
 //     if (originalData.length == 0) {
 //         axios.get('http://localhost:4002/api/posts/' + postId, {
 //             headers: {
-//                 // 'auth': localStorage.getItem('auth') || '',
+//                
 //                 'authorization': localStorage.getItem('Authorization') || ''
 //             }
 //         })
@@ -306,7 +306,7 @@ export default function PostEditor({ send, setSend, setComplete, setShowEditor, 
 //             },
 //         })
 //         if (!response.ok) {
-//             setMessage("Failed to edit post")
+//             setMessage(["Failed to edit post"' false])
 //             throw new Error(`Failed to edit post! Status: ${response.status}`);
 //         }
 

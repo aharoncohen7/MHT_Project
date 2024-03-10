@@ -9,20 +9,6 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import * as Yup from 'yup';
 
-// function Copyright(props) {
-//   return (
-//     <Typography variant="body2" color="text.secondary" align="center" {...props}>
-//       {' © '}
-//       <Link color="inherit" href="http://localhost:5173/">
-//         Chi.Dot
-//       </Link>{' '}
-//       {new Date().getFullYear()}
-//       {'.'}
-//     </Typography>
-//   );
-// }
-
-
 export default function Register({ setIsNew }) {
   const { setMessage, message } = useContext(DataContext)
 
@@ -99,27 +85,27 @@ export default function Register({ setIsNew }) {
       if (response.status === 400 || response.status === 404) {
         console.log("400");
         const errorMessage = await response.text();
-        setMessage(`${errorMessage} :תקלה בתהליך הרישום `)
+        setMessage([`${errorMessage} :תקלה בתהליך הרישום `,false])
         console.log(errorMessage);
       }
       if (response.status === 200) {
         const user = await response.json();
         console.log(user);
         if (user) {
-          setMessage('משתמש נרשם בהצלחה, נא להכנס');
+          setMessage(['משתמש נרשם בהצלחה, נא להכנס', true]);
           window.location.href = "http://localhost:5173/home"
         }
         else {
           console.log("try > else");
           console.log('משתמש נרשם: תקלה לא מזוהה', response);
-          setMessage(`משתמש נרשם: תקלה לא מזוהה`);
+          setMessage([`משתמש נרשם: תקלה לא מזוהה`, false]);
         }
       }
 
     }
     catch (error) {
       console.log("catch");
-      setMessage(`${error.message} תקלה בתהליך הרישום`  );
+      setMessage([`${error.message} תקלה בתהליך הרישום`, false]  );
       console.log(`תקלה בתהליך הרישום ${error.message}`);
 
     }
@@ -251,3 +237,15 @@ export default function Register({ setIsNew }) {
     </Container>
   );
 }
+// function Copyright(props) {
+//   return (
+//     <Typography variant="body2" color="text.secondary" align="center" {...props}>
+//       {' © '}
+//       <Link color="inherit" href="http://localhost:5173/">
+//         Chi.Dot
+//       </Link>{' '}
+//       {new Date().getFullYear()}
+//       {'.'}
+//     </Typography>
+//   );
+// }

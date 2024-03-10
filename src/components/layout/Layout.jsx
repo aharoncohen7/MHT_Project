@@ -42,12 +42,12 @@ const Layout = () => {
         console.log(response.status);
         if (response.status !== 200) {
           console.log(response.status);
-          setMessage("הסשן הסתיים, נא להכנס שוב")
+          setMessage(["הסשן הסתיים, נא להכנס שוב", false])
           logOut();
         }
       } catch (error) {
         console.log(error.message);
-        setMessage("התרחשה תקלה בניסיון האימות" ,error.message )
+        setMessage([" התרחשה תקלה בניסיון האימות" + error.message, false])
         logOut();
       }
     }
@@ -61,7 +61,7 @@ const Layout = () => {
       <span >
         <Navbar parasha={parasha} />
         <Content parasha={parasha}/>
-        {message && <Message message={message} />}
+        {message[0] && <Message message={message} />}
       </span>
   )
 }

@@ -41,12 +41,12 @@ const CommentList = ({ postId, showComments, setMessage }) => {
           }),
           headers: {
             'Content-Type': 'application/json',
-            // 'auth': localStorage.getItem('auth') || '',
+           
             'authorization': localStorage.getItem('Authorization') || ''
           },
         });
         if (!response.ok) {
-          setMessage("Failed to add comment")
+          setMessage(["Failed to add comment", true])
           if(response.status==401){
             logOut()
         }
@@ -58,7 +58,7 @@ const CommentList = ({ postId, showComments, setMessage }) => {
         setComments(prevOriginalData => [...prevOriginalData, newComment], () => {
           console.log("Created", comments);
         });
-        setMessage('Comment added successfully');
+        setMessage(['Comment added successfully', true]);
 
 
       }
@@ -74,16 +74,16 @@ const CommentList = ({ postId, showComments, setMessage }) => {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
-        // 'auth': localStorage.getItem('auth') || '',
+       
         'authorization': localStorage.getItem('Authorization') || ''
       },
     });
     if (!response.ok) {
-      setMessage(`Failed to delete comment! Status: ${response.status}`);
+      setMessage([`Failed to delete comment! Status: ${response.status}`, false]);
       return;
     }
     setComments(prevFilteredData => prevFilteredData.filter(obj => obj.id !== commentId));
-    setMessage(`comment ${commentId} deleted`)
+    setMessage([`comment ${commentId} deleted`, true])
   }
 
 
@@ -103,7 +103,7 @@ const CommentList = ({ postId, showComments, setMessage }) => {
         const data = await response.json();
         setComments(data)
       } catch (error) {
-        setMessage("Error fetching comments!")
+        setMessage(["Error fetching comments!", false])
         console.error("Error fetching comments:", error);
       }
     };

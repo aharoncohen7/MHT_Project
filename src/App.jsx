@@ -11,7 +11,7 @@ import Cookies from "js-cookie";
 function App() {
   const [userId, setUserId] = useState(null);
   const [userName, setUserName] = useState(null);
-  const [message, setMessage] = useState(null);
+  const [message, setMessage] = useState([null,true]);
   const [isAdmin, setIsAdmin] = useState(0)
   const [adminMode, setAdminMode] = useState(false)
   console.log("userId: ", userId, "userName: ", userName, "isAdmin: ", isAdmin, "adminMode: ", adminMode);
@@ -54,9 +54,9 @@ function App() {
 
   // // איפוס הודעות מערכת
   useEffect(() => {
-    if (message !== "") {
+    if (message[0] !== null) {
       setTimeout(() => {
-        setMessage(null);
+        setMessage([null, false]);
       }, 5000);
     }
   }, [message]);
@@ -64,7 +64,7 @@ function App() {
 
 
   return (
-    <DataContext.Provider value={{ navigate, logOut, setUserId, setUserName, setMessage, setIsAdmin, setAdminMode,  userId, userName, isAdmin,adminMode, message}}>
+    <DataContext.Provider value={{ navigate, logOut, setUserId, setUserName, setMessage, setIsAdmin, setAdminMode,  userId, userName, isAdmin, adminMode, message}}>
       <div>
         <Routes>
           <Route

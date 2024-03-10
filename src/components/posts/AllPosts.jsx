@@ -1,4 +1,4 @@
-import { useLocation } from 'react-router-dom';
+
 import React, { useState, useContext } from "react";
 import DataContext from '../../contexts';
 import DataContext2 from '../../contexts/index2';
@@ -10,23 +10,42 @@ import { FiFeather } from 'react-icons/fi';
 import { FiTrash2 } from "react-icons/fi";
 import { deletePost2 } from "../../functions/postFunctions"
 import Cookies from "js-cookie";
+import { useLocation } from "react-router-dom";
 
 
-export default function AllPosts({userId, adminMode}) {
-    const { setMessage,  message,logOut, navigate} = useContext(DataContext)
+// שינוי מבנה תאריך יצירת מאמר
+function formatDate(dateString) {
+    const parts = dateString.split('T')[0].split("-");
+    return `${parts[2]}-${parts[1]}-${parts[0].slice(2)}`;
+}
+
+
+
+export default function AllPosts() {
+    const {userId, adminMode, setMessage, message,logOut, navigate} = useContext(DataContext)
     const {setOriginalData} = useContext(DataContext2)
     const [showEditor, setShowEditor] = useState(false);
-    const [myPosts, setMyPosts] = useState([]);
-    const location = useLocation();
-    const searchParams = new URLSearchParams(location.search);
-    const tag = searchParams.get('tag');
-    const subtopic = searchParams.get('parasha');
-    // console.log(tag || "tag", subtopic || "subtopic", adminMode ||"adminMode");
-
+    const [sortedList, setSortedList] = useState([]);
+    
+    
 
     function importedDelete(item) {
         deletePost2(item, setOriginalData, setMessage, logOut, navigate)
     }
+
+
+    function extractTextBetweenTags(html) {
+        const regex = /<[^>]+>([^<]*)<\/[^>]+>/g; // פסקלות רגולריות לזיהוי תגיות HTML
+        const matches = html.matchAll(regex); // מצא את כל ההתאמות לתגיות בטקסט
+        let result = ''; // תוכן הטקסט בין התגיות
+    
+        for (const match of matches) {
+            result += match[1].trim(); // הוסף את התוכן שנמצא בין התגיות לתוך התוצאה
+        }
+        return result.substring(0, 50);
+    }
+    
+    
 
        //עריכה 
     async function adminEdit(item) {
@@ -63,7 +82,7 @@ export default function AllPosts({userId, adminMode}) {
             }),
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
-                // 'auth': localStorage.getItem('auth') || '',
+               
                 'authorization': localStorage.getItem('Authorization') || ''
             },
         });
@@ -72,7 +91,7 @@ export default function AllPosts({userId, adminMode}) {
             console.log("400/404");
             const errorMessage = await response.text();
             console.log('Post not updated' + errorMessage);
-            setMessage('Post not updated ' + errorMessage)
+            setMessage(['Post not updated ' + errorMessage, false])
             if (response.status == 401) {
                 logOut()
             }
@@ -82,7 +101,7 @@ export default function AllPosts({userId, adminMode}) {
         // console.log(newPost);
         setOriginalData(prevOriginalData => prevOriginalData.filter(obj => obj.id !== item.id));
         setOriginalData(prevOriginalData => [...prevOriginalData, newPost]);
-        setMessage('Post updated successfully');
+        setMessage(['Post updated successfully', true]);
     }
     catch (error) {
         console.error(error.message);
@@ -104,44 +123,41 @@ export default function AllPosts({userId, adminMode}) {
 
 
                     </div>
-                    {!showEditor && <Search
-                        setMyPosts={setMyPosts}
-                        tag={tag}
-                        subtopic={subtopic}
-                    />}
+                    {!showEditor && <Search setSortedList={setSortedList} />}
                     <button onClick={() => setShowEditor(true)} > <FiFeather size={"20px"} /><span>הוסף מאמר </span></button>
                     {message && <p style={{ color: 'red' }}>{message}</p>}
                     <div className="grid max-w-2xl grid-cols-1 pt-10 mx-auto mt-10 border-t border-gray-200 gap-x-8 gap-y-16 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3  ">
-                        {myPosts.map((post) => (
+                        {sortedList.map((post) => (
                             <article key={post.id} className="flex flex-col items-center justify-between max-w-xl hover:bg-gray-100 border border-gray-300 shadow-md truncate rounded-md">
                                 <div className="flex items-center text-xs gap-x-4">
-                                    <time dateTime={post.datetime} className="text-gray-500">
-                                        {post.created_at.split('T')[0]}
-                                    </time>
+                                    <p className="text-gray-500">
+                                        {formatDate(post.created_at)}
+                                    </p>
+                                    <div className="text-sm leading-6">
+                                        <p className="font-semibold text-gray-900">
+                                           {/* <span className="absolute inset-0" /> */}
+                                           {post.author} :מחבר
+                                        </p>
+                                    </div>
                                     <a className="relative z-1 rounded-full bg-gray-50 px-4 py-4  mt-2 font-medium text-gray-600 hover:bg-gray-100 " >
                                         {post.subtopic}
                                     </a>
                                 </div>
-                                <div onClick={() => { navigate(`/post/${post.id}`) }} className="relative group">
+                                <div onClick={() => { navigate(`/post/${post.id}`) }}  className="relative group">
+                                   
+                                
                                     <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-                                        <a href={post.href}>
+                        
                                             <span className="absolute inset-0 " />
-                                            <p style={{ wordWrap: "break-word" }} className="text-right m-6 overflow-wrap-normal ">{post.title}</p>
-                                        </a>
+                                            <p style={{ wordWrap: "break-word" }} className=" ml-20 mr-20 text-right m-6 overflow-wrap-normal ">{post.title}
+                                            </p>
+                                        <p className='ml-20 mr-20 text-sm leading-6 text-gray-600 line-clamp-3'>
+                                            {extractTextBetweenTags(post.body)}
+                                        </p>
                                     </h3>
-                                    {/* <p className="mt-5 text-sm leading-6 text-gray-600 line-clamp-3">{post.title}</p> */}
+                                    <p className="ml-20 mt-5  text-sm leading-6 text-gray-600 line-clamp-3">{"<<קרא עוד"}</p>
                                 </div>
                                 <div className="relative flex items-center mt-8 gap-x-4">
-                                    {/* <img src={post.author.imageUrl} alt="" className="w-10 h-10 rounded-full bg-gray-50" /> */}
-                                    <div className="text-sm leading-6">
-                                        <p className="font-semibold text-gray-900">
-                                            {/* <a href={post.author.href}>
-                                           <span className="absolute inset-0" />
-                                           {post.author.name}
-                                        </a> */}
-                                        </p>
-                                        {/* <p className="text-gray-600">{post.author.role}</p> */}
-                                    </div>
                                 {adminMode &&  <> <button
                                         type="button"
                                         className="flex items-center justify-center w-8 h-8 bg-gray-200 rounded-full hover:bg-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500"
@@ -193,7 +209,7 @@ export default function AllPosts({userId, adminMode}) {
     //             method: 'DELETE',
     //             headers: {
     //                 'Content-Type': 'application/json',
-    //                 // 'auth': localStorage.getItem('auth') || '',
+    //                
     //                 'authorization': localStorage.getItem('Authorization') || ''
     //             },
     //         });
@@ -203,7 +219,7 @@ export default function AllPosts({userId, adminMode}) {
     //         }
     //         // alert(`Post ${item.id} deleted`) 
     //         setOriginalData(prevOriginalData => prevOriginalData.filter(obj => obj.id !== item.id));
-    //         //   setMessage(`Post ${item.id} deleted`) 
+    //         
     //         alert(`Post ${item.id} deleted`)
     //         navigate(`/home`)
     //     }
