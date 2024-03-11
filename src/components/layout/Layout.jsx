@@ -19,6 +19,7 @@ const Layout = () => {
       try {
         const response = await axios.get(`https://www.hebcal.com/hebcal?cfg=json&s=on&start=${getCurrentDate()}&end=${getNextWeekDate()}`)
         const parasha = getParasha(response.data)
+        console.log(parasha);
         setParasha(parasha)
       } catch (error) {
         console.error('Error fetching data:', error);

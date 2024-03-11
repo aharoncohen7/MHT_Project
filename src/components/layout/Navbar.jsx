@@ -1,4 +1,4 @@
-import { Fragment, useContext } from 'react'
+import { Fragment, useContext, useState } from 'react'
 import DataContext from '../../contexts';
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
@@ -6,19 +6,31 @@ import Switch from '@mui/material/Switch';
 
 
 export default function Navbar({ parasha }) {
-    const { userName,logOut, isAdmin, adminMode, setAdminMode, navigate,  } = useContext(DataContext)
+    const { userName, logOut, isAdmin, adminMode, setAdminMode, navigate, } = useContext(DataContext)
 
-    const navigation = [
-        { name: `על ${parasha}`, href: `home/`, current: true },
-        { name: "הכל", href: 'home/?parasha=all', current: false },
-        { name: 'הוספת מאמר', href: '/addition', current: false },
-        { name: 'אודות', href: '/about', current: false },
-    ]
+
+   
+
+    const [navigation, setNavigation] = useState([
+        { id: 0, name: parasha || "פרשת השבוע", href: `home/`, current: true },
+        { id: 1, name: "כל הפרשיות", href: 'home/?parasha=all', current: false },
+        { id: 2, name: 'הוספת מאמר', href: '/addition', current: false },
+        { id: 3, name: 'אודות', href: '/about', current: false }
+    ])
 
 
     function classNames(...classes) {
         return classes.filter(Boolean).join(' ')
     }
+
+
+    const handleNavigationClick = (index) => {
+        const updatedNavigation = navigation.map((item, i) => ({
+            ...item,
+            current: i === index
+        }));
+        setNavigation(updatedNavigation);
+    };
 
 
 
@@ -44,21 +56,21 @@ export default function Navbar({ parasha }) {
                                 </Disclosure.Button>
                             </div>
 
-                            <div className="flex items-center justify-center flex-1 sm:items-stretch sm:justify-start">
+                            <div className="hidden sm:ml-6 sm:flex items-center justify-center flex-1 sm:items-stretch sm:justify-start">
                                 <div className="flex items-center flex-shrink-0">
                                     <img
-                                        className="w-auto h-10"
-                                        src="http://www.uploads.co.il/uploads/images/29333571.png"
-                                        alt="לוגו"
+                                        className="w-auto h-14 "
+                                        src="http://www.uploads.co.il/uploads/images/106030801.png"
+                                        alt="logo"
                                     />
                                 </div>
                                 <div className="hidden sm:ml-6 sm:block">
-                                    <div className="flex space-x-4">
+                                    <div className="flex space-x-4 text-center">
                                         {navigation.map((item) => (
                                             <a
                                                 key={item.name}
                                                 // href={item.href}
-                                                onClick={() => { navigate(item.href) }}
+                                                onClick={() => { handleNavigationClick(item.id); navigate(item.href) }}
                                                 className={classNames(
                                                     item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                                                     'rounded-md px-3 py-2 text-sm font-medium'
@@ -73,7 +85,8 @@ export default function Navbar({ parasha }) {
                             </div>
 
                             <div className="min-w-0 flex-1">
-                                <h2 className="text-center  font-bold leading-7 text-white sm:truncate sm:text-2xl sm:tracking-right">{parasha}</h2>
+                                <h2 onClick={() => { navigate(navigation[0].href) }}
+                                    className="text-center  font-bold leading-7 text-white sm:truncate sm:text-2xl sm:tracking-right">{`וורטלי - ל${parasha}`}</h2>
 
                             </div>
 
@@ -87,16 +100,16 @@ export default function Navbar({ parasha }) {
                                     <BellIcon className="w-6 h-6" aria-hidden="true" />
                                 </button> */}
 
-    
-                         {!!isAdmin &&  <span className="text-white hidden sm:ml-6 sm:block">{ adminMode ? "Admin mode" : "User mode"}
-                            <Switch
-                                className='hidden sm:ml-6 sm:block'
-                                checked={adminMode}
-                                onChange={() => setAdminMode(!adminMode)}
-                                name="loading"
-                                color="primary"
-                            />
-                            </span>}
+
+                                {!!isAdmin && <span className="text-white hidden sm:ml-6 sm:block">{adminMode ? "Admin mode" : "User mode"}
+                                    <Switch
+                                        className='hidden sm:ml-6 sm:block'
+                                        checked={adminMode}
+                                        onChange={() => setAdminMode(!adminMode)}
+                                        name="loading"
+                                        color="primary"
+                                    />
+                                </span>}
 
                                 {/* Profile dropdown */}
                                 <Menu as="div" className="relative ml-3">
