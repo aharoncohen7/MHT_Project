@@ -45,7 +45,12 @@ export default function Search({ setSortedList }) {
                 setSortedList(sortBy(filter).filter((elm) => elm.userId == authorId));
                 return
             }
-            setSortedList(sortBy(filter).filter((elm) => elm.subtopic != null && elm.subtopic == parasha.split(' ')[1]))
+            if(parasha) {
+                const parashaSubtopic = parasha.split(' ')[1];
+                setSortedList(sortBy(filter).filter(elm => elm.subtopic != null && elm.subtopic === parashaSubtopic));
+                return;
+            }
+            setSortedList(sortBy(filter));
         }
     }, [filteredData, filter, tag, authorId, subtopic])
 

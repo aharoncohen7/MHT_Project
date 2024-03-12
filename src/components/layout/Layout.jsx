@@ -7,6 +7,7 @@ import Navbar from "./Navbar";
 import { getCurrentDate, getNextWeekDate, getParasha } from '../../functions';
 import Cookies from "js-cookie";
 import Message from '../../components/Message'
+import ParashaNav from "./ParashaNav";
 
 
 const Layout = () => {
@@ -62,6 +63,9 @@ const Layout = () => {
     <span >
       <Navbar parasha={parasha} />
       <Content parasha={parasha} />
+      <div className="border-t mt-10 max-w-80 fixed top-0 left-40">
+        <ParashaNav />
+      </div>
       {message[0] &&
         <Message message={message} />}
     </span>

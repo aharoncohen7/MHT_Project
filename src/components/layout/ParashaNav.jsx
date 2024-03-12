@@ -30,7 +30,7 @@ export default function ParashaNav() {
           >
             <Typography >{chometName}</Typography>
           </AccordionSummary>
-          <AccordionDetails>
+          <AccordionDetails >
             {parshiot.map((parasha) => (
               <div onClick={() => navigate(`/home/?parasha=${parasha}`)} key={parasha}>
                 {parasha}
