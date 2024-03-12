@@ -37,7 +37,7 @@ function App() {
           setUserId(response.data.userId)
         } catch (error) {
           console.log(error.message, "שגיאה באימות טוקן");
-          alert(error.message, "שגיאה באימות טוקן")
+          setMessage([error.message +  " שגיאה באימות טוקן", false])
           logOut();
         }
       }
