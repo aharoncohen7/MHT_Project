@@ -5,13 +5,13 @@ import Cookies from "js-cookie";
 
 
 const CommentList = ({ postId, showComments, setMessage }) => {
-  const urlComments = `https://vortly.onrender.com/api/comments/${postId}`;
+  const urlComments = `https://vortly-db.onrender.com/api/comments/${postId}`;
   const [comments, setComments] = useState([]);
 
 
   function logOut(){
     localStorage.removeItem('Authorization');
-    window.location.href = "https://vortly.onrender.com/"
+    window.location.href = "https://vortly-db.onrender.com/"
  }
 
   // הוספת חדש
@@ -33,7 +33,7 @@ const CommentList = ({ postId, showComments, setMessage }) => {
       });
       if (result.value) {
         const { body } = result.value;
-        const response = await fetch('https://vortly.onrender.com/api/comments', {
+        const response = await fetch('https://vortly-db.onrender.com/api/comments', {
           method: 'POST',
           body: JSON.stringify({
             postId,
@@ -70,7 +70,7 @@ const CommentList = ({ postId, showComments, setMessage }) => {
 
   // מחיקה
   async function deleteComment(commentId, email) {
-    const response = await fetch(`https://vortly.onrender.com/api/comments/${commentId}`, {
+    const response = await fetch(`https://vortly-db.onrender.com/api/comments/${commentId}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',

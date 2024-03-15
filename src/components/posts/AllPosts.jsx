@@ -70,7 +70,7 @@ export default function AllPosts() {
       if (!result.value) { return }
 
       try {
-        const response = await fetch(`https://vortly.onrender.com/api/posts/${item.id}`, {
+        const response = await fetch(`https://vortly-db.onrender.com/api/posts/${item.id}`, {
             method: 'PATCH',
             body: JSON.stringify({
                 selectedBook: item.topic ,
@@ -208,7 +208,7 @@ export default function AllPosts() {
     // async function deletePost(item) {
     //     console.log(item);
     //     try {
-    //         let response = await fetch(`https://vortly.onrender.com/api/posts/${item.id}`, {
+    //         let response = await fetch(`https://vortly-db.onrender.com/api/posts/${item.id}`, {
     //             method: 'DELETE',
     //             headers: {
     //                 'Content-Type': 'application/json',

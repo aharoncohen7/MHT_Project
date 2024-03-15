@@ -34,7 +34,7 @@ const Layout = () => {
   useEffect(() => {
     async function checkToken() {
       try {
-        const response = await axios.post('https://vortly.onrender.com/api/login/isTokenExpired', {
+        const response = await axios.post('https://vortly-db.onrender.com/api/login/isTokenExpired', {
           token: localStorage.getItem("Authorization")
         }, {
           headers: {

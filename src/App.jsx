@@ -16,7 +16,7 @@ function App() {
   const [adminMode, setAdminMode] = useState(false)
   console.log("userId: ", userId, "userName: ", userName, "isAdmin: ", isAdmin, "adminMode: ", adminMode);
   const navigate = useNavigate();
-  // https://vortly.onrender.com
+  // https://vortly-db.onrender.com
 
 
 
@@ -25,7 +25,7 @@ function App() {
     async function checkToken() {
       if (localStorage.getItem('Authorization')) {
         try {
-          const response = await axios.post('https://vortly.onrender.com/api/login/checkToken', {}, {
+          const response = await axios.post('https://vortly-db.onrender.com/api/login/checkToken', {}, {
             headers: {
               'Content-Type': 'application/json',
               'Authorization': localStorage.getItem('Authorization')
@@ -51,7 +51,7 @@ function App() {
   // זריקה החוצה
   function logOut() {
     localStorage.removeItem('Authorization');
-    window.location.href = "https://vortly.onrender.com/"
+    window.location.href = "https://vortly-db.onrender.com/"
   }
 
   // // איפוס הודעות מערכת

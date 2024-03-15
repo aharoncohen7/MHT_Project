@@ -3,7 +3,7 @@
 //פוסט חדש
 export async function addNewPost2(userId, selectedBook, selectedPortion, title, body, tags, setOriginalData, setMessage, setSend, setShowEditor, logOut, navigate) {
   try {
-    const response = await fetch('https://vortly.onrender.com/api/posts', {
+    const response = await fetch('https://vortly-db.onrender.com/api/posts', {
       method: 'POST',
       body: JSON.stringify({
         selectedBook,
@@ -52,7 +52,7 @@ export async function addNewPost2(userId, selectedBook, selectedPortion, title, 
 // עריכה
 export async function editPost2(postId, selectedBook, selectedPortion, title, body, tags, setOriginalData, setMessage, setSend, setShowEditor, logOut, navigate) {
   try {
-    const response = await fetch(`https://vortly.onrender.com/api/posts/${postId}`, {
+    const response = await fetch(`https://vortly-db.onrender.com/api/posts/${postId}`, {
       method: 'PATCH',
       body: JSON.stringify({
         selectedBook,
@@ -92,7 +92,7 @@ export async function editPost2(postId, selectedBook, selectedPortion, title, bo
     setSend(false)
     setShowEditor(false)
     navigate(`/post/${postId}`)
-    window.location.href = `https://vortly.onrender.com/post/${postId}`
+    window.location.href = `https://vortly-db.onrender.com/post/${postId}`
 
   }
   catch (error) {
@@ -105,7 +105,7 @@ export async function editPost2(postId, selectedBook, selectedPortion, title, bo
 export async function deletePost2(item, setOriginalData, setMessage, logOut, navigate) {
   // console.log(item);
   try {
-    let response = await fetch(`https://vortly.onrender.com/api/posts/${item.id}`, {
+    let response = await fetch(`https://vortly-db.onrender.com/api/posts/${item.id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
