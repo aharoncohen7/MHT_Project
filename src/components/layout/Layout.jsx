@@ -63,7 +63,7 @@ const Layout = () => {
     <span >
       <Navbar parasha={parasha} />
       <Content parasha={parasha} />
-      <div className="border-t mt-10 max-w-80 fixed top-0 left-40">
+      <div className="hidden md:fixed border-t mt-10 max-w-80 top-0 left-40">
         <ParashaNav />
       </div>
       {message[0] &&

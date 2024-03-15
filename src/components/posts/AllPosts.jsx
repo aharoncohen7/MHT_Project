@@ -48,7 +48,7 @@ export default function AllPosts() {
 
        //עריכה 
     async function adminEdit(item) {
-         item.tags
+        //  item.tags
         const oldTitle = item.title;
         const oldBody = item.body;
         const result = await Swal.fire({
@@ -126,7 +126,7 @@ export default function AllPosts() {
                     {!showEditor && <button className= "z-20 fixed bottom-6 sm:bottom-14 left-6 sm:left-14 bg-gray-700 rounded-full text-gray-700 hover:bg-gray-900 hover:text-gray h-14 sm:h-20 w-14 sm:w-20 px-4 sm:px-5 text-sm font-medium" onClick={() => setShowEditor(true)} > <FiFeather className="text-white size-6 sm:size-10 ml-0" /> </button>}
                    
                     {message && <p style={{ color: 'red' }}>{message}</p>}
-                    <div className="mb-20 grid max-w-2xl grid-cols-1 pt-10 mx-auto border-t border-gray-200 gap-x-8 gap-y-16 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3  ">
+                    <div className="mb-20 grid max-w-2xl grid-cols-1 pt-10 mx-auto border-t border-gray-200 gap-x-8 gap-y-16 sm:mt-36 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3  ">
                         {sortedList.map((post) => (
                             <article  key={post.id} className="bg-white flex flex-col items-center justify-between max-w-xl hover:bg-gray-100 border border-gray-300 shadow-md truncate rounded-md">
                                 <div className="flex items-center text-xs gap-x-4">
