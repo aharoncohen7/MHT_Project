@@ -207,7 +207,7 @@ export default function Editor({ send, setSend, setComplete, setShowEditor, init
 // עריכה
 // async function editPost() {
 //     try {
-//         const response = await fetch(`http://localhost:4002/api/posts/${postId}`, {
+//         const response = await fetch(`https://vortly.onrender.com/api/posts/${postId}`, {
 //             method: 'PATCH',
 //             body: JSON.stringify({
 //                 selectedBook,
@@ -247,7 +247,7 @@ export default function Editor({ send, setSend, setComplete, setShowEditor, init
 //         setSend(false)
 //         setShowEditor(false)
 //         // navigate(`/post/${postId}`)
-//         window.location.href = `http://localhost:5173/post/${postId}`
+//         window.location.href = `https://vortly.onrender.com/post/${postId}`
 
 //     }
 //     catch (error) {
@@ -261,7 +261,7 @@ export default function Editor({ send, setSend, setComplete, setShowEditor, init
 // // אם לא נמצא, בקשת הט מהשרת
 // useEffect(() => {
 //     if (originalData.length == 0) {
-//         axios.get('http://localhost:4002/api/posts/' + postId, {
+//         axios.get('https://vortly.onrender.com/api/posts/' + postId, {
 //             headers: {
 //                
 //                 'authorization': localStorage.getItem('Authorization') || ''
@@ -293,7 +293,7 @@ export default function Editor({ send, setSend, setComplete, setShowEditor, init
 
 //   async function handleSave() {
 //     try {
-//         const response = await fetch(`http://localhost:4002/api/posts/${oldPost.id}`, {
+//         const response = await fetch(`https://vortly.onrender.com/api/posts/${oldPost.id}`, {
 //             method: 'PATCH',
 //             body: JSON.stringify({
 //                 title: result.value.title,

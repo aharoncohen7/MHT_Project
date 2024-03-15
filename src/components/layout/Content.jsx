@@ -22,7 +22,7 @@ const Content = ({ parasha }) => {
   useEffect(() => {
     const getAllPosts = async () => {
       try {
-        const urlPosts = "http://localhost:4002/api/posts/";
+        const urlPosts = "https://vortly.onrender.com/api/posts/";
         const requestOptions = {
           method: 'GET',
           headers: {

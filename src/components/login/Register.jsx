@@ -75,7 +75,7 @@ export default function Register({ setIsNew }) {
   //Registration 
   const handleRegister = async () => {
     try {
-      const response = await fetch('http://localhost:4002/api/registration', {
+      const response = await fetch('https://vortly.onrender.com/api/registration', {
         method: 'POST',
         body: JSON.stringify(formData),
         headers: {
@@ -93,7 +93,7 @@ export default function Register({ setIsNew }) {
         console.log(user);
         if (user) {
           setMessage(['משתמש נרשם בהצלחה, נא להכנס', true]);
-          window.location.href = "http://localhost:5173/home"
+          window.location.href = "https://vortly.onrender.com/home"
         }
         else {
           console.log("try > else");
@@ -222,7 +222,7 @@ export default function Register({ setIsNew }) {
               </Link> */}
               <Link
                 onClick={() => { setIsNew(true) }}
-                //  href="http://localhost:5173/home"
+                //  href="https://vortly.onrender.com/home"
                 variant="body2">
                 כבר יש לך חשבון ? הכנס
               </Link>
@@ -241,7 +241,7 @@ export default function Register({ setIsNew }) {
 //   return (
 //     <Typography variant="body2" color="text.secondary" align="center" {...props}>
 //       {' © '}
-//       <Link color="inherit" href="http://localhost:5173/">
+//       <Link color="inherit" href="https://vortly.onrender.com/">
 //         Chi.Dot
 //       </Link>{' '}
 //       {new Date().getFullYear()}

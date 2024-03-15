@@ -14,7 +14,7 @@ export default function MyRating({ item }) {
             const newRating = event.target.value;
             console.log(newRating);
             try {
-                const response = await fetch(`http://localhost:4002/api/posts/rating/${item.id}`, {
+                const response = await fetch(`https://vortly.onrender.com/api/posts/rating/${item.id}`, {
                     method: 'PATCH',
                     body: JSON.stringify({
                         newRating,

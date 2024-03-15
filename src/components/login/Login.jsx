@@ -35,7 +35,7 @@ export default function Login({ setIsNew }) {
       password
     };
     try {
-      const response = await fetch('http://localhost:4002/api/login', {
+      const response = await fetch('https://vortly.onrender.com/api/login', {
         method: 'POST',
         body: JSON.stringify(requestData),
         headers: {
