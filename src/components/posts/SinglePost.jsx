@@ -7,7 +7,7 @@ import TagList from './TagList';
 import ParashaNav from '../layout/ParashaNav';
 import Cookies from "js-cookie";
 import DataContext2 from '../../contexts/index2';
-import { deletePost2 } from "../../functions/postFunctions"
+import { deletePost } from "../../functions/postFunctions"
 
 
 
@@ -33,7 +33,7 @@ export default function SinglePost() {
 
 // מחיקה
   function importedDelete() {
-    deletePost2(item, setOriginalData, setMessage, logOut, navigate)
+    deletePost(item, setOriginalData, setMessage, logOut, navigate)
 }
 
 
@@ -118,7 +118,7 @@ export default function SinglePost() {
                 {/* כפתורי עריכה */}
                 <div className="EditButtons">
                   <label htmlFor="edit-delete">
-                    <Button variant="contained" onClick={() => navigate(`/home/`)}>חזור</Button>
+                    <Button variant="contained" onClick={() => navigate(`/`)}>חזור</Button>
                     {message && <p style={{ color: 'red' }}>{message}</p>}
                     {adminMode &&
                     <>
@@ -184,7 +184,7 @@ export default function SinglePost() {
   //     setOriginalData(prevOriginalData => prevOriginalData.filter(obj => obj.id !== item.id));
   //     setMessage([`Post ${item.id} deleted`, true])
   //     alert(`Post ${item.id} deleted`)
-  //     navigate(`/home`)
+  //     navigate(`/`)
   //   }
   //   catch (error) {
   //     alert(`Post ${item.id} not deleted`)

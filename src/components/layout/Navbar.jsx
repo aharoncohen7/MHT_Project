@@ -12,7 +12,7 @@ export default function Navbar({ parasha }) {
    
 
     const [navigation, setNavigation] = useState([
-        { id: 0, name: parasha || "פרשת השבוע", href: `home/`, current: true },
+        { id: 0, name: parasha || "פרשת השבוע", href: `/`, current: true },
         { id: 1, name: "כל הפרשיות", href: 'home/?parasha=all', current: false },
         { id: 2, name: 'הוספת מאמר', href: '/addition', current: false },
         { id: 3, name: 'אודות', href: '/about', current: false }

@@ -58,13 +58,14 @@ const Content = ({ parasha }) => {
   return (
     <DataContext2.Provider value={{ originalData, setOriginalData, filteredData, setFilteredData, parasha }}>
       <Routes>
+        <Route path="/" element={<AllPosts />} />
         <Route path="home/*" element={<AllPosts />} />
         <Route path="post/:postId" element={<SinglePost />} />
         <Route path="edit/:postId" element={< Edit />} />
         <Route path="addition" element={<Addition />} />
         <Route path="about" element={<AboutUs />} />
         <Route path="login" element={<SignIn />} />
-        <Route path='/*' element={<NotFound />} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
     </DataContext2.Provider>
 

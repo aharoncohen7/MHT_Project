@@ -8,7 +8,7 @@ import Swal from 'sweetalert2';
 import ParashaNav from '../layout/ParashaNav';
 import { FiFeather } from 'react-icons/fi';
 import { FiTrash2 } from "react-icons/fi";
-import { deletePost2 } from "../../functions/postFunctions"
+import { deletePost } from "../../functions/postFunctions"
 import Cookies from "js-cookie";
 
 
@@ -29,7 +29,7 @@ export default function AllPosts() {
     
 
     function importedDelete(item) {
-        deletePost2(item, setOriginalData, setMessage, logOut, navigate)
+        deletePost(item, setOriginalData, setMessage, logOut, navigate)
     }
 
 
@@ -224,7 +224,7 @@ export default function AllPosts() {
     //         setOriginalData(prevOriginalData => prevOriginalData.filter(obj => obj.id !== item.id));
     //         
     //         alert(`Post ${item.id} deleted`)
-    //         navigate(`/home`)
+    //         navigate(`/`)
     //     }
     //     catch (error) {
     //         alert(`Post ${item.id} not deleted`)

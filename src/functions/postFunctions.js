@@ -1,7 +1,7 @@
 
 
 //פוסט חדש
-export async function addNewPost2(userId, selectedBook, selectedPortion, title, body, tags, setOriginalData, setMessage, setSend, setShowEditor, logOut, navigate) {
+export async function addNewPost(userId, selectedBook, selectedPortion, title, body, tags, setOriginalData, setMessage, setSend, setShowEditor, logOut, navigate) {
   try {
     const response = await fetch('https://vortly-db.onrender.com/api/posts', {
       method: 'POST',
@@ -50,7 +50,7 @@ export async function addNewPost2(userId, selectedBook, selectedPortion, title, 
 
 
 // עריכה
-export async function editPost2(postId, selectedBook, selectedPortion, title, body, tags, setOriginalData, setMessage, setSend, setShowEditor, logOut, navigate) {
+export async function editPost(postId, selectedBook, selectedPortion, title, body, tags, setOriginalData, setMessage, setSend, setShowEditor, logOut, navigate) {
   try {
     const response = await fetch(`https://vortly-db.onrender.com/api/posts/${postId}`, {
       method: 'PATCH',
@@ -102,7 +102,7 @@ export async function editPost2(postId, selectedBook, selectedPortion, title, bo
 
 
 // מחיקה
-export async function deletePost2(item, setOriginalData, setMessage, logOut, navigate) {
+export async function deletePost(item, setOriginalData, setMessage, logOut, navigate) {
   // console.log(item);
   try {
     let response = await fetch(`https://vortly-db.onrender.com/api/posts/${item.id}`, {
@@ -120,7 +120,7 @@ export async function deletePost2(item, setOriginalData, setMessage, logOut, nav
     setOriginalData(prevOriginalData => prevOriginalData.filter(obj => obj.id !== item.id));
     setMessage([`Post ${item.id} deleted`, true])
     // alert(`Post ${item.id} deleted`)
-    navigate(`/home`)
+    navigate(`/`)
   }
   catch (error) {
     setMessage([`Post ${item.id} not deleted`, false])

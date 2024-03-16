@@ -42,7 +42,7 @@ export default function Addition() {
             </p>
 
             <div className="flex justify-center mt-8">
-              <button className="px-10 py-2 font-bold text-white bg-blue-500 border rounded hover:bg-blue-700" onClick={() => navigate("/home")}>
+              <button className="px-10 py-2 font-bold text-white bg-blue-500 border rounded hover:bg-blue-700" onClick={() => navigate("/")}>
                 סיום
               </button>
               <button className="px-10 py-2 font-bold text-white bg-blue-500 border rounded hover:bg-blue-700" onClick={() => setShowEditor(true)}>

@@ -5,8 +5,8 @@ import 'react-quill/dist/quill.snow.css';
 import Select from './Select'
 import DataContext from '../../contexts';
 import DataContext2 from '../../contexts/index2';
-import { editPost2 } from "../../functions/postFunctions"
-import { addNewPost2 } from "../../functions/postFunctions"
+import { editPost } from "../../functions/postFunctions"
+import { addNewPost } from "../../functions/postFunctions"
 import { error } from 'pdf-lib'
 import axios from 'axios'
 import Button from '@mui/material/Button';
@@ -45,7 +45,7 @@ export default function Editor({ send, setSend, setComplete, setShowEditor, init
                     }
                 }
                 else {
-                    navigate(`/home`)
+                    navigate(`/`)
                 }
             }
         }
@@ -128,10 +128,10 @@ export default function Editor({ send, setSend, setComplete, setShowEditor, init
 
     function importedEdit() {
         if(postId){
-            editPost2(postId, selectedBook, selectedPortion, title, body, tags, setOriginalData,  setMessage, setSend, setShowEditor, logOut, navigate)
+            editPost(postId, selectedBook, selectedPortion, title, body, tags, setOriginalData,  setMessage, setSend, setShowEditor, logOut, navigate)
         }
         else{
-            addNewPost2(userId, selectedBook, selectedPortion, title, body, tags, setOriginalData, setMessage, setSend, setShowEditor, logOut, navigate)
+            addNewPost(userId, selectedBook, selectedPortion, title, body, tags, setOriginalData, setMessage, setSend, setShowEditor, logOut, navigate)
         }
                         
     }

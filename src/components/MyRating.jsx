@@ -40,7 +40,6 @@ export default function MyRating({ item }) {
                     // throw new Error(`Failed to update rating! Status: ${response.status}`);
                 }
                 const editedPost = await response.json();
-                setMessage(["דירוג בוצע בהצלחה", true])
                 setOriginalData(prevOriginalData => {
                     const updatedOriginalData = [...prevOriginalData].map(obj => {
                         if (obj.id === item.id) {
@@ -50,7 +49,7 @@ export default function MyRating({ item }) {
                     });
                     return updatedOriginalData;
                 });
-            
+                setMessage(["דירוג בוצע בהצלחה", true])
             }
             catch (error) {
                 setMessage(["שגיאה" + error.message, false]);

@@ -52,7 +52,7 @@ export default function Login({ setIsNew }) {
           setIsAdmin(user.isAdmin)
           localStorage.setItem("Authorization", user.token)
           Cookies.set("Authorization", user.token)
-          navigate(`/home`);
+          navigate(`/`);
         }
       }
       else {

@@ -93,7 +93,7 @@ export default function Register({ setIsNew }) {
         console.log(user);
         if (user) {
           setMessage(['משתמש נרשם בהצלחה, נא להכנס', true]);
-          window.location.href = "https://vortly.onrender.com/home"
+          window.location.href = "https://vortly.onrender.com/"
         }
         else {
           console.log("try > else");
@@ -222,7 +222,7 @@ export default function Register({ setIsNew }) {
               </Link> */}
               <Link
                 onClick={() => { setIsNew(true) }}
-                //  href="https://vortly.onrender.com/home"
+                //  href="https://vortly.onrender.com/"
                 variant="body2">
                 כבר יש לך חשבון ? הכנס
               </Link>
