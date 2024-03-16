@@ -92,7 +92,7 @@ export async function editPost2(postId, selectedBook, selectedPortion, title, bo
     setSend(false)
     setShowEditor(false)
     navigate(`/post/${postId}`)
-    window.location.href = `https://vortly-db.onrender.com/post/${postId}`
+    window.location.href = `https://vortly.onrender.com/post/${postId}`
 
   }
   catch (error) {

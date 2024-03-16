@@ -11,7 +11,7 @@ const CommentList = ({ postId, showComments, setMessage }) => {
 
   function logOut(){
     localStorage.removeItem('Authorization');
-    window.location.href = "https://vortly-db.onrender.com/"
+    window.location.href = "https://vortly.onrender.com/"
  }
 
   // הוספת חדש

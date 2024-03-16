@@ -16,10 +16,7 @@ function App() {
   const [adminMode, setAdminMode] = useState(false)
   console.log("userId: ", userId, "userName: ", userName, "isAdmin: ", isAdmin, "adminMode: ", adminMode);
   const navigate = useNavigate();
-  // https://vortly-db.onrender.com
-
-
-
+ 
   // בדיקת טוקן
   useEffect(() => {
     async function checkToken() {
@@ -51,7 +48,7 @@ function App() {
   // זריקה החוצה
   function logOut() {
     localStorage.removeItem('Authorization');
-    window.location.href = "https://vortly-db.onrender.com/"
+    window.location.href = "https://vortly.onrender.com/"
   }
 
   // // איפוס הודעות מערכת

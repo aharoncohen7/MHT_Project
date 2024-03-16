@@ -93,7 +93,7 @@ export default function Register({ setIsNew }) {
         console.log(user);
         if (user) {
           setMessage(['משתמש נרשם בהצלחה, נא להכנס', true]);
-          window.location.href = "https://vortly-db.onrender.com/home"
+          window.location.href = "https://vortly.onrender.com/home"
         }
         else {
           console.log("try > else");
@@ -222,7 +222,7 @@ export default function Register({ setIsNew }) {
               </Link> */}
               <Link
                 onClick={() => { setIsNew(true) }}
-                //  href="https://vortly-db.onrender.com/home"
+                //  href="https://vortly.onrender.com/home"
                 variant="body2">
                 כבר יש לך חשבון ? הכנס
               </Link>
@@ -241,7 +241,7 @@ export default function Register({ setIsNew }) {
 //   return (
 //     <Typography variant="body2" color="text.secondary" align="center" {...props}>
 //       {' © '}
-//       <Link color="inherit" href="https://vortly-db.onrender.com/">
+//       <Link color="inherit" href="https://vortly.onrender.com/">
 //         Chi.Dot
 //       </Link>{' '}
 //       {new Date().getFullYear()}

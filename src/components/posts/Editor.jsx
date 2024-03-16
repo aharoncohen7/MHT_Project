@@ -247,7 +247,7 @@ export default function Editor({ send, setSend, setComplete, setShowEditor, init
 //         setSend(false)
 //         setShowEditor(false)
 //         // navigate(`/post/${postId}`)
-//         window.location.href = `https://vortly-db.onrender.com/post/${postId}`
+//         window.location.href = `https://vortly.onrender.com/post/${postId}`
 
 //     }
 //     catch (error) {
