@@ -5,8 +5,7 @@ import 'react-quill/dist/quill.snow.css';
 import Select from './Select'
 import DataContext from '../../contexts';
 import DataContext2 from '../../contexts/index2';
-import { editPost } from "../../functions/postFunctions"
-import { addNewPost } from "../../functions/postFunctions"
+import { importedAddNew, importedEdit } from "../../functions/postFunctions"
 import { error } from 'pdf-lib'
 import axios from 'axios'
 import Button from '@mui/material/Button';
@@ -19,8 +18,8 @@ export default function Editor({ send, setSend, setComplete, setShowEditor, init
     const { postId } = useParams()
     const {  logOut, userId, setMessage, message, navigate } = useContext(DataContext)
     const { originalData, setOriginalData } = useContext(DataContext2)
-    const [selectedBook, setSelectedBook] = useState(initialPost && initialPost.topic ? initialPost.topic : undefined);
-    const [selectedPortion, setSelectedPortion] = useState(initialPost && initialPost.subtopic ? initialPost.subtopic : undefined);
+    const [selectedBook, setSelectedBook] = useState(initialPost && initialPost.topic ? initialPost.topic : "");
+    const [selectedPortion, setSelectedPortion] = useState(initialPost && initialPost.subtopic ? initialPost.subtopic : "");
     const [title, setTitle] = useState(initialPost ? initialPost.title : '');
     const [body, setBody] = useState(initialPost ? initialPost.body : '');
     const [tags, setTags] = useState(initialPost && initialPost.tags ? initialPost.tags : [])
@@ -31,7 +30,7 @@ export default function Editor({ send, setSend, setComplete, setShowEditor, init
     useEffect(() => {
         async function findPost() {
             if (postId) {
-                // console.log("Fetching data...");
+                console.log("Fetching data...");
                 const postToEdit = originalData.find(post => post.id == postId);
                 // console.log(postToEdit);
                 if (postToEdit) {
@@ -65,13 +64,15 @@ export default function Editor({ send, setSend, setComplete, setShowEditor, init
     // יצירת פוסט בפועל
     useEffect(() => {
         if (send) {
-            importedEdit();
+            sendPost();
             setShowEditor(false)
+            quill.history.clear();
         }
     }, [send]);
 
     // מטפל תוכן מאמר
     const handleContentChange = (newBody) => {
+        console.log(newBody);
         setBody(newBody);
     };
 
@@ -126,12 +127,12 @@ export default function Editor({ send, setSend, setComplete, setShowEditor, init
 
 
 
-    function importedEdit() {
+    function sendPost() {
         if(postId){
-            editPost(postId, selectedBook, selectedPortion, title, body, tags, setOriginalData,  setMessage, setSend, setShowEditor, logOut, navigate)
+            importedEdit(postId, selectedBook, selectedPortion, title, body, tags, setOriginalData,  setMessage, setSend, setShowEditor, logOut, navigate)
         }
         else{
-            addNewPost(userId, selectedBook, selectedPortion, title, body, tags, setOriginalData, setMessage, setSend, setShowEditor, logOut, navigate)
+            importedAddNew(userId, selectedBook, selectedPortion, title, body, tags, setOriginalData, setMessage, setSend, setShowEditor, logOut, navigate)
         }
                         
     }
@@ -183,137 +184,3 @@ export default function Editor({ send, setSend, setComplete, setShowEditor, init
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// עריכה
-// async function editPost() {
-//     try {
-//         const response = await fetch(`https://vortly-db.onrender.com/api/posts/${postId}`, {
-//             method: 'PATCH',
-//             body: JSON.stringify({
-//                 selectedBook,
-//                 selectedPortion,
-//                 title,
-//                 body,
-//                 ...(tags.length > 0 && { tags }),
-//             }),
-//             headers: {
-//                 'Content-type': 'application/json; charset=UTF-8',
-//                
-//                 'authorization': localStorage.getItem('Authorization') || ''
-//             },
-//         });
-//         console.log(response);
-//         if (response.status === 400 || response.status === 404) {
-//             console.log("400/404");
-//             const errorMessage = await response.text();
-//             console.log('Post not updated' + errorMessage);
-//             setMessage(['Post not updated ' + errorMessage, false]);
-//             alert('Post not updated ' + errorMessage)
-//             setSend(false)
-//             setShowEditor(false)
-//             if (response.status == 401) {
-//                 logOut()
-//             }
-//             // navigate(`/post/${postId}`)
-//             alert('Post not updated')
-//             throw new Error(`Failed to update post! Status: ${response.status}`);
-
-//         }
-//         const newPost = await response.json();
-//         console.log(newPost);
-//         setOriginalData(prevOriginalData => [...prevOriginalData, newPost]);
-//         setMessage(['Post updated successfully', true]);
-//         alert('Post updated successfully')
-//         setSend(false)
-//         setShowEditor(false)
-//         // navigate(`/post/${postId}`)
-//         window.location.href = `https://vortly.onrender.com/post/${postId}`
-
-//     }
-//     catch (error) {
-//         console.error(error.message);
-//     }
-// }
-
-
-
-
-// // אם לא נמצא, בקשת הט מהשרת
-// useEffect(() => {
-//     if (originalData.length == 0) {
-//         axios.get('https://vortly-db.onrender.com/api/posts/' + postId, {
-//             headers: {
-//                
-//                 'authorization': localStorage.getItem('Authorization') || ''
-//             }
-//         })
-//             .then(response => {
-//                 console.log(response);
-//                 if (response.data.length == 0) {
-//                     navigate(`/notfound`)
-//                 }
-//                 // setOldPost(response.data);
-//                 setSelectedBook(response.data.topic)
-//                 setSelectedPortion(response.data.subtopic)
-//                 setTitle(response.data.title)
-//                 setBody(response.data.body)
-//                 // setTags(response.data)
-//             })
-//             .catch(error => {
-
-//                 console.error('Error fetching data:', error);
-//                 navigate(`/notfound`)
-//             });
-//     }
-
-// }, []);
-
-
-
-
-//   async function handleSave() {
-//     try {
-//         const response = await fetch(`https://vortly-db.onrender.com/api/posts/${oldPost.id}`, {
-//             method: 'PATCH',
-//             body: JSON.stringify({
-//                 title: result.value.title,
-//                 body: result.value.body
-//             }),
-//             headers: {
-//                 'Content-type': 'application/json; charset=UTF-8',
-//                 'auth': localStorage.getItem('auth') || '',
-//                 'authorization': localStorage.getItem('Authorization') || ''
-//             },
-//         })
-//         if (!response.ok) {
-//             setMessage(["Failed to edit post"' false])
-//             throw new Error(`Failed to edit post! Status: ${response.status}`);
-//         }
-
-
-
-//     }
-//     catch (error) {
-//         console.error(error.message);
-//     }
-// }

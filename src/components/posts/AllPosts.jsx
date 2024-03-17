@@ -8,7 +8,7 @@ import Swal from 'sweetalert2';
 import ParashaNav from '../layout/ParashaNav';
 import { FiFeather } from 'react-icons/fi';
 import { FiTrash2 } from "react-icons/fi";
-import { deletePost } from "../../functions/postFunctions"
+import { importedDelete, importedAdminEdit} from "../../functions/postFunctions"
 import Cookies from "js-cookie";
 import ErrorBoundary from '../ErrorBoundary';
 
@@ -21,18 +21,23 @@ function formatDate(dateString) {
 
 
 
-export default function AllPosts() {
+
+export default function AllPosts({setOriginalData}) {
     const {userId, adminMode, setMessage, message,logOut, navigate} = useContext(DataContext)
-    const {setOriginalData} = useContext(DataContext2)
+    // const {setOriginalData} = useContext(DataContext2)
     const [showEditor, setShowEditor] = useState(false);
     const [sortedList, setSortedList] = useState([]);
     
     
 
-    function importedDelete(item) {
-        deletePost(item, setOriginalData, setMessage, logOut, navigate)
+    function deletePost(item) {
+        importedDelete(item, setOriginalData, setMessage, logOut, navigate)
     }
+    
 
+    function adminEdit(item) {
+        importedAdminEdit(item, setOriginalData, setMessage, logOut, navigate)
+    }
 
     function extractTextBetweenTags(html) {
         const regex = /<[^>]+>([^<]*)<\/[^>]+>/g; // פסקלות רגולריות לזיהוי תגיות HTML
@@ -47,72 +52,9 @@ export default function AllPosts() {
     
     
 
-       //עריכה 
-    async function adminEdit(item) {
-        //  item.tags
-        const oldTitle = item.title;
-        const oldBody = item.body;
-        const result = await Swal.fire({
-        title: 'ערוך פוסט',
-        html: '<textarea id="title" style="background-color: rgba(172, 192, 389, 0.74); width: 350px; text-align: center;" class="swal2-input" placeholder="ערוך כותרת (עד 20 תווים)">' + oldTitle + '</textarea>' +
-          '<textarea id="body" style="height: 300px; background-color: rgba(172, 592, 189, 0.74); width: 350px; text-align: center;" class="swal2-input" placeholder=" ערוך פוסט (עד 40 תווים)">' + oldBody + '</textarea>',
-        showCancelButton: true,
-        confirmButtonText: 'אישור',
-        cancelButtonText: 'ביטול',
-        preConfirm: () => {
-          const title = document.getElementById('title').value;
-          const body = document.getElementById('body').value;
-          if (!title || !body) {
-            Swal.showValidationMessage('אנא מלא את כל השדות');
-          }
-          return { title, body };
-        }
-      });
-      if (!result.value) { return }
-
-      try {
-        const response = await fetch(`https://vortly-db.onrender.com/api/posts/${item.id}`, {
-            method: 'PATCH',
-            body: JSON.stringify({
-                selectedBook: item.topic ,
-                selectedPortion: item.subtopic,
-                title: result.value.title,
-                body: result.value.body,
-                tags: [],
-            }),
-            headers: {
-                'Content-type': 'application/json; charset=UTF-8',
-               
-                'authorization': localStorage.getItem('Authorization') || ''
-            },
-        });
-        // console.log(response);
-        if (response.status === 400 || response.status === 404) {
-            console.log("400/404");
-            const errorMessage = await response.text();
-            console.log('Post not updated' + errorMessage);
-            setMessage(['Post not updated ' + errorMessage, false])
-            if (response.status == 401) {
-                logOut()
-            }
-            throw new Error(`Failed to update post! Status: ${response.status}`);
-        }
-        const newPost = await response.json();
-        // console.log(newPost);
-        setOriginalData(prevOriginalData => prevOriginalData.filter(obj => obj.id !== item.id));
-        setOriginalData(prevOriginalData => [...prevOriginalData, newPost]);
-        setMessage(['Post updated successfully', true]);
-    }
-    catch (error) {
-        console.error(error.message);
-    }
-  }
-
-
-
     return (
         <ErrorBoundary>
-        {/* <> */}
+   {/* <> */}
             <div className="py-24 sm:py-32">
                 <div className="px-6 mx-auto max-w-7xl lg:px-8">
                     <div className="max-w-2xl mx-auto lg:mx-0">
@@ -163,7 +105,7 @@ export default function AllPosts() {
                                 {adminMode &&  <> <button
                                         type="button"
                                         className="flex items-center justify-center w-8 h-8 bg-gray-200 rounded-full hover:bg-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500"
-                                        onClick={() => importedDelete(post)}
+                                        onClick={() => deletePost(post)}
                                     >
                                         <span className="text-lg font-bold text-gray-500"><FiTrash2/></span>
                                     </button>
@@ -188,50 +130,12 @@ export default function AllPosts() {
             </div>
             {showEditor &&
                 <PopUp userId={userId} showEditor={showEditor} setShowEditor={setShowEditor} />}
-        {/* </> */}
+   
         </ErrorBoundary>
+        // </>
     )
 }
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-    // // מחיקה
-    // async function deletePost(item) {
-    //     console.log(item);
-    //     try {
-    //         let response = await fetch(`https://vortly-db.onrender.com/api/posts/${item.id}`, {
-    //             method: 'DELETE',
-    //             headers: {
-    //                 'Content-Type': 'application/json',
-    //                
-    //                 'authorization': localStorage.getItem('Authorization') || ''
-    //             },
-    //         });
-    //         if (!response.ok) {
-    //             console.log("problem deleting post");
-    //             throw new Error(`Failed to delete post! Status: ${response.status}`);
-    //         }
-    //         // alert(`Post ${item.id} deleted`) 
-    //         setOriginalData(prevOriginalData => prevOriginalData.filter(obj => obj.id !== item.id));
-    //         
-    //         alert(`Post ${item.id} deleted`)
-    //         navigate(`/`)
-    //     }
-    //     catch (error) {
-    //         alert(`Post ${item.id} not deleted`)
-    //         console.error(error.message);
-
-    //     }
-    // }

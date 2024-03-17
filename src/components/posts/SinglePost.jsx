@@ -7,7 +7,7 @@ import TagList from './TagList';
 import ParashaNav from '../layout/ParashaNav';
 import Cookies from "js-cookie";
 import DataContext2 from '../../contexts/index2';
-import { deletePost } from "../../functions/postFunctions"
+import { importedDelete } from "../../functions/postFunctions"
 
 
 
@@ -30,10 +30,10 @@ export default function SinglePost() {
     fetchData();
   }, [postId, originalData]);
 
-
+  
 // מחיקה
-  function importedDelete() {
-    deletePost(item, setOriginalData, setMessage, logOut, navigate)
+  function deletePost() {
+    importedDelete(item, setOriginalData, setMessage, logOut, navigate)
 }
 
 
@@ -122,7 +122,7 @@ export default function SinglePost() {
                     {message && <p style={{ color: 'red' }}>{message}</p>}
                     {adminMode &&
                     <>
-                    <Button value="delete" onClick={importedDelete} variant="contained">🗑️</Button>
+                    <Button value="delete" onClick={deletePost} variant="contained">🗑️</Button>
                     <Button variant="contained" onClick={() => navigate(`/edit/${item.id}`)}>ערוך מאמר</Button>
                     </>}
                    

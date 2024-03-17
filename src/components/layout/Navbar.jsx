@@ -3,14 +3,16 @@ import DataContext from '../../contexts';
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Switch from '@mui/material/Switch';
+import { useNavigate } from 'react-router-dom';
 
 
+
+// סרגל ראשי עליון
 export default function Navbar({ parasha }) {
-    const { userName, logOut, isAdmin, adminMode, setAdminMode, navigate, } = useContext(DataContext)
+    const { logOut, isAdmin, adminMode, setAdminMode } = useContext(DataContext)
+    const navigate = useNavigate();
 
-
-   
-
+    // סדרת לחצנים
     const [navigation, setNavigation] = useState([
         { id: 0, name: parasha || "פרשת השבוע", href: `/`, current: true },
         { id: 1, name: "כל הפרשיות", href: 'home/?parasha=all', current: false },
@@ -23,16 +25,17 @@ export default function Navbar({ parasha }) {
         return classes.filter(Boolean).join(' ')
     }
 
-
-    const handleNavigationClick = (index) => {
+    //    הגדרת הלחצן הלחוץ כעת - שינוי גוון
+    const handleNavigationClick = (botton) => {
         const updatedNavigation = navigation.map((item, i) => ({
             ...item,
-            current: i === index
+            current: i === botton.id
         }));
         setNavigation(updatedNavigation);
+        navigate(botton.href)
     };
 
-
+  
 
 
 
@@ -66,27 +69,38 @@ export default function Navbar({ parasha }) {
                                 </div>
                                 <div className="hidden sm:ml-6 sm:block">
                                     <div className="flex space-x-4 text-center">
-                                        {navigation.map((item) => (
-                                            <a
-                                                key={item.name}
-                                                // href={item.href}
-                                                onClick={() => { handleNavigationClick(item.id); navigate(item.href) }}
-                                                className={classNames(
-                                                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                                                    'rounded-md px-3 py-2 text-sm font-medium'
-                                                )}
-                                                aria-current={item.current ? 'page' : undefined}
-                                            >
-                                                {item.name}
-                                            </a>
-                                        ))}
+                                        {navigation.map((item, index) => {
+
+                                            // במידה והמשתמש  מנהל לא נציג את הכפתור 'אודות
+                                            if (!(isAdmin && index === navigation.length - 1)) {
+                                                return (
+                                                    <a
+                                                        key={item.name}
+                                                        // href={item.href}
+                                                        onClick={(e) => {
+                                                            e.preventDefault(); // מונע רענון דף
+                                                            handleNavigationClick(item);
+                                                        }}
+                                                
+                                                        className={classNames(
+                                                            item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                                                            'rounded-md px-3 py-2 text-sm font-medium'
+                                                        )}
+                                                        aria-current={item.current ? 'page' : undefined}
+                                                    >
+                                                        {item.name}
+                                                    </a>
+                                                );
+                                            }
+                                            return null;
+                                        })}
                                     </div>
                                 </div>
                             </div>
 
                             <div className="min-w-0 flex-1">
                                 <h2 onClick={() => { navigate(navigation[0].href) }}
-                                    className="text-center  font-bold leading-7 text-white sm:truncate sm:text-2xl sm:tracking-right">{`וורטלי - ל${parasha}`}</h2>
+                                    className="text-center  font-bold leading-7 text-white sm:truncate sm:text-2xl sm:tracking-right">{`וורטלי`}<span>{parasha ? `- ${parasha}` : null}</span></h2>
 
                             </div>
 
@@ -101,9 +115,9 @@ export default function Navbar({ parasha }) {
                                 </button> */}
 
 
-                                {!!isAdmin && <span className="text-white hidden sm:ml-6 sm:block">{adminMode ? "Admin mode" : "User mode"}
+                                {!!isAdmin && <span className="text-white hidden sm:ml-2 sm:inline">{adminMode ? "Admin" : "User"}
                                     <Switch
-                                        className='hidden sm:ml-6 sm:block'
+                                        className='hidden sm:ml-2 sm:block'
                                         checked={adminMode}
                                         onChange={() => setAdminMode(!adminMode)}
                                         name="loading"
@@ -121,6 +135,7 @@ export default function Navbar({ parasha }) {
                                                 className="w-8 h-8 rounded-full"
                                                 src="http://www.uploads.co.il/uploads/images/354664585.jpg"
                                                 alt=""
+                                                title="Open user menu"
                                             />
                                         </Menu.Button>
                                     </div>
@@ -133,7 +148,7 @@ export default function Navbar({ parasha }) {
                                         leaveFrom="transform opacity-100 scale-100"
                                         leaveTo="transform opacity-0 scale-95"
                                     >
-                                        <Menu.Items className="absolute right-0 z-10 w-48 py-1 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                                        <Menu.Items className="absolute -right-6 z-10 w-24 py-1 mt-2 origin-top-right bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                                             {/* <Menu.Item>
                                                 {({ active }) => (
                                                     <a
@@ -160,7 +175,7 @@ export default function Navbar({ parasha }) {
                                                         onClick={() => { logOut(); }}
                                                         className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                                                     >
-                                                        Sign out
+                                                        התנתק
                                                     </a>
                                                 )}
                                             </Menu.Item>

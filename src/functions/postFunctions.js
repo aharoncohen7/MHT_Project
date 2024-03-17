@@ -1,7 +1,8 @@
+import Swal from 'sweetalert2';
 
 
 //פוסט חדש
-export async function addNewPost(userId, selectedBook, selectedPortion, title, body, tags, setOriginalData, setMessage, setSend, setShowEditor, logOut, navigate) {
+export async function importedAddNew(userId, selectedBook, selectedPortion, title, body, tags, setOriginalData, setMessage, setSend, setShowEditor, logOut, navigate) {
   try {
     const response = await fetch('https://vortly-db.onrender.com/api/posts', {
       method: 'POST',
@@ -30,6 +31,7 @@ export async function addNewPost(userId, selectedBook, selectedPortion, title, b
       setShowEditor(false)
       if (response.status == 401) {
         logOut()
+        return
       }
       throw new Error(`Failed to create post! Status: ${response.status}`);
     }
@@ -39,6 +41,7 @@ export async function addNewPost(userId, selectedBook, selectedPortion, title, b
     setMessage(['Post created successfully', true]);
     setSend(false)
     setShowEditor(false)
+    window.location.href = `/`
 
   }
   catch (error) {
@@ -50,7 +53,7 @@ export async function addNewPost(userId, selectedBook, selectedPortion, title, b
 
 
 // עריכה
-export async function editPost(postId, selectedBook, selectedPortion, title, body, tags, setOriginalData, setMessage, setSend, setShowEditor, logOut, navigate) {
+export async function importedEdit(postId, selectedBook, selectedPortion, title, body, tags, setOriginalData, setMessage, setSend, setShowEditor, logOut, navigate) {
   try {
     const response = await fetch(`https://vortly-db.onrender.com/api/posts/${postId}`, {
       method: 'PATCH',
@@ -63,7 +66,6 @@ export async function editPost(postId, selectedBook, selectedPortion, title, bod
       }),
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
-
         'authorization': localStorage.getItem('Authorization') || ''
       },
     });
@@ -75,7 +77,7 @@ export async function editPost(postId, selectedBook, selectedPortion, title, bod
       setMessage(['Post not updated ' + errorMessage, false])
       setSend(false)
       setShowEditor(false)
-
+      window.location.href = `/post/${postId}`
       // navigate(`/post/${postId}`)
       
       throw new Error(`Failed to update post! Status: ${response.status}`);
@@ -83,6 +85,7 @@ export async function editPost(postId, selectedBook, selectedPortion, title, bod
     if (response.status == 401) {
       setMessage(['Post not updated', false])
       logOut()
+      return
     }
     const newPost = await response.json();
     // console.log(newPost);
@@ -91,7 +94,7 @@ export async function editPost(postId, selectedBook, selectedPortion, title, bod
     // alert('Post updated successfully')
     setSend(false)
     setShowEditor(false)
-    navigate(`/post/${postId}`)
+    // navigate(`/post/${postId}`)
     window.location.href = `https://vortly.onrender.com/post/${postId}`
 
   }
@@ -102,7 +105,7 @@ export async function editPost(postId, selectedBook, selectedPortion, title, bod
 
 
 // מחיקה
-export async function deletePost(item, setOriginalData, setMessage, logOut, navigate) {
+export async function importedDelete(item, setOriginalData, setMessage, logOut, navigate) {
   // console.log(item);
   try {
     let response = await fetch(`https://vortly-db.onrender.com/api/posts/${item.id}`, {
@@ -117,10 +120,16 @@ export async function deletePost(item, setOriginalData, setMessage, logOut, navi
       console.log("problem deleting post");
       throw new Error(`Failed to delete post! Status: ${response.status}`);
     }
+    if (response.status == 401) {
+      setMessage(['Post not deleted', false])
+      logOut()
+      return
+    }
     setOriginalData(prevOriginalData => prevOriginalData.filter(obj => obj.id !== item.id));
     setMessage([`Post ${item.id} deleted`, true])
     // alert(`Post ${item.id} deleted`)
-    navigate(`/`)
+    // navigate(`/`)
+    window.location.href = `/`
   }
   catch (error) {
     setMessage([`Post ${item.id} not deleted`, false])
@@ -128,3 +137,67 @@ export async function deletePost(item, setOriginalData, setMessage, logOut, navi
 
   }
 }
+
+
+      //עריכה 
+      export  async function importedAdminEdit(item, setOriginalData, setMessage, logOut) {
+        //  item.tags
+        const oldTitle = item.title;
+        const oldBody = item.body;
+        const result = await Swal.fire({
+        title: 'ערוך פוסט',
+        html: '<textarea id="title" style="background-color: rgba(172, 192, 389, 0.74); width: 350px; text-align: center;" class="swal2-input" placeholder="ערוך כותרת (עד 20 תווים)">' + oldTitle + '</textarea>' +
+          '<textarea id="body" style="height: 300px; background-color: rgba(172, 592, 189, 0.74); width: 350px; text-align: center;" class="swal2-input" placeholder=" ערוך פוסט (עד 40 תווים)">' + oldBody + '</textarea>',
+        showCancelButton: true,
+        confirmButtonText: 'אישור',
+        cancelButtonText: 'ביטול',
+        preConfirm: () => {
+          const title = document.getElementById('title').value;
+          const body = document.getElementById('body').value;
+          if (!title || !body) {
+            Swal.showValidationMessage('אנא מלא את כל השדות');
+          }
+          return { title, body };
+        }
+      });
+      if (!result.value) { return }
+
+      try {
+        const response = await fetch(`https://vortly-db.onrender.com/api/posts/${item.id}`, {
+            method: 'PATCH',
+            body: JSON.stringify({
+                selectedBook: item.topic ,
+                selectedPortion: item.subtopic,
+                title: result.value.title,
+                body: result.value.body,
+                tags: [],
+            }),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+               
+                'authorization': localStorage.getItem('Authorization') || ''
+            },
+        });
+        // console.log(response);
+        if (response.status === 400 || response.status === 404) {
+            console.log("400/404");
+            const errorMessage = await response.text();
+            console.log('Post not updated' + errorMessage);
+            setMessage(['Post not updated ' + errorMessage, false])
+            if (response.status == 401) {
+                logOut()
+                return
+            }
+            throw new Error(`Failed to update post! Status: ${response.status}`);
+        }
+        const newPost = await response.json();
+        // console.log(newPost);
+        setOriginalData(prevOriginalData => prevOriginalData.filter(obj => obj.id !== item.id));
+        setOriginalData(prevOriginalData => [...prevOriginalData, newPost]);
+        setMessage(['Post updated successfully', true]);
+        window.location.href = `/`
+    }
+    catch (error) {
+        console.error(error.message);
+    }
+  }

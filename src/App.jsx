@@ -56,7 +56,7 @@ function App() {
     if (message[0] !== null) {
       setTimeout(() => {
         setMessage([null, false]);
-      }, 5000);
+      }, 3000);
     }
   }, [message]);
 
