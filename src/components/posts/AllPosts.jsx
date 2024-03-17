@@ -10,6 +10,7 @@ import { FiFeather } from 'react-icons/fi';
 import { FiTrash2 } from "react-icons/fi";
 import { deletePost } from "../../functions/postFunctions"
 import Cookies from "js-cookie";
+import ErrorBoundary from '../ErrorBoundary';
 
 
 // שינוי מבנה תאריך יצירת מאמר
@@ -110,7 +111,8 @@ export default function AllPosts() {
 
 
     return (
-        <>
+        <ErrorBoundary>
+        {/* <> */}
             <div className="py-24 sm:py-32">
                 <div className="px-6 mx-auto max-w-7xl lg:px-8">
                     <div className="max-w-2xl mx-auto lg:mx-0">
@@ -186,7 +188,8 @@ export default function AllPosts() {
             </div>
             {showEditor &&
                 <PopUp userId={userId} showEditor={showEditor} setShowEditor={setShowEditor} />}
-        </>
+        {/* </> */}
+        </ErrorBoundary>
     )
 }
 
