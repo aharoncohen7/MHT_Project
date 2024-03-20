@@ -1,5 +1,5 @@
 {
-    "root": "dist/", 
+    "root": "dist/assets/", 
     "routes": {
         "/**":"index.html"
     }
