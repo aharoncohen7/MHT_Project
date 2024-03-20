@@ -1,6 +1,6 @@
 {
     "root": "dist/assets/", 
     "routes": {
-        "/**":"index.html"
+        "/**":"dist/assets/index.html"
     }
 }
