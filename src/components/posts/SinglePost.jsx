@@ -78,6 +78,7 @@ export default function SinglePost() {
                   <button onClick={ () =>{if(item.subtopic) navigate(`/home/?parasha=${item.subtopic}`)}} className="ml-20   leading-7 text-indigo-800 font-bold text-xl">
                     {item.subtopic ? item.subtopic : "שם הפרשה"}
                   </button>
+                  
                   <h2   className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{item.title}</h2>
                   <button onClick={ () =>{ navigate(`/home/?author=${item.userId}`)}}  className="mt-6 text-xl font-bold leading-8 text-indigo-800"> {item.author} :מחבר</button>
                 </div>

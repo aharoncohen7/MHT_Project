@@ -4,6 +4,9 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Switch from '@mui/material/Switch';
 import { useNavigate } from 'react-router-dom';
+const logo1 ="http://www.uploads.co.il/uploads/images/106030801.png"
+const logo2 ="http://img.uniquemu.co.il/upload/bIj1Npo.png"
+const logo3 ="http://img.uniquemu.co.il/upload/WrcvRJe.png"
 
 
 
@@ -63,7 +66,7 @@ export default function Navbar({ parasha }) {
                                 <div className="flex items-center flex-shrink-0">
                                     <img
                                         className="w-auto h-14 "
-                                        src="http://www.uploads.co.il/uploads/images/106030801.png"
+                                        src={logo2}
                                         alt="logo"
                                     />
                                 </div>
