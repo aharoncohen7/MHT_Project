@@ -12,7 +12,14 @@ import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import Cookies from "js-cookie";
 
-
+ // עיצוב סרגל עורך טקסט
+ const module = {
+    toolbar: [
+        ['bold', 'italic', 'underline'],
+        [{ 'header': 1 }, { 'header': 2 }],
+        [{ 'color': [] }, { 'background': [] }],
+    ]
+}
 
 export default function Editor({ send, setSend, setComplete, setShowEditor, initialPost }) {
     const { postId } = useParams()
@@ -52,14 +59,7 @@ export default function Editor({ send, setSend, setComplete, setShowEditor, init
     }, [postId, originalData]);
 
 
-    // עיצוב סרגל עורך טקסט
-    const module = {
-        toolbar: [
-            ['bold', 'italic', 'underline'],
-            [{ 'header': 1 }, { 'header': 2 }],
-            [{ 'color': [] }, { 'background': [] }],
-        ]
-    }
+   
 
     // יצירת פוסט בפועל
     useEffect(() => {

@@ -108,7 +108,7 @@ export async function importedEdit(postId, selectedBook, selectedPortion, title,
 export async function importedDelete(item, setOriginalData, setMessage, logOut, navigate) {
   // console.log(item);
   try {
-    let response = await fetch(`https://vortly-db.onrender.com/api/posts/${item.id}`, {
+    let response = await fetch(`https://vortly-db.onrender.com/api/posts/delete-single/${item.id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
