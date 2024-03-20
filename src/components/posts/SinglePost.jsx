@@ -92,12 +92,15 @@ export default function SinglePost() {
                 src={`https://www.breslev.org/wp-content/uploads/2019/07/${item.subtopic.replace(" ", "-")}.jpg`}
                 alt="תמונת הפרשה"
               />}
-             
-            </div>
-            <span className='hidden lg:col-start-2 lg:row-start-2  lg:block mr-10  lg:sticky mb-5 
+             <span className='hidden lg:col-start-2 lg:row-start-2  lg:block mr-10  lg:sticky mb-5 
                 w-[48rem] rounded-xl shadow-xl sm:w-[26rem]
                 '>
                 <ParashaNav /></span>
+            </div>
+            {/* <span className='hidden lg:col-start-2 lg:row-start-2  lg:block mr-10  lg:sticky mb-5 
+                w-[48rem] rounded-xl shadow-xl sm:w-[26rem]
+                '>
+                <ParashaNav /></span> */}
             <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
               <div className="lg:pr-4 -mt-20">
                 <div className="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
