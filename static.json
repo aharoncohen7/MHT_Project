@@ -1,0 +1,6 @@
+{
+    "root": "dist/", 
+    "ruotes": {
+        "/**":"index.html"
+    }
+}
