@@ -9,6 +9,7 @@ import Cookies from "js-cookie";
 
 
 function App() {
+  console.log("app is up");
   const [userId, setUserId] = useState(null);
   const [userName, setUserName] = useState(null);
   const [message, setMessage] = useState([null,true]);
