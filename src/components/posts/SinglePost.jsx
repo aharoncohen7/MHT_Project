@@ -16,7 +16,7 @@ export default function SinglePost() {
   const navigate = useNavigate();
   const [item, setItem] = useState(null);
   const { postId } = useParams()
-  const { setMessage,message, adminMode } = useContext(DataContext)
+  const { setMessage,message, logOut, adminMode } = useContext(DataContext)
   const { setOriginalData, originalData } = useContext(DataContext2)
 
   // מצא פוסט בודד מתוך הרשימה

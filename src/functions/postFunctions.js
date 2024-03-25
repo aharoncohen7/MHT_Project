@@ -128,7 +128,7 @@ export async function importedDelete(item, setOriginalData, setMessage, logOut, 
     setOriginalData(prevOriginalData => prevOriginalData.filter(obj => obj.id !== item.id));
     setMessage([`Post ${item.id} deleted`, true])
     // alert(`Post ${item.id} deleted`)
-    // navigate(`/`)
+    navigate(`/`)
     window.location.href = `/`
   }
   catch (error) {
