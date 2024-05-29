@@ -10,7 +10,7 @@ import Cookies from "js-cookie";
 import DataContext from '../../contexts';
 
 
-export default function Login({ setIsNew }) {
+export default function Login({ setIsExists }) {
   localStorage.removeItem('Authorization');
   const { setMessage, setUserId, setUserName, setIsAdmin, navigate, message } = useContext(DataContext)
   const [username, setUsername] = useState('');
@@ -51,7 +51,7 @@ export default function Login({ setIsNew }) {
           setUserName(user.username)
           setIsAdmin(user.isAdmin)
           localStorage.setItem("Authorization", user.token)
-          Cookies.set("Authorization", user.token)
+          // Cookies.set("Authorization", user.token)
           navigate(`/`);
         }
       }
@@ -117,7 +117,7 @@ export default function Login({ setIsNew }) {
             <Grid item>
               <Link
                 // href="#"
-                onClick={() => { setIsNew(false) }}
+                onClick={() => { setIsExists(false) }}
                 variant="body2"
               >
                 עדיין אינך רשום? הרשם עכשיו

@@ -27,7 +27,6 @@ const Content = ({ parasha }) => {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
-           
             'authorization': localStorage.getItem('Authorization') || ''
           },
         };

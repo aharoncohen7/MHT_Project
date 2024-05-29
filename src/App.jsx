@@ -19,37 +19,37 @@ function App() {
   const navigate = useNavigate();
  
   // בדיקת טוקן
-  useEffect(() => {
-    async function checkToken() {
-      if (localStorage.getItem('Authorization')) {
-        try {
-          const response = await axios.post('https://vortly-db.onrender.com/api/login/checkToken', {}, {
-            headers: {
-              'Content-Type': 'application/json',
-              'Authorization': localStorage.getItem('Authorization')
-            }
-          });
-          if (response.status !== 200) {
-            console.log(response.status, "שגיאה באימות טוקן");
-            logOut();
-          }
-          setIsAdmin(response.data.isAdmin)
-          setUserId(response.data.userId)
-        } catch (error) {
-          console.log(error.message, "שגיאה באימות טוקן");
-          setMessage([error.message +  " שגיאה באימות טוקן", false])
-          logOut();
-        }
-      }
-    }
-    checkToken();
-  }, []);
+  // useEffect(() => {
+  //   async function checkToken() {
+  //     if (localStorage.getItem('Authorization')) {
+  //       try {
+  //         const response = await axios.post('https://vortly-db.onrender.com/api/login/checkToken', {}, {
+  //           headers: {
+  //             'Content-Type': 'application/json',
+  //             'Authorization': localStorage.getItem('Authorization')
+  //           }
+  //         });
+  //         if (response.status !== 200) {
+  //           console.log(response.status, "שגיאה באימות טוקן");
+  //           logOut();
+  //         }
+  //         setIsAdmin(response.data.isAdmin)
+  //         setUserId(response.data.userId)
+  //       } catch (error) {
+  //         console.log(error.message, "שגיאה באימות טוקן");
+  //         setMessage([error.message +  " שגיאה באימות טוקן", false])
+  //         logOut();
+  //       }
+  //     }
+  //   }
+  //   checkToken();
+  // }, []);
 
 
   // זריקה החוצה
   function logOut() {
     localStorage.removeItem('Authorization');
-    window.location.href = "https://vortly.onrender.com/"
+    // window.location.href = "https://vortly.onrender.com/"
   }
 
   // // איפוס הודעות מערכת
@@ -70,14 +70,16 @@ function App() {
           <Route
             path="/*"
             element={
-              !localStorage.getItem("Authorization") ? (
-                <SignIn />
-              ) : (
+              // !localStorage.getItem("Authorization") ? (
+              //   <SignIn />
+              // ) : (
                 <Layout />
-              )
+              // )
             }
           />
         </Routes>
+           
+      
       </>
     </DataContext.Provider>
   )

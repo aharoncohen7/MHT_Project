@@ -9,7 +9,7 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import * as Yup from 'yup';
 
-export default function Register({ setIsNew }) {
+export default function Register({ setIsExists }) {
   const { setMessage, message } = useContext(DataContext)
 
   const [formData, setFormData] = useState({
@@ -221,7 +221,7 @@ export default function Register({ setIsNew }) {
                 {"Don't have an account? Sign Up"}
               </Link> */}
               <Link
-                onClick={() => { setIsNew(true) }}
+                onClick={() => { setIsExists(true) }}
                 //  href="https://vortly.onrender.com/"
                 variant="body2">
                 כבר יש לך חשבון ? הכנס
