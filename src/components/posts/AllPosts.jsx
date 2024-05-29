@@ -41,7 +41,7 @@ export default function AllPosts({ setOriginalData }) {
     function handleNewPost() {
         if (userId) {
             setShowEditor(true)
-            console.log("tytryrty");
+            console.log("tytryrty")
         }
         else {
             setMessage(["כדי לפרסם פוטס עליך להיות מחובר", false]);
@@ -81,7 +81,7 @@ export default function AllPosts({ setOriginalData }) {
                     {!showEditor && <Search setSortedList={setSortedList} />}
                     {!showEditor && userId &&
                         <button className="z-20 fixed bottom-6 sm:bottom-14 left-6 sm:left-14 bg-gray-700 rounded-full text-gray-700 hover:bg-gray-900 hover:text-gray h-14 sm:h-20 w-14 sm:w-20 px-4 sm:px-5 text-sm font-medium"
-                            onClick={handleNewPost} >
+                            onClick={()=>handleNewPost()} >
                             <FiFeather className="text-white size-6 sm:size-10 ml-0" /> </button>}
 
                     {message && <p style={{ color: 'red' }}>{message}</p>}
