@@ -1,3 +1,5 @@
+import Login from "../components/login/Login";
+
 // תאריך נוכחי
 export function getCurrentDate() {
     const currentDate = new Date();
@@ -25,8 +27,9 @@ export function getParasha(apiResponse) {
     for (const item of apiResponse.items) {
       if (item.category === 'parashat') {
         const parashaHebrew = item.hebrew;
-        console.log(parashaHebrew);
-        return parashaHebrew;
+        const parasha = parashaHebrew.split(' ')[0] + " " + parshiot[parashaHebrew.split(' ')[1]];
+        console.log("🚀 ~ getParasha ~ parasha:", parasha)
+        return parasha;
       }
     }
   }
@@ -39,5 +42,72 @@ export function formatDate(dateString) {
   return `${parts[2]}-${parts[1]}-${parts[0].slice(2)}`;
 }
 
+
+const parshiot = {
+  "בראשית": "בראשית",
+  "נח": "נח",
+  "לך לך": "לך לך",
+  "וירא": "וירא",
+  "חיי שרה": "חיי שרה",
+  "תולדות": "תולדות",
+  "ויצא": "ויצא",
+  "וישלח": "וישלח",
+  "וישב": "וישב",
+  "מקץ": "מקץ",
+  "ויגש": "ויגש",
+  "ויחי": "ויחי",
+  "שמות": "שמות",
+  "שמת": "שמות",
+  "וארא": "וארא",
+  "בא": "בא",
+  "בשלח": "בשלח",
+  "יתרו": "יתרו",
+  "משפטים": "משפטים",
+  "תרומה": "תרומה",
+  "תצווה": "תצווה",
+  "תצוה": "תצווה",
+  "כי תשא": "כי תשא",
+  "ויקהל": "ויקהל",
+  "פקודי": "פקודי",
+  "ויקרא": "ויקרא",
+  "צו": "צו",
+  "שמיני": "שמיני",
+  "תזריע": "תזריע",
+  "מצורע": "מצורע",
+  "אחרי מות": "אחרי מות",
+  "קדושים": "קדושים",
+  "קדשים": "קדושים",
+  "אמור": "אמור",
+  "אמר": "אמור",
+  "בהר": "בהר",
+  "בחקותי": "בחקותי",
+  "בחקתי": "בחקותי",
+  "במדבר": "במדבר",
+  "נשא": "נשא",
+  "בהעלותך": "בהעלותך",
+  "בהעלתך": "בהעלותך",
+  "שלח": "שלח",
+  "קרח": "קרח",
+  "חוקת": "חוקת",
+  "חקת": "חוקת",
+  "בלק": "בלק",
+  "פנחס": "פנחס",
+  "פינחס": "פנחס",
+  "מטות": "מטות",
+  "מטת": "מטות",
+  "מסעי": "מסעי",
+  "דברים": "דברים",
+  "ואתחנן": "ואתחנן",
+  "עקב": "עקב",
+  "ראה": "ראה",
+  "שופטים": "שופטים",
+  "שפטים": "שופטים",
+  "כי תצא": "כי תצא",
+  "כי תבא": "כי תבא",
+  "נצבים": "נצבים",
+  "וילך": "וילך",
+  "האזינו": "האזינו",
+  "וזאת הברכה": "וזאת הברכה"
+};
 
 
