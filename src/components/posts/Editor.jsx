@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext, useRef } from 'react';
 import { useParams } from 'react-router-dom'
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
@@ -31,6 +31,7 @@ export default function Editor({ send, setSend, setComplete, setShowEditor, init
     const [body, setBody] = useState(initialPost ? initialPost.body : '');
     const [tags, setTags] = useState(initialPost && initialPost.tags ? initialPost.tags : [])
     const [isAddingTag, setIsAddingTag] = useState(false);
+    const quillRef = useRef(null);
 
 
     // מצא פוסט בודד מתוך הרשימה
@@ -66,13 +67,15 @@ export default function Editor({ send, setSend, setComplete, setShowEditor, init
         if (send) {
             sendPost();
             setShowEditor(false)
-            quill.history.clear();
+            // if (quillRef.current) {
+            //     quillRef.current.setValue('');
+            //   }
         }
     }, [send]);
 
     // מטפל תוכן מאמר
     const handleContentChange = (newBody) => {
-        console.log(newBody);
+        // console.log(newBody);
         setBody(newBody);
     };
 
@@ -97,7 +100,7 @@ export default function Editor({ send, setSend, setComplete, setShowEditor, init
         const textParts = body.split(/<[^>]+>/).filter(Boolean);
         // סכימת אורך כל המחרוזות בין התגיות
         const sum = textParts.reduce((acc, text) => acc + text.trim().length, 0);
-        console.log(sum);
+        // console.log(sum);
         // בדיקה האם הסכום גבוה מ־60 והחזרת תוצאה
         return sum > 60;
     }
@@ -114,7 +117,7 @@ export default function Editor({ send, setSend, setComplete, setShowEditor, init
     useEffect(() => {
         setComplete(prev => {
             if (!prev && checkFields()) {
-                console.log(body);
+                // console.log(body);
                 return true;
             }
             if (prev && !(checkFields())) {
@@ -145,7 +148,7 @@ export default function Editor({ send, setSend, setComplete, setShowEditor, init
                 <div >
                     <input className=' relative w-full inline-flex  justify-center gap-x-5.5 mt-10 px-3 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-600 hover:bg-gray-50 py-2 pl-3 pr-10 text-right bg-white rounded-md shadow-sm cursor-pointer focus:outline-none focus:ring focus:ring-blue-500 focus:ring-opacity-50' type="text" value={title} onChange={(e) => setTitle(e.target.value)} placeholder='בחר כותרת למאמר באורך של 20 תווים ומעלה' />
                     {title && title.length > 19 &&
-                        <ReactQuill theme="snow" onChange={handleContentChange} modules={module} value={body} />}
+                        <ReactQuill  ref={quillRef} theme="snow" onChange={handleContentChange} modules={module} value={body} />}
 
                     <div>
                         {checkBody() && isAddingTag ? (

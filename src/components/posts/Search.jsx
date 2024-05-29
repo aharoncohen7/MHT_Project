@@ -120,11 +120,13 @@ export default function Search({ setSortedList }) {
             
                 <div className={`hidden sm:ml-6 sm:block fixed left-1/2 w-3/6 ${showSearch ? "top-32" : "top-24"} text-center transform -translate-x-1/2 -translate-y-1/2 bg-gray-300 rounded-lg shadow-md z-10`}>
                     {showSearch && <>
-                    {adminMode &&  <div className="flex items-center justify-center mb-2 "><label htmlFor="search-by-id">
+                    {adminMode &&  <div className="flex items-center justify-center mb-2 ">
+                        <label htmlFor="search-by-id">
                         <input
                             type="radio"
                             name="options"
                             value="false"
+                            id="search-by-id"
                             className="w-4 h-4 mr-2"
                             checked={selectedOption === false}
                             onChange={handleOptionChange}
@@ -135,6 +137,7 @@ export default function Search({ setSortedList }) {
                             type="radio"
                             name="options"
                             value="true"
+                            id="search-by-title"
                             className="w-4 h-4 ml-2 mr-2"
                             checked={selectedOption === true}
                             onChange={handleOptionChange}

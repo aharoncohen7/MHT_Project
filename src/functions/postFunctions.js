@@ -69,9 +69,9 @@ export async function importedEdit(postId, selectedBook, selectedPortion, title,
         'authorization': localStorage.getItem('Authorization') || ''
       },
     });
-    // console.log(response);
+    console.log(response);
     if (response.status === 400 || response.status === 404) {
-      // console.log("400/404");
+      console.log("400/404");
       const errorMessage = await response.text();
       console.log(['Post not updated' + errorMessage, false]);
       setMessage(['Post not updated ' + errorMessage, false])
@@ -87,11 +87,10 @@ export async function importedEdit(postId, selectedBook, selectedPortion, title,
       logOut()
       return
     }
+
     const newPost = await response.json();
-    // console.log(newPost);
     setOriginalData(prevOriginalData => [...prevOriginalData, newPost]);
     setMessage(['Post updated successfully', true]);
-    // alert('Post updated successfully')
     setSend(false)
     setShowEditor(false)
     // navigate(`/post/${postId}`)
@@ -99,6 +98,7 @@ export async function importedEdit(postId, selectedBook, selectedPortion, title,
 
   }
   catch (error) {
+    console.log(error.message);
     console.error(error.message);
   }
 }
@@ -128,8 +128,8 @@ export async function importedDelete(item, setOriginalData, setMessage, logOut, 
     setOriginalData(prevOriginalData => prevOriginalData.filter(obj => obj.id !== item.id));
     setMessage([`Post ${item.id} deleted`, true])
     // alert(`Post ${item.id} deleted`)
-    navigate(`/`)
-    window.location.href = `/`
+    navigate(-1)
+    // window.location.href = `/`
   }
   catch (error) {
     setMessage([`Post ${item.id} not deleted`, false])
@@ -195,7 +195,7 @@ export async function importedDelete(item, setOriginalData, setMessage, logOut, 
         setOriginalData(prevOriginalData => prevOriginalData.filter(obj => obj.id !== item.id));
         setOriginalData(prevOriginalData => [...prevOriginalData, newPost]);
         setMessage(['Post updated successfully', true]);
-        window.location.href = `/`
+        // window.location.href = `/`
     }
     catch (error) {
         console.error(error.message);

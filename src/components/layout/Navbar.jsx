@@ -1,9 +1,9 @@
-import { Fragment, useContext, useState } from 'react'
+import { Fragment, useContext, useEffect, useState } from 'react'
 import DataContext from '../../contexts';
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Switch from '@mui/material/Switch';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 const logo1 ="https://www.uploads.co.il/uploads/images/106030801.png"
 const logo2 ="https://img.uniquemu.co.il/upload/bIj1Npo.png"
 const logo3 ="http://img.uniquemu.co.il/upload/WrcvRJe.png"
@@ -12,12 +12,22 @@ const logo3 ="http://img.uniquemu.co.il/upload/WrcvRJe.png"
 
 // סרגל ראשי עליון
 export default function Navbar({ parasha }) {
-    const { logOut, isAdmin, adminMode, setAdminMode } = useContext(DataContext)
+    const { logOut, isAdmin, adminMode, setAdminMode, userId } = useContext(DataContext)
+    console.log(userId);
     const navigate = useNavigate();
+    const location = useLocation();
+    const [isLoggedIn, setIsLoggedIn] = useState(!!userId)
+
+
+    useEffect(()=>{
+        if(userId){
+            setIsLoggedIn(true)
+        }
+    }, [userId])
 
     // סדרת לחצנים
     const [navigation, setNavigation] = useState([
-        { id: 0, name: parasha || "פרשת השבוע", href: `/`, current: true },
+        { id: 0, name: parasha || "פרשת השבוע", href: `/`, current: true,  },
         { id: 1, name: "כל הפרשיות", href: 'home/?parasha=all', current: false },
         { id: 2, name: 'הוספת מאמר', href: '/addition', current: false },
         { id: 3, name: 'אודות', href: '/about', current: false }
@@ -38,6 +48,11 @@ export default function Navbar({ parasha }) {
         navigate(botton.href)
     };
 
+
+    const goToLoginAndBack = () => {
+        navigate('/login', { state: { from: location } });
+      };
+
   
 
 
@@ -51,7 +66,7 @@ export default function Navbar({ parasha }) {
                         <div className="relative flex items-center justify-between h-16">
                             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                                 {/* Mobile menu button*/}
-                                <Disclosure.Button className="relative inline-flex items-center justify-center p-2 text-gray-400 rounded-md hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                                <Disclosure.Button className=" relative inline-flex items-center justify-center p-2 text-gray-400 rounded-md hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                                     <span className="absolute -inset-0.5" />
                                     <span className="sr-only">Open main menu</span>
                                     {open ? (
@@ -135,8 +150,8 @@ export default function Navbar({ parasha }) {
                                             <span className="absolute -inset-1.5" />
                                             <span className="sr-only">Open user menu</span>
                                             <img
-                                                className="w-8 h-8 rounded-full"
-                                                src="http://www.uploads.co.il/uploads/images/354664585.jpg"
+                                                className={`${isLoggedIn ? '' : 'grayscale opacity-50'} w-8 h-8 rounded-full`}
+                                                src="https://www.uploads.co.il/uploads/images/354664585.jpg"
                                                 alt=""
                                                 title="Open user menu"
                                             />
@@ -175,10 +190,10 @@ export default function Navbar({ parasha }) {
                                             <Menu.Item>
                                                 {({ active }) => (
                                                     <a
-                                                        onClick={() => { logOut(); }}
-                                                        className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                                                        onClick={ isLoggedIn ? () => { logOut(); setIsLoggedIn(false);} : goToLoginAndBack}
+                                                        className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700 cursor-pointer')}
                                                     >
-                                                        התנתק
+                                                         {isLoggedIn ? " התנתק" : "התחבר"}
                                                     </a>
                                                 )}
                                             </Menu.Item>

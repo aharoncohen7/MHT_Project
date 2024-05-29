@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import Editor from './posts/Editor';
 import Button from '@mui/material/Button';
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -8,10 +8,18 @@ import { FiFeather } from 'react-icons/fi';
 
 
 export default function Addition() {
-  const { navigate, setMessage } = useContext(DataContext)
+  const { navigate, setMessage, userId } = useContext(DataContext)
   const [showEditor, setShowEditor] = useState(false);
   const [complete, setComplete] = useState(false)
-  const [send, setSend] = useState(false)
+  const [send, setSend] = useState(false) 
+
+
+  useEffect(()=>{
+    if(!userId){
+      setMessage(["כדי לפרסם פוטס עליך להיות מחובר", false]);
+      navigate(-1);
+    }
+  },[])
 
 
   return (

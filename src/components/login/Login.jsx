@@ -8,6 +8,7 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Cookies from "js-cookie";
 import DataContext from '../../contexts';
+import { useLocation } from 'react-router-dom';
 
 
 export default function Login({ setIsExists }) {
@@ -15,15 +16,13 @@ export default function Login({ setIsExists }) {
   const { setMessage, setUserId, setUserName, setIsAdmin, navigate, message } = useContext(DataContext)
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const location = useLocation();
+ 
 
   //on input change
   const handleInput = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    // console.log({
-    //   username: data.get("username"),
-    //   password: data.get("password"),
-    // });
     setUsername(data.get("username"))
     setPassword(data.get("password"))
   };
@@ -45,14 +44,14 @@ export default function Login({ setIsExists }) {
       if (response.ok) {
         const user = await response.json();
         if (user) {
-          // console.log(user);
+          console.log(user);
           setMessage(['Login successful',true]);
           setUserId(user.id)
-          setUserName(user.username)
+          // setUserName(user.username)
           setIsAdmin(user.isAdmin)
           localStorage.setItem("Authorization", user.token)
           // Cookies.set("Authorization", user.token)
-          navigate(`/`);
+          handleSuccessfulLogin();
         }
       }
       else {
@@ -62,6 +61,13 @@ export default function Login({ setIsExists }) {
       setMessage([`Error during login: ${error.message}`, false]);
       console.log(`Error during login: ${error.message}`);
     }
+  };
+
+
+  const handleSuccessfulLogin = () => {
+    const from = location.state?.from?.pathname || '/';
+    console.log(from)
+    navigate(from, { replace: true });
   };
 
 

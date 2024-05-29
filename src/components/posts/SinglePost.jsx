@@ -121,8 +121,8 @@ export default function SinglePost() {
 
                 {/* כפתורי עריכה */}
                 <div className="EditButtons">
-                  <label htmlFor="edit-delete">
-                    <Button variant="contained" onClick={() => navigate(`/`)}>חזור</Button>
+             
+                    <Button variant="contained" onClick={() => navigate(-1)}>חזור</Button>
                     {message && <p style={{ color: 'red' }}>{message}</p>}
                     {adminMode &&
                     <>
@@ -130,7 +130,7 @@ export default function SinglePost() {
                     <Button variant="contained" onClick={() => navigate(`/edit/${item.id}`)}>ערוך מאמר</Button>
                     </>}
                    
-                  </label>
+        
                 </div>
                 
                 {/* <div className="hidden sm:ml-6 sm:block" style={{ top: '60px', right: '0px' }}><ParashaNav /></div> */}

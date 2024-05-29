@@ -11,44 +11,51 @@ import Cookies from "js-cookie";
 function App() {
   console.log("app is up");
   const [userId, setUserId] = useState(null);
-  const [userName, setUserName] = useState(null);
-  const [message, setMessage] = useState([null,true]);
+  // const [userName, setUserName] = useState(null);
+  const [message, setMessage] = useState([null, true]);
   const [isAdmin, setIsAdmin] = useState(0)
   const [adminMode, setAdminMode] = useState(false)
-  console.log("userId: ", userId, "userName: ", userName, "isAdmin: ", isAdmin, "adminMode: ", adminMode);
+  console.log("userId: ", userId, "isAdmin: ", isAdmin, "adminMode: ", adminMode);
   const navigate = useNavigate();
- 
+
   // בדיקת טוקן
-  // useEffect(() => {
-  //   async function checkToken() {
-  //     if (localStorage.getItem('Authorization')) {
-  //       try {
-  //         const response = await axios.post('https://vortly-db.onrender.com/api/login/checkToken', {}, {
-  //           headers: {
-  //             'Content-Type': 'application/json',
-  //             'Authorization': localStorage.getItem('Authorization')
-  //           }
-  //         });
-  //         if (response.status !== 200) {
-  //           console.log(response.status, "שגיאה באימות טוקן");
-  //           logOut();
-  //         }
-  //         setIsAdmin(response.data.isAdmin)
-  //         setUserId(response.data.userId)
-  //       } catch (error) {
-  //         console.log(error.message, "שגיאה באימות טוקן");
-  //         setMessage([error.message +  " שגיאה באימות טוקן", false])
-  //         logOut();
-  //       }
-  //     }
-  //   }
-  //   checkToken();
-  // }, []);
+  useEffect(() => {
+    async function checkToken() {
+      if (localStorage.getItem('Authorization')) {
+        try {
+          const response = await axios.post('https://vortly-db.onrender.com/api/login/checkToken', {}, {
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': localStorage.getItem('Authorization')
+            }
+          });
+          if (response.status !== 200) {
+            console.log(response.status, "שגיאה באימות טוקן");
+            logOut();
+            return;
+          }
+          const userData = response.data;
+          console.log(userData);
+          setIsAdmin(userData.isAdmin)
+          setUserId(userData.userId)
+        } catch (error) {
+          console.log(error.message, "שגיאה באימות טוקן");
+          setMessage([error.message +  " שגיאה באימות טוקן", false])
+          logOut();
+        }
+      }
+    }
+    checkToken();
+  }, []);
 
 
   // זריקה החוצה
   function logOut() {
     localStorage.removeItem('Authorization');
+    setUserId(null);
+    // setUserName(null);
+    setIsAdmin(0)
+    setAdminMode(false)
     // window.location.href = "https://vortly.onrender.com/"
   }
 
@@ -64,22 +71,25 @@ function App() {
 
 
   return (
-    <DataContext.Provider value={{ navigate, logOut, setUserId, setUserName, setMessage, setIsAdmin, setAdminMode,  userId, userName, isAdmin, adminMode, message}}>
+    <DataContext.Provider value={{ navigate, logOut, setUserId, setMessage, setIsAdmin, setAdminMode, userId, isAdmin, adminMode, message }}>
       <>
         <Routes>
+          <Route path="/login" element={<SignIn />} />
           <Route
             path="/*"
             element={
               // !localStorage.getItem("Authorization") ? (
-              //   <SignIn />
+              // <SignIn />
               // ) : (
-                <Layout />
+              <Layout />
               // )
             }
           />
         </Routes>
-           
-      
+
+
+
+
       </>
     </DataContext.Provider>
   )
