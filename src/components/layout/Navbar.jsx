@@ -66,7 +66,7 @@ export default function Navbar({ parasha }) {
                                 <div className="flex items-center flex-shrink-0">
                                     <img
                                         className="w-auto h-14 "
-                                        src={logo2}
+                                        src={logo1}
                                         alt="logo"
                                     />
                                 </div>

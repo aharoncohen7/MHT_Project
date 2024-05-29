@@ -33,4 +33,11 @@ export function getParasha(apiResponse) {
 }
 
 
+// שינוי מבנה תאריך יצירת מאמר
+export function formatDate(dateString) {
+  const parts = dateString.split('T')[0].split("-");
+  return `${parts[2]}-${parts[1]}-${parts[0].slice(2)}`;
+}
+
+
 

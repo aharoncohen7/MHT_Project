@@ -1,23 +1,22 @@
 
 import React, { useState, useContext } from "react";
 import DataContext from '../../contexts';
-import DataContext2 from '../../contexts/index2';
 import Search from "./Search"
 import PopUp from '../PopUp';
-import Swal from 'sweetalert2';
 import ParashaNav from '../layout/ParashaNav';
 import { FiFeather } from 'react-icons/fi';
 import { FiTrash2 } from "react-icons/fi";
 import { importedDelete, importedAdminEdit} from "../../functions/postFunctions"
 import Cookies from "js-cookie";
 import ErrorBoundary from '../ErrorBoundary';
+import { formatDate } from "./../../functions"
 
 
-// שינוי מבנה תאריך יצירת מאמר
-function formatDate(dateString) {
-    const parts = dateString.split('T')[0].split("-");
-    return `${parts[2]}-${parts[1]}-${parts[0].slice(2)}`;
-}
+// // שינוי מבנה תאריך יצירת מאמר
+// function formatDate(dateString) {
+//     const parts = dateString.split('T')[0].split("-");
+//     return `${parts[2]}-${parts[1]}-${parts[0].slice(2)}`;
+// }
 
 
 
