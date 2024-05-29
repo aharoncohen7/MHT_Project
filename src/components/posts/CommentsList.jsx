@@ -5,7 +5,7 @@ import Cookies from "js-cookie";
 
 
 const CommentList = ({ postId, showComments, setMessage }) => {
-  const urlComments = `https://vortly-db.onrender.com/api/comments/${postId}`;
+  const urlComments = `s://vortly-db.onrender.com/api/comments/${postId}`;
   const [comments, setComments] = useState([]);
 
 

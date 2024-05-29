@@ -4,8 +4,8 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Switch from '@mui/material/Switch';
 import { useNavigate } from 'react-router-dom';
-const logo1 ="http://www.uploads.co.il/uploads/images/106030801.png"
-const logo2 ="http://img.uniquemu.co.il/upload/bIj1Npo.png"
+const logo1 ="https://www.uploads.co.il/uploads/images/106030801.png"
+const logo2 ="https://img.uniquemu.co.il/upload/bIj1Npo.png"
 const logo3 ="http://img.uniquemu.co.il/upload/WrcvRJe.png"
 
 
