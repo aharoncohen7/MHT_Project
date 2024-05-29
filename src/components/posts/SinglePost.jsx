@@ -25,7 +25,9 @@ export default function SinglePost() {
       const result = originalData.find(post => post.id == postId);
       if (result) {
         setItem(result);
+        console.log(result)
       }
+      
     }
     fetchData();
   }, [postId, originalData]);

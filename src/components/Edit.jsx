@@ -14,18 +14,18 @@ export const Edit = () => {
     const [showEditor, setShowEditor] = useState(true);
 
 
-    useEffect(() => {
-        if (!showEditor) {
-            navigate(`/post/${postId}`);
-        }
-    }, [showEditor])
+    // useEffect(() => {
+    //     if (!showEditor) {
+    //         navigate(`/post/${postId}`);
+    //     }
+    // }, [showEditor])
 
 
     return (
         <>
             <Editor send={send} setComplete={setComplete} setShowEditor={setShowEditor} setSend={setSend} />
             <div style={{ position: "absolute", bottom: "10px", display: "flex", gap: "1rem" }}>
-                <Button variant="outlined" startIcon={<DeleteIcon />} onClick={() => setShowEditor(false)}>סגור</Button>
+                <Button variant="outlined" startIcon={<DeleteIcon />} onClick={() =>  { navigate(`/post/${postId}`)}}>סגור</Button>
                 <Button disabled={!complete} variant="contained" endIcon={<SendIcon />} onClick={() => { setSend(true) }}>שלח</Button>
             </div>
         </>

@@ -40,8 +40,9 @@ export async function importedAddNew(userId, selectedBook, selectedPortion, titl
     setOriginalData(prevOriginalData => [...prevOriginalData, newPost]);
     setMessage(['Post created successfully', true]);
     setSend(false)
-    setShowEditor(false)
-    window.location.href = `/`
+    setShowEditor(false);
+    window.location.href = `/post/${newPost.id}`
+
 
   }
   catch (error) {
@@ -77,8 +78,8 @@ export async function importedEdit(postId, selectedBook, selectedPortion, title,
       setMessage(['Post not updated ' + errorMessage, false])
       setSend(false)
       setShowEditor(false)
-      window.location.href = `/post/${postId}`
-      // navigate(`/post/${postId}`)
+      // window.location.href = `/post/${postId}`
+      navigate(`/post/${postId}`)
       
       throw new Error(`Failed to update post! Status: ${response.status}`);
     }
@@ -94,7 +95,8 @@ export async function importedEdit(postId, selectedBook, selectedPortion, title,
     setSend(false)
     setShowEditor(false)
     // navigate(`/post/${postId}`)
-    window.location.href = `https://vortly.onrender.com/post/${postId}`
+    // window.location.href = `https://vortly.onrender.com/post/${postId}`
+    window.location.href = `/post/${postId}`
 
   }
   catch (error) {
@@ -127,7 +129,6 @@ export async function importedDelete(item, setOriginalData, setMessage, logOut, 
     }
     setOriginalData(prevOriginalData => prevOriginalData.filter(obj => obj.id !== item.id));
     setMessage([`Post ${item.id} deleted`, true])
-    // alert(`Post ${item.id} deleted`)
     navigate(-1)
     // window.location.href = `/`
   }
@@ -139,7 +140,7 @@ export async function importedDelete(item, setOriginalData, setMessage, logOut, 
 }
 
 
-      //עריכה 
+      //עריכה admin
       export  async function importedAdminEdit(item, setOriginalData, setMessage, logOut) {
         //  item.tags
         const oldTitle = item.title;

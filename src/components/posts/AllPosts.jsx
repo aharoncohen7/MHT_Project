@@ -41,6 +41,7 @@ export default function AllPosts({ setOriginalData }) {
     function handleNewPost() {
         if (userId) {
             setShowEditor(true)
+            console.log("tytryrty");
         }
         else {
             setMessage(["כדי לפרסם פוטס עליך להיות מחובר", false]);
@@ -80,7 +81,7 @@ export default function AllPosts({ setOriginalData }) {
                     {!showEditor && <Search setSortedList={setSortedList} />}
                     {!showEditor && userId &&
                         <button className="z-20 fixed bottom-6 sm:bottom-14 left-6 sm:left-14 bg-gray-700 rounded-full text-gray-700 hover:bg-gray-900 hover:text-gray h-14 sm:h-20 w-14 sm:w-20 px-4 sm:px-5 text-sm font-medium"
-                            onClick={() => handleNewPost} >
+                            onClick={handleNewPost} >
                             <FiFeather className="text-white size-6 sm:size-10 ml-0" /> </button>}
 
                     {message && <p style={{ color: 'red' }}>{message}</p>}
@@ -116,7 +117,8 @@ export default function AllPosts({ setOriginalData }) {
                                     <p className="ml-20 mt-5  text-sm leading-6 text-gray-600 line-clamp-3">{"<<קרא עוד"}</p>
                                 </div>
                                 <div className="relative flex items-center mt-8 gap-x-4">
-                                    {adminMode && <> <button
+                                    {adminMode && <> 
+                                    <button
                                         type="button"
                                         className="flex items-center justify-center w-8 h-8 bg-gray-200 rounded-full hover:bg-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500"
                                         onClick={() => deletePost(post)}
