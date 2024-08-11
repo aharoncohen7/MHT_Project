@@ -4,10 +4,15 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Switch from '@mui/material/Switch';
 import { useLocation, useNavigate } from 'react-router-dom';
-const logo1 ="https://www.uploads.co.il/uploads/images/106030801.png"
-const logo2 ="https://img.uniquemu.co.il/upload/bIj1Npo.png"
-const logo3 ="http://img.uniquemu.co.il/upload/WrcvRJe.png"
+const env = await import.meta.env;
+const logo2 = (env.VITE_logo2) || "https://img.uniquemu.co.il/upload/bIj1Npo.png";
+const avatar = (env.VITE_avatar) || "http://img.uniquemu.co.il/upload/udYCav4.jpeg"
 
+const logo1 ="https://www.uploads.co.il/uploads/images/106030801.png"
+// const logo2 ="https://img.uniquemu.co.il/upload/bIj1Npo.png"
+const logo3 ="http://img.uniquemu.co.il/upload/WrcvRJe.png"
+// const avatar = "http://img.uniquemu.co.il/upload/4BSyycN.jpeg"
+const avatar2 = "http://img.uniquemu.co.il/upload/udYCav4.jpeg"
 
 
 // סרגל ראשי עליון
@@ -81,7 +86,7 @@ export default function Navbar({ parasha }) {
                                 <div className="flex items-center flex-shrink-0">
                                     <img
                                         className="w-auto h-14 "
-                                        src={logo1}
+                                        src={logo2}
                                         alt="logo"
                                     />
                                 </div>
@@ -151,7 +156,7 @@ export default function Navbar({ parasha }) {
                                             <span className="sr-only">Open user menu</span>
                                             <img
                                                 className={`${isLoggedIn ? '' : 'grayscale opacity-50'} w-8 h-8 rounded-full`}
-                                                src="https://www.uploads.co.il/uploads/images/354664585.jpg"
+                                                src={avatar}
                                                 alt=""
                                                 title="Open user menu"
                                             />
