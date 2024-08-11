@@ -5,8 +5,12 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Switch from '@mui/material/Switch';
 import { useLocation, useNavigate } from 'react-router-dom';
 const env = await import.meta.env;
-const logo2 = (env.VITE_logo2) || "https://img.uniquemu.co.il/upload/bIj1Npo.png";
-const avatar = (env.VITE_avatar) || "http://img.uniquemu.co.il/upload/udYCav4.jpeg"
+const logo2 =
+//  (env.VITE_logo2) ||
+  "https://img.uniquemu.co.il/upload/bIj1Npo.png";
+const avatar = 
+// (env.VITE_avatar) || 
+"http://img.uniquemu.co.il/upload/udYCav4.jpeg"
 
 const logo1 ="https://www.uploads.co.il/uploads/images/106030801.png"
 // const logo2 ="https://img.uniquemu.co.il/upload/bIj1Npo.png"
