@@ -4,7 +4,7 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Switch from '@mui/material/Switch';
 import { useLocation, useNavigate } from 'react-router-dom';
-const env = await import.meta.env;
+// const env = await import.meta.env;
 const logo2 =
 //  (env.VITE_logo2) ||
   "https://img.uniquemu.co.il/upload/bIj1Npo.png";
