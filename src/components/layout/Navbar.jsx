@@ -5,17 +5,13 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Switch from '@mui/material/Switch';
 import { useLocation, useNavigate } from 'react-router-dom';
 // const env = await import.meta.env;
-const logo2 =
-//  (env.VITE_logo2) ||
-  "https://img.uniquemu.co.il/upload/bIj1Npo.png";
-const avatar = 
-// (env.VITE_avatar) || 
-"http://img.uniquemu.co.il/upload/udYCav4.jpeg"
+// const logo2 =  (env.VITE_logo2) || "https://img.uniquemu.co.il/upload/bIj1Npo.png";
+// const avatar = (env.VITE_avatar) || "http://img.uniquemu.co.il/upload/udYCav4.jpeg"
 
-const logo1 ="https://www.uploads.co.il/uploads/images/106030801.png"
-// const logo2 ="https://img.uniquemu.co.il/upload/bIj1Npo.png"
-const logo3 ="http://img.uniquemu.co.il/upload/WrcvRJe.png"
-// const avatar = "http://img.uniquemu.co.il/upload/4BSyycN.jpeg"
+const logo1 = "https://www.uploads.co.il/uploads/images/106030801.png"
+const logo2 = "https://img.uniquemu.co.il/upload/bIj1Npo.png"
+const logo3 = "http://img.uniquemu.co.il/upload/WrcvRJe.png"
+const avatar = "http://img.uniquemu.co.il/upload/4BSyycN.jpeg"
 const avatar2 = "http://img.uniquemu.co.il/upload/udYCav4.jpeg"
 
 
@@ -28,41 +24,54 @@ export default function Navbar({ parasha }) {
     const [isLoggedIn, setIsLoggedIn] = useState(!!userId)
 
 
-    useEffect(()=>{
-        if(userId){
+    useEffect(() => {
+        if (userId) {
             setIsLoggedIn(true)
         }
     }, [userId])
 
+    const navigation = [
+        { id: 0, name: parasha || "פרשת השבוע", href: `/` },
+        { id: 1, name: "כל הפרשיות", href: 'home/?parasha=all' },
+        { id: 2, name: 'הוספת מאמר', href: '/addition' },
+        { id: 3, name: adminMode ? 'טבלת משתמשים' : 'קצת עלינו', href: adminMode ? '/dashboard' : '/about' }
+    ];
+    const [activeIndex, setActiveIndex] = useState(0);
+
+    const handleNavigationClick = (button) => {
+        setActiveIndex(button.id);
+        navigate(button.href);
+    };
+
+    //    הגדרת הלחצן הלחוץ כעת - שינוי גוון
+    // const handleNavigationClick = (button) => {
+    //     const updatedNavigation = navigation.map((item, i) => ({
+    //         ...item,
+    //         current: i === button.id
+    //     }));
+    //     setNavigation(updatedNavigation);
+    //     navigate(button.href)
+    // };
+
     // סדרת לחצנים
-    const [navigation, setNavigation] = useState([
-        { id: 0, name: parasha || "פרשת השבוע", href: `/`, current: true,  },
-        { id: 1, name: "כל הפרשיות", href: 'home/?parasha=all', current: false },
-        { id: 2, name: 'הוספת מאמר', href: '/addition', current: false },
-        { id: 3, name: 'אודות', href: '/about', current: false }
-    ])
+    // const [navigation, setNavigation] = useState([
+    //     { id: 0, name: parasha || "פרשת השבוע", href: `/`, current: true,  },
+    //     { id: 1, name: "כל הפרשיות", href: 'home/?parasha=all', current: false },
+    //     { id: 2, name: 'הוספת מאמר', href: '/addition', current: false },
+    //     { id: 3, name: adminMode ? 'טבלת משתמשים' : 'קצת עלינו', href: adminMode ? '/dashboard' : '/about', current: false }
+    // ])
 
 
     function classNames(...classes) {
         return classes.filter(Boolean).join(' ')
     }
 
-    //    הגדרת הלחצן הלחוץ כעת - שינוי גוון
-    const handleNavigationClick = (botton) => {
-        const updatedNavigation = navigation.map((item, i) => ({
-            ...item,
-            current: i === botton.id
-        }));
-        setNavigation(updatedNavigation);
-        navigate(botton.href)
-    };
-
 
     const goToLoginAndBack = () => {
         navigate('/login', { state: { from: location } });
-      };
+    };
 
-  
+
 
 
 
@@ -94,12 +103,12 @@ export default function Navbar({ parasha }) {
                                         alt="logo"
                                     />
                                 </div>
-                                <div className="hidden sm:ml-6 sm:block">
-                                    <div className="flex space-x-4 text-center">
+                                <div className="hidden sm:ml-6 sm:block ">
+                                    <div className="flex space-x-8 text-center items-center justify-center ">
                                         {navigation.map((item, index) => {
 
-                                            // במידה והמשתמש  מנהל לא נציג את הכפתור 'אודות
-                                            if (!(isAdmin && index === navigation.length - 1)) {
+
+                                            if (true) {
                                                 return (
                                                     <a
                                                         key={item.name}
@@ -107,27 +116,33 @@ export default function Navbar({ parasha }) {
                                                         onClick={(e) => {
                                                             e.preventDefault(); // מונע רענון דף
                                                             handleNavigationClick(item);
+
                                                         }}
-                                                
+
                                                         className={classNames(
-                                                            item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                                                            'rounded-md px-3 py-2 text-sm font-medium'
+                                                            // item.current 
+                                                            index === activeIndex ? 'bg-gray-900 text-white ' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                                                            'rounded-md px-3 py-2 text-sm font-medium cursor-pointer select-none'
                                                         )}
-                                                        aria-current={item.current ? 'page' : undefined}
+                                                        aria-current={
+                                                            // item.current
+                                                            index === activeIndex
+                                                                ? 'page' : undefined}
                                                     >
                                                         {item.name}
                                                     </a>
                                                 );
                                             }
                                             return null;
-                                        })}
+                                        })
+                                        }
                                     </div>
                                 </div>
                             </div>
 
                             <div className="min-w-0 flex-1">
                                 <h2 onClick={() => { navigate(navigation[0].href) }}
-                                    className="text-center  font-bold leading-7 text-white sm:truncate sm:text-2xl sm:tracking-right">{`וורטלי`}<span>{parasha ? `- ${parasha}` : null}</span></h2>
+                                    className="text-center  font-bold leading-7 text-white sm:truncate sm:text-2xl sm:tracking-right select-none">{`וורטלי`}<span>{parasha ? `- ${parasha}` : null}</span></h2>
 
                             </div>
 
@@ -142,7 +157,7 @@ export default function Navbar({ parasha }) {
                                 </button> */}
 
 
-                                {!!isAdmin && <span className="text-white hidden sm:ml-2 sm:inline">{adminMode ? "Admin" : "User"}
+                                {!!isAdmin && <span className="text-white hidden sm:ml-2 sm:inline select-none">{adminMode ? "Admin" : "User"}
                                     <Switch
                                         className='hidden sm:ml-2 sm:block'
                                         checked={adminMode}
@@ -199,10 +214,10 @@ export default function Navbar({ parasha }) {
                                             <Menu.Item>
                                                 {({ active }) => (
                                                     <a
-                                                        onClick={ isLoggedIn ? () => { logOut(); setIsLoggedIn(false);} : goToLoginAndBack}
+                                                        onClick={isLoggedIn ? () => { logOut(); setIsLoggedIn(false); } : goToLoginAndBack}
                                                         className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700 cursor-pointer')}
                                                     >
-                                                         {isLoggedIn ? " התנתק" : "התחבר"}
+                                                        {isLoggedIn ? " התנתק" : "התחבר"}
                                                     </a>
                                                 )}
                                             </Menu.Item>
@@ -215,20 +230,26 @@ export default function Navbar({ parasha }) {
 
                     <Disclosure.Panel className="sm:hidden">
                         <div className="px-2 pt-2 pb-3 space-y-1">
-                            {navigation.map((item) => (
+                            {navigation.map((item, index) => (
                                 <Disclosure.Button
                                     key={item.name}
                                     as="a"
                                     href={item.href}
                                     className={classNames(
-                                        item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                                        'block rounded-md px-3 py-2 text-base font-medium'
+                                        // item.current
+                                        index === activeIndex ?
+                                            'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                                        'block rounded-md px-3 py-2 text-base font-medium cursor-pointer'
                                     )}
-                                    aria-current={item.current ? 'page' : undefined}
+                                    aria-current={
+                                        // item.current 
+                                        index === activeIndex
+                                            ? 'page' : undefined}
                                 >
                                     {item.name}
                                 </Disclosure.Button>
                             ))}
+                            רדקראדאקראראראראר
                         </div>
                     </Disclosure.Panel>
                 </>

@@ -21,12 +21,16 @@ function App() {
   // בדיקת טוקן
   useEffect(() => {
     async function checkToken() {
-      if (localStorage.getItem('Authorization')) {
+      if (
+        // localStorage.getItem('Authorization')
+        Cookies.get('Authorization')
+      ) {
         try {
           const response = await axios.post('https://vortly-db.onrender.com/api/login/checkToken', {}, {
             headers: {
               'Content-Type': 'application/json',
-              'Authorization': localStorage.getItem('Authorization')
+              // 'Authorization': localStorage.getItem('Authorization')
+              'Authorization': Cookies.get('Authorization')
             }
           });
           if (response.status !== 200) {
@@ -52,6 +56,7 @@ function App() {
   // זריקה החוצה
   function logOut() {
     localStorage.removeItem('Authorization');
+    Cookies.remove('Authorization');
     setUserId(null);
     // setUserName(null);
     setIsAdmin(0)

@@ -21,8 +21,8 @@ export default function MyRating({ item }) {
                     }),
                     headers: {
                         'Content-type': 'application/json; charset=UTF-8',
-            
-                        'authorization': localStorage.getItem('Authorization') || ''
+                        // 'authorization': localStorage.getItem('Authorization') || ''
+                        'authorization': Cookies.get('Authorization') || ''
                     }
                 })
                 if (!response.ok) {

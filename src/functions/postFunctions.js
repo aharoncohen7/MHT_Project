@@ -1,8 +1,10 @@
 import Swal from 'sweetalert2';
+import Cookies from "js-cookie";
 
 
 //פוסט חדש
 export async function importedAddNew(userId, selectedBook, selectedPortion, title, body, tags, setOriginalData, setMessage, setSend, setShowEditor, logOut, navigate) {
+  
   try {
     const response = await fetch('https://vortly-db.onrender.com/api/posts', {
       method: 'POST',
@@ -16,8 +18,8 @@ export async function importedAddNew(userId, selectedBook, selectedPortion, titl
       }),
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
-
-        'authorization': localStorage.getItem('Authorization') || ''
+        // 'authorization': localStorage.getItem('Authorization') || ''
+        'authorization': Cookies.get('Authorization') || ''
       },
     });
     console.log(response);
@@ -67,7 +69,8 @@ export async function importedEdit(postId, selectedBook, selectedPortion, title,
       }),
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
-        'authorization': localStorage.getItem('Authorization') || ''
+        // 'authorization': localStorage.getItem('Authorization') || ''
+        'authorization': Cookies.get('Authorization') || ''
       },
     });
     console.log(response);
@@ -115,7 +118,8 @@ export async function importedDelete(item, setOriginalData, setMessage, logOut, 
       headers: {
         'Content-Type': 'application/json',
 
-        'authorization': localStorage.getItem('Authorization') || ''
+        // 'authorization': localStorage.getItem('Authorization') || ''
+        'authorization': Cookies.get('Authorization') || ''
       },
     });
     if (!response.ok) {
@@ -176,7 +180,8 @@ export async function importedDelete(item, setOriginalData, setMessage, logOut, 
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
                
-                'authorization': localStorage.getItem('Authorization') || ''
+                // 'authorization': localStorage.getItem('Authorization') || ''
+                'authorization': Cookies.get('Authorization') || ''
             },
         });
         // console.log(response);

@@ -11,6 +11,7 @@ const CommentList = ({ postId, showComments, setMessage }) => {
 
   function logOut(){
     localStorage.removeItem('Authorization');
+    Cookies.remove('Authorization');
     window.location.href = "https://vortly.onrender.com/"
  }
 
@@ -42,7 +43,8 @@ const CommentList = ({ postId, showComments, setMessage }) => {
           headers: {
             'Content-Type': 'application/json',
            
-            'authorization': localStorage.getItem('Authorization') || ''
+            // 'authorization': localStorage.getItem('Authorization') || ''
+            'authorization': Cookies.get('Authorization') || ''
           },
         });
         if (!response.ok) {
@@ -75,7 +77,8 @@ const CommentList = ({ postId, showComments, setMessage }) => {
       headers: {
         'Content-Type': 'application/json',
        
-        'authorization': localStorage.getItem('Authorization') || ''
+        // 'authorization': localStorage.getItem('Authorization') || ''
+        'authorization': Cookies.get('Authorization') || ''
       },
     });
     if (!response.ok) {
@@ -96,7 +99,8 @@ const CommentList = ({ postId, showComments, setMessage }) => {
           headers: {
             'Content-Type': 'application/json',
             // 'auth': localStorage.getItem('auth') || ''.getItem('auth') || '',
-            'authorization': localStorage.getItem('Authorization') || ''
+            // 'authorization': localStorage.getItem('Authorization') || ''
+            'authorization': Cookies.get('Authorization') || ''
           },
         };
         const response = await fetch(urlComments, requestOptions);

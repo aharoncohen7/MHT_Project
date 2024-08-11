@@ -27,7 +27,8 @@ const Content = ({ parasha }) => {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
-            'authorization': localStorage.getItem('Authorization') || ''
+            // 'authorization': localStorage.getItem('Authorization') || ''
+            'authorization': Cookies.get('Authorization') || ''
           },
         };
         const response = await fetch(urlPosts, requestOptions);
