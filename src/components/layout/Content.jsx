@@ -10,49 +10,38 @@ import SignIn from "../login/SignIn";
 import AboutUs from "../AboutUs";
 import Cookies from "js-cookie";
 import { Edit } from "../Edit";
+import useAxiosReq from "../../functions/useAxiosReq";
+
 
 
 const Content = ({ parasha }) => {
-  const {  logOut, setMessage } = useContext(DataContext)
+  const { setMessage } = useContext(DataContext)
   const [originalData, setOriginalData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
- 
+    // קבלת פוסטים
+  const {data, error} = useAxiosReq({method: 'GET',body:{}, url:`/posts` })
+  console.log(data);
+  
+    // קיבוע פוסטים
+  useEffect(()=>{
+    if(data){
+      setOriginalData(data);
+      setFilteredData(data)
+    }
+  },[data])
 
-  // קבלת פוסטים
-  useEffect(() => {
-    const getAllPosts = async () => {
-      try {
-        const urlPosts = "https://vortly-db.onrender.com/api/posts/";
-        const requestOptions = {
-          method: 'GET',
-          headers: {
-            'Content-Type': 'application/json',
-            // 'authorization': localStorage.getItem('Authorization') || ''
-            'authorization': Cookies.get('Authorization') || ''
-          },
-        };
-        const response = await fetch(urlPosts, requestOptions);
-        if (!response.ok) {
-          if (response.status == 401) {
-            logOut()
-          }
-          setMessage(["Network response was not ok!", false])
-          throw new Error(`Network response was not ok! status: ${response.status}`);
-        }
-        const data = await response.json();
-        setOriginalData(data);
-        // console.log(data);
-      } catch (error) {
-        console.error("Error fetching posts:", error);
-      }
-    };
-    getAllPosts();
-  }, []);
+  // טיפול בשגיאות
+  useEffect(()=>{
+    if(error){
+      setMessage(["Network response was not ok!", false])
+    }
+  },[error])
 
-
+  // במקרה של שינוי במערך השמה מחדש
   useEffect(() => {
     setFilteredData(originalData)
    }, [originalData])
+
 
 
   return (
@@ -64,6 +53,7 @@ const Content = ({ parasha }) => {
         <Route path="edit/:postId" element={< Edit />} />
         <Route path="addition" element={<Addition />} />
         <Route path="about" element={<NotFound />} />
+        {/* <Route path="dashboard" element={<Dashboard />} /> */}
         {/* <Route path="login" element={<SignIn />} /> */}
         <Route path='*' element={<NotFound />} />
       </Routes>

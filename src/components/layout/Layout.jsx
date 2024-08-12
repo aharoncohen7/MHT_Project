@@ -30,34 +30,6 @@ const Layout = () => {
   }, []);
 
 
-  // בדיקת טוקן
-  // useEffect(() => {
-  //   async function checkToken() {
-  //     try {
-  //       const response = await axios.post('https://vortly-db.onrender.com/api/login/isTokenExpired', {
-  //         token: localStorage.getItem("Authorization")
-  //       }, {
-  //         headers: {
-  //           'Content-Type': 'application/json'
-  //         }
-  //       });
-  //       console.log(response.status)
-  //       if (response.status !== 200) {
-  //         console.log(response.status);
-  //         setMessage(["הסשן הסתיים, נא להכנס שוב", false])
-  //         logOut();
-  //       }
-  //     } catch (error) {
-  //       console.log(error.message);
-  //       setMessage([" התרחשה תקלה בניסיון האימות" + error.message, false])
-  //       logOut();
-  //     }
-  //   }
-
-  //   checkToken();
-  // }, []);
-
-
 
   return (
     <span >

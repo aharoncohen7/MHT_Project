@@ -1,12 +1,9 @@
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Fragment, useContext, useEffect, useState } from 'react'
-import DataContext from '../../contexts';
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Switch from '@mui/material/Switch';
-import { useLocation, useNavigate } from 'react-router-dom';
-// const env = await import.meta.env;
-// const logo2 =  (env.VITE_logo2) || "https://img.uniquemu.co.il/upload/bIj1Npo.png";
-// const avatar = (env.VITE_avatar) || "http://img.uniquemu.co.il/upload/udYCav4.jpeg"
+import DataContext from '../../contexts';
 
 const logo1 = "https://www.uploads.co.il/uploads/images/106030801.png"
 const logo2 = "https://img.uniquemu.co.il/upload/bIj1Npo.png"
@@ -17,63 +14,32 @@ const avatar2 = "http://img.uniquemu.co.il/upload/udYCav4.jpeg"
 
 // סרגל ראשי עליון
 export default function Navbar({ parasha }) {
-    const { logOut, isAdmin, adminMode, setAdminMode, userId } = useContext(DataContext)
-    console.log(userId);
-    const navigate = useNavigate();
+    const { logOut, isAdmin, adminMode, setAdminMode, userId, navigate } = useContext(DataContext)
+    const [activeIndex, setActiveIndex] = useState(0);
     const location = useLocation();
-    const [isLoggedIn, setIsLoggedIn] = useState(!!userId)
+    const isLoggedIn = !!userId;
 
-
-    useEffect(() => {
-        if (userId) {
-            setIsLoggedIn(true)
-        }
-    }, [userId])
-
-    const navigation = [
+    const navButtons = [
         { id: 0, name: parasha || "פרשת השבוע", href: `/` },
         { id: 1, name: "כל הפרשיות", href: 'home/?parasha=all' },
         { id: 2, name: 'הוספת מאמר', href: '/addition' },
         { id: 3, name: adminMode ? 'טבלת משתמשים' : 'קצת עלינו', href: adminMode ? '/dashboard' : '/about' }
+        
     ];
-    const [activeIndex, setActiveIndex] = useState(0);
 
     const handleNavigationClick = (button) => {
         setActiveIndex(button.id);
         navigate(button.href);
     };
 
-    //    הגדרת הלחצן הלחוץ כעת - שינוי גוון
-    // const handleNavigationClick = (button) => {
-    //     const updatedNavigation = navigation.map((item, i) => ({
-    //         ...item,
-    //         current: i === button.id
-    //     }));
-    //     setNavigation(updatedNavigation);
-    //     navigate(button.href)
-    // };
-
-    // סדרת לחצנים
-    // const [navigation, setNavigation] = useState([
-    //     { id: 0, name: parasha || "פרשת השבוע", href: `/`, current: true,  },
-    //     { id: 1, name: "כל הפרשיות", href: 'home/?parasha=all', current: false },
-    //     { id: 2, name: 'הוספת מאמר', href: '/addition', current: false },
-    //     { id: 3, name: adminMode ? 'טבלת משתמשים' : 'קצת עלינו', href: adminMode ? '/dashboard' : '/about', current: false }
-    // ])
-
-
     function classNames(...classes) {
         return classes.filter(Boolean).join(' ')
     }
 
-
+    // התחברות
     const goToLoginAndBack = () => {
         navigate('/login', { state: { from: location } });
     };
-
-
-
-
 
 
     return (
@@ -104,8 +70,8 @@ export default function Navbar({ parasha }) {
                                     />
                                 </div>
                                 <div className="hidden sm:ml-6 sm:block ">
-                                    <div className="flex space-x-8 text-center items-center justify-center ">
-                                        {navigation.map((item, index) => {
+                                    <div className="flex space-x-2  text-center items-center justify-center ">
+                                        {navButtons.map((item, index) => {
 
 
                                             if (true) {
@@ -121,8 +87,8 @@ export default function Navbar({ parasha }) {
 
                                                         className={classNames(
                                                             // item.current 
-                                                            index === activeIndex ? 'bg-gray-900 text-white ' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                                                            'rounded-md px-3 py-2 text-sm font-medium cursor-pointer select-none'
+                                                            index === activeIndex ? 'bg-gray-900 text-white ' : 'text-gray-300 hover:bg-gray-700 ',
+                                                            'rounded-md px-4 py-4 text-sm font-medium cursor-pointer select-none'
                                                         )}
                                                         aria-current={
                                                             // item.current
@@ -141,7 +107,7 @@ export default function Navbar({ parasha }) {
                             </div>
 
                             <div className="min-w-0 flex-1">
-                                <h2 onClick={() => { navigate(navigation[0].href) }}
+                                <h2 onClick={() => { navigate(navButtons[0].href) }}
                                     className="text-center  font-bold leading-7 text-white sm:truncate sm:text-2xl sm:tracking-right select-none">{`וורטלי`}<span>{parasha ? `- ${parasha}` : null}</span></h2>
 
                             </div>
@@ -161,7 +127,7 @@ export default function Navbar({ parasha }) {
                                     <Switch
                                         className='hidden sm:ml-2 sm:block'
                                         checked={adminMode}
-                                        onChange={() => setAdminMode(!adminMode)}
+                                        onChange={() => {localStorage.setItem('isAdminMode', !adminMode); setAdminMode(!adminMode)}}
                                         name="loading"
                                         color="primary"
                                     />
@@ -214,11 +180,13 @@ export default function Navbar({ parasha }) {
                                             <Menu.Item>
                                                 {({ active }) => (
                                                     <a
-                                                        onClick={isLoggedIn ? () => { logOut(); setIsLoggedIn(false); } : goToLoginAndBack}
+                                                        onClick={isLoggedIn ? logOut : goToLoginAndBack}
                                                         className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700 cursor-pointer')}
                                                     >
                                                         {isLoggedIn ? " התנתק" : "התחבר"}
                                                     </a>
+
+                                                    
                                                 )}
                                             </Menu.Item>
                                         </Menu.Items>
@@ -230,7 +198,7 @@ export default function Navbar({ parasha }) {
 
                     <Disclosure.Panel className="sm:hidden">
                         <div className="px-2 pt-2 pb-3 space-y-1">
-                            {navigation.map((item, index) => (
+                            {navButtons.map((item, index) => (
                                 <Disclosure.Button
                                     key={item.name}
                                     as="a"

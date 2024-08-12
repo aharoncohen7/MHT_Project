@@ -4,67 +4,17 @@ import { Routes, Route, useNavigate } from 'react-router-dom';
 import DataContext from './contexts/';
 import SignIn from './components/login/SignIn';
 import Layout from './components/layout/Layout';
-import axios from "axios";
 import Cookies from "js-cookie";
-
+import { axiosReq } from './functions/useAxiosReq';
 
 function App() {
-  console.log("app is up");
-  const [userId, setUserId] = useState(null);
-  // const [userName, setUserName] = useState(null);
-  const [message, setMessage] = useState([null, true]);
-  const [isAdmin, setIsAdmin] = useState(0)
-  const [adminMode, setAdminMode] = useState(false)
-  console.log("userId: ", userId, "isAdmin: ", isAdmin, "adminMode: ", adminMode);
   const navigate = useNavigate();
+  const [userId, setUserId] = useState(null);
+  const [isAdmin, setIsAdmin] = useState(0)
+  const [adminMode, setAdminMode] = useState( Boolean(localStorage.getItem('isAdminMode')) || false);
+  const [message, setMessage] = useState([null, true]);
 
-  // בדיקת טוקן
-  useEffect(() => {
-    async function checkToken() {
-      if (
-        // localStorage.getItem('Authorization')
-        Cookies.get('Authorization')
-      ) {
-        try {
-          const response = await axios.post('https://vortly-db.onrender.com/api/login/checkToken', {}, {
-            headers: {
-              'Content-Type': 'application/json',
-              // 'Authorization': localStorage.getItem('Authorization')
-              'Authorization': Cookies.get('Authorization')
-            }
-          });
-          if (response.status !== 200) {
-            console.log(response.status, "שגיאה באימות טוקן");
-            logOut();
-            return;
-          }
-          const userData = response.data;
-          console.log(userData);
-          setIsAdmin(userData.isAdmin)
-          setUserId(userData.userId)
-        } catch (error) {
-          console.log(error.message, "שגיאה באימות טוקן");
-          setMessage([error.message +  " שגיאה באימות טוקן", false])
-          logOut();
-        }
-      }
-    }
-    checkToken();
-  }, []);
-
-
-  // זריקה החוצה
-  function logOut() {
-    localStorage.removeItem('Authorization');
-    Cookies.remove('Authorization');
-    setUserId(null);
-    // setUserName(null);
-    setIsAdmin(0)
-    setAdminMode(false)
-    // window.location.href = "https://vortly.onrender.com/"
-  }
-
-  // // איפוס הודעות מערכת
+  // איפוס הודעות מערכת
   useEffect(() => {
     if (message[0] !== null) {
       setTimeout(() => {
@@ -73,31 +23,83 @@ function App() {
     }
   }, [message]);
 
+ // בדיקת טוקן
+  useEffect(() => {
+  const checkToken = async () => {
+    if (Cookies.get('Authorization')) {
+      try {
+        const userData = await axiosReq({ method: 'POST', body: {}, url: `/login/checkToken` })
+        setIsAdmin(userData.isAdmin)
+        setUserId(userData.userId)
+        setAdminMode(Boolean(localStorage.getItem('isAdminMode')) || false)
+
+      } catch (e) {
+        console.log(e, "שגיאה באימות טוקן");
+        setMessage([" הסשן הסתיים, נא התחבר מחדש", false])
+        logOut();
+
+      }
+    }
+  }
+    checkToken();
+  }, [])
+
+
+   // זריקה החוצה
+   function logOut() {
+     Cookies.remove('Authorization');
+    // localStorage.removeItem('isAdminMode')
+    setUserId(null);
+    setIsAdmin(0)
+    setAdminMode(false)
+    // window.location.href = "https://vortly.onrender.com/"
+  }
+
+
+
+  const contexts = {
+    navigate,
+    setMessage,
+    logOut,
+    setUserId,
+    setIsAdmin,
+    setAdminMode,
+    message,
+    userId,
+    isAdmin,
+    adminMode,
+  }
 
 
   return (
-    <DataContext.Provider value={{ navigate, logOut, setUserId, setMessage, setIsAdmin, setAdminMode, userId, isAdmin, adminMode, message }}>
-      <>
-        <Routes>
-          <Route path="/login" element={<SignIn />} />
-          <Route
-            path="/*"
-            element={
-              // !localStorage.getItem("Authorization") ? (
-              // <SignIn />
-              // ) : (
-              <Layout />
-              // )
-            }
-          />
-        </Routes>
-
-
-
-
-      </>
+    <DataContext.Provider value={contexts}>
+      <Routes>
+        <Route path="/login" element={<SignIn />} />
+        <Route path="/*" element={<Layout />} />
+      </Routes>
     </DataContext.Provider>
   )
 }
 
 export default App
+
+
+// TODO לאחד 3 סטייטים הבאים
+// const [userData, setUserData] = useState({
+//   userId: null,
+//   isAdmin: 0,
+//   adminMode: false
+// })
+
+// const contexts = {
+//   navigate,
+//   message,
+//   setMessage,
+//   logOut,
+//   setUserId : (userId) => setUserData({...userData, userId}),
+//   setIsAdmin:  (isAdmin) => setUserData({...userData, isAdmin}),
+//   setAdminMode : (adminMode) => setUserData({...userData, adminMode}),
+//   userId:userData.userId,
+//   isAdmin:userData.isAdmin,
+//   adminMode:userData.adminMode,
+// }
