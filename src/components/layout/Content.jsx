@@ -11,11 +11,12 @@ import AboutUs from "../AboutUs";
 import Cookies from "js-cookie";
 import { Edit } from "../Edit";
 import useAxiosReq from "../../functions/useAxiosReq";
+import Dashboard from "../dashboard/Dashboard";
 
 
 
 const Content = ({ parasha }) => {
-  const { setMessage } = useContext(DataContext)
+  const { setMessage, isAdmin, adminMode, } = useContext(DataContext)
   const [originalData, setOriginalData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
     // קבלת פוסטים
@@ -53,7 +54,7 @@ const Content = ({ parasha }) => {
         <Route path="edit/:postId" element={< Edit />} />
         <Route path="addition" element={<Addition />} />
         <Route path="about" element={<NotFound />} />
-        {/* <Route path="dashboard" element={<Dashboard />} /> */}
+        <Route path="dashboard" element={isAdmin && adminMode ?<Dashboard /> : <NotFound />} />
         {/* <Route path="login" element={<SignIn />} /> */}
         <Route path='*' element={<NotFound />} />
       </Routes>
