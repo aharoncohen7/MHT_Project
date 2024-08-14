@@ -84,7 +84,7 @@ const UserTable = () => {
                 {sortKey == "name" && <>{sortOrder == 'asc' ? <FaArrowDown /> : <FaArrowUp />}</>}</span>
             </th>
             <th className="py-2 px-4 border cursor-pointer flex gap-4 items-center justify-center" onClick={() => handleSort('username')}>
-              <span className='flex gap-4 items-center justify-center'>user name
+              <span className='flex gap-4 items-center justify-center px-2'>user name
                 {sortKey == "username" && <>{sortOrder == 'asc' ? <FaArrowDown /> : <FaArrowUp />}</>}</span>
             </th>
             <th className="py-2 px-4 border text-gray-600">ID</th>

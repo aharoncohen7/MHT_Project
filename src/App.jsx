@@ -11,7 +11,7 @@ function App() {
   const navigate = useNavigate();
   const [userId, setUserId] = useState(null);
   const [isAdmin, setIsAdmin] = useState(0)
-  const [adminMode, setAdminMode] = useState( Boolean(localStorage.getItem('isAdminMode')) || false);
+  const [adminMode, setAdminMode] = useState(Boolean(sessionStorage.getItem('isAdminMode')) || false);
   const [message, setMessage] = useState([null, true]);
 
   // איפוס הודעות מערכת
@@ -31,15 +31,20 @@ function App() {
         const userData = await axiosReq({ method: 'POST', body: {}, url: `/login/checkToken` })
         setIsAdmin(userData.isAdmin)
         setUserId(userData.userId)
-        setAdminMode(Boolean(localStorage.getItem('isAdminMode')) || false)
+        setAdminMode(Boolean(sessionStorage.getItem('isAdminMode')) || false)
+        sessionStorage
 
       } catch (e) {
         console.log(e, "שגיאה באימות טוקן");
+        setAdminMode(false)
+        sessionStorage.removeItem('isAdminMode')
         setMessage([" הסשן הסתיים, נא התחבר מחדש", false])
         logOut();
 
       }
     }
+    else sessionStorage.removeItem('isAdminMode')
+    setAdminMode(false)
   }
     checkToken();
   }, [])
@@ -48,7 +53,7 @@ function App() {
    // זריקה החוצה
    function logOut() {
      Cookies.remove('Authorization');
-    // localStorage.removeItem('isAdminMode')
+    sessionStorage.removeItem('isAdminMode')
     setUserId(null);
     setIsAdmin(0)
     setAdminMode(false)

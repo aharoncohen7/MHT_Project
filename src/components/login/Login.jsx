@@ -12,7 +12,7 @@ import { useLocation } from 'react-router-dom';
 
 
 export default function Login({ setIsExists }) {
-  localStorage.removeItem('Authorization');
+  sessionStorage.removeItem('isAdminMode');
   Cookies.remove('Authorization');
   const { setMessage, setUserId, setUserName, setIsAdmin, navigate, message } = useContext(DataContext)
   const [username, setUsername] = useState('');
@@ -50,7 +50,7 @@ export default function Login({ setIsExists }) {
           setUserId(user.id)
           // setUserName(user.username)
           setIsAdmin(user.isAdmin)
-          // localStorage.setItem("Authorization", user.token)
+          // sessionStorage.setItem("Authorization", user.token)
           Cookies.set("Authorization", user.token)
           handleSuccessfulLogin();
         }

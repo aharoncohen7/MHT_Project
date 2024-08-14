@@ -127,7 +127,7 @@ export default function Navbar({ parasha }) {
                                     <Switch
                                         className='hidden sm:ml-2 sm:block'
                                         checked={adminMode}
-                                        onChange={() => {localStorage.setItem('isAdminMode', !adminMode); setAdminMode(!adminMode)}}
+                                        onChange={() => {sessionStorage.setItem('isAdminMode', !adminMode); setAdminMode(!adminMode)}}
                                         name="loading"
                                         color="primary"
                                     />
