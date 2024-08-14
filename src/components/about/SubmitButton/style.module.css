@@ -1,0 +1,49 @@
+.button {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.textButton {
+    width: 100%;
+    /* // padding: 8px; */
+    /* // border-radius: 8px; */
+}
+
+.allowedButton {
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    background: var(--blue-gradient);
+    &:hover {
+        background-color: var(--primary-blue);
+    }
+}
+
+.disabledButton {
+    cursor: not-allowed;
+    opacity: 0.6;
+    pointer-events: none;
+    background: var(--light-blue);
+    box-shadow:1px 1px 15px 6px #fff;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner {
+    border: 4px solid rgba(253, 147, 98, 0.1);
+    border-left-color: var(--primary-blue);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin-full 1s linear infinite;
+}
+
+@keyframes spin-full {
+    to {
+        transform: rotate(360deg);
+    }
+}

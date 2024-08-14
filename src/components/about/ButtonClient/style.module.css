@@ -1,0 +1,60 @@
+.gradientBorder {
+    position: relative;
+    display: inline-block;
+    padding: 10px 10px;
+    border: none;
+    color: #fff;
+    background-color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    border-radius: 11px;
+
+}
+
+.gradientBorder:active::before {
+    background: linear-gradient(45deg, #0077CC, #003C66);
+}
+
+.gradientBorder:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.gradientBorder::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    /* Adjust this value to change the border radius */
+    padding: 4px;
+    /* This determines the border thickness */
+    background: linear-gradient(45deg, #003C66, #0077CC);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
+
+.gradientBorder:hover::before {
+    opacity: 0.8;
+}
+
+.gradientBorder span {
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .gradientBorder {
+        width: 100px;
+    }
+}
