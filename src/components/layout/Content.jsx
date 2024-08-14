@@ -12,6 +12,7 @@ import Cookies from "js-cookie";
 import { Edit } from "../Edit";
 import useAxiosReq from "../../functions/useAxiosReq";
 import Dashboard from "../dashboard/Dashboard";
+import ContactUsForm from "../about/ContactUsForm";
 
 
 
@@ -53,7 +54,7 @@ const Content = ({ parasha }) => {
         <Route path="post/:postId" element={<SinglePost />} />
         <Route path="edit/:postId" element={< Edit />} />
         <Route path="addition" element={<Addition />} />
-        <Route path="about" element={<NotFound />} />
+        <Route path="about" element={<AboutUs />} />
         <Route path="dashboard" element={isAdmin && adminMode ?<Dashboard /> : <NotFound />} />
         {/* <Route path="login" element={<SignIn />} /> */}
         <Route path='*' element={<NotFound />} />

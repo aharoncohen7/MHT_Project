@@ -22,7 +22,7 @@ export default function Navbar({ parasha }) {
     const navButtons = [
         { id: 0, name: parasha || "פרשת השבוע", href: `/` },
         { id: 1, name: "כל הפרשיות", href: 'home/?parasha=all' },
-        { id: 2, name: 'הוספת מאמר', href: '/addition' },
+        { id: 2, name: isLoggedIn ? 'הוספת מאמר' : "התחבר", href: isLoggedIn ? '/addition' : '/login' },
         { id: 3, name: adminMode ? 'טבלת משתמשים' : 'קצת עלינו', href: adminMode ? '/dashboard' : '/about' }
         
     ];
