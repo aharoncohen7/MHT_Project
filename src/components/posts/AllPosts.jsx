@@ -44,7 +44,7 @@ export default function AllPosts({ setOriginalData }) {
             console.log("tytryrty")
         }
         else {
-            setMessage(["כדי לפרסם פוטס עליך להיות מחובר", false]);
+            setMessage(["כדי לפרסם פוסט עליך להיות מחובר", false]);
         }
     }
 

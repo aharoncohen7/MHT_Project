@@ -16,7 +16,7 @@ export default function Addition() {
 
   useEffect(()=>{
     if(!userId){
-      setMessage(["כדי לפרסם פוטס עליך להיות מחובר", false]);
+      setMessage(["כדי לפרסם פוסט עליך להיות מחובר", false]);
       navigate(-1);
     }
   },[])

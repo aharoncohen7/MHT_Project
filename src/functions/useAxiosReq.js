@@ -20,7 +20,7 @@ export const axiosReq = async ({ method = 'POST', body, url }) => {
        return result;
     } catch (error) {
        console.log('api error 🤢 \n', { error })
-       throw error.response?.data?.my  ? error.response?.data?.message || 'something went wrong' : 'something went wrong'
+       throw  error.message || 'something went wrong'
     }
  }
 
@@ -28,7 +28,6 @@ export const axiosReq = async ({ method = 'POST', body, url }) => {
 
 
 export default function useAxiosReq({ defaultVal, method, url, body }) {
-
     const [data, setData] = useState(defaultVal)
     // טעינה בעת המתנה למידע
     const [loading, setLoading] = useState(false)
@@ -59,5 +58,5 @@ export default function useAxiosReq({ defaultVal, method, url, body }) {
         // }, [1000])
     }, [])
 
-    return { data, loading, error, fetchData }
+    return { data, loading, setLoading, error, fetchData }
 }
