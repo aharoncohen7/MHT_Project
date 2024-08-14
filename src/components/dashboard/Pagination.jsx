@@ -1,5 +1,6 @@
-const Pagination = ({ currentPage, totalPages, onPageChange }) => {
+const Pagination = ({ currentPage, totalPages, onPageChange, currentLength, totalLength }) => {
    const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
+
 
    return (
       <div className="flex justify-center items-center gap-4 mt-4">
@@ -14,7 +15,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
          ))}
 
          <p>
-            showing 66 items from 1090
+            showing {currentLength} items from {totalLength}
          </p>
       </div>
    );

@@ -58,5 +58,5 @@ export default function useAxiosReq({ defaultVal, method, url, body }) {
         // }, [1000])
     }, [])
 
-    return { data, loading, error, fetchData }
+    return { data, loading, setLoading, error, fetchData }
 }
