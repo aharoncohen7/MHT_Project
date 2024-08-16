@@ -7,8 +7,8 @@
     width: 500px;
     flex-shrink: 0;
     padding: 1rem;
-    box-shadow: 1px 25px 24px 12px var(--gray);
-    box-shadow: var(--box-shadow);
+    /* box-shadow: 1px 25px 24px 12px #DFDFDF; */
+    box-shadow: 1px 1px 15px 2px #fff;
     border-radius: 14px;
     /* background-color: var(--blue-gradient); */
     background-color:white;
@@ -88,7 +88,7 @@
     padding: 0.5rem;
     border-radius: 0.275rem;
     border: 1px solid #d1d5db;
-    /* // box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); */
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     font-size: 1rem;
     letter-spacing: 0.01rem;
     word-spacing: 0.001rem;
@@ -100,11 +100,10 @@
 
     &:focus {
         outline: none;
-        /* // ring: 2px solid #0077CC; */
-        /* // border-color: #0077CC; */
-        /* // linear-gradient(45deg, #0077CC, #003C66); */
-        /* // box-shadow: 1px 1px 15px 2px #fff; */
-        /* // box-shadow: 1px 1px 10px  #eff8rgb(141, 141, 141) */
+        border: #0077CC solid 3px;
+        /* linear-gradient :root(45deg, #0077CC, #003C66); */
+        box-shadow: 1px 1px 15px 2px #fff;
+        /* box-shadow: 1px 1px 10px #eff8 rgb(141, 141, 141) */
 
     }
 }
@@ -192,3 +191,15 @@
         transform: rotate(360deg);
     }
 }
+
+
+/* // vars */
+
+    /* --primary-blue: #002651;
+    --box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    --light-blue: #034077;
+    --white: #FFFFFF;
+    --gray: #DFDFDF;
+    --blue-gradient: linear-gradient(to right, rgba(6, 119, 221, 0.8), rgba(4, 81, 151, 0.8), rgba(3, 64, 119, 0.8));
+    --txt-color : #262626; */
+  
