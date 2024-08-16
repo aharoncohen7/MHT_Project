@@ -1,0 +1,29 @@
+/* fonts.css */
+@import '@fontsource/heebo/100.css';
+@import '@fontsource/heebo/200.css';
+@import '@fontsource/heebo/300.css';
+@import '@fontsource/heebo/400.css';
+@import '@fontsource/heebo/500.css';
+@import '@fontsource/heebo/600.css';
+@import '@fontsource/heebo/700.css';
+@import '@fontsource/heebo/800.css';
+@import '@fontsource/heebo/900.css';
+
+@import '@fontsource/bona-nova/400.css';
+@import '@fontsource/bona-nova/700.css';
+
+:root {
+  --font-heebo: 'Heebo', sans-serif;
+  --font-bona: 'Bona Nova', serif;
+}
+
+/* אופציונלי: הגדרת font-display: swap */
+@font-face {
+  font-family: 'Heebo';
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bona Nova';
+  font-display: swap;
+}
