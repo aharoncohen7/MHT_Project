@@ -87,7 +87,7 @@ export default function AllPosts({ setOriginalData }) {
                     {message && <p style={{ color: 'red' }}>{message}</p>}
                     <div className="mb-20 grid max-w-2xl grid-cols-1 pt-10 mx-auto border-t border-gray-200 gap-x-8 gap-y-16 sm:mt-36 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3  ">
                         {sortedList.map((post) => (
-                            <article key={post.id} className="cursor-pointer bg-white flex flex-col items-center justify-between max-w-xl hover:bg-gray-100 border border-gray-300 shadow-md truncate rounded-md">
+                            <article key={post.id} className="cursor-pointer bg-white flex flex-col items-center justify-between max-w-xl hover:bg-gray-100 border border-gray-300 shadow-md truncate rounded-xl">
                                 <div className="flex items-center text-xs gap-x-4">
                                     <p className="text-gray-500">
                                         {formatDate(post.created_at)}

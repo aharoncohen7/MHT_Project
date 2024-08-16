@@ -12,8 +12,6 @@ import Cookies from "js-cookie";
 import { Edit } from "../Edit";
 import useAxiosReq from "../../functions/useAxiosReq";
 import Dashboard from "../dashboard/Dashboard";
-import ContactUsForm from "../about/ContactUsForm";
-
 
 
 const Content = ({ parasha }) => {

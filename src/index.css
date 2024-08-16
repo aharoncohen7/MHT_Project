@@ -3,10 +3,12 @@
 @tailwind utilities;
 
 
-body{
-  /* background-color: #000300; */
-  background-color: cornsilk;
+html {
+  scroll-behavior: smooth;
 }
+
+
+
 
 .ql-editor {
   direction: rtl;
@@ -43,6 +45,8 @@ body{
 body {
   direction: rtl;
   font-family: var(--font-heebo);
+  /* background-color: #000300; */
+  background-color: cornsilk;
 }
 a{
   text-decoration: none;
