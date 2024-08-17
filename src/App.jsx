@@ -79,7 +79,7 @@ function App() {
   return (
     <DataContext.Provider value={contexts}>
       <Routes>
-        <Route path="/login" element={<SignIn />} />
+        {/* <Route path="/login" element={<SignIn />} /> */}
         <Route path="/*" element={<Layout />} />
       </Routes>
     </DataContext.Provider>

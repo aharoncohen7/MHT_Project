@@ -53,6 +53,7 @@ const Content = ({ parasha }) => {
         <Route path="edit/:postId" element={< Edit />} />
         <Route path="addition" element={<Addition />} />
         <Route path="about" element={<AboutUs />} />
+        <Route path="/login" element={<SignIn />} />
         <Route path="dashboard" element={isAdmin && adminMode ?<Dashboard /> : <NotFound />} />
         {/* <Route path="login" element={<SignIn />} /> */}
         <Route path='*' element={<NotFound />} />

@@ -5,20 +5,10 @@ import { SiTheconversation } from "react-icons/si";
 import { SubmitButton } from '../SubmitButton/SubmitButton';
 import Text from '../TextComponent';
 import styles from "./style.module.css";
+import { axiosReq } from '../../../functions/useAxiosReq';
 const RECAPTCHA_SITE_KEY = '6Ld8QxcqAAAAAF09ze43D1eSzgG0gBq4S4ky6bB_';
 
-const createQuestionAction = (state) => {
-  return {
-    type: "createQuestionAction",
-    parameters: {
-      question: state.question,
-      contactMethod: state.contactMethod,
-      contactDetails: state.contactDetails,
-    },
-    success: state.success,
-    message: state.message,
-  };
-}
+
 
 export default function ContactUsForm() {
   const [state, setState] = useState({});
@@ -62,13 +52,34 @@ export default function ContactUsForm() {
   }
 
   // שליחת הטופס
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const action = createQuestionAction(state);
-    // להוסיף כאן את ההגיון של שליחת הטופס
-    // למשל fetch עם POST או כל אמצעי אחר בהתאם לדרישות שלך
-    console.log("Form submitted:", action);
-  };
+  const handleSubmit = async(event) => {
+    try{
+      event.preventDefault();
+    
+      // יצירת אובייקט FormData לקבלת נתוני הטופס
+      const formData = new FormData(formRef.current);
+      
+      // יצירת אובייקט רגיל מנתוני הטופס
+      const formValues = Object.fromEntries(formData.entries());
+      
+      console.log("Form submitted with values:", formValues);
+      
+      // קריאה לפעולה עם הנתונים שנאספו
+      const action = await axiosReq({
+        method: "POST",
+        body: formValues,
+        url: "/questions"
+      });
+      setState(action)
+      console.log("Form action response:", action);
+    
+    }
+    catch (error) {
+      console.error("Error occurred during form submission:", error);
+      setState({ success:false, message: "שגיאה אירעה במהלך השליחה" });
+    }
+  }
+  
 
   return (
     <div className={styles.container}>
@@ -94,7 +105,7 @@ export default function ContactUsForm() {
           </label>
           <input
             type="text"
-            name='title'
+            name='subject'
             placeholder="נסה לנסח את פנייתך במשפט אחד"
             className={styles.input}
             minLength={10}
@@ -107,7 +118,7 @@ export default function ContactUsForm() {
             <Text as="h5" fontStyle="b">*תוכן הפנייה</Text>
           </label>
           <textarea
-            name='question'
+            name='content'
             placeholder="אנא נסח את פנייתך בעברית (באורך של 20 תווים ומעלה)"
             title="אנא נסח את פנייתך בעברית (באורך של 20 תווים ומעלה)"
             className={styles.textarea}
