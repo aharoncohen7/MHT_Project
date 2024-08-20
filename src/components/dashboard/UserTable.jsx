@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Pagination from './Pagination';
 import useAxiosReq, { axiosReq } from '../../functions/useAxiosReq';
 import { FaArrowDown } from "react-icons/fa";
@@ -20,11 +20,20 @@ const UserTable = () => {
   const { data: users, error, loading, setLoading, fetchData: getUsers } = useAxiosReq({ method: 'GET', body: {}, url: `/users` });
 
 
+
+useEffect(()=>{
+  if(error){
+    setMessage(['הפעולה נכשלה' + error.message, false]);
+  }
+
+},[error])
+
   const handleSort = (key) => {
     const order = sortKey === key && sortOrder === 'asc' ? 'desc' : 'asc';
     setSortKey(key);
     setSortOrder(order);
   };
+
   const handleSetCurrentPage = (page) => {
     setLoading(true)
     setTimeout(() => {
@@ -62,38 +71,40 @@ const UserTable = () => {
 
   return (
     <div className="p-4">
+      
       <div className="flex mb-4">
+      <select className="border p-2" value={isAdmin} onChange={(e) => setIsAdmin(e.target.value)}>
+          <option value="all">הצג הכל</option>
+          <option value={1}>עורכים בלבד</option>
+          <option value={0}>משתמשים בלבד</option>
+        </select>
         <input
           type="text"
-          className="border p-2 mr-2"
-          placeholder="Search by name or email"
+          className="border px-8 mr-2"
+          placeholder="חפש בשם משתמש או אימייל"
           value={search}
           onChange={(e) => { setCurrentPage(1); setSearch(e.target.value) }}
         />
-        <select className="border p-2" value={isAdmin} onChange={(e) => setIsAdmin(e.target.value)}>
-          <option value="all">All</option>
-          <option value={1}>Admin</option>
-          <option value={0}>User</option>
-        </select>
+        
       </div>
       <table className="min-w-full cursor-arrow">
         <thead >
           <tr>
             <th className="py-2 px-4 border cursor-pointer " onClick={() => handleSort('name')}>
-              <span className='flex gap-4 items-center justify-center'>Name
+              <span className='flex gap-4 items-center justify-center'>שם פרטי ומשפחה
                 {sortKey == "name" && <>{sortOrder == 'asc' ? <FaArrowDown /> : <FaArrowUp />}</>}</span>
             </th>
             <th className="py-2 px-4 border cursor-pointer flex gap-4 items-center justify-center" onClick={() => handleSort('username')}>
-              <span className='flex gap-4 items-center justify-center px-2'>user name
+              <span className='flex gap-4 items-center justify-center px-2'>שם משתמש
                 {sortKey == "username" && <>{sortOrder == 'asc' ? <FaArrowDown /> : <FaArrowUp />}</>}</span>
             </th>
-            <th className="py-2 px-4 border text-gray-600">ID</th>
-            <th className="py-2 px-4 border text-gray-600">Phone</th>
+            <th className="py-2 px-4 border text-gray-600">מזהה</th>
+            <th className="py-2 px-4 border text-gray-600">טלפון</th>
             <th className="py-2 px-4 border cursor-pointer flex gap-4 items-center justify-center" onClick={() => handleSort('email')}>
-              <span className='flex gap-4 items-center justify-center'>Email
+              <span className='flex gap-4 items-center justify-center'>אימייל
                 {sortKey == "email" && <>{sortOrder == 'asc' ? <FaArrowDown /> : <FaArrowUp />}</>} </span>
             </th>
-            <th className="py-2 px-4 border text-gray-600">is Admin</th>
+            <th className="py-2 px-4 border text-gray-600">האם מנהל</th>
           </tr>
         </thead>
         <tbody>
@@ -115,7 +126,7 @@ const UserTable = () => {
                     name="loading"
                     color="primary"
                   />
-                  {user.isAdmin ? 'Yes' : 'No'}</td>
+                  {user.isAdmin ? 'כן' : 'לא'}</td>
               </tr>
             ))
           )}

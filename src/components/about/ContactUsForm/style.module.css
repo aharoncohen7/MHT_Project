@@ -1,4 +1,7 @@
 .container {
+ 
+
+
     margin: 20px 0;
     display: flex;
     justify-content: center;
@@ -121,7 +124,7 @@
 
 
 
-.submitButton{
+.submitButton {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -130,7 +133,7 @@
     gap: 8px;
 }
 
-.recaptcha{
+.recaptcha {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -195,11 +198,10 @@
 
 /* // vars */
 
-    /* --primary-blue: #002651;
+/* --primary-blue: #002651;
     --box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
     --light-blue: #034077;
     --white: #FFFFFF;
     --gray: #DFDFDF;
     --blue-gradient: linear-gradient(to right, rgba(6, 119, 221, 0.8), rgba(4, 81, 151, 0.8), rgba(3, 64, 119, 0.8));
     --txt-color : #262626; */
-  

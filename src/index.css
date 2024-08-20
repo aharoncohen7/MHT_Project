@@ -3,30 +3,40 @@
 @tailwind utilities;
 
 
+@import '@fontsource/heebo/100.css';
+@import '@fontsource/heebo/200.css';
+@import '@fontsource/heebo/300.css';
+@import '@fontsource/heebo/400.css';
+@import '@fontsource/heebo/500.css';
+@import '@fontsource/heebo/600.css';
+@import '@fontsource/heebo/700.css';
+@import '@fontsource/heebo/800.css';
+@import '@fontsource/heebo/900.css';
+
+@import '@fontsource/bona-nova/400.css';
+@import '@fontsource/bona-nova/700.css';
+
+
 html {
   scroll-behavior: smooth;
+  /* font-family: 'Bona Nova', sans-serif; */
+  font-display: swap;
 }
 
 
 
 
-.ql-editor {
-  direction: rtl;
-  text-align: right;
-  max-width: 400px;
-}
-
-@media (max-width: 600px) {
-  .ql-editor {
-    max-width: 320px;
-  }
-}
 
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  /* למנוע סמן עכבר מהבהב */
+  caret-color: transparent;
+  /* pointer-events: none; */
+  /* user-select: none; */
 }
 
 
@@ -44,9 +54,15 @@ html {
 
 body {
   direction: rtl;
-  font-family: var(--font-heebo);
+  /* font-family: var(--font-heebo); */
   /* background-color: #000300; */
   background-color: cornsilk;
+  /* background: linear-gradient(to right, rgba(11, 2, 57, 0.8), rgba(15, 2, 28, 0.94), rgba(6, 9, 47, 0.8)) */
+  /* background:linear-gradient(to top right, #ff4694, #776fff); */
+  /* background: linear-gradient(to top right, #ff4694, #222222, #776fff); */
+  /* background: var(--blue-gradient); */
+
+
 }
 a{
   text-decoration: none;
@@ -79,5 +95,26 @@ label, input, select, button{
   background: var(--primary-blue);
 }
 
+/* ללא סמן מהבהב */
+.no-caret {
+  caret-color: transparent;
+  user-select: none;
+}
+
+/* רק אינפוטים, טקסט אריות, ודומיהם יקבלו את הסמן */
+input, textarea, [contenteditable="true"] {
+  caret-color: auto;
+}
 
 
+.ql-editor {
+  direction: rtl;
+  text-align: right;
+  max-width: 400px;
+}
+
+@media (max-width: 600px) {
+  .ql-editor {
+    max-width: 320px;
+  }
+}

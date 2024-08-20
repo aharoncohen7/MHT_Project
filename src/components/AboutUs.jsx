@@ -7,9 +7,9 @@ const links = [
   { name: 'לתרומות', href: '#' },
 ]
 const stats = [
-  { name: 'עורכי תוכן', value: '10+' },
+  { name: 'עורכי תוכן מקצועיים', value: '10+' },
   { name: 'כותבים רשומים', value: '80+' },
-  { name: 'מאמרים וחידושים', value: '300+' },
+  { name: 'מאמרים חדשים מדי שבוע', value: '300+' },
   { name: 'תגיות בנושאים שונים', value: '500+' },
 ]
 
@@ -70,7 +70,7 @@ export default function AboutUs() {
         </div>
       </div>
       <section id="form">
-        <span className="w-full flex my-22 justify-center text-base font-semibold leading-7 text-white">
+        <span className="w-full py-20 flex my-22 justify-center text-base font-semibold leading-7 text-white">
           <ContactUsForm /></span>
       </section>
     </div>
