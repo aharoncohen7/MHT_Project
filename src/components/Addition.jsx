@@ -101,7 +101,7 @@ export default function Addition() {
                 variant="contained"
                 endIcon={<SendIcon />}
                 onClick={() => {
-                  if (!userId) {
+                  if (userId) {
                     setSend(true);
                   } else {
                     setMessage(["כדי לפרסם פוסט עליך להיות מחובר", false]);

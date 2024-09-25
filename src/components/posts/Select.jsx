@@ -23,7 +23,7 @@ export default function Select({
   };
 
   return (
-    <div className=" flex flex-row-reverse">
+    <div className=" flex flex-row-reverse w-full">
       {/* סלקט החומשים */}
       <select
         className="relative py-2 pl-3 pr-10 text-right bg-white rounded-md shadow-sm cursor-pointer focus:outline-none focus:ring focus:ring-blue-500 focus:ring-opacity-50"
