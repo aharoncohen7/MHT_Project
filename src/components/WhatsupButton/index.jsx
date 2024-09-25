@@ -1,7 +1,7 @@
 import React from "react";
 // import Link from "next/link";
-import styles from "./style.module.css";
 import { FaWhatsapp } from "react-icons/fa";
+import styles from "./style.module.css";
 
 export default function JoinUs() {
   return (

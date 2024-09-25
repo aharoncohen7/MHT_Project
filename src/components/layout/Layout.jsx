@@ -1,104 +1,77 @@
-
-import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
-import Content from './Content'
+import React, { useContext, useEffect, useState } from "react";
+import Message from "../../components/Message";
 import UserContext from "../../contexts";
-import Navbar from "./Header";
-import { getCurrentDate, getNextWeekDate, getParasha } from '../../functions';
-import Cookies from "js-cookie";
-import Message from '../../components/Message'
-import ParashaNav from "./ParashaNav";
+import { getCurrentDate, getNextWeekDate, getParasha } from "../../functions";
+import { axiosReq } from "../../functions/useAxiosReq";
 import Footer from "../Footer";
-import useAxiosReq, { axiosReq } from "../../functions/useAxiosReq";
-
+import Content from "./Content";
+import Navbar from "./Header";
+import ParashaNav from "./ParashaNav";
 
 const Layout = () => {
   const [parasha, setParasha] = useState(null);
-  const { logOut, setMessage, message } = useContext(UserContext)
+  const [originalData, setOriginalData] = useState([]);
+  const [filteredData, setFilteredData] = useState([]);
+  const { logOut, setMessage, message } = useContext(UserContext);
 
   // קבלת פרשה
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get(`https://www.hebcal.com/hebcal?cfg=json&s=on&start=${getCurrentDate()}&end=${getNextWeekDate()}`)
-        const parasha = getParasha(response.data)
-        console.log(parasha);
-        setParasha(parasha)
+        const response = await axios.get(
+          `https://www.hebcal.com/hebcal?cfg=json&s=on&start=${getCurrentDate()}&end=${getNextWeekDate()}`
+        );
+        const parasha = getParasha(response.data);
+        setParasha(parasha);
       } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error("Error fetching data:", error);
       }
     }
     fetchData();
   }, []);
 
 
-  const [originalData, setOriginalData] = useState([]);
-  const [filteredData, setFilteredData] = useState([]);
-    // קבלת פוסטים
-  // const {data, error} = useAxiosReq({method: 'GET',body:{}, url:`/posts` })
-  // console.log(data);
-  
-
-
-
-    // קיבוע פוסטים
-  useEffect(()=>{
+  // קיבוע פוסטים
+  useEffect(() => {
     const fetchData = async () => {
-      // התחלת אפקט טעינה
-      // setLoading(true)
       try {
-          const data = await axiosReq({method: 'GET',body:{}, url:`/posts` })
-          if(data){
-            console.log(data)
-            setOriginalData(data);
-            setFilteredData(data)
-          }
+        const data = await axiosReq({ method: "GET", body: {}, url: `/posts` });
+        if (data) {
+          console.log(data);
+          setOriginalData(data);
+          setFilteredData(data);
+        }
       } catch (e) {
-          // setError(e)
-          setMessage(["Network response was not ok!", false])
+        setMessage(["Network response was not ok!", false]);
       }
-      //  finally {
-  
-      //     // הפסקת אפקט טעינה
-      //     setLoading(false)
-  
-      // }
-  }
+    };
 
-   
-  fetchData()
+    fetchData();
+  }, []);
 
-    
-  },[])
-
-  // טיפול בשגיאות
-  // useEffect(()=>{
-  //   if(error){
-  //     setMessage(["Network response was not ok!", false])
-  //   }
-  // },[error])
 
   // במקרה של שינוי במערך השמה מחדש
   useEffect(() => {
-    setFilteredData(originalData)
-   }, [originalData])
-
-
-
+    setFilteredData(originalData);
+  }, [originalData]);
 
   return (
-    <span >
+    <span>
       <Navbar parasha={parasha} />
-      <Content parasha={parasha} originalData={originalData} setOriginalData={setOriginalData} filteredData={filteredData}
-      setFilteredData={setFilteredData}
+      <Content
+        parasha={parasha}
+        originalData={originalData}
+        setOriginalData={setOriginalData}
+        filteredData={filteredData}
+        setFilteredData={setFilteredData}
       />
       <div className="hidden md:fixed border-t mt-10 max-w-80 top-0 left-40">
         <ParashaNav />
       </div>
-      {message[0] &&
-        <Message message={message} />}
-        <Footer/>
-       {/* <div
+      {message[0] && <Message message={message} />}
+      <Footer />
+      {/* <div
         className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
         aria-hidden="true"
       >
@@ -111,7 +84,7 @@ const Layout = () => {
         />
       </div> */}
     </span>
-  )
-}
+  );
+};
 
 export default Layout;

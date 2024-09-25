@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState } from "react";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import Link from "@mui/material/Link";
@@ -7,83 +7,87 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Cookies from "js-cookie";
-import UserContext from '../../contexts';
-import { useLocation } from 'react-router-dom';
-
+import UserContext from "../../contexts";
+import { useLocation } from "react-router-dom";
 
 export default function Login({ setIsExists }) {
-  sessionStorage.removeItem('isAdminMode');
-  Cookies.remove('Authorization');
-  const { setMessage, setUserId, setUserName, setIsAdmin, navigate, message } = useContext(UserContext)
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  sessionStorage.removeItem("isAdminMode");
+  Cookies.remove("Authorization");
+  const { setMessage, setUserId, setUserName, setIsAdmin, navigate, message } =
+    useContext(UserContext);
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   const location = useLocation();
- 
 
   //on input change
   const handleInput = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    setUsername(data.get("username"))
-    setPassword(data.get("password"))
+    setUsername(data.get("username"));
+    setPassword(data.get("password"));
   };
 
   //on LOGIN
   const handleLogin = async () => {
     const requestData = {
       username,
-      password
+      password,
     };
     try {
-      const response = await fetch('https://vortly-db.onrender.com/api/login', {
-        method: 'POST',
+      const response = await fetch("https://vortly-db.onrender.com/api/login", {
+        method: "POST",
         body: JSON.stringify(requestData),
         headers: {
-          'Content-Type': 'application/json'
-        }
+          "Content-Type": "application/json",
+        },
       });
       if (response.ok) {
         const user = await response.json();
         if (user) {
           console.log(user);
-          setMessage(['Login successful',true]);
-          setUserId(user.id)
+          setMessage(["Login successful", true]);
+          setUserId(user.id);
           // setUserName(user.username)
-          setIsAdmin(user.isAdmin)
+          setIsAdmin(user.isAdmin);
           // sessionStorage.setItem("Authorization", user.token)
-          Cookies.set("Authorization", user.token)
+          Cookies.set("Authorization", user.token);
           handleSuccessfulLogin();
         }
-      }
-      else {
-        if(response.status == 403){
+      } else {
+        if (response.status == 403) {
           setMessage([`המערכת ממתינה לאישור כתובת האימייל שלך`, false]);
-                return}
-        if(response.status == 404){
-        setMessage([`משתמש לא נמצא`, false]);
-        return}
+          return;
+        }
+        if (response.status == 404) {
+          setMessage([`משתמש לא נמצא`, false]);
+          return;
+        }
         setMessage([`אירעה שגיאה במהלך ההתחברות, נסה שוב מאוחר יותר`, false]);
         console.error(`Error during login: ${response.statusText}`);
       }
     } catch (error) {
-      setMessage([`אירעה שגיאה לא צפויה במהלך ההתחברות: ${error.message}`, false]);
+      setMessage([
+        `אירעה שגיאה לא צפויה במהלך ההתחברות: ${error.message}`,
+        false,
+      ]);
       console.error(`Error during login: ${error.message}`);
     }
   };
 
-
   const handleSuccessfulLogin = () => {
-    const from = location.state?.from?.pathname || '/';
-    console.log(from)
+    const from = location.state?.from?.pathname || "/";
+    console.log(from);
     navigate(from, { replace: true });
   };
 
-
   return (
-    <Container component="main" maxWidth="xs" sx={{
-    marginTop:13,
-    }}
-  > 
+    <Container
+      component="main"
+      maxWidth="xs"
+      sx={{
+        marginTop: 13,
+      }}
+    >
       <Box
         sx={{
           minHeight: 340,
@@ -95,7 +99,13 @@ export default function Login({ setIsExists }) {
         <Typography component="h1" variant="h5">
           טופס התחברות
         </Typography>
-        <Box component="form" onChange={handleInput} onSubmit={handleLogin} noValidate sx={{ mt: 1 }}>
+        <Box
+          component="form"
+          onChange={handleInput}
+          onSubmit={handleLogin}
+          noValidate
+          sx={{ mt: 1 }}
+        >
           <TextField
             margin="normal"
             required
@@ -134,7 +144,9 @@ export default function Login({ setIsExists }) {
             <Grid item>
               <Link
                 // href="#"
-                onClick={() => { setIsExists(false) }}
+                onClick={() => {
+                  setIsExists(false);
+                }}
                 variant="body2"
               >
                 עדיין אינך רשום? הרשם עכשיו
@@ -143,7 +155,7 @@ export default function Login({ setIsExists }) {
           </Grid>
         </Box>
       </Box>
-      {message && <p style={{ color: 'red' }}>{message}</p>}
+      {message && <p style={{ color: "red" }}>{message}</p>}
     </Container>
   );
 }
