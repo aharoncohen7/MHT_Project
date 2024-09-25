@@ -22,9 +22,9 @@ export default function Navbar({ parasha }) {
 
     const navButtons = [
         { id: 0, name: parasha || "פרשת השבוע", href: `/` },
-        { id: 1, name: "כל הפרשיות", href: 'בית/?parasha=all' },
+        { id: 1, name: "כל הפרשיות", href: '/home/?parasha=all' },
         { id: 2, name: isLoggedIn ? 'הוספת מאמר' : "התחבר", href: isLoggedIn ? '/addition' : '/login' },
-        { id: 3, name: adminMode ? 'טבלת משתמשים' : 'אודות', href: adminMode ? '/dashboard' : '/אודות' },
+        { id: 3, name: adminMode ? 'טבלת משתמשים' : 'אודות', href: adminMode ? '/dashboard' : '/about' },
         // { id: 3, name: isDarkMode ? 'LightMode' : "DarkMode", href: "/" }
         
     ];
@@ -220,7 +220,7 @@ export default function Navbar({ parasha }) {
                                     {item.name}
                                 </Disclosure.Button>
                             ))}
-                            רדקראדאקראראראראר
+                            
                         </div>
                     </Disclosure.Panel>
                 </>

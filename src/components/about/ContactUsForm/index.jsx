@@ -17,7 +17,7 @@ export default function ContactUsForm() {
   const [contactDetails, setContactDetails] = useState('');
   const [message, setMessage] = useState(null);
   const [captchaValue, setCaptchaValue] = useState(null);
-  const [isRecaptchaLoading, setIsRecaptchaLoading] = useState(true);
+  const [isReCaptchaLoading, setIsReCaptchaLoading] = useState(true);
 
   // מטפל בתגובה לשליחת הטופס
   useEffect(() => {
@@ -37,7 +37,7 @@ export default function ContactUsForm() {
 
   // מטפל בהמתנה לטעינת קומפוננט קאפצ'ה
   const handleRecaptchaLoad = useCallback(() => {
-    setIsRecaptchaLoading(false);
+    setIsReCaptchaLoading(false);
   }, []);
 
   // מאפס נתונים בין מעבר בין סוגי קלטים ומעדכן סוג התקשרות
@@ -194,10 +194,10 @@ export default function ContactUsForm() {
 
         <div className={styles.submitButton}>
           <div className={styles.recaptcha}>
-            {isRecaptchaLoading && (
+            {isReCaptchaLoading && (
               <div className={styles.loading}><div className={styles.spinner}></div></div>
             )}
-            <div style={{ display: isRecaptchaLoading ? 'none' : 'block' }}>
+            <div style={{ display: isReCaptchaLoading ? 'none' : 'block' }}>
               <ReCAPTCHA
                 sitekey={RECAPTCHA_SITE_KEY}
                 onChange={(value) => setCaptchaValue(value)}
@@ -213,7 +213,7 @@ export default function ContactUsForm() {
             <SubmitButton
               text={"שלח"}
               width={"100%"}
-              // onPendingText={"שולח..."}
+              onPendingText={"שולח..."}
               disabled={!captchaValue}
             />
           )}

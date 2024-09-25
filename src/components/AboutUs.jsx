@@ -1,10 +1,10 @@
 import { useContext } from "react"
-import ContactUsForm from "./about/ContactUsForm"
+import { useNavigate } from "react-router-dom"
 import UserContext from "../contexts"
 
 const links = [
   { name: 'להרחבה', href: '#' },
-  { name: 'צור קשר', href: '/צור-קשר/אודות' },
+  { name: 'צור קשר', href: '/about/contact-us' },
   { name: 'הצטרף אלינו', href: '#' },
   { name: 'לתרומות', href: '#' },
 ]
@@ -17,6 +17,7 @@ const stats = [
 
 export default function AboutUs() {
   const { isDarkMode } = useContext(UserContext)
+  const navigator = useNavigate()
 
   return (
     <div className={`relative py-24 overflow-hidden 
@@ -70,9 +71,9 @@ export default function AboutUs() {
                     ${isDarkMode ? "text-white" : ""}
            gap-x-8 gap-y-6 sm:grid-cols-2 md:flex lg:gap-x-10`}>
             {links.map((link) => (
-              <a key={link.name} href={link.href}>
-                <span className="px-2" aria-hidden="true">&larr;</span>{link.name}
-              </a>
+           
+                <span key={link.name} onClick={()=>navigator(link.href)} className="px-2" >{link.name}</span>
+         
             ))}
           </div>
           <dl className="grid grid-cols-1 gap-8 mt-16 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">

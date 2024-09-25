@@ -13,7 +13,7 @@ export default function TagList({ postTags }) {
                     <ButtonClick 
                         key={index}
                         className="inline-flex items-center rounded-md bg-indigo-200 px-3 py-3 text-xl font-medium text-blue-700 ring-1 ring-inset ring-blue-1900/10" 
-                        onClick={() => {nav(`/בית/?tag=${tag}`)}}
+                        onClick={() => {nav(`/home/?tag=${tag}`)}}
                     >
                         {tag}
                     </ButtonClick>

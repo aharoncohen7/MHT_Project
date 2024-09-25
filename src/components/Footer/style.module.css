@@ -1,4 +1,4 @@
-.Footer {
+/* .Footer {
   background-color: rgba(239, 239, 239, 0.59);
 }
 
@@ -63,6 +63,81 @@
 }
 
 
+
+.rightsToUs {
+  text-align: center;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 0.8rem;
+  background: var(--blue-gradient);
+  padding: 1rem 0;
+} */
+
+
+.Footer {
+  background-color: rgba(239, 239, 239, 0.59);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0.6rem;
+  align-items: center;
+  font-family: var(--font-bona);
+}
+
+@media (min-width: var(--md)) {
+  .container {
+    flex-direction: row;
+    padding: 2rem;
+  }
+
+  .container .containerList {
+    order: -1;
+  }
+}
+
+.container .containerList {
+  padding: 1rem;
+}
+
+.renderList ul {
+  padding: 0.8rem 0;
+}
+
+.renderList ul li,
+.renderList ul h3 {
+  padding: 0.2rem 0;
+  list-style-type: none;
+}
+
+.renderList ul li:hover,
+.renderList ul h3:hover {
+  text-decoration: underline;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #034077;
+}
+
+.link {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #002651;
+}
+
+.containerList {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 500px;
+  gap: 10px;
+}
 
 .rightsToUs {
   text-align: center;

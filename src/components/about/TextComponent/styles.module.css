@@ -42,9 +42,9 @@
   font-family: var(--font-bona);
 }
 
-.heebo {
+/* .heebo {
   font-family: var(--font-heebo);
-}
+} */
 
 .blue {
   color: var(--primary-blue);

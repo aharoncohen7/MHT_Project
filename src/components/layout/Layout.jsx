@@ -9,6 +9,7 @@ import Cookies from "js-cookie";
 import Message from '../../components/Message'
 import ParashaNav from "./ParashaNav";
 import Footer from "../Footer";
+import useAxiosReq, { axiosReq } from "../../functions/useAxiosReq";
 
 
 const Layout = () => {
@@ -31,11 +32,66 @@ const Layout = () => {
   }, []);
 
 
+  const [originalData, setOriginalData] = useState([]);
+  const [filteredData, setFilteredData] = useState([]);
+    // קבלת פוסטים
+  // const {data, error} = useAxiosReq({method: 'GET',body:{}, url:`/posts` })
+  // console.log(data);
+  
+
+
+
+    // קיבוע פוסטים
+  useEffect(()=>{
+    const fetchData = async () => {
+      // התחלת אפקט טעינה
+      // setLoading(true)
+      try {
+          const data = await axiosReq({method: 'GET',body:{}, url:`/posts` })
+          if(data){
+            console.log(data)
+            setOriginalData(data);
+            setFilteredData(data)
+          }
+      } catch (e) {
+          // setError(e)
+          setMessage(["Network response was not ok!", false])
+      }
+      //  finally {
+  
+      //     // הפסקת אפקט טעינה
+      //     setLoading(false)
+  
+      // }
+  }
+
+   
+  fetchData()
+
+    
+  },[])
+
+  // טיפול בשגיאות
+  // useEffect(()=>{
+  //   if(error){
+  //     setMessage(["Network response was not ok!", false])
+  //   }
+  // },[error])
+
+  // במקרה של שינוי במערך השמה מחדש
+  useEffect(() => {
+    setFilteredData(originalData)
+   }, [originalData])
+
+
+
 
   return (
     <span >
       <Navbar parasha={parasha} />
-      <Content parasha={parasha} />
+      <Content parasha={parasha} originalData={originalData} setOriginalData={setOriginalData} filteredData={filteredData}
+      setFilteredData={setFilteredData}
+      />
       <div className="hidden md:fixed border-t mt-10 max-w-80 top-0 left-40">
         <ParashaNav />
       </div>

@@ -10,7 +10,7 @@ import { CiCircleChevDown } from "react-icons/ci";
 export default function Search({ setSortedList }) {
     const { adminMode } = useContext(UserContext)
     const { originalData, filteredData, setFilteredData, parasha } = useContext(DataContext)
-    console.log(parasha);
+    // console.log(parasha);
     const [showSearch, setShowSearch] = useState(true)
     const [selectedOption, setSelectedOption] = useState(true);
     const [filter, setFilter] = useState('creation date ↑');

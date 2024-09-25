@@ -78,12 +78,12 @@ export default function SinglePost() {
             <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
               <div className="lg:pr-38">
                 <div className="lg:max-w-lg mr-6 ">
-                  <Button onClick={ () =>{if(item.subtopic) navigate(`/בית/?parasha=${item.subtopic}`)}} className="ml-20   leading-7 text-indigo-800 font-bold text-xl">
+                  <Button onClick={ () =>{if(item.subtopic) navigate(`/home/?parasha=${item.subtopic}`)}} className="ml-20   leading-7 text-indigo-800 font-bold text-xl">
                     {item.subtopic ? item.subtopic : "שם הפרשה"}
                   </Button>
                   
                   <h2   className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{item.title}</h2>
-                  <Button onClick={ () =>{ navigate(`/בית/?author=${item.userId}`)}}  className="mt-6 text-xl font-bold leading-8 text-indigo-800"> {item.author} :מחבר</Button>
+                  <Button onClick={ () =>{ navigate(`/home/?author=${item.userId}`)}}  className="mt-6 text-xl font-bold leading-8 text-indigo-800"> {item.author} :מחבר</Button>
                 </div>
               </div>
              

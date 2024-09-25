@@ -10,15 +10,26 @@
     /* // border-radius: 8px; */
 }
 
-.allowedButton {
+/* .allowedButton {
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
     background: var(--blue-gradient);
     &:hover {
         background-color: var(--primary-blue);
     }
-}
+} */
 
+
+.allowedButton {
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    background: var(--blue-gradient);
+  }
+  
+  .allowedButton:hover {
+    background-color: var(--primary-blue);
+  }
+  
 .disabledButton {
     cursor: not-allowed;
     opacity: 0.6;

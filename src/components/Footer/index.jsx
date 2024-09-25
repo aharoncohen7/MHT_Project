@@ -1,16 +1,18 @@
 import React from "react";
 import styles from "./style.module.css";
 import { about, questions, WeeklyPortion } from "./text.js";
+import { useNavigate } from "react-router-dom";
 export default function Footer() {
+  const navigate = useNavigate()
   const RenderList = ({ items, title }) => (
     <div className={styles.renderList}>
       <h3 className={styles.title}>{title}</h3>
       <ul>
         {items?.map((item, index) => (
           <li key={index}>
-            <a className={styles.link} href={`/${item}/${title}`}>
+            <span className={styles.link} onClick={()=>navigate(`/${title}/${item}`)}>
               {item}
-            </a>
+            </span>
           </li>
         ))}
       </ul>
@@ -21,7 +23,7 @@ export default function Footer() {
     <footer className={styles.Footer}>
       <nav className={styles.container}>
         <div className={styles.containerList}>
-          <RenderList items={about} title={"אודות"} />
+          <RenderList items={about} title={"about"} />
           <RenderList items={questions} title={"שאלות"} />
           <RenderList items={WeeklyPortion} title={"פרשת השבוע"} />
         </div>
