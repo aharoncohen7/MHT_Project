@@ -14,8 +14,9 @@ const avatar2 = "http://img.uniquemu.co.il/upload/udYCav4.jpeg"
 
 // סרגל ראשי עליון
 export default function Navbar({ parasha }) {
-    const { logOut, isAdmin, adminMode, setAdminMode, userId, navigate, setDarkMode, isDarkMode } = useContext(UserContext)
+    const { logOut, isAdmin, adminMode, setAdminMode, userId, setDarkMode, isDarkMode } = useContext(UserContext)
     const [activeIndex, setActiveIndex] = useState(0);
+    const navigate = useNavigate()
     const location = useLocation();
     const isLoggedIn = !!userId;
 
