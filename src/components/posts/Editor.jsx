@@ -3,8 +3,8 @@ import { useParams } from 'react-router-dom'
 import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import Select from './Select'
-import DataContext from '../../contexts';
-import DataContext2 from '../../contexts/index2';
+import UserContext from '../../contexts';
+import DataContext from '../../contexts/dataContext';
 import { importedAddNew, importedEdit } from "../../functions/postFunctions"
 import { error } from 'pdf-lib'
 import axios from 'axios'
@@ -23,8 +23,8 @@ import Cookies from "js-cookie";
 
 export default function Editor({ send, setSend, setComplete, setShowEditor, initialPost }) {
     const { postId } = useParams()
-    const {  logOut, userId, setMessage, message, navigate } = useContext(DataContext)
-    const { originalData, setOriginalData } = useContext(DataContext2)
+    const {  logOut, userId, setMessage, message, navigate } = useContext(UserContext)
+    const { originalData, setOriginalData } = useContext(DataContext)
     const [selectedBook, setSelectedBook] = useState(initialPost && initialPost.topic ? initialPost.topic : "");
     const [selectedPortion, setSelectedPortion] = useState(initialPost && initialPost.subtopic ? initialPost.subtopic : "");
     const [title, setTitle] = useState(initialPost ? initialPost.title : '');

@@ -1,4 +1,4 @@
-'use client'
+
 import { Button } from '../Button';
 import Text from '../TextComponent'
 import styles from './style.module.css'

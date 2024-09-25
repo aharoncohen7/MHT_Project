@@ -42,7 +42,7 @@ export default function ParashaNav() {
           </AccordionSummary>
           <AccordionDetails >
             {parshiot.map((parasha) => (
-              <div onClick={() => navigate(`/home/?parasha=${parasha}`)} key={parasha}>
+              <div onClick={() => navigate(`/בית/?parasha=${parasha}`)} key={parasha}>
                 {parasha}
               </div>
             ))}

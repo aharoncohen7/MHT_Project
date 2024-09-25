@@ -3,7 +3,7 @@ import { Fragment, useContext, useEffect, useState } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import Switch from '@mui/material/Switch';
-import DataContext from '../../contexts';
+import UserContext from '../../contexts';
 
 const logo1 = "https://www.uploads.co.il/uploads/images/106030801.png"
 const logo2 = "https://img.uniquemu.co.il/upload/bIj1Npo.png"
@@ -14,16 +14,17 @@ const avatar2 = "http://img.uniquemu.co.il/upload/udYCav4.jpeg"
 
 // סרגל ראשי עליון
 export default function Navbar({ parasha }) {
-    const { logOut, isAdmin, adminMode, setAdminMode, userId, navigate } = useContext(DataContext)
+    const { logOut, isAdmin, adminMode, setAdminMode, userId, navigate, setDarkMode, isDarkMode } = useContext(UserContext)
     const [activeIndex, setActiveIndex] = useState(0);
     const location = useLocation();
     const isLoggedIn = !!userId;
 
     const navButtons = [
         { id: 0, name: parasha || "פרשת השבוע", href: `/` },
-        { id: 1, name: "כל הפרשיות", href: 'home/?parasha=all' },
+        { id: 1, name: "כל הפרשיות", href: 'בית/?parasha=all' },
         { id: 2, name: isLoggedIn ? 'הוספת מאמר' : "התחבר", href: isLoggedIn ? '/addition' : '/login' },
-        { id: 3, name: adminMode ? 'טבלת משתמשים' : 'קצת עלינו', href: adminMode ? '/dashboard' : '/about' }
+        { id: 3, name: adminMode ? 'טבלת משתמשים' : 'אודות', href: adminMode ? '/dashboard' : '/אודות' },
+        // { id: 3, name: isDarkMode ? 'LightMode' : "DarkMode", href: "/" }
         
     ];
 
@@ -43,7 +44,7 @@ export default function Navbar({ parasha }) {
 
 
     return (
-        <Disclosure as="nav" className="fixed top-0 z-10 w-full bg-gray-800 ">
+        <Disclosure as="nav" className={`fixed top-0 z-10 w-full blue-gradient`}>
             {({ open }) => (
                 <>
                     <div className="px-2 mx-auto max-w-7xl sm:px-6 lg:px-8">
@@ -67,6 +68,7 @@ export default function Navbar({ parasha }) {
                                         className="w-auto h-14 "
                                         src={logo2}
                                         alt="logo"
+                                        onClick={()=>setDarkMode(!isDarkMode)}
                                     />
                                 </div>
                                 <div className="hidden sm:ml-6 sm:block ">
@@ -108,7 +110,7 @@ export default function Navbar({ parasha }) {
 
                             <div className="min-w-0 flex-1">
                                 <h2 onClick={() => { navigate(navButtons[0].href) }}
-                                    className="text-center  font-bold leading-7 text-white sm:truncate sm:text-2xl sm:tracking-right select-none">{`וורטלי`}<span>{parasha ? `- ${parasha}` : null}</span></h2>
+                                    className="text-center  font-bold leading-7 text-white sm:truncate sm:text-2xl sm:tracking-right select-none">{`וורטלי -`}<span>{parasha ? ` ${parasha}` : null}</span></h2>
 
                             </div>
 

@@ -1,6 +1,6 @@
 
 import React, { useState, useContext } from "react";
-import DataContext from '../../contexts';
+import UserContext from '../../contexts';
 import Search from "./Search"
 import PopUp from '../PopUp';
 import ParashaNav from '../layout/ParashaNav';
@@ -22,8 +22,8 @@ import { formatDate } from "./../../functions"
 
 
 export default function AllPosts({ setOriginalData }) {
-    const { userId, adminMode, setMessage, message, logOut, navigate } = useContext(DataContext)
-    // const {setOriginalData} = useContext(DataContext2)
+    const { userId, adminMode, setMessage, message, logOut, navigate } = useContext(UserContext)
+    // const {setOriginalData} = useContext(DataContext)
     const [showEditor, setShowEditor] = useState(false);
     const [sortedList, setSortedList] = useState([]);
 
@@ -34,14 +34,13 @@ export default function AllPosts({ setOriginalData }) {
     }
 
 
-    function adminEdit(item) {
+    function edit_as_admin(item) {
         importedAdminEdit(item, setOriginalData, setMessage, logOut, navigate)
     }
 
     function handleNewPost() {
         if (userId) {
             setShowEditor(true)
-            console.log("tytryrty")
         }
         else {
             setMessage(["כדי לפרסם פוסט עליך להיות מחובר", false]);
@@ -128,7 +127,7 @@ export default function AllPosts({ setOriginalData }) {
                                         <button
                                             type="button"
                                             className="flex items-center justify-center w-8 h-8 bg-gray-200 rounded-full hover:bg-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500"
-                                            onClick={() => adminEdit(post)}
+                                            onClick={() => edit_as_admin(post)}
                                         >
                                             <span className="text-lg font-bold text-gray-500">✏️</span>
                                         </button></>

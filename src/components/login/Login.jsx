@@ -7,14 +7,14 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Cookies from "js-cookie";
-import DataContext from '../../contexts';
+import UserContext from '../../contexts';
 import { useLocation } from 'react-router-dom';
 
 
 export default function Login({ setIsExists }) {
   sessionStorage.removeItem('isAdminMode');
   Cookies.remove('Authorization');
-  const { setMessage, setUserId, setUserName, setIsAdmin, navigate, message } = useContext(DataContext)
+  const { setMessage, setUserId, setUserName, setIsAdmin, navigate, message } = useContext(UserContext)
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const location = useLocation();
@@ -56,11 +56,18 @@ export default function Login({ setIsExists }) {
         }
       }
       else {
-        setMessage([`Error during login: ${response.statusText}`, false]);
+        if(response.status == 403){
+          setMessage([`המערכת ממתינה לאישור כתובת האימייל שלך`, false]);
+                return}
+        if(response.status == 404){
+        setMessage([`משתמש לא נמצא`, false]);
+        return}
+        setMessage([`אירעה שגיאה במהלך ההתחברות, נסה שוב מאוחר יותר`, false]);
+        console.error(`Error during login: ${response.statusText}`);
       }
     } catch (error) {
-      setMessage([`Error during login: ${error.message}`, false]);
-      console.log(`Error during login: ${error.message}`);
+      setMessage([`אירעה שגיאה לא צפויה במהלך ההתחברות: ${error.message}`, false]);
+      console.error(`Error during login: ${error.message}`);
     }
   };
 
@@ -73,17 +80,20 @@ export default function Login({ setIsExists }) {
 
 
   return (
-    <Container component="main" maxWidth="xs">
+    <Container component="main" maxWidth="xs" sx={{
+    marginTop:13,
+    }}
+  > 
       <Box
         sx={{
-          marginTop: 8,
+          minHeight: 340,
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
         }}
       >
         <Typography component="h1" variant="h5">
-          התחברות
+          טופס התחברות
         </Typography>
         <Box component="form" onChange={handleInput} onSubmit={handleLogin} noValidate sx={{ mt: 1 }}>
           <TextField
@@ -91,7 +101,7 @@ export default function Login({ setIsExists }) {
             required
             fullWidth
             id="username"
-            label="username"
+            label="שם משתמש"
             name="username"
             autoComplete="username"
             autoFocus
@@ -101,7 +111,7 @@ export default function Login({ setIsExists }) {
             required
             fullWidth
             name="password"
-            label="Password"
+            label="סיסמה"
             type="password"
             id="password"
             autoComplete="current-password"

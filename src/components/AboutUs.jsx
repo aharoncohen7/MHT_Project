@@ -1,8 +1,10 @@
+import { useContext } from "react"
 import ContactUsForm from "./about/ContactUsForm"
+import UserContext from "../contexts"
 
 const links = [
   { name: 'להרחבה', href: '#' },
-  { name: 'צור קשר', href: '#form' },
+  { name: 'צור קשר', href: '/צור-קשר/אודות' },
   { name: 'הצטרף אלינו', href: '#' },
   { name: 'לתרומות', href: '#' },
 ]
@@ -14,13 +16,17 @@ const stats = [
 ]
 
 export default function AboutUs() {
+  const { isDarkMode } = useContext(UserContext)
+
   return (
-    <div className="relative py-24 overflow-hidden bg-gray-900 isolate sm:py-32">
+    <div className={`relative py-24 overflow-hidden 
+       ${isDarkMode ? "bg-gray-900" : ""}
+     isolate sm:py-32`}>
       {/* <img
         src=""
         className="absolute inset-0 object-cover object-right w-full h-full -z-10 md:object-center"
       /> */}
-      <div
+      {/* <div
         className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
         aria-hidden="true"
       >
@@ -31,7 +37,7 @@ export default function AboutUs() {
               'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
           }}
         />
-      </div>
+      </div> */}
       <div
         className="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu"
         aria-hidden="true"
@@ -46,13 +52,23 @@ export default function AboutUs() {
       </div>
       <div className="px-6 mx-auto max-w-7xl lg:px-8">
         <div className="max-w-2xl mx-auto lg:mx-0">
-          <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">קצת עלינו</h2>
-          <p className="mt-6 text-lg leading-8 text-gray-300">
+          <h2 className={`text-4xl font-bold tracking-tight 
+           ${isDarkMode ? "text-white" : ""}
+          sm:text-6xl`}>אודות "וורטלי"</h2>
+
+          <p className={`mt-6 text-lg leading-8 
+           ${isDarkMode ? "text-gray-300" : ""}
+          `}>
             אתר וורטלי שם לעצמו למטרה להוות פלטפורמה נוחה ויעילה לפרסום חידושי תורה שלך על פרשיות השבוע ומועדי השנה (בשלב זה) על מנת לעזור לך להפיץ את חידושיך ולהגיע בקלות לקהלים חדשים.
           </p>
         </div>
         <div className="max-w-2xl mx-auto mt-10 lg:mx-0 lg:max-w-none">
-          <div className="grid grid-cols-1 text-base font-semibold leading-7 text-white gap-x-8 gap-y-6 sm:grid-cols-2 md:flex lg:gap-x-10">
+          <div className={`grid grid-cols-1 
+          
+            ${isDarkMode ? "text-base" : ""}
+           font-semibold leading-7 
+                    ${isDarkMode ? "text-white" : ""}
+           gap-x-8 gap-y-6 sm:grid-cols-2 md:flex lg:gap-x-10`}>
             {links.map((link) => (
               <a key={link.name} href={link.href}>
                 <span className="px-2" aria-hidden="true">&larr;</span>{link.name}
@@ -63,16 +79,18 @@ export default function AboutUs() {
             {stats.map((stat) => (
               <div key={stat.name} className="flex flex-col-reverse">
                 <dt className="text-base leading-7 text-gray-300">{stat.name}</dt>
-                <dd className="text-2xl font-bold leading-9 tracking-tight text-white">{stat.value}</dd>
+                <dd className={`text-2xl font-bold leading-9 tracking-tight 
+           ${isDarkMode ? "text-white" : ""}
+                `}>{stat.value}</dd>
               </div>
             ))}
           </dl>
         </div>
       </div>
-      <section id="form">
+      {/* <section id="צור-קשר">
         <span className="w-full py-20 flex my-22 justify-center text-base font-semibold leading-7 text-white">
           <ContactUsForm /></span>
-      </section>
+      </section> */}
     </div>
   )
 }

@@ -86,7 +86,7 @@
 .input,
 .textarea {
     display: block;
-    font-family: var(--font-heebo);
+    /* font-family: var(--font-heebo); */
     width: 100%;
     padding: 0.5rem;
     border-radius: 0.275rem;

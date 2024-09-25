@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  font-family: 700;
+  font-size: 1rem;
+  color: #ffffff;
+  background: linear-gradient(to top, rgba(6, 119, 221, 0.8), rgba(4, 81, 151, 0.8), rgba(3, 64, 119, 0.8));
+  text-decoration: none;
+  border-radius: 7px;
+  padding: .4rem .8rem;
+  &:hover{
+    box-shadow: 0 0 6px 0 #000;
+  }
+}
+
+.logo {
+  a{
+    font-size: 1.2rem;
+  }
+}
+
+@media (width > var(--md)) {
+  .logo a,
+  .container {
+    font-size: 1.1rem;
+  }
+}

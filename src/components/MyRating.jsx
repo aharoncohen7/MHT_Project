@@ -1,13 +1,13 @@
 import React, { useContext } from 'react'
 import Rating from '@mui/material/Rating';
 import Stack from '@mui/material/Stack';
-import DataContext from '../contexts';
+import UserContext from '../contexts';
 import Cookies from "js-cookie";
-import DataContext2 from '../contexts/index2';
+import DataContext from '../contexts/dataContext';
 
 export default function MyRating({ item }) {
-    const { logOut, setMessage } = useContext(DataContext)
-    const { setOriginalData} = useContext(DataContext2)
+    const { logOut, setMessage } = useContext(UserContext)
+    const { setOriginalData} = useContext(DataContext)
 
         // דירוג פוסט
         async function updateRating(event) {
@@ -60,8 +60,10 @@ export default function MyRating({ item }) {
 
 
     return (
-        <Stack spacing={1}>
-            <Rating name="half-rating" value={parseFloat(item.rating)} defaultValue={0.0} precision={0.5} onChange={updateRating} />
+        <span className='ltr'>
+            <Stack spacing={1}>
+            <Rating name="half-rating" style={{color: "var(--blue)", dir: "ltr"}} value={parseFloat(item.rating)} defaultValue={0.0} precision={0.5} onChange={updateRating} />
         </Stack>
+        </span>
     )
 }

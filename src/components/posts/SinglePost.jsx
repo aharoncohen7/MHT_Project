@@ -1,13 +1,13 @@
 import React, { useState, useContext, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { Button } from '@mui/material';
-import DataContext from '../../contexts';
+import UserContext from '../../contexts';
 import MyRating from '../MyRating'
 import TagList from './TagList';
 import ParashaNav from '../layout/ParashaNav';
-import Cookies from "js-cookie";
-import DataContext2 from '../../contexts/index2';
+import DataContext from '../../contexts/dataContext';
 import { importedDelete } from "../../functions/postFunctions"
+import { ButtonClick } from '../about/ButtonClick';
 
 
 
@@ -16,8 +16,8 @@ export default function SinglePost() {
   const navigate = useNavigate();
   const [item, setItem] = useState(null);
   const { postId } = useParams()
-  const { setMessage,message, logOut, adminMode } = useContext(DataContext)
-  const { setOriginalData, originalData } = useContext(DataContext2)
+  const { setMessage,message, logOut, adminMode } = useContext(UserContext)
+  const { setOriginalData, originalData } = useContext(DataContext)
 
   // מצא פוסט בודד מתוך הרשימה
   useEffect(() => {
@@ -43,7 +43,7 @@ export default function SinglePost() {
   return (
     <>
       {item && (
-        <div className="relative flex items-center justify-center px-6 py-24 overflow-hidden bg-white isolate sm:py-12 lg:overflow-visible lg:px-24">
+        <div className="relative flex items-center justify-center px-6 py-24 overflow-hidden isolate sm:py-12 lg:overflow-visible lg:px-24">
           {item.subtopic && <div className="flex items-center flex-shrink-0">
             {/* <img
               className="w-auto h-20 hidden sm:ml-6 sm:block"
@@ -56,7 +56,8 @@ export default function SinglePost() {
               className="absolute left-[max(50%,25rem)] top-0 h-[44rem] w-[128rem] -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
               aria-hidden="true"
             >
-              <defs>
+              {/* משבצות */}
+              {/* <defs>
                 <pattern
                   id="e813992c-7d03-4cc4-a2bd-151760b470a0"
                   width={200}
@@ -67,7 +68,7 @@ export default function SinglePost() {
                 >
                   <path d="M100 200V.5M.5 .5H200" fill="none" />
                 </pattern>
-              </defs>
+              </defs> */}
 
 //lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8
               <rect width="100%" height="100%" strokeWidth={0} fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)" />
@@ -77,12 +78,12 @@ export default function SinglePost() {
             <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
               <div className="lg:pr-38">
                 <div className="lg:max-w-lg mr-6 ">
-                  <button onClick={ () =>{if(item.subtopic) navigate(`/home/?parasha=${item.subtopic}`)}} className="ml-20   leading-7 text-indigo-800 font-bold text-xl">
+                  <Button onClick={ () =>{if(item.subtopic) navigate(`/בית/?parasha=${item.subtopic}`)}} className="ml-20   leading-7 text-indigo-800 font-bold text-xl">
                     {item.subtopic ? item.subtopic : "שם הפרשה"}
-                  </button>
+                  </Button>
                   
                   <h2   className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{item.title}</h2>
-                  <button onClick={ () =>{ navigate(`/home/?author=${item.userId}`)}}  className="mt-6 text-xl font-bold leading-8 text-indigo-800"> {item.author} :מחבר</button>
+                  <Button onClick={ () =>{ navigate(`/בית/?author=${item.userId}`)}}  className="mt-6 text-xl font-bold leading-8 text-indigo-800"> {item.author} :מחבר</Button>
                 </div>
               </div>
              

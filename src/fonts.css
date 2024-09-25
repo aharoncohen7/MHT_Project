@@ -1,4 +1,4 @@
-/* fonts.css */
+/* fonts.css
 @import '@fontsource/heebo/100.css';
 @import '@fontsource/heebo/200.css';
 @import '@fontsource/heebo/300.css';
@@ -18,7 +18,7 @@
 }
 
 /* אופציונלי: הגדרת font-display: swap */
-@font-face {
+/* @font-face {
   font-family: 'Heebo';
   font-display: swap;
 }
@@ -26,4 +26,4 @@
 @font-face {
   font-family: 'Bona Nova';
   font-display: swap;
-}
+}  */

@@ -1,17 +1,19 @@
 
 import React, { useEffect, useState } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
-import DataContext from './contexts/';
+import UserContext from './contexts/';
 import SignIn from './components/login/SignIn';
 import Layout from './components/layout/Layout';
 import Cookies from "js-cookie";
 import { axiosReq } from './functions/useAxiosReq';
+import { dark } from '@mui/material/styles/createPalette';
 
 function App() {
   const navigate = useNavigate();
   const [userId, setUserId] = useState(null);
   const [isAdmin, setIsAdmin] = useState(0)
   const [adminMode, setAdminMode] = useState(Boolean(sessionStorage.getItem('isAdminMode')) || false);
+  const [isDarkMode, setDarkMode] = useState(false);
   const [message, setMessage] = useState([null, true]);
 
   // איפוס הודעות מערכת
@@ -62,7 +64,7 @@ function App() {
 
 
 
-  const contexts = {
+  const contextsList = {
     navigate,
     setMessage,
     logOut,
@@ -73,16 +75,17 @@ function App() {
     userId,
     isAdmin,
     adminMode,
+    isDarkMode
   }
 
 
   return (
-    <DataContext.Provider value={contexts}>
+    <UserContext.Provider value={contextsList}>
       <Routes>
         {/* <Route path="/login" element={<SignIn />} /> */}
         <Route path="/*" element={<Layout />} />
       </Routes>
-    </DataContext.Provider>
+    </UserContext.Provider>
   )
 }
 

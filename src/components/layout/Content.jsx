@@ -4,18 +4,19 @@ import AllPosts from "../posts/AllPosts";
 import SinglePost from "../posts/SinglePost";
 import Addition from "../Addition";
 import NotFound from '../NotFound'
-import DataContext from '../../contexts';
-import DataContext2 from '../../contexts/index2';
+import UserContext from '../../contexts';
+import DataContext from '../../contexts/dataContext';
 import SignIn from "../login/SignIn";
 import AboutUs from "../AboutUs";
 import Cookies from "js-cookie";
 import { Edit } from "../Edit";
 import useAxiosReq from "../../functions/useAxiosReq";
 import Dashboard from "../dashboard/Dashboard";
+import ContactUsForm from "../about/ContactUsForm";
 
 
 const Content = ({ parasha }) => {
-  const { setMessage, isAdmin, adminMode, } = useContext(DataContext)
+  const { setMessage, isAdmin, adminMode, } = useContext(UserContext)
   const [originalData, setOriginalData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
     // קבלת פוסטים
@@ -45,20 +46,21 @@ const Content = ({ parasha }) => {
 
 
   return (
-    <DataContext2.Provider value={{ originalData, setOriginalData, filteredData, setFilteredData, parasha }}>
+    <DataContext.Provider value={{ originalData, setOriginalData, filteredData, setFilteredData, parasha }}>
       <Routes>
         <Route path="/" element={<AllPosts setOriginalData={setOriginalData}/>} />
-        <Route path="home/*" element={<AllPosts setOriginalData={setOriginalData}/>} />
+        <Route path="בית/*" element={<AllPosts setOriginalData={setOriginalData}/>} />
         <Route path="post/:postId" element={<SinglePost />} />
         <Route path="edit/:postId" element={< Edit />} />
         <Route path="addition" element={<Addition />} />
-        <Route path="about" element={<AboutUs />} />
+        <Route path="אודות" element={<AboutUs />} />
+        <Route path="צור-קשר/אודות" element={<ContactUsForm />} />
         <Route path="/login" element={<SignIn />} />
         <Route path="dashboard" element={isAdmin && adminMode ?<Dashboard /> : <NotFound />} />
         {/* <Route path="login" element={<SignIn />} /> */}
         <Route path='*' element={<NotFound />} />
       </Routes>
-    </DataContext2.Provider>
+    </DataContext.Provider>
 
   )
 }

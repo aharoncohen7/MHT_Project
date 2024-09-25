@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import DataContext from '../../contexts';
+import UserContext from '../../contexts';
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import Link from "@mui/material/Link";
@@ -10,7 +10,7 @@ import Container from "@mui/material/Container";
 import * as Yup from 'yup';
 
 export default function Register({ setIsExists }) {
-  const { setMessage, message } = useContext(DataContext)
+  const { setMessage, message } = useContext(UserContext)
 
   const [formData, setFormData] = useState({
     name: '',
@@ -92,11 +92,11 @@ export default function Register({ setIsExists }) {
         const user = await response.json();
         console.log(user);
         if (user) {
-          setMessage(['משתמש נרשם בהצלחה, נא להכנס', true]);
+          setMessage(["נרשמת! קישור לאימות כתובת האימייל נשלח אליך, נא לאשר אותו", true]);
           window.location.href = "https://vortly.onrender.com/"
         }
         else {
-          console.log("try > else");
+          // console.log("try > else");
           console.log('משתמש נרשם: תקלה לא מזוהה', response);
           setMessage([`משתמש נרשם: תקלה לא מזוהה`, false]);
         }
@@ -116,14 +116,15 @@ export default function Register({ setIsExists }) {
     <Container component="main" maxWidth="xs">
       <Box
         sx={{
-          marginTop: 8,
+          marginTop: 15,
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
+          minHeight: 360
         }}
       >
         <Typography component="h1" variant="h5">
-          צור משתמש חדש
+          הרשמה
         </Typography>
         <Box className='text-right' component="form" onChange={handleInput}
           // onSubmit={handleLogin}

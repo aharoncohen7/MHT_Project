@@ -3,12 +3,12 @@ import Editor from './posts/Editor';
 import Button from '@mui/material/Button';
 import DeleteIcon from '@mui/icons-material/Delete';
 import SendIcon from '@mui/icons-material/Send';
-import DataContext from '../contexts';
+import UserContext from '../contexts';
 import { FiFeather } from 'react-icons/fi';
 
 
 export default function Addition() {
-  const { navigate, setMessage, userId } = useContext(DataContext)
+  const { navigate, setMessage, userId } = useContext(UserContext)
   const [showEditor, setShowEditor] = useState(false);
   const [complete, setComplete] = useState(false)
   const [send, setSend] = useState(false) 

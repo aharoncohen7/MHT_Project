@@ -1,15 +1,15 @@
 import React, { useState, useEffect, useContext } from "react";
 import { FiEyeOff } from "react-icons/fi";
-import DataContext2 from '../../contexts/index2'
+import DataContext from '../../contexts/dataContext'
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
-import DataContext from "../../contexts";
+import UserContext from "../../contexts";
 import { CiCircleChevUp } from "react-icons/ci";
 import { CiCircleChevDown } from "react-icons/ci";
 
 export default function Search({ setSortedList }) {
-    const { adminMode } = useContext(DataContext)
-    const { originalData, filteredData, setFilteredData, parasha } = useContext(DataContext2)
+    const { adminMode } = useContext(UserContext)
+    const { originalData, filteredData, setFilteredData, parasha } = useContext(DataContext)
     console.log(parasha);
     const [showSearch, setShowSearch] = useState(true)
     const [selectedOption, setSelectedOption] = useState(true);
@@ -46,9 +46,17 @@ export default function Search({ setSortedList }) {
                 return
             }
             if(parasha) {
-                const parashaSubtopic = parasha.split(' ')[1];
-                setSortedList(sortBy(filter).filter(elm => elm.subtopic != null && elm.subtopic === parashaSubtopic));
-                return;
+                const parashaName = parasha.split(' ')[1];
+                if(parashaName.split("-").length){
+                    const parashaName1 = parashaName.split("-")[0];
+                    const parashaName2 = parashaName.split("-")[1];
+                    setSortedList(sortBy(filter).filter(elm => elm.subtopic != null && (elm.subtopic === parashaName1 || elm.subtopic === parashaName2)));
+                    return;
+                }
+                else{
+                    setSortedList(sortBy(filter).filter(elm => elm.subtopic != null && elm.subtopic === parashaName));
+                    return;
+                }
             }
             setSortedList(sortBy(filter));
         }

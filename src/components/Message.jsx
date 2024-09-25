@@ -2,10 +2,10 @@ import { Fragment, useRef, useState, useContext } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { CheckCircleIcon } from '@heroicons/react/20/solid'
 import { FiAlertTriangle } from "react-icons/fi";
-import DataContext from '../contexts';
+import UserContext from '../contexts';
 
 export default function Message() {
-  const {message } = useContext(DataContext)
+  const {message } = useContext(UserContext)
   const [open, setOpen] = useState(true)
   const cancelButtonRef = useRef(null)
 

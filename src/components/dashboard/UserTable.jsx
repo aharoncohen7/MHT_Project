@@ -5,12 +5,15 @@ import { FaArrowDown } from "react-icons/fa";
 import { FaArrowUp } from "react-icons/fa";
 import Switch from '@mui/material/Switch';
 import { useContext } from 'react';
-import DataContext from '../../contexts';
+import UserContext from '../../contexts';
+import { Button } from '@mui/material';
+import DeleteIcon from '@mui/icons-material/Delete';
+
 
 
 
 const UserTable = () => {
-  const { setMessage } = useContext(DataContext)
+  const { setMessage } = useContext(UserContext)
   const [search, setSearch] = useState('');
   const [sortKey, setSortKey] = useState('');
   const [sortOrder, setSortOrder] = useState('asc');
@@ -42,11 +45,30 @@ useEffect(()=>{
     }, 200);
   };
 
-  const SetAdmin = async (id) => {
+  const setPermission = async (id, permission) => {
     // התחלת אפקט טעינה
     setLoading(true)
     try {
-      const result = await axiosReq({ method: "PATCH", url: `users/set-admin/${id}`, body: { permission: 1 } })
+      const result = await axiosReq({ method: "PATCH", url: `users/set-permission/${id}`, body: { permission } })
+      if (result) {
+        getUsers();
+      } else {
+        setMessage(['הפעולה נכשלה', false]);
+      }
+    } catch (e) {
+      setMessage(['הפעולה נכשלה', false]);
+    } finally {
+      // הפסקת אפקט טעינה
+      setLoading(false)
+
+    }
+  }
+
+  const deleteUser = async (id) => {
+    // התחלת אפקט טעינה
+    setLoading(true)
+    try {
+      const result = await axiosReq({ method: "DELETE", url: `users/${id}` })
       if (result) {
         getUsers();
       } else {
@@ -104,7 +126,9 @@ useEffect(()=>{
               <span className='flex gap-4 items-center justify-center'>אימייל
                 {sortKey == "email" && <>{sortOrder == 'asc' ? <FaArrowDown /> : <FaArrowUp />}</>} </span>
             </th>
+            <th className="py-2 px-4 border text-gray-600">סטטוס משתמש</th>
             <th className="py-2 px-4 border text-gray-600">האם מנהל</th>
+            <th className="py-2 px-4 border text-gray-600">מחיקת משתמש</th>
           </tr>
         </thead>
         <tbody>
@@ -118,15 +142,28 @@ useEffect(()=>{
                 <td className="py-2 px-4 border">{user.id}</td>
                 <td className="py-2 px-4 border">{user.phone}</td>
                 <td className="py-2 px-4 border">{user.email}</td>
-                <td className={`py-2 px-4 border ${user.isAdmin ? "text-green-600" : "text-red-600"}`}>
+                <td className={`py-2 px-4 border ${user.isAdmin > -1 ? "text-green-600" : "text-red-600"}`}>
                   <Switch
                     className='hidden sm:ml-2 sm:block'
-                    checked={user.isAdmin}
-                    onChange={() => {SetAdmin(user.id)}}
+                    checked={user.isAdmin > -1}
+                    onChange={() => {setPermission(user.id, user.isAdmin==-1 ? 0 : -1)}}
                     name="loading"
                     color="primary"
                   />
-                  {user.isAdmin ? 'כן' : 'לא'}</td>
+                  {user.isAdmin == -1 ? 'ממתין' : 'מאומת'}</td>
+                <td className={`py-2 px-4 border ${user.isAdmin > 0 ? "text-green-600" : "text-red-600"}`}>
+                  <Switch
+                    className='hidden sm:ml-2 sm:block'
+                    checked={user.isAdmin > 0}
+                    onChange={() => {setPermission(user.id, user.isAdmin==0 ? 1 : 0)}}
+                    name="loading"
+                    color="primary"
+                  />
+                  {user.isAdmin > 0 ? 'כן' : 'לא'}</td>
+                <td className={`py-2 px-4 border`}>
+              <Button variant="outlined" startIcon={<DeleteIcon />} onClick={() =>deleteUser(user.id) }/>
+
+                  </td>
               </tr>
             ))
           )}

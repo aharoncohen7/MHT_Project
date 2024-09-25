@@ -4,10 +4,10 @@ import Button from '@mui/material/Button';
 import DeleteIcon from '@mui/icons-material/Delete';
 import SendIcon from '@mui/icons-material/Send';
 import { useParams } from 'react-router-dom';
-import DataContext from '../contexts';
+import UserContext from '../contexts';
 
 export const Edit = () => {
-    const { navigate } = useContext(DataContext)
+    const { navigate } = useContext(UserContext)
     const { postId } = useParams()
     const [complete, setComplete] = useState(false)
     const [send, setSend] = useState(false)

@@ -4,12 +4,12 @@ import Editor from './posts/Editor';
 import Button from '@mui/material/Button';
 import DeleteIcon from '@mui/icons-material/Delete';
 import SendIcon from '@mui/icons-material/Send';
-import DataContext from '../contexts';
+import UserContext from '../contexts';
 
 export default function PopUp({ showEditor, setShowEditor}) {
   const [complete, setComplete] = useState(false)
   const [send, setSend] = useState(false)
-  const { userId } = useContext(DataContext)
+  const { userId } = useContext(UserContext)
   console.log(userId);
   Modal.setAppElement('#root')
 

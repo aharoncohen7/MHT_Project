@@ -17,9 +17,33 @@
 @import '@fontsource/bona-nova/700.css';
 
 
+/* בסגנון גלובלי - בדרך כלל בקובץ index.css או globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* // vars */
+:root {
+  --primary-blue: #002651;
+  --box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  --light-blue: #034077;
+  --white: #FFFFFF;
+  --gray: #DFDFDF;
+  --blue-gradient: linear-gradient(to right, rgba(6, 119, 221, 0.8), rgba(4, 81, 151, 0.8), rgba(3, 64, 119, 0.8));
+  --txt-color : #262626;
+  --sm: 568px;
+  --md: 768px;
+  --lg: 1024px;
+  --xl: 1200px;
+  --xxl: 1400px;
+  --font-heebo: 'Heebo', sans-serif;
+  --font-bona-nova: 'Bona Nova', serif;
+  --font-roboto: 'Roboto', sans-serif;
+
+}
+
+
 html {
   scroll-behavior: smooth;
-  /* font-family: 'Bona Nova', sans-serif; */
+  font-family: '--font-roboto', sans-serif;
   font-display: swap;
 }
 
@@ -40,23 +64,17 @@ html {
 }
 
 
-/* // vars */
-:root {
-  --primary-blue: #002651;
-  --box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
-  --light-blue: #034077;
-  --white: #FFFFFF;
-  --gray: #DFDFDF;
-  --blue-gradient: linear-gradient(to right, rgba(6, 119, 221, 0.8), rgba(4, 81, 151, 0.8), rgba(3, 64, 119, 0.8));
-  --txt-color : #262626;
 
-}
 
 body {
   direction: rtl;
-  /* font-family: var(--font-heebo); */
+  /* font-family: var(--font-roboto); */
+  /* font-family: var(--font-bona-nova); */
   /* background-color: #000300; */
   background-color: cornsilk;
+  background-color: rgba(247, 244, 233, 0.875);
+
+  /* background-color: rgba(239, 239, 239, 0.59) */
   /* background: linear-gradient(to right, rgba(11, 2, 57, 0.8), rgba(15, 2, 28, 0.94), rgba(6, 9, 47, 0.8)) */
   /* background:linear-gradient(to top right, #ff4694, #776fff); */
   /* background: linear-gradient(to top right, #ff4694, #222222, #776fff); */
@@ -67,10 +85,19 @@ body {
 a{
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 
 label, input, select, button{
   font: inherit;
+  cursor: pointer;
+
+}
+
+
+button{
+  background: linear-gradient(to right, #0677dd, #045197, #034077);
+
 }
 
 
@@ -111,6 +138,11 @@ input, textarea, [contenteditable="true"] {
   direction: rtl;
   text-align: right;
   max-width: 400px;
+}
+
+
+.blue-gradient {
+  background: linear-gradient(to right, #0677dd, #045197, #034077);
 }
 
 @media (max-width: 600px) {
