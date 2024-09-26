@@ -44,6 +44,42 @@ export function formatDate(dateString) {
 }
 
 
+export const phoneValidator = (phone) => {
+  // Remove all non-digit characters except for the leading '+'
+  const cleanedValue = phone.replace(/[^\d+]/g, "");
+
+  // Check if the number starts with +972 or 0
+  if (!/^(\+972|0)/.test(cleanedValue)) {
+    return "מספר הטלפון חייב להתחיל ב-0 או +972";
+  }
+
+  // Remove the prefix for further validation
+  const numberWithoutPrefix = cleanedValue.replace(/^(\+972|0)/, "");
+
+  // Validate numbers starting with 2, 3, 4, 8, 9
+  if (/^[23489]\d{7}$/.test(numberWithoutPrefix)) {
+    return ""; // Valid number
+  }
+
+  // Validate numbers starting with 5 or 7
+  if (/^[57]\d{8}$/.test(numberWithoutPrefix)) {
+    return ""; // Valid number
+  }
+
+  // Check for invalid starting digits
+  if (/^[16]/.test(numberWithoutPrefix)) {
+    return "קידומת שגויה";
+  }
+
+  if (phone.length < 10) {
+    return "אנא השלם את המספר";
+  }
+
+  // If we've reached this point, the number is invalid
+  return "מספר טלפון לא תקין. אנא בדוק את המספר ונסה שוב";
+};
+
+
 const parshiot = {
   "בראשית": "בראשית",
   "נח": "נח",

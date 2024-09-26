@@ -204,7 +204,7 @@ export default function SinglePost() {
 // async function deletePost() {
 
 //   try {
-//     let response = await fetch(`https://vortly-db.onrender.com/api/posts/${item.id}`, {
+//     let response = await fetch(`${SERVER_HOST}/posts/${item.id}`, {
 //       method: 'DELETE',
 //       headers: {
 //         'Content-Type': 'application/json',
