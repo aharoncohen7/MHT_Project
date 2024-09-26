@@ -6,7 +6,7 @@ import Cookies from "js-cookie";
 export async function importedAddNew(userId, selectedBook, selectedPortion, title, body, tags, setOriginalData, setMessage, setSend, setShowEditor, logOut, navigate) {
   
   try {
-    const response = await fetch('https://vortly-db.onrender.com/api/posts', {
+    const response = await fetch(`${SERVER_HOST}/posts`, {
       method: 'POST',
       body: JSON.stringify({
         selectedBook,
@@ -58,7 +58,7 @@ export async function importedAddNew(userId, selectedBook, selectedPortion, titl
 // עריכה
 export async function importedEdit(postId, selectedBook, selectedPortion, title, body, tags, setOriginalData, setMessage, setSend, setShowEditor, logOut, navigate) {
   try {
-    const response = await fetch(`https://vortly-db.onrender.com/api/posts/${postId}`, {
+    const response = await fetch(`${SERVER_HOST}/posts/${postId}`, {
       method: 'PATCH',
       body: JSON.stringify({
         selectedBook,
@@ -113,7 +113,7 @@ export async function importedEdit(postId, selectedBook, selectedPortion, title,
 export async function importedDelete(item, setOriginalData, setMessage, logOut, navigate) {
   // console.log(item);
   try {
-    let response = await fetch(`https://vortly-db.onrender.com/api/posts/delete-single/${item.id}`, {
+    let response = await fetch(`${SERVER_HOST}/posts/delete-single/${item.id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
@@ -168,7 +168,7 @@ export async function importedDelete(item, setOriginalData, setMessage, logOut, 
       if (!result.value) { return }
 
       try {
-        const response = await fetch(`https://vortly-db.onrender.com/api/posts/${item.id}`, {
+        const response = await fetch(`${SERVER_HOST}/posts/${item.id}`, {
             method: 'PATCH',
             body: JSON.stringify({
                 selectedBook: item.topic ,

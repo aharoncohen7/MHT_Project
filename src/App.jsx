@@ -7,13 +7,14 @@ import Layout from './components/layout/Layout';
 import Cookies from "js-cookie";
 import { axiosReq } from './functions/useAxiosReq';
 import { dark } from '@mui/material/styles/createPalette';
+// const CLIENT_HOST = import.meta.env.VITE_CLIENT_HOST;
 
 function App() {
   const navigate = useNavigate();
   const [userId, setUserId] = useState(null);
   const [isAdmin, setIsAdmin] = useState(0)
   const [adminMode, setAdminMode] = useState(Boolean(sessionStorage.getItem('isAdminMode')) || false);
-  const [isDarkMode, setDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const [message, setMessage] = useState([null, true]);
 
   // איפוס הודעות מערכת
@@ -59,7 +60,6 @@ function App() {
     setUserId(null);
     setIsAdmin(0)
     setAdminMode(false)
-    // window.location.href = "https://vortly.onrender.com/"
   }
 
 
@@ -71,6 +71,7 @@ function App() {
     setUserId,
     setIsAdmin,
     setAdminMode,
+    setIsDarkMode,
     message,
     userId,
     isAdmin,

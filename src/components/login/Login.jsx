@@ -9,6 +9,7 @@ import Container from "@mui/material/Container";
 import Cookies from "js-cookie";
 import UserContext from "../../contexts";
 import { useLocation } from "react-router-dom";
+const SERVER_HOST = import.meta.env.VITE_SERVER_HOST;
 
 export default function Login({ setIsExists }) {
   sessionStorage.removeItem("isAdminMode");
@@ -34,7 +35,7 @@ export default function Login({ setIsExists }) {
       password,
     };
     try {
-      const response = await fetch("https://vortly-db.onrender.com/api/login", {
+      const response = await fetch(`${SERVER_HOST}/login`, {
         method: "POST",
         body: JSON.stringify(requestData),
         headers: {
@@ -55,13 +56,21 @@ export default function Login({ setIsExists }) {
         }
       } else {
         if (response.status == 403) {
+          // const response = await fetch(`${SERVER_HOST}/registration/verification`, {
+          //   method: "POST",
+          //   body: JSON.stringify({email: response.body.email}),
+          //   headers: {
+          //     "Content-Type": "application/json",
+          //   },
+          // });
+
           setMessage([`המערכת ממתינה לאישור כתובת האימייל שלך`, false]);
           return;
         }
-        if (response.status == 404) {
-          setMessage([`משתמש לא נמצא`, false]);
-          return;
-        }
+        // if (response.status == 404) {
+        //   setMessage([`משתמש לא נמצא`, false]);
+        //   return;
+        // }
         setMessage([`אירעה שגיאה במהלך ההתחברות, נסה שוב מאוחר יותר`, false]);
         console.error(`Error during login: ${response.statusText}`);
       }
