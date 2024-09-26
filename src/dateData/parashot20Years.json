@@ -1,0 +1,5852 @@
+{
+  "2024-07-27": {
+    "inEnglish": "Pinchas",
+    "hDate": "21 Tamuz 5784",
+    "inHebrew": "פנחס",
+    "hDateInHebrew": "כא-תמוז-תשפ״ד"
+  },
+  "2024-08-03": {
+    "inEnglish": "Matot-Masei",
+    "hDate": "28 Tamuz 5784",
+    "inHebrew": "מטות־מסעי",
+    "hDateInHebrew": "כח-תמוז-תשפ״ד"
+  },
+  "2024-08-10": {
+    "inEnglish": "Devarim",
+    "hDate": "6 Av 5784",
+    "inHebrew": "דברים",
+    "hDateInHebrew": "ו-אב-תשפ״ד"
+  },
+  "2024-08-17": {
+    "inEnglish": "Vaetchanan",
+    "hDate": "13 Av 5784",
+    "inHebrew": "ואתחנן",
+    "hDateInHebrew": "יג-אב-תשפ״ד"
+  },
+  "2024-08-24": {
+    "inEnglish": "Eikev",
+    "hDate": "20 Av 5784",
+    "inHebrew": "עקב",
+    "hDateInHebrew": "כ-אב-תשפ״ד"
+  },
+  "2024-08-31": {
+    "inEnglish": "Re’eh",
+    "hDate": "27 Av 5784",
+    "inHebrew": "ראה",
+    "hDateInHebrew": "כז-אב-תשפ״ד"
+  },
+  "2024-09-07": {
+    "inEnglish": "Shoftim",
+    "hDate": "4 Elul 5784",
+    "inHebrew": "שופטים",
+    "hDateInHebrew": "ד-אלול-תשפ״ד"
+  },
+  "2024-09-14": {
+    "inEnglish": "Ki Teitzei",
+    "hDate": "11 Elul 5784",
+    "inHebrew": "כי תצא",
+    "hDateInHebrew": "יא-אלול-תשפ״ד"
+  },
+  "2024-09-21": {
+    "inEnglish": "Ki Tavo",
+    "hDate": "18 Elul 5784",
+    "inHebrew": "כי תבוא",
+    "hDateInHebrew": "יח-אלול-תשפ״ד"
+  },
+  "2024-09-28": {
+    "inEnglish": "Nitzavim-Vayeilech",
+    "hDate": "25 Elul 5784",
+    "inHebrew": "נצבים־וילך",
+    "hDateInHebrew": "כה-אלול-תשפ״ד"
+  },
+  "2024-10-05": {
+    "inEnglish": "Ha’azinu",
+    "hDate": "3 Tishrei 5785",
+    "inHebrew": "האזינו",
+    "hDateInHebrew": "ג-תשרי-תשפ״ה"
+  },
+  "2024-10-26": {
+    "inEnglish": "Bereshit",
+    "hDate": "24 Tishrei 5785",
+    "inHebrew": "בראשית",
+    "hDateInHebrew": "כד-תשרי-תשפ״ה"
+  },
+  "2024-11-02": {
+    "inEnglish": "Noach",
+    "hDate": "1 Cheshvan 5785",
+    "inHebrew": "נח",
+    "hDateInHebrew": "א-חשוון-תשפ״ה"
+  },
+  "2024-11-09": {
+    "inEnglish": "Lech-Lecha",
+    "hDate": "8 Cheshvan 5785",
+    "inHebrew": "לך לך",
+    "hDateInHebrew": "ח-חשוון-תשפ״ה"
+  },
+  "2024-11-16": {
+    "inEnglish": "Vayera",
+    "hDate": "15 Cheshvan 5785",
+    "inHebrew": "וירא",
+    "hDateInHebrew": "טו-חשוון-תשפ״ה"
+  },
+  "2024-11-23": {
+    "inEnglish": "Chayei Sara",
+    "hDate": "22 Cheshvan 5785",
+    "inHebrew": "חיי שרה",
+    "hDateInHebrew": "כב-חשוון-תשפ״ה"
+  },
+  "2024-11-30": {
+    "inEnglish": "Toldot",
+    "hDate": "29 Cheshvan 5785",
+    "inHebrew": "תולדות",
+    "hDateInHebrew": "כט-חשוון-תשפ״ה"
+  },
+  "2024-12-07": {
+    "inEnglish": "Vayetzei",
+    "hDate": "6 Kislev 5785",
+    "inHebrew": "ויצא",
+    "hDateInHebrew": "ו-כסלו-תשפ״ה"
+  },
+  "2024-12-14": {
+    "inEnglish": "Vayishlach",
+    "hDate": "13 Kislev 5785",
+    "inHebrew": "וישלח",
+    "hDateInHebrew": "יג-כסלו-תשפ״ה"
+  },
+  "2024-12-21": {
+    "inEnglish": "Vayeshev",
+    "hDate": "20 Kislev 5785",
+    "inHebrew": "וישב",
+    "hDateInHebrew": "כ-כסלו-תשפ״ה"
+  },
+  "2024-12-28": {
+    "inEnglish": "Miketz",
+    "hDate": "27 Kislev 5785",
+    "inHebrew": "מקץ",
+    "hDateInHebrew": "כז-כסלו-תשפ״ה"
+  },
+  "2025-01-04": {
+    "inEnglish": "Vayigash",
+    "hDate": "4 Tevet 5785",
+    "inHebrew": "ויגש",
+    "hDateInHebrew": "ד-טבת-תשפ״ה"
+  },
+  "2025-01-11": {
+    "inEnglish": "Vayechi",
+    "hDate": "11 Tevet 5785",
+    "inHebrew": "ויחי",
+    "hDateInHebrew": "יא-טבת-תשפ״ה"
+  },
+  "2025-01-18": {
+    "inEnglish": "Shemot",
+    "hDate": "18 Tevet 5785",
+    "inHebrew": "שמות",
+    "hDateInHebrew": "יח-טבת-תשפ״ה"
+  },
+  "2025-01-25": {
+    "inEnglish": "Vaera",
+    "hDate": "25 Tevet 5785",
+    "inHebrew": "וארא",
+    "hDateInHebrew": "כה-טבת-תשפ״ה"
+  },
+  "2025-02-01": {
+    "inEnglish": "Bo",
+    "hDate": "3 Sh'vat 5785",
+    "inHebrew": "בא",
+    "hDateInHebrew": "ג-שבט-תשפ״ה"
+  },
+  "2025-02-08": {
+    "inEnglish": "Beshalach",
+    "hDate": "10 Sh'vat 5785",
+    "inHebrew": "בשלח",
+    "hDateInHebrew": "י-שבט-תשפ״ה"
+  },
+  "2025-02-15": {
+    "inEnglish": "Yitro",
+    "hDate": "17 Sh'vat 5785",
+    "inHebrew": "יתרו",
+    "hDateInHebrew": "יז-שבט-תשפ״ה"
+  },
+  "2025-02-22": {
+    "inEnglish": "Mishpatim",
+    "hDate": "24 Sh'vat 5785",
+    "inHebrew": "משפטים",
+    "hDateInHebrew": "כד-שבט-תשפ״ה"
+  },
+  "2025-03-01": {
+    "inEnglish": "Terumah",
+    "hDate": "1 Adar 5785",
+    "inHebrew": "תרומה",
+    "hDateInHebrew": "א-אדר-תשפ״ה"
+  },
+  "2025-03-08": {
+    "inEnglish": "Tetzaveh",
+    "hDate": "8 Adar 5785",
+    "inHebrew": "תצוה",
+    "hDateInHebrew": "ח-אדר-תשפ״ה"
+  },
+  "2025-03-15": {
+    "inEnglish": "Ki Tisa",
+    "hDate": "15 Adar 5785",
+    "inHebrew": "כי תשא",
+    "hDateInHebrew": "טו-אדר-תשפ״ה"
+  },
+  "2025-03-22": {
+    "inEnglish": "Vayakhel",
+    "hDate": "22 Adar 5785",
+    "inHebrew": "ויקהל",
+    "hDateInHebrew": "כב-אדר-תשפ״ה"
+  },
+  "2025-03-29": {
+    "inEnglish": "Pekudei",
+    "hDate": "29 Adar 5785",
+    "inHebrew": "פקודי",
+    "hDateInHebrew": "כט-אדר-תשפ״ה"
+  },
+  "2025-04-05": {
+    "inEnglish": "Vayikra",
+    "hDate": "7 Nisan 5785",
+    "inHebrew": "ויקרא",
+    "hDateInHebrew": "ז-ניסן-תשפ״ה"
+  },
+  "2025-04-12": {
+    "inEnglish": "Tzav",
+    "hDate": "14 Nisan 5785",
+    "inHebrew": "צו",
+    "hDateInHebrew": "יד-ניסן-תשפ״ה"
+  },
+  "2025-04-26": {
+    "inEnglish": "Shmini",
+    "hDate": "28 Nisan 5785",
+    "inHebrew": "שמיני",
+    "hDateInHebrew": "כח-ניסן-תשפ״ה"
+  },
+  "2025-05-03": {
+    "inEnglish": "Tazria-Metzora",
+    "hDate": "5 Iyyar 5785",
+    "inHebrew": "תזריע־מצורע",
+    "hDateInHebrew": "ה-אייר-תשפ״ה"
+  },
+  "2025-05-10": {
+    "inEnglish": "Achrei Mot-Kedoshim",
+    "hDate": "12 Iyyar 5785",
+    "inHebrew": "אחרי מות־קדושים",
+    "hDateInHebrew": "יב-אייר-תשפ״ה"
+  },
+  "2025-05-17": {
+    "inEnglish": "Emor",
+    "hDate": "19 Iyyar 5785",
+    "inHebrew": "אמור",
+    "hDateInHebrew": "יט-אייר-תשפ״ה"
+  },
+  "2025-05-24": {
+    "inEnglish": "Behar-Bechukotai",
+    "hDate": "26 Iyyar 5785",
+    "inHebrew": "בהר־בחוקותי",
+    "hDateInHebrew": "כו-אייר-תשפ״ה"
+  },
+  "2025-05-31": {
+    "inEnglish": "Bamidbar",
+    "hDate": "4 Sivan 5785",
+    "inHebrew": "במדבר",
+    "hDateInHebrew": "ד-סיוון-תשפ״ה"
+  },
+  "2025-06-07": {
+    "inEnglish": "Nasso",
+    "hDate": "11 Sivan 5785",
+    "inHebrew": "נשא",
+    "hDateInHebrew": "יא-סיוון-תשפ״ה"
+  },
+  "2025-06-14": {
+    "inEnglish": "Beha’alotcha",
+    "hDate": "18 Sivan 5785",
+    "inHebrew": "בהעלותך",
+    "hDateInHebrew": "יח-סיוון-תשפ״ה"
+  },
+  "2025-06-21": {
+    "inEnglish": "Sh’lach",
+    "hDate": "25 Sivan 5785",
+    "inHebrew": "שלח",
+    "hDateInHebrew": "כה-סיוון-תשפ״ה"
+  },
+  "2025-06-28": {
+    "inEnglish": "Korach",
+    "hDate": "2 Tamuz 5785",
+    "inHebrew": "קורח",
+    "hDateInHebrew": "ב-תמוז-תשפ״ה"
+  },
+  "2025-07-05": {
+    "inEnglish": "Chukat",
+    "hDate": "9 Tamuz 5785",
+    "inHebrew": "חוקת",
+    "hDateInHebrew": "ט-תמוז-תשפ״ה"
+  },
+  "2025-07-12": {
+    "inEnglish": "Balak",
+    "hDate": "16 Tamuz 5785",
+    "inHebrew": "בלק",
+    "hDateInHebrew": "טז-תמוז-תשפ״ה"
+  },
+  "2025-07-19": {
+    "inEnglish": "Pinchas",
+    "hDate": "23 Tamuz 5785",
+    "inHebrew": "פנחס",
+    "hDateInHebrew": "כג-תמוז-תשפ״ה"
+  },
+  "2025-07-26": {
+    "inEnglish": "Matot-Masei",
+    "hDate": "1 Av 5785",
+    "inHebrew": "מטות־מסעי",
+    "hDateInHebrew": "א-אב-תשפ״ה"
+  },
+  "2025-08-02": {
+    "inEnglish": "Devarim",
+    "hDate": "8 Av 5785",
+    "inHebrew": "דברים",
+    "hDateInHebrew": "ח-אב-תשפ״ה"
+  },
+  "2025-08-09": {
+    "inEnglish": "Vaetchanan",
+    "hDate": "15 Av 5785",
+    "inHebrew": "ואתחנן",
+    "hDateInHebrew": "טו-אב-תשפ״ה"
+  },
+  "2025-08-16": {
+    "inEnglish": "Eikev",
+    "hDate": "22 Av 5785",
+    "inHebrew": "עקב",
+    "hDateInHebrew": "כב-אב-תשפ״ה"
+  },
+  "2025-08-23": {
+    "inEnglish": "Re’eh",
+    "hDate": "29 Av 5785",
+    "inHebrew": "ראה",
+    "hDateInHebrew": "כט-אב-תשפ״ה"
+  },
+  "2025-08-30": {
+    "inEnglish": "Shoftim",
+    "hDate": "6 Elul 5785",
+    "inHebrew": "שופטים",
+    "hDateInHebrew": "ו-אלול-תשפ״ה"
+  },
+  "2025-09-06": {
+    "inEnglish": "Ki Teitzei",
+    "hDate": "13 Elul 5785",
+    "inHebrew": "כי תצא",
+    "hDateInHebrew": "יג-אלול-תשפ״ה"
+  },
+  "2025-09-13": {
+    "inEnglish": "Ki Tavo",
+    "hDate": "20 Elul 5785",
+    "inHebrew": "כי תבוא",
+    "hDateInHebrew": "כ-אלול-תשפ״ה"
+  },
+  "2025-09-20": {
+    "inEnglish": "Nitzavim",
+    "hDate": "27 Elul 5785",
+    "inHebrew": "נצבים",
+    "hDateInHebrew": "כז-אלול-תשפ״ה"
+  },
+  "2025-09-27": {
+    "inEnglish": "Vayeilech",
+    "hDate": "5 Tishrei 5786",
+    "inHebrew": "וילך",
+    "hDateInHebrew": "ה-תשרי-תשפ״ו"
+  },
+  "2025-10-04": {
+    "inEnglish": "Ha’azinu",
+    "hDate": "12 Tishrei 5786",
+    "inHebrew": "האזינו",
+    "hDateInHebrew": "יב-תשרי-תשפ״ו"
+  },
+  "2025-10-18": {
+    "inEnglish": "Bereshit",
+    "hDate": "26 Tishrei 5786",
+    "inHebrew": "בראשית",
+    "hDateInHebrew": "כו-תשרי-תשפ״ו"
+  },
+  "2025-10-25": {
+    "inEnglish": "Noach",
+    "hDate": "3 Cheshvan 5786",
+    "inHebrew": "נח",
+    "hDateInHebrew": "ג-חשוון-תשפ״ו"
+  },
+  "2025-11-01": {
+    "inEnglish": "Lech-Lecha",
+    "hDate": "10 Cheshvan 5786",
+    "inHebrew": "לך לך",
+    "hDateInHebrew": "י-חשוון-תשפ״ו"
+  },
+  "2025-11-08": {
+    "inEnglish": "Vayera",
+    "hDate": "17 Cheshvan 5786",
+    "inHebrew": "וירא",
+    "hDateInHebrew": "יז-חשוון-תשפ״ו"
+  },
+  "2025-11-15": {
+    "inEnglish": "Chayei Sara",
+    "hDate": "24 Cheshvan 5786",
+    "inHebrew": "חיי שרה",
+    "hDateInHebrew": "כד-חשוון-תשפ״ו"
+  },
+  "2025-11-22": {
+    "inEnglish": "Toldot",
+    "hDate": "2 Kislev 5786",
+    "inHebrew": "תולדות",
+    "hDateInHebrew": "ב-כסלו-תשפ״ו"
+  },
+  "2025-11-29": {
+    "inEnglish": "Vayetzei",
+    "hDate": "9 Kislev 5786",
+    "inHebrew": "ויצא",
+    "hDateInHebrew": "ט-כסלו-תשפ״ו"
+  },
+  "2025-12-06": {
+    "inEnglish": "Vayishlach",
+    "hDate": "16 Kislev 5786",
+    "inHebrew": "וישלח",
+    "hDateInHebrew": "טז-כסלו-תשפ״ו"
+  },
+  "2025-12-13": {
+    "inEnglish": "Vayeshev",
+    "hDate": "23 Kislev 5786",
+    "inHebrew": "וישב",
+    "hDateInHebrew": "כג-כסלו-תשפ״ו"
+  },
+  "2025-12-20": {
+    "inEnglish": "Miketz",
+    "hDate": "30 Kislev 5786",
+    "inHebrew": "מקץ",
+    "hDateInHebrew": "ל-כסלו-תשפ״ו"
+  },
+  "2025-12-27": {
+    "inEnglish": "Vayigash",
+    "hDate": "7 Tevet 5786",
+    "inHebrew": "ויגש",
+    "hDateInHebrew": "ז-טבת-תשפ״ו"
+  },
+  "2026-01-03": {
+    "inEnglish": "Vayechi",
+    "hDate": "14 Tevet 5786",
+    "inHebrew": "ויחי",
+    "hDateInHebrew": "יד-טבת-תשפ״ו"
+  },
+  "2026-01-10": {
+    "inEnglish": "Shemot",
+    "hDate": "21 Tevet 5786",
+    "inHebrew": "שמות",
+    "hDateInHebrew": "כא-טבת-תשפ״ו"
+  },
+  "2026-01-17": {
+    "inEnglish": "Vaera",
+    "hDate": "28 Tevet 5786",
+    "inHebrew": "וארא",
+    "hDateInHebrew": "כח-טבת-תשפ״ו"
+  },
+  "2026-01-24": {
+    "inEnglish": "Bo",
+    "hDate": "6 Sh'vat 5786",
+    "inHebrew": "בא",
+    "hDateInHebrew": "ו-שבט-תשפ״ו"
+  },
+  "2026-01-31": {
+    "inEnglish": "Beshalach",
+    "hDate": "13 Sh'vat 5786",
+    "inHebrew": "בשלח",
+    "hDateInHebrew": "יג-שבט-תשפ״ו"
+  },
+  "2026-02-07": {
+    "inEnglish": "Yitro",
+    "hDate": "20 Sh'vat 5786",
+    "inHebrew": "יתרו",
+    "hDateInHebrew": "כ-שבט-תשפ״ו"
+  },
+  "2026-02-14": {
+    "inEnglish": "Mishpatim",
+    "hDate": "27 Sh'vat 5786",
+    "inHebrew": "משפטים",
+    "hDateInHebrew": "כז-שבט-תשפ״ו"
+  },
+  "2026-02-21": {
+    "inEnglish": "Terumah",
+    "hDate": "4 Adar 5786",
+    "inHebrew": "תרומה",
+    "hDateInHebrew": "ד-אדר-תשפ״ו"
+  },
+  "2026-02-28": {
+    "inEnglish": "Tetzaveh",
+    "hDate": "11 Adar 5786",
+    "inHebrew": "תצוה",
+    "hDateInHebrew": "יא-אדר-תשפ״ו"
+  },
+  "2026-03-07": {
+    "inEnglish": "Ki Tisa",
+    "hDate": "18 Adar 5786",
+    "inHebrew": "כי תשא",
+    "hDateInHebrew": "יח-אדר-תשפ״ו"
+  },
+  "2026-03-14": {
+    "inEnglish": "Vayakhel-Pekudei",
+    "hDate": "25 Adar 5786",
+    "inHebrew": "ויקהל־פקודי",
+    "hDateInHebrew": "כה-אדר-תשפ״ו"
+  },
+  "2026-03-21": {
+    "inEnglish": "Vayikra",
+    "hDate": "3 Nisan 5786",
+    "inHebrew": "ויקרא",
+    "hDateInHebrew": "ג-ניסן-תשפ״ו"
+  },
+  "2026-03-28": {
+    "inEnglish": "Tzav",
+    "hDate": "10 Nisan 5786",
+    "inHebrew": "צו",
+    "hDateInHebrew": "י-ניסן-תשפ״ו"
+  },
+  "2026-04-11": {
+    "inEnglish": "Shmini",
+    "hDate": "24 Nisan 5786",
+    "inHebrew": "שמיני",
+    "hDateInHebrew": "כד-ניסן-תשפ״ו"
+  },
+  "2026-04-18": {
+    "inEnglish": "Tazria-Metzora",
+    "hDate": "1 Iyyar 5786",
+    "inHebrew": "תזריע־מצורע",
+    "hDateInHebrew": "א-אייר-תשפ״ו"
+  },
+  "2026-04-25": {
+    "inEnglish": "Achrei Mot-Kedoshim",
+    "hDate": "8 Iyyar 5786",
+    "inHebrew": "אחרי מות־קדושים",
+    "hDateInHebrew": "ח-אייר-תשפ״ו"
+  },
+  "2026-05-02": {
+    "inEnglish": "Emor",
+    "hDate": "15 Iyyar 5786",
+    "inHebrew": "אמור",
+    "hDateInHebrew": "טו-אייר-תשפ״ו"
+  },
+  "2026-05-09": {
+    "inEnglish": "Behar-Bechukotai",
+    "hDate": "22 Iyyar 5786",
+    "inHebrew": "בהר־בחוקותי",
+    "hDateInHebrew": "כב-אייר-תשפ״ו"
+  },
+  "2026-05-16": {
+    "inEnglish": "Bamidbar",
+    "hDate": "29 Iyyar 5786",
+    "inHebrew": "במדבר",
+    "hDateInHebrew": "כט-אייר-תשפ״ו"
+  },
+  "2026-05-30": {
+    "inEnglish": "Nasso",
+    "hDate": "14 Sivan 5786",
+    "inHebrew": "נשא",
+    "hDateInHebrew": "יד-סיוון-תשפ״ו"
+  },
+  "2026-06-06": {
+    "inEnglish": "Beha’alotcha",
+    "hDate": "21 Sivan 5786",
+    "inHebrew": "בהעלותך",
+    "hDateInHebrew": "כא-סיוון-תשפ״ו"
+  },
+  "2026-06-13": {
+    "inEnglish": "Sh’lach",
+    "hDate": "28 Sivan 5786",
+    "inHebrew": "שלח",
+    "hDateInHebrew": "כח-סיוון-תשפ״ו"
+  },
+  "2026-06-20": {
+    "inEnglish": "Korach",
+    "hDate": "5 Tamuz 5786",
+    "inHebrew": "קורח",
+    "hDateInHebrew": "ה-תמוז-תשפ״ו"
+  },
+  "2026-06-27": {
+    "inEnglish": "Chukat-Balak",
+    "hDate": "12 Tamuz 5786",
+    "inHebrew": "חוקת־בלק",
+    "hDateInHebrew": "יב-תמוז-תשפ״ו"
+  },
+  "2026-07-04": {
+    "inEnglish": "Pinchas",
+    "hDate": "19 Tamuz 5786",
+    "inHebrew": "פנחס",
+    "hDateInHebrew": "יט-תמוז-תשפ״ו"
+  },
+  "2026-07-11": {
+    "inEnglish": "Matot-Masei",
+    "hDate": "26 Tamuz 5786",
+    "inHebrew": "מטות־מסעי",
+    "hDateInHebrew": "כו-תמוז-תשפ״ו"
+  },
+  "2026-07-18": {
+    "inEnglish": "Devarim",
+    "hDate": "4 Av 5786",
+    "inHebrew": "דברים",
+    "hDateInHebrew": "ד-אב-תשפ״ו"
+  },
+  "2026-07-25": {
+    "inEnglish": "Vaetchanan",
+    "hDate": "11 Av 5786",
+    "inHebrew": "ואתחנן",
+    "hDateInHebrew": "יא-אב-תשפ״ו"
+  },
+  "2026-08-01": {
+    "inEnglish": "Eikev",
+    "hDate": "18 Av 5786",
+    "inHebrew": "עקב",
+    "hDateInHebrew": "יח-אב-תשפ״ו"
+  },
+  "2026-08-08": {
+    "inEnglish": "Re’eh",
+    "hDate": "25 Av 5786",
+    "inHebrew": "ראה",
+    "hDateInHebrew": "כה-אב-תשפ״ו"
+  },
+  "2026-08-15": {
+    "inEnglish": "Shoftim",
+    "hDate": "2 Elul 5786",
+    "inHebrew": "שופטים",
+    "hDateInHebrew": "ב-אלול-תשפ״ו"
+  },
+  "2026-08-22": {
+    "inEnglish": "Ki Teitzei",
+    "hDate": "9 Elul 5786",
+    "inHebrew": "כי תצא",
+    "hDateInHebrew": "ט-אלול-תשפ״ו"
+  },
+  "2026-08-29": {
+    "inEnglish": "Ki Tavo",
+    "hDate": "16 Elul 5786",
+    "inHebrew": "כי תבוא",
+    "hDateInHebrew": "טז-אלול-תשפ״ו"
+  },
+  "2026-09-05": {
+    "inEnglish": "Nitzavim-Vayeilech",
+    "hDate": "23 Elul 5786",
+    "inHebrew": "נצבים־וילך",
+    "hDateInHebrew": "כג-אלול-תשפ״ו"
+  },
+  "2026-09-19": {
+    "inEnglish": "Ha’azinu",
+    "hDate": "8 Tishrei 5787",
+    "inHebrew": "האזינו",
+    "hDateInHebrew": "ח-תשרי-תשפ״ז"
+  },
+  "2026-10-10": {
+    "inEnglish": "Bereshit",
+    "hDate": "29 Tishrei 5787",
+    "inHebrew": "בראשית",
+    "hDateInHebrew": "כט-תשרי-תשפ״ז"
+  },
+  "2026-10-17": {
+    "inEnglish": "Noach",
+    "hDate": "6 Cheshvan 5787",
+    "inHebrew": "נח",
+    "hDateInHebrew": "ו-חשוון-תשפ״ז"
+  },
+  "2026-10-24": {
+    "inEnglish": "Lech-Lecha",
+    "hDate": "13 Cheshvan 5787",
+    "inHebrew": "לך לך",
+    "hDateInHebrew": "יג-חשוון-תשפ״ז"
+  },
+  "2026-10-31": {
+    "inEnglish": "Vayera",
+    "hDate": "20 Cheshvan 5787",
+    "inHebrew": "וירא",
+    "hDateInHebrew": "כ-חשוון-תשפ״ז"
+  },
+  "2026-11-07": {
+    "inEnglish": "Chayei Sara",
+    "hDate": "27 Cheshvan 5787",
+    "inHebrew": "חיי שרה",
+    "hDateInHebrew": "כז-חשוון-תשפ״ז"
+  },
+  "2026-11-14": {
+    "inEnglish": "Toldot",
+    "hDate": "4 Kislev 5787",
+    "inHebrew": "תולדות",
+    "hDateInHebrew": "ד-כסלו-תשפ״ז"
+  },
+  "2026-11-21": {
+    "inEnglish": "Vayetzei",
+    "hDate": "11 Kislev 5787",
+    "inHebrew": "ויצא",
+    "hDateInHebrew": "יא-כסלו-תשפ״ז"
+  },
+  "2026-11-28": {
+    "inEnglish": "Vayishlach",
+    "hDate": "18 Kislev 5787",
+    "inHebrew": "וישלח",
+    "hDateInHebrew": "יח-כסלו-תשפ״ז"
+  },
+  "2026-12-05": {
+    "inEnglish": "Vayeshev",
+    "hDate": "25 Kislev 5787",
+    "inHebrew": "וישב",
+    "hDateInHebrew": "כה-כסלו-תשפ״ז"
+  },
+  "2026-12-12": {
+    "inEnglish": "Miketz",
+    "hDate": "2 Tevet 5787",
+    "inHebrew": "מקץ",
+    "hDateInHebrew": "ב-טבת-תשפ״ז"
+  },
+  "2026-12-19": {
+    "inEnglish": "Vayigash",
+    "hDate": "9 Tevet 5787",
+    "inHebrew": "ויגש",
+    "hDateInHebrew": "ט-טבת-תשפ״ז"
+  },
+  "2026-12-26": {
+    "inEnglish": "Vayechi",
+    "hDate": "16 Tevet 5787",
+    "inHebrew": "ויחי",
+    "hDateInHebrew": "טז-טבת-תשפ״ז"
+  },
+  "2027-01-02": {
+    "inEnglish": "Shemot",
+    "hDate": "23 Tevet 5787",
+    "inHebrew": "שמות",
+    "hDateInHebrew": "כג-טבת-תשפ״ז"
+  },
+  "2027-01-09": {
+    "inEnglish": "Vaera",
+    "hDate": "1 Sh'vat 5787",
+    "inHebrew": "וארא",
+    "hDateInHebrew": "א-שבט-תשפ״ז"
+  },
+  "2027-01-16": {
+    "inEnglish": "Bo",
+    "hDate": "8 Sh'vat 5787",
+    "inHebrew": "בא",
+    "hDateInHebrew": "ח-שבט-תשפ״ז"
+  },
+  "2027-01-23": {
+    "inEnglish": "Beshalach",
+    "hDate": "15 Sh'vat 5787",
+    "inHebrew": "בשלח",
+    "hDateInHebrew": "טו-שבט-תשפ״ז"
+  },
+  "2027-01-30": {
+    "inEnglish": "Yitro",
+    "hDate": "22 Sh'vat 5787",
+    "inHebrew": "יתרו",
+    "hDateInHebrew": "כב-שבט-תשפ״ז"
+  },
+  "2027-02-06": {
+    "inEnglish": "Mishpatim",
+    "hDate": "29 Sh'vat 5787",
+    "inHebrew": "משפטים",
+    "hDateInHebrew": "כט-שבט-תשפ״ז"
+  },
+  "2027-02-13": {
+    "inEnglish": "Terumah",
+    "hDate": "6 Adar I 5787",
+    "inHebrew": "תרומה",
+    "hDateInHebrew": "ו-אדר-undefined"
+  },
+  "2027-02-20": {
+    "inEnglish": "Tetzaveh",
+    "hDate": "13 Adar I 5787",
+    "inHebrew": "תצוה",
+    "hDateInHebrew": "יג-אדר-undefined"
+  },
+  "2027-02-27": {
+    "inEnglish": "Ki Tisa",
+    "hDate": "20 Adar I 5787",
+    "inHebrew": "כי תשא",
+    "hDateInHebrew": "כ-אדר-undefined"
+  },
+  "2027-03-06": {
+    "inEnglish": "Vayakhel",
+    "hDate": "27 Adar I 5787",
+    "inHebrew": "ויקהל",
+    "hDateInHebrew": "כז-אדר-undefined"
+  },
+  "2027-03-13": {
+    "inEnglish": "Pekudei",
+    "hDate": "4 Adar II 5787",
+    "inHebrew": "פקודי",
+    "hDateInHebrew": "ד-אדר-undefined"
+  },
+  "2027-03-20": {
+    "inEnglish": "Vayikra",
+    "hDate": "11 Adar II 5787",
+    "inHebrew": "ויקרא",
+    "hDateInHebrew": "יא-אדר-undefined"
+  },
+  "2027-03-27": {
+    "inEnglish": "Tzav",
+    "hDate": "18 Adar II 5787",
+    "inHebrew": "צו",
+    "hDateInHebrew": "יח-אדר-undefined"
+  },
+  "2027-04-03": {
+    "inEnglish": "Shmini",
+    "hDate": "25 Adar II 5787",
+    "inHebrew": "שמיני",
+    "hDateInHebrew": "כה-אדר-undefined"
+  },
+  "2027-04-10": {
+    "inEnglish": "Tazria",
+    "hDate": "3 Nisan 5787",
+    "inHebrew": "תזריע",
+    "hDateInHebrew": "ג-ניסן-תשפ״ז"
+  },
+  "2027-04-17": {
+    "inEnglish": "Metzora",
+    "hDate": "10 Nisan 5787",
+    "inHebrew": "מצורע",
+    "hDateInHebrew": "י-ניסן-תשפ״ז"
+  },
+  "2027-05-01": {
+    "inEnglish": "Achrei Mot",
+    "hDate": "24 Nisan 5787",
+    "inHebrew": "אחרי מות",
+    "hDateInHebrew": "כד-ניסן-תשפ״ז"
+  },
+  "2027-05-08": {
+    "inEnglish": "Kedoshim",
+    "hDate": "1 Iyyar 5787",
+    "inHebrew": "קדושים",
+    "hDateInHebrew": "א-אייר-תשפ״ז"
+  },
+  "2027-05-15": {
+    "inEnglish": "Emor",
+    "hDate": "8 Iyyar 5787",
+    "inHebrew": "אמור",
+    "hDateInHebrew": "ח-אייר-תשפ״ז"
+  },
+  "2027-05-22": {
+    "inEnglish": "Behar",
+    "hDate": "15 Iyyar 5787",
+    "inHebrew": "בהר",
+    "hDateInHebrew": "טו-אייר-תשפ״ז"
+  },
+  "2027-05-29": {
+    "inEnglish": "Bechukotai",
+    "hDate": "22 Iyyar 5787",
+    "inHebrew": "בחוקותי",
+    "hDateInHebrew": "כב-אייר-תשפ״ז"
+  },
+  "2027-06-05": {
+    "inEnglish": "Bamidbar",
+    "hDate": "29 Iyyar 5787",
+    "inHebrew": "במדבר",
+    "hDateInHebrew": "כט-אייר-תשפ״ז"
+  },
+  "2027-06-19": {
+    "inEnglish": "Nasso",
+    "hDate": "14 Sivan 5787",
+    "inHebrew": "נשא",
+    "hDateInHebrew": "יד-סיוון-תשפ״ז"
+  },
+  "2027-06-26": {
+    "inEnglish": "Beha’alotcha",
+    "hDate": "21 Sivan 5787",
+    "inHebrew": "בהעלותך",
+    "hDateInHebrew": "כא-סיוון-תשפ״ז"
+  },
+  "2027-07-03": {
+    "inEnglish": "Sh’lach",
+    "hDate": "28 Sivan 5787",
+    "inHebrew": "שלח",
+    "hDateInHebrew": "כח-סיוון-תשפ״ז"
+  },
+  "2027-07-10": {
+    "inEnglish": "Korach",
+    "hDate": "5 Tamuz 5787",
+    "inHebrew": "קורח",
+    "hDateInHebrew": "ה-תמוז-תשפ״ז"
+  },
+  "2027-07-17": {
+    "inEnglish": "Chukat-Balak",
+    "hDate": "12 Tamuz 5787",
+    "inHebrew": "חוקת־בלק",
+    "hDateInHebrew": "יב-תמוז-תשפ״ז"
+  },
+  "2027-07-24": {
+    "inEnglish": "Pinchas",
+    "hDate": "19 Tamuz 5787",
+    "inHebrew": "פנחס",
+    "hDateInHebrew": "יט-תמוז-תשפ״ז"
+  },
+  "2027-07-31": {
+    "inEnglish": "Matot-Masei",
+    "hDate": "26 Tamuz 5787",
+    "inHebrew": "מטות־מסעי",
+    "hDateInHebrew": "כו-תמוז-תשפ״ז"
+  },
+  "2027-08-07": {
+    "inEnglish": "Devarim",
+    "hDate": "4 Av 5787",
+    "inHebrew": "דברים",
+    "hDateInHebrew": "ד-אב-תשפ״ז"
+  },
+  "2027-08-14": {
+    "inEnglish": "Vaetchanan",
+    "hDate": "11 Av 5787",
+    "inHebrew": "ואתחנן",
+    "hDateInHebrew": "יא-אב-תשפ״ז"
+  },
+  "2027-08-21": {
+    "inEnglish": "Eikev",
+    "hDate": "18 Av 5787",
+    "inHebrew": "עקב",
+    "hDateInHebrew": "יח-אב-תשפ״ז"
+  },
+  "2027-08-28": {
+    "inEnglish": "Re’eh",
+    "hDate": "25 Av 5787",
+    "inHebrew": "ראה",
+    "hDateInHebrew": "כה-אב-תשפ״ז"
+  },
+  "2027-09-04": {
+    "inEnglish": "Shoftim",
+    "hDate": "2 Elul 5787",
+    "inHebrew": "שופטים",
+    "hDateInHebrew": "ב-אלול-תשפ״ז"
+  },
+  "2027-09-11": {
+    "inEnglish": "Ki Teitzei",
+    "hDate": "9 Elul 5787",
+    "inHebrew": "כי תצא",
+    "hDateInHebrew": "ט-אלול-תשפ״ז"
+  },
+  "2027-09-18": {
+    "inEnglish": "Ki Tavo",
+    "hDate": "16 Elul 5787",
+    "inHebrew": "כי תבוא",
+    "hDateInHebrew": "טז-אלול-תשפ״ז"
+  },
+  "2027-09-25": {
+    "inEnglish": "Nitzavim-Vayeilech",
+    "hDate": "23 Elul 5787",
+    "inHebrew": "נצבים־וילך",
+    "hDateInHebrew": "כג-אלול-תשפ״ז"
+  },
+  "2027-10-09": {
+    "inEnglish": "Ha’azinu",
+    "hDate": "8 Tishrei 5788",
+    "inHebrew": "האזינו",
+    "hDateInHebrew": "ח-תשרי-תשפ״ח"
+  },
+  "2027-10-30": {
+    "inEnglish": "Bereshit",
+    "hDate": "29 Tishrei 5788",
+    "inHebrew": "בראשית",
+    "hDateInHebrew": "כט-תשרי-תשפ״ח"
+  },
+  "2027-11-06": {
+    "inEnglish": "Noach",
+    "hDate": "6 Cheshvan 5788",
+    "inHebrew": "נח",
+    "hDateInHebrew": "ו-חשוון-תשפ״ח"
+  },
+  "2027-11-13": {
+    "inEnglish": "Lech-Lecha",
+    "hDate": "13 Cheshvan 5788",
+    "inHebrew": "לך לך",
+    "hDateInHebrew": "יג-חשוון-תשפ״ח"
+  },
+  "2027-11-20": {
+    "inEnglish": "Vayera",
+    "hDate": "20 Cheshvan 5788",
+    "inHebrew": "וירא",
+    "hDateInHebrew": "כ-חשוון-תשפ״ח"
+  },
+  "2027-11-27": {
+    "inEnglish": "Chayei Sara",
+    "hDate": "27 Cheshvan 5788",
+    "inHebrew": "חיי שרה",
+    "hDateInHebrew": "כז-חשוון-תשפ״ח"
+  },
+  "2027-12-04": {
+    "inEnglish": "Toldot",
+    "hDate": "4 Kislev 5788",
+    "inHebrew": "תולדות",
+    "hDateInHebrew": "ד-כסלו-תשפ״ח"
+  },
+  "2027-12-11": {
+    "inEnglish": "Vayetzei",
+    "hDate": "11 Kislev 5788",
+    "inHebrew": "ויצא",
+    "hDateInHebrew": "יא-כסלו-תשפ״ח"
+  },
+  "2027-12-18": {
+    "inEnglish": "Vayishlach",
+    "hDate": "18 Kislev 5788",
+    "inHebrew": "וישלח",
+    "hDateInHebrew": "יח-כסלו-תשפ״ח"
+  },
+  "2027-12-25": {
+    "inEnglish": "Vayeshev",
+    "hDate": "25 Kislev 5788",
+    "inHebrew": "וישב",
+    "hDateInHebrew": "כה-כסלו-תשפ״ח"
+  },
+  "2028-01-01": {
+    "inEnglish": "Miketz",
+    "hDate": "2 Tevet 5788",
+    "inHebrew": "מקץ",
+    "hDateInHebrew": "ב-טבת-תשפ״ח"
+  },
+  "2028-01-08": {
+    "inEnglish": "Vayigash",
+    "hDate": "9 Tevet 5788",
+    "inHebrew": "ויגש",
+    "hDateInHebrew": "ט-טבת-תשפ״ח"
+  },
+  "2028-01-15": {
+    "inEnglish": "Vayechi",
+    "hDate": "16 Tevet 5788",
+    "inHebrew": "ויחי",
+    "hDateInHebrew": "טז-טבת-תשפ״ח"
+  },
+  "2028-01-22": {
+    "inEnglish": "Shemot",
+    "hDate": "23 Tevet 5788",
+    "inHebrew": "שמות",
+    "hDateInHebrew": "כג-טבת-תשפ״ח"
+  },
+  "2028-01-29": {
+    "inEnglish": "Vaera",
+    "hDate": "1 Sh'vat 5788",
+    "inHebrew": "וארא",
+    "hDateInHebrew": "א-שבט-תשפ״ח"
+  },
+  "2028-02-05": {
+    "inEnglish": "Bo",
+    "hDate": "8 Sh'vat 5788",
+    "inHebrew": "בא",
+    "hDateInHebrew": "ח-שבט-תשפ״ח"
+  },
+  "2028-02-12": {
+    "inEnglish": "Beshalach",
+    "hDate": "15 Sh'vat 5788",
+    "inHebrew": "בשלח",
+    "hDateInHebrew": "טו-שבט-תשפ״ח"
+  },
+  "2028-02-19": {
+    "inEnglish": "Yitro",
+    "hDate": "22 Sh'vat 5788",
+    "inHebrew": "יתרו",
+    "hDateInHebrew": "כב-שבט-תשפ״ח"
+  },
+  "2028-02-26": {
+    "inEnglish": "Mishpatim",
+    "hDate": "29 Sh'vat 5788",
+    "inHebrew": "משפטים",
+    "hDateInHebrew": "כט-שבט-תשפ״ח"
+  },
+  "2028-03-04": {
+    "inEnglish": "Terumah",
+    "hDate": "6 Adar 5788",
+    "inHebrew": "תרומה",
+    "hDateInHebrew": "ו-אדר-תשפ״ח"
+  },
+  "2028-03-11": {
+    "inEnglish": "Tetzaveh",
+    "hDate": "13 Adar 5788",
+    "inHebrew": "תצוה",
+    "hDateInHebrew": "יג-אדר-תשפ״ח"
+  },
+  "2028-03-18": {
+    "inEnglish": "Ki Tisa",
+    "hDate": "20 Adar 5788",
+    "inHebrew": "כי תשא",
+    "hDateInHebrew": "כ-אדר-תשפ״ח"
+  },
+  "2028-03-25": {
+    "inEnglish": "Vayakhel-Pekudei",
+    "hDate": "27 Adar 5788",
+    "inHebrew": "ויקהל־פקודי",
+    "hDateInHebrew": "כז-אדר-תשפ״ח"
+  },
+  "2028-04-01": {
+    "inEnglish": "Vayikra",
+    "hDate": "5 Nisan 5788",
+    "inHebrew": "ויקרא",
+    "hDateInHebrew": "ה-ניסן-תשפ״ח"
+  },
+  "2028-04-08": {
+    "inEnglish": "Tzav",
+    "hDate": "12 Nisan 5788",
+    "inHebrew": "צו",
+    "hDateInHebrew": "יב-ניסן-תשפ״ח"
+  },
+  "2028-04-22": {
+    "inEnglish": "Shmini",
+    "hDate": "26 Nisan 5788",
+    "inHebrew": "שמיני",
+    "hDateInHebrew": "כו-ניסן-תשפ״ח"
+  },
+  "2028-04-29": {
+    "inEnglish": "Tazria-Metzora",
+    "hDate": "3 Iyyar 5788",
+    "inHebrew": "תזריע־מצורע",
+    "hDateInHebrew": "ג-אייר-תשפ״ח"
+  },
+  "2028-05-06": {
+    "inEnglish": "Achrei Mot-Kedoshim",
+    "hDate": "10 Iyyar 5788",
+    "inHebrew": "אחרי מות־קדושים",
+    "hDateInHebrew": "י-אייר-תשפ״ח"
+  },
+  "2028-05-13": {
+    "inEnglish": "Emor",
+    "hDate": "17 Iyyar 5788",
+    "inHebrew": "אמור",
+    "hDateInHebrew": "יז-אייר-תשפ״ח"
+  },
+  "2028-05-20": {
+    "inEnglish": "Behar-Bechukotai",
+    "hDate": "24 Iyyar 5788",
+    "inHebrew": "בהר־בחוקותי",
+    "hDateInHebrew": "כד-אייר-תשפ״ח"
+  },
+  "2028-05-27": {
+    "inEnglish": "Bamidbar",
+    "hDate": "2 Sivan 5788",
+    "inHebrew": "במדבר",
+    "hDateInHebrew": "ב-סיוון-תשפ״ח"
+  },
+  "2028-06-03": {
+    "inEnglish": "Nasso",
+    "hDate": "9 Sivan 5788",
+    "inHebrew": "נשא",
+    "hDateInHebrew": "ט-סיוון-תשפ״ח"
+  },
+  "2028-06-10": {
+    "inEnglish": "Beha’alotcha",
+    "hDate": "16 Sivan 5788",
+    "inHebrew": "בהעלותך",
+    "hDateInHebrew": "טז-סיוון-תשפ״ח"
+  },
+  "2028-06-17": {
+    "inEnglish": "Sh’lach",
+    "hDate": "23 Sivan 5788",
+    "inHebrew": "שלח",
+    "hDateInHebrew": "כג-סיוון-תשפ״ח"
+  },
+  "2028-06-24": {
+    "inEnglish": "Korach",
+    "hDate": "30 Sivan 5788",
+    "inHebrew": "קורח",
+    "hDateInHebrew": "ל-סיוון-תשפ״ח"
+  },
+  "2028-07-01": {
+    "inEnglish": "Chukat",
+    "hDate": "7 Tamuz 5788",
+    "inHebrew": "חוקת",
+    "hDateInHebrew": "ז-תמוז-תשפ״ח"
+  },
+  "2028-07-08": {
+    "inEnglish": "Balak",
+    "hDate": "14 Tamuz 5788",
+    "inHebrew": "בלק",
+    "hDateInHebrew": "יד-תמוז-תשפ״ח"
+  },
+  "2028-07-15": {
+    "inEnglish": "Pinchas",
+    "hDate": "21 Tamuz 5788",
+    "inHebrew": "פנחס",
+    "hDateInHebrew": "כא-תמוז-תשפ״ח"
+  },
+  "2028-07-22": {
+    "inEnglish": "Matot-Masei",
+    "hDate": "28 Tamuz 5788",
+    "inHebrew": "מטות־מסעי",
+    "hDateInHebrew": "כח-תמוז-תשפ״ח"
+  },
+  "2028-07-29": {
+    "inEnglish": "Devarim",
+    "hDate": "6 Av 5788",
+    "inHebrew": "דברים",
+    "hDateInHebrew": "ו-אב-תשפ״ח"
+  },
+  "2028-08-05": {
+    "inEnglish": "Vaetchanan",
+    "hDate": "13 Av 5788",
+    "inHebrew": "ואתחנן",
+    "hDateInHebrew": "יג-אב-תשפ״ח"
+  },
+  "2028-08-12": {
+    "inEnglish": "Eikev",
+    "hDate": "20 Av 5788",
+    "inHebrew": "עקב",
+    "hDateInHebrew": "כ-אב-תשפ״ח"
+  },
+  "2028-08-19": {
+    "inEnglish": "Re’eh",
+    "hDate": "27 Av 5788",
+    "inHebrew": "ראה",
+    "hDateInHebrew": "כז-אב-תשפ״ח"
+  },
+  "2028-08-26": {
+    "inEnglish": "Shoftim",
+    "hDate": "4 Elul 5788",
+    "inHebrew": "שופטים",
+    "hDateInHebrew": "ד-אלול-תשפ״ח"
+  },
+  "2028-09-02": {
+    "inEnglish": "Ki Teitzei",
+    "hDate": "11 Elul 5788",
+    "inHebrew": "כי תצא",
+    "hDateInHebrew": "יא-אלול-תשפ״ח"
+  },
+  "2028-09-09": {
+    "inEnglish": "Ki Tavo",
+    "hDate": "18 Elul 5788",
+    "inHebrew": "כי תבוא",
+    "hDateInHebrew": "יח-אלול-תשפ״ח"
+  },
+  "2028-09-16": {
+    "inEnglish": "Nitzavim-Vayeilech",
+    "hDate": "25 Elul 5788",
+    "inHebrew": "נצבים־וילך",
+    "hDateInHebrew": "כה-אלול-תשפ״ח"
+  },
+  "2028-09-23": {
+    "inEnglish": "Ha’azinu",
+    "hDate": "3 Tishrei 5789",
+    "inHebrew": "האזינו",
+    "hDateInHebrew": "ג-תשרי-תשפ״ט"
+  },
+  "2028-10-14": {
+    "inEnglish": "Bereshit",
+    "hDate": "24 Tishrei 5789",
+    "inHebrew": "בראשית",
+    "hDateInHebrew": "כד-תשרי-תשפ״ט"
+  },
+  "2028-10-21": {
+    "inEnglish": "Noach",
+    "hDate": "1 Cheshvan 5789",
+    "inHebrew": "נח",
+    "hDateInHebrew": "א-חשוון-תשפ״ט"
+  },
+  "2028-10-28": {
+    "inEnglish": "Lech-Lecha",
+    "hDate": "8 Cheshvan 5789",
+    "inHebrew": "לך לך",
+    "hDateInHebrew": "ח-חשוון-תשפ״ט"
+  },
+  "2028-11-04": {
+    "inEnglish": "Vayera",
+    "hDate": "15 Cheshvan 5789",
+    "inHebrew": "וירא",
+    "hDateInHebrew": "טו-חשוון-תשפ״ט"
+  },
+  "2028-11-11": {
+    "inEnglish": "Chayei Sara",
+    "hDate": "22 Cheshvan 5789",
+    "inHebrew": "חיי שרה",
+    "hDateInHebrew": "כב-חשוון-תשפ״ט"
+  },
+  "2028-11-18": {
+    "inEnglish": "Toldot",
+    "hDate": "29 Cheshvan 5789",
+    "inHebrew": "תולדות",
+    "hDateInHebrew": "כט-חשוון-תשפ״ט"
+  },
+  "2028-11-25": {
+    "inEnglish": "Vayetzei",
+    "hDate": "7 Kislev 5789",
+    "inHebrew": "ויצא",
+    "hDateInHebrew": "ז-כסלו-תשפ״ט"
+  },
+  "2028-12-02": {
+    "inEnglish": "Vayishlach",
+    "hDate": "14 Kislev 5789",
+    "inHebrew": "וישלח",
+    "hDateInHebrew": "יד-כסלו-תשפ״ט"
+  },
+  "2028-12-09": {
+    "inEnglish": "Vayeshev",
+    "hDate": "21 Kislev 5789",
+    "inHebrew": "וישב",
+    "hDateInHebrew": "כא-כסלו-תשפ״ט"
+  },
+  "2028-12-16": {
+    "inEnglish": "Miketz",
+    "hDate": "28 Kislev 5789",
+    "inHebrew": "מקץ",
+    "hDateInHebrew": "כח-כסלו-תשפ״ט"
+  },
+  "2028-12-23": {
+    "inEnglish": "Vayigash",
+    "hDate": "5 Tevet 5789",
+    "inHebrew": "ויגש",
+    "hDateInHebrew": "ה-טבת-תשפ״ט"
+  },
+  "2028-12-30": {
+    "inEnglish": "Vayechi",
+    "hDate": "12 Tevet 5789",
+    "inHebrew": "ויחי",
+    "hDateInHebrew": "יב-טבת-תשפ״ט"
+  },
+  "2029-01-06": {
+    "inEnglish": "Shemot",
+    "hDate": "19 Tevet 5789",
+    "inHebrew": "שמות",
+    "hDateInHebrew": "יט-טבת-תשפ״ט"
+  },
+  "2029-01-13": {
+    "inEnglish": "Vaera",
+    "hDate": "26 Tevet 5789",
+    "inHebrew": "וארא",
+    "hDateInHebrew": "כו-טבת-תשפ״ט"
+  },
+  "2029-01-20": {
+    "inEnglish": "Bo",
+    "hDate": "4 Sh'vat 5789",
+    "inHebrew": "בא",
+    "hDateInHebrew": "ד-שבט-תשפ״ט"
+  },
+  "2029-01-27": {
+    "inEnglish": "Beshalach",
+    "hDate": "11 Sh'vat 5789",
+    "inHebrew": "בשלח",
+    "hDateInHebrew": "יא-שבט-תשפ״ט"
+  },
+  "2029-02-03": {
+    "inEnglish": "Yitro",
+    "hDate": "18 Sh'vat 5789",
+    "inHebrew": "יתרו",
+    "hDateInHebrew": "יח-שבט-תשפ״ט"
+  },
+  "2029-02-10": {
+    "inEnglish": "Mishpatim",
+    "hDate": "25 Sh'vat 5789",
+    "inHebrew": "משפטים",
+    "hDateInHebrew": "כה-שבט-תשפ״ט"
+  },
+  "2029-02-17": {
+    "inEnglish": "Terumah",
+    "hDate": "2 Adar 5789",
+    "inHebrew": "תרומה",
+    "hDateInHebrew": "ב-אדר-תשפ״ט"
+  },
+  "2029-02-24": {
+    "inEnglish": "Tetzaveh",
+    "hDate": "9 Adar 5789",
+    "inHebrew": "תצוה",
+    "hDateInHebrew": "ט-אדר-תשפ״ט"
+  },
+  "2029-03-03": {
+    "inEnglish": "Ki Tisa",
+    "hDate": "16 Adar 5789",
+    "inHebrew": "כי תשא",
+    "hDateInHebrew": "טז-אדר-תשפ״ט"
+  },
+  "2029-03-10": {
+    "inEnglish": "Vayakhel-Pekudei",
+    "hDate": "23 Adar 5789",
+    "inHebrew": "ויקהל־פקודי",
+    "hDateInHebrew": "כג-אדר-תשפ״ט"
+  },
+  "2029-03-17": {
+    "inEnglish": "Vayikra",
+    "hDate": "1 Nisan 5789",
+    "inHebrew": "ויקרא",
+    "hDateInHebrew": "א-ניסן-תשפ״ט"
+  },
+  "2029-03-24": {
+    "inEnglish": "Tzav",
+    "hDate": "8 Nisan 5789",
+    "inHebrew": "צו",
+    "hDateInHebrew": "ח-ניסן-תשפ״ט"
+  },
+  "2029-04-14": {
+    "inEnglish": "Shmini",
+    "hDate": "29 Nisan 5789",
+    "inHebrew": "שמיני",
+    "hDateInHebrew": "כט-ניסן-תשפ״ט"
+  },
+  "2029-04-21": {
+    "inEnglish": "Tazria-Metzora",
+    "hDate": "6 Iyyar 5789",
+    "inHebrew": "תזריע־מצורע",
+    "hDateInHebrew": "ו-אייר-תשפ״ט"
+  },
+  "2029-04-28": {
+    "inEnglish": "Achrei Mot-Kedoshim",
+    "hDate": "13 Iyyar 5789",
+    "inHebrew": "אחרי מות־קדושים",
+    "hDateInHebrew": "יג-אייר-תשפ״ט"
+  },
+  "2029-05-05": {
+    "inEnglish": "Emor",
+    "hDate": "20 Iyyar 5789",
+    "inHebrew": "אמור",
+    "hDateInHebrew": "כ-אייר-תשפ״ט"
+  },
+  "2029-05-12": {
+    "inEnglish": "Behar-Bechukotai",
+    "hDate": "27 Iyyar 5789",
+    "inHebrew": "בהר־בחוקותי",
+    "hDateInHebrew": "כז-אייר-תשפ״ט"
+  },
+  "2029-05-19": {
+    "inEnglish": "Bamidbar",
+    "hDate": "5 Sivan 5789",
+    "inHebrew": "במדבר",
+    "hDateInHebrew": "ה-סיוון-תשפ״ט"
+  },
+  "2029-05-26": {
+    "inEnglish": "Nasso",
+    "hDate": "12 Sivan 5789",
+    "inHebrew": "נשא",
+    "hDateInHebrew": "יב-סיוון-תשפ״ט"
+  },
+  "2029-06-02": {
+    "inEnglish": "Beha’alotcha",
+    "hDate": "19 Sivan 5789",
+    "inHebrew": "בהעלותך",
+    "hDateInHebrew": "יט-סיוון-תשפ״ט"
+  },
+  "2029-06-09": {
+    "inEnglish": "Sh’lach",
+    "hDate": "26 Sivan 5789",
+    "inHebrew": "שלח",
+    "hDateInHebrew": "כו-סיוון-תשפ״ט"
+  },
+  "2029-06-16": {
+    "inEnglish": "Korach",
+    "hDate": "3 Tamuz 5789",
+    "inHebrew": "קורח",
+    "hDateInHebrew": "ג-תמוז-תשפ״ט"
+  },
+  "2029-06-23": {
+    "inEnglish": "Chukat",
+    "hDate": "10 Tamuz 5789",
+    "inHebrew": "חוקת",
+    "hDateInHebrew": "י-תמוז-תשפ״ט"
+  },
+  "2029-06-30": {
+    "inEnglish": "Balak",
+    "hDate": "17 Tamuz 5789",
+    "inHebrew": "בלק",
+    "hDateInHebrew": "יז-תמוז-תשפ״ט"
+  },
+  "2029-07-07": {
+    "inEnglish": "Pinchas",
+    "hDate": "24 Tamuz 5789",
+    "inHebrew": "פנחס",
+    "hDateInHebrew": "כד-תמוז-תשפ״ט"
+  },
+  "2029-07-14": {
+    "inEnglish": "Matot-Masei",
+    "hDate": "2 Av 5789",
+    "inHebrew": "מטות־מסעי",
+    "hDateInHebrew": "ב-אב-תשפ״ט"
+  },
+  "2029-07-21": {
+    "inEnglish": "Devarim",
+    "hDate": "9 Av 5789",
+    "inHebrew": "דברים",
+    "hDateInHebrew": "ט-אב-תשפ״ט"
+  },
+  "2029-07-28": {
+    "inEnglish": "Vaetchanan",
+    "hDate": "16 Av 5789",
+    "inHebrew": "ואתחנן",
+    "hDateInHebrew": "טז-אב-תשפ״ט"
+  },
+  "2029-08-04": {
+    "inEnglish": "Eikev",
+    "hDate": "23 Av 5789",
+    "inHebrew": "עקב",
+    "hDateInHebrew": "כג-אב-תשפ״ט"
+  },
+  "2029-08-11": {
+    "inEnglish": "Re’eh",
+    "hDate": "30 Av 5789",
+    "inHebrew": "ראה",
+    "hDateInHebrew": "ל-אב-תשפ״ט"
+  },
+  "2029-08-18": {
+    "inEnglish": "Shoftim",
+    "hDate": "7 Elul 5789",
+    "inHebrew": "שופטים",
+    "hDateInHebrew": "ז-אלול-תשפ״ט"
+  },
+  "2029-08-25": {
+    "inEnglish": "Ki Teitzei",
+    "hDate": "14 Elul 5789",
+    "inHebrew": "כי תצא",
+    "hDateInHebrew": "יד-אלול-תשפ״ט"
+  },
+  "2029-09-01": {
+    "inEnglish": "Ki Tavo",
+    "hDate": "21 Elul 5789",
+    "inHebrew": "כי תבוא",
+    "hDateInHebrew": "כא-אלול-תשפ״ט"
+  },
+  "2029-09-08": {
+    "inEnglish": "Nitzavim",
+    "hDate": "28 Elul 5789",
+    "inHebrew": "נצבים",
+    "hDateInHebrew": "כח-אלול-תשפ״ט"
+  },
+  "2029-09-15": {
+    "inEnglish": "Vayeilech",
+    "hDate": "6 Tishrei 5790",
+    "inHebrew": "וילך",
+    "hDateInHebrew": "ו-תשרי-תש״צ"
+  },
+  "2029-09-22": {
+    "inEnglish": "Ha’azinu",
+    "hDate": "13 Tishrei 5790",
+    "inHebrew": "האזינו",
+    "hDateInHebrew": "יג-תשרי-תש״צ"
+  },
+  "2029-10-06": {
+    "inEnglish": "Bereshit",
+    "hDate": "27 Tishrei 5790",
+    "inHebrew": "בראשית",
+    "hDateInHebrew": "כז-תשרי-תש״צ"
+  },
+  "2029-10-13": {
+    "inEnglish": "Noach",
+    "hDate": "4 Cheshvan 5790",
+    "inHebrew": "נח",
+    "hDateInHebrew": "ד-חשוון-תש״צ"
+  },
+  "2029-10-20": {
+    "inEnglish": "Lech-Lecha",
+    "hDate": "11 Cheshvan 5790",
+    "inHebrew": "לך לך",
+    "hDateInHebrew": "יא-חשוון-תש״צ"
+  },
+  "2029-10-27": {
+    "inEnglish": "Vayera",
+    "hDate": "18 Cheshvan 5790",
+    "inHebrew": "וירא",
+    "hDateInHebrew": "יח-חשוון-תש״צ"
+  },
+  "2029-11-03": {
+    "inEnglish": "Chayei Sara",
+    "hDate": "25 Cheshvan 5790",
+    "inHebrew": "חיי שרה",
+    "hDateInHebrew": "כה-חשוון-תש״צ"
+  },
+  "2029-11-10": {
+    "inEnglish": "Toldot",
+    "hDate": "3 Kislev 5790",
+    "inHebrew": "תולדות",
+    "hDateInHebrew": "ג-כסלו-תש״צ"
+  },
+  "2029-11-17": {
+    "inEnglish": "Vayetzei",
+    "hDate": "10 Kislev 5790",
+    "inHebrew": "ויצא",
+    "hDateInHebrew": "י-כסלו-תש״צ"
+  },
+  "2029-11-24": {
+    "inEnglish": "Vayishlach",
+    "hDate": "17 Kislev 5790",
+    "inHebrew": "וישלח",
+    "hDateInHebrew": "יז-כסלו-תש״צ"
+  },
+  "2029-12-01": {
+    "inEnglish": "Vayeshev",
+    "hDate": "24 Kislev 5790",
+    "inHebrew": "וישב",
+    "hDateInHebrew": "כד-כסלו-תש״צ"
+  },
+  "2029-12-08": {
+    "inEnglish": "Miketz",
+    "hDate": "2 Tevet 5790",
+    "inHebrew": "מקץ",
+    "hDateInHebrew": "ב-טבת-תש״צ"
+  },
+  "2029-12-15": {
+    "inEnglish": "Vayigash",
+    "hDate": "9 Tevet 5790",
+    "inHebrew": "ויגש",
+    "hDateInHebrew": "ט-טבת-תש״צ"
+  },
+  "2029-12-22": {
+    "inEnglish": "Vayechi",
+    "hDate": "16 Tevet 5790",
+    "inHebrew": "ויחי",
+    "hDateInHebrew": "טז-טבת-תש״צ"
+  },
+  "2029-12-29": {
+    "inEnglish": "Shemot",
+    "hDate": "23 Tevet 5790",
+    "inHebrew": "שמות",
+    "hDateInHebrew": "כג-טבת-תש״צ"
+  },
+  "2030-01-05": {
+    "inEnglish": "Vaera",
+    "hDate": "1 Sh'vat 5790",
+    "inHebrew": "וארא",
+    "hDateInHebrew": "א-שבט-תש״צ"
+  },
+  "2030-01-12": {
+    "inEnglish": "Bo",
+    "hDate": "8 Sh'vat 5790",
+    "inHebrew": "בא",
+    "hDateInHebrew": "ח-שבט-תש״צ"
+  },
+  "2030-01-19": {
+    "inEnglish": "Beshalach",
+    "hDate": "15 Sh'vat 5790",
+    "inHebrew": "בשלח",
+    "hDateInHebrew": "טו-שבט-תש״צ"
+  },
+  "2030-01-26": {
+    "inEnglish": "Yitro",
+    "hDate": "22 Sh'vat 5790",
+    "inHebrew": "יתרו",
+    "hDateInHebrew": "כב-שבט-תש״צ"
+  },
+  "2030-02-02": {
+    "inEnglish": "Mishpatim",
+    "hDate": "29 Sh'vat 5790",
+    "inHebrew": "משפטים",
+    "hDateInHebrew": "כט-שבט-תש״צ"
+  },
+  "2030-02-09": {
+    "inEnglish": "Terumah",
+    "hDate": "6 Adar I 5790",
+    "inHebrew": "תרומה",
+    "hDateInHebrew": "ו-אדר-undefined"
+  },
+  "2030-02-16": {
+    "inEnglish": "Tetzaveh",
+    "hDate": "13 Adar I 5790",
+    "inHebrew": "תצוה",
+    "hDateInHebrew": "יג-אדר-undefined"
+  },
+  "2030-02-23": {
+    "inEnglish": "Ki Tisa",
+    "hDate": "20 Adar I 5790",
+    "inHebrew": "כי תשא",
+    "hDateInHebrew": "כ-אדר-undefined"
+  },
+  "2030-03-02": {
+    "inEnglish": "Vayakhel",
+    "hDate": "27 Adar I 5790",
+    "inHebrew": "ויקהל",
+    "hDateInHebrew": "כז-אדר-undefined"
+  },
+  "2030-03-09": {
+    "inEnglish": "Pekudei",
+    "hDate": "4 Adar II 5790",
+    "inHebrew": "פקודי",
+    "hDateInHebrew": "ד-אדר-undefined"
+  },
+  "2030-03-16": {
+    "inEnglish": "Vayikra",
+    "hDate": "11 Adar II 5790",
+    "inHebrew": "ויקרא",
+    "hDateInHebrew": "יא-אדר-undefined"
+  },
+  "2030-03-23": {
+    "inEnglish": "Tzav",
+    "hDate": "18 Adar II 5790",
+    "inHebrew": "צו",
+    "hDateInHebrew": "יח-אדר-undefined"
+  },
+  "2030-03-30": {
+    "inEnglish": "Shmini",
+    "hDate": "25 Adar II 5790",
+    "inHebrew": "שמיני",
+    "hDateInHebrew": "כה-אדר-undefined"
+  },
+  "2030-04-06": {
+    "inEnglish": "Tazria",
+    "hDate": "3 Nisan 5790",
+    "inHebrew": "תזריע",
+    "hDateInHebrew": "ג-ניסן-תש״צ"
+  },
+  "2030-04-13": {
+    "inEnglish": "Metzora",
+    "hDate": "10 Nisan 5790",
+    "inHebrew": "מצורע",
+    "hDateInHebrew": "י-ניסן-תש״צ"
+  },
+  "2030-04-27": {
+    "inEnglish": "Achrei Mot",
+    "hDate": "24 Nisan 5790",
+    "inHebrew": "אחרי מות",
+    "hDateInHebrew": "כד-ניסן-תש״צ"
+  },
+  "2030-05-04": {
+    "inEnglish": "Kedoshim",
+    "hDate": "1 Iyyar 5790",
+    "inHebrew": "קדושים",
+    "hDateInHebrew": "א-אייר-תש״צ"
+  },
+  "2030-05-11": {
+    "inEnglish": "Emor",
+    "hDate": "8 Iyyar 5790",
+    "inHebrew": "אמור",
+    "hDateInHebrew": "ח-אייר-תש״צ"
+  },
+  "2030-05-18": {
+    "inEnglish": "Behar",
+    "hDate": "15 Iyyar 5790",
+    "inHebrew": "בהר",
+    "hDateInHebrew": "טו-אייר-תש״צ"
+  },
+  "2030-05-25": {
+    "inEnglish": "Bechukotai",
+    "hDate": "22 Iyyar 5790",
+    "inHebrew": "בחוקותי",
+    "hDateInHebrew": "כב-אייר-תש״צ"
+  },
+  "2030-06-01": {
+    "inEnglish": "Bamidbar",
+    "hDate": "29 Iyyar 5790",
+    "inHebrew": "במדבר",
+    "hDateInHebrew": "כט-אייר-תש״צ"
+  },
+  "2030-06-15": {
+    "inEnglish": "Nasso",
+    "hDate": "14 Sivan 5790",
+    "inHebrew": "נשא",
+    "hDateInHebrew": "יד-סיוון-תש״צ"
+  },
+  "2030-06-22": {
+    "inEnglish": "Beha’alotcha",
+    "hDate": "21 Sivan 5790",
+    "inHebrew": "בהעלותך",
+    "hDateInHebrew": "כא-סיוון-תש״צ"
+  },
+  "2030-06-29": {
+    "inEnglish": "Sh’lach",
+    "hDate": "28 Sivan 5790",
+    "inHebrew": "שלח",
+    "hDateInHebrew": "כח-סיוון-תש״צ"
+  },
+  "2030-07-06": {
+    "inEnglish": "Korach",
+    "hDate": "5 Tamuz 5790",
+    "inHebrew": "קורח",
+    "hDateInHebrew": "ה-תמוז-תש״צ"
+  },
+  "2030-07-13": {
+    "inEnglish": "Chukat-Balak",
+    "hDate": "12 Tamuz 5790",
+    "inHebrew": "חוקת־בלק",
+    "hDateInHebrew": "יב-תמוז-תש״צ"
+  },
+  "2030-07-20": {
+    "inEnglish": "Pinchas",
+    "hDate": "19 Tamuz 5790",
+    "inHebrew": "פנחס",
+    "hDateInHebrew": "יט-תמוז-תש״צ"
+  },
+  "2030-07-27": {
+    "inEnglish": "Matot-Masei",
+    "hDate": "26 Tamuz 5790",
+    "inHebrew": "מטות־מסעי",
+    "hDateInHebrew": "כו-תמוז-תש״צ"
+  },
+  "2030-08-03": {
+    "inEnglish": "Devarim",
+    "hDate": "4 Av 5790",
+    "inHebrew": "דברים",
+    "hDateInHebrew": "ד-אב-תש״צ"
+  },
+  "2030-08-10": {
+    "inEnglish": "Vaetchanan",
+    "hDate": "11 Av 5790",
+    "inHebrew": "ואתחנן",
+    "hDateInHebrew": "יא-אב-תש״צ"
+  },
+  "2030-08-17": {
+    "inEnglish": "Eikev",
+    "hDate": "18 Av 5790",
+    "inHebrew": "עקב",
+    "hDateInHebrew": "יח-אב-תש״צ"
+  },
+  "2030-08-24": {
+    "inEnglish": "Re’eh",
+    "hDate": "25 Av 5790",
+    "inHebrew": "ראה",
+    "hDateInHebrew": "כה-אב-תש״צ"
+  },
+  "2030-08-31": {
+    "inEnglish": "Shoftim",
+    "hDate": "2 Elul 5790",
+    "inHebrew": "שופטים",
+    "hDateInHebrew": "ב-אלול-תש״צ"
+  },
+  "2030-09-07": {
+    "inEnglish": "Ki Teitzei",
+    "hDate": "9 Elul 5790",
+    "inHebrew": "כי תצא",
+    "hDateInHebrew": "ט-אלול-תש״צ"
+  },
+  "2030-09-14": {
+    "inEnglish": "Ki Tavo",
+    "hDate": "16 Elul 5790",
+    "inHebrew": "כי תבוא",
+    "hDateInHebrew": "טז-אלול-תש״צ"
+  },
+  "2030-09-21": {
+    "inEnglish": "Nitzavim-Vayeilech",
+    "hDate": "23 Elul 5790",
+    "inHebrew": "נצבים־וילך",
+    "hDateInHebrew": "כג-אלול-תש״צ"
+  },
+  "2030-10-05": {
+    "inEnglish": "Ha’azinu",
+    "hDate": "8 Tishrei 5791",
+    "inHebrew": "האזינו",
+    "hDateInHebrew": "ח-תשרי-תשצ״א"
+  },
+  "2030-10-26": {
+    "inEnglish": "Bereshit",
+    "hDate": "29 Tishrei 5791",
+    "inHebrew": "בראשית",
+    "hDateInHebrew": "כט-תשרי-תשצ״א"
+  },
+  "2030-11-02": {
+    "inEnglish": "Noach",
+    "hDate": "6 Cheshvan 5791",
+    "inHebrew": "נח",
+    "hDateInHebrew": "ו-חשוון-תשצ״א"
+  },
+  "2030-11-09": {
+    "inEnglish": "Lech-Lecha",
+    "hDate": "13 Cheshvan 5791",
+    "inHebrew": "לך לך",
+    "hDateInHebrew": "יג-חשוון-תשצ״א"
+  },
+  "2030-11-16": {
+    "inEnglish": "Vayera",
+    "hDate": "20 Cheshvan 5791",
+    "inHebrew": "וירא",
+    "hDateInHebrew": "כ-חשוון-תשצ״א"
+  },
+  "2030-11-23": {
+    "inEnglish": "Chayei Sara",
+    "hDate": "27 Cheshvan 5791",
+    "inHebrew": "חיי שרה",
+    "hDateInHebrew": "כז-חשוון-תשצ״א"
+  },
+  "2030-11-30": {
+    "inEnglish": "Toldot",
+    "hDate": "4 Kislev 5791",
+    "inHebrew": "תולדות",
+    "hDateInHebrew": "ד-כסלו-תשצ״א"
+  },
+  "2030-12-07": {
+    "inEnglish": "Vayetzei",
+    "hDate": "11 Kislev 5791",
+    "inHebrew": "ויצא",
+    "hDateInHebrew": "יא-כסלו-תשצ״א"
+  },
+  "2030-12-14": {
+    "inEnglish": "Vayishlach",
+    "hDate": "18 Kislev 5791",
+    "inHebrew": "וישלח",
+    "hDateInHebrew": "יח-כסלו-תשצ״א"
+  },
+  "2030-12-21": {
+    "inEnglish": "Vayeshev",
+    "hDate": "25 Kislev 5791",
+    "inHebrew": "וישב",
+    "hDateInHebrew": "כה-כסלו-תשצ״א"
+  },
+  "2030-12-28": {
+    "inEnglish": "Miketz",
+    "hDate": "2 Tevet 5791",
+    "inHebrew": "מקץ",
+    "hDateInHebrew": "ב-טבת-תשצ״א"
+  },
+  "2031-01-04": {
+    "inEnglish": "Vayigash",
+    "hDate": "9 Tevet 5791",
+    "inHebrew": "ויגש",
+    "hDateInHebrew": "ט-טבת-תשצ״א"
+  },
+  "2031-01-11": {
+    "inEnglish": "Vayechi",
+    "hDate": "16 Tevet 5791",
+    "inHebrew": "ויחי",
+    "hDateInHebrew": "טז-טבת-תשצ״א"
+  },
+  "2031-01-18": {
+    "inEnglish": "Shemot",
+    "hDate": "23 Tevet 5791",
+    "inHebrew": "שמות",
+    "hDateInHebrew": "כג-טבת-תשצ״א"
+  },
+  "2031-01-25": {
+    "inEnglish": "Vaera",
+    "hDate": "1 Sh'vat 5791",
+    "inHebrew": "וארא",
+    "hDateInHebrew": "א-שבט-תשצ״א"
+  },
+  "2031-02-01": {
+    "inEnglish": "Bo",
+    "hDate": "8 Sh'vat 5791",
+    "inHebrew": "בא",
+    "hDateInHebrew": "ח-שבט-תשצ״א"
+  },
+  "2031-02-08": {
+    "inEnglish": "Beshalach",
+    "hDate": "15 Sh'vat 5791",
+    "inHebrew": "בשלח",
+    "hDateInHebrew": "טו-שבט-תשצ״א"
+  },
+  "2031-02-15": {
+    "inEnglish": "Yitro",
+    "hDate": "22 Sh'vat 5791",
+    "inHebrew": "יתרו",
+    "hDateInHebrew": "כב-שבט-תשצ״א"
+  },
+  "2031-02-22": {
+    "inEnglish": "Mishpatim",
+    "hDate": "29 Sh'vat 5791",
+    "inHebrew": "משפטים",
+    "hDateInHebrew": "כט-שבט-תשצ״א"
+  },
+  "2031-03-01": {
+    "inEnglish": "Terumah",
+    "hDate": "6 Adar 5791",
+    "inHebrew": "תרומה",
+    "hDateInHebrew": "ו-אדר-תשצ״א"
+  },
+  "2031-03-08": {
+    "inEnglish": "Tetzaveh",
+    "hDate": "13 Adar 5791",
+    "inHebrew": "תצוה",
+    "hDateInHebrew": "יג-אדר-תשצ״א"
+  },
+  "2031-03-15": {
+    "inEnglish": "Ki Tisa",
+    "hDate": "20 Adar 5791",
+    "inHebrew": "כי תשא",
+    "hDateInHebrew": "כ-אדר-תשצ״א"
+  },
+  "2031-03-22": {
+    "inEnglish": "Vayakhel-Pekudei",
+    "hDate": "27 Adar 5791",
+    "inHebrew": "ויקהל־פקודי",
+    "hDateInHebrew": "כז-אדר-תשצ״א"
+  },
+  "2031-03-29": {
+    "inEnglish": "Vayikra",
+    "hDate": "5 Nisan 5791",
+    "inHebrew": "ויקרא",
+    "hDateInHebrew": "ה-ניסן-תשצ״א"
+  },
+  "2031-04-05": {
+    "inEnglish": "Tzav",
+    "hDate": "12 Nisan 5791",
+    "inHebrew": "צו",
+    "hDateInHebrew": "יב-ניסן-תשצ״א"
+  },
+  "2031-04-19": {
+    "inEnglish": "Shmini",
+    "hDate": "26 Nisan 5791",
+    "inHebrew": "שמיני",
+    "hDateInHebrew": "כו-ניסן-תשצ״א"
+  },
+  "2031-04-26": {
+    "inEnglish": "Tazria-Metzora",
+    "hDate": "3 Iyyar 5791",
+    "inHebrew": "תזריע־מצורע",
+    "hDateInHebrew": "ג-אייר-תשצ״א"
+  },
+  "2031-05-03": {
+    "inEnglish": "Achrei Mot-Kedoshim",
+    "hDate": "10 Iyyar 5791",
+    "inHebrew": "אחרי מות־קדושים",
+    "hDateInHebrew": "י-אייר-תשצ״א"
+  },
+  "2031-05-10": {
+    "inEnglish": "Emor",
+    "hDate": "17 Iyyar 5791",
+    "inHebrew": "אמור",
+    "hDateInHebrew": "יז-אייר-תשצ״א"
+  },
+  "2031-05-17": {
+    "inEnglish": "Behar-Bechukotai",
+    "hDate": "24 Iyyar 5791",
+    "inHebrew": "בהר־בחוקותי",
+    "hDateInHebrew": "כד-אייר-תשצ״א"
+  },
+  "2031-05-24": {
+    "inEnglish": "Bamidbar",
+    "hDate": "2 Sivan 5791",
+    "inHebrew": "במדבר",
+    "hDateInHebrew": "ב-סיוון-תשצ״א"
+  },
+  "2031-05-31": {
+    "inEnglish": "Nasso",
+    "hDate": "9 Sivan 5791",
+    "inHebrew": "נשא",
+    "hDateInHebrew": "ט-סיוון-תשצ״א"
+  },
+  "2031-06-07": {
+    "inEnglish": "Beha’alotcha",
+    "hDate": "16 Sivan 5791",
+    "inHebrew": "בהעלותך",
+    "hDateInHebrew": "טז-סיוון-תשצ״א"
+  },
+  "2031-06-14": {
+    "inEnglish": "Sh’lach",
+    "hDate": "23 Sivan 5791",
+    "inHebrew": "שלח",
+    "hDateInHebrew": "כג-סיוון-תשצ״א"
+  },
+  "2031-06-21": {
+    "inEnglish": "Korach",
+    "hDate": "30 Sivan 5791",
+    "inHebrew": "קורח",
+    "hDateInHebrew": "ל-סיוון-תשצ״א"
+  },
+  "2031-06-28": {
+    "inEnglish": "Chukat",
+    "hDate": "7 Tamuz 5791",
+    "inHebrew": "חוקת",
+    "hDateInHebrew": "ז-תמוז-תשצ״א"
+  },
+  "2031-07-05": {
+    "inEnglish": "Balak",
+    "hDate": "14 Tamuz 5791",
+    "inHebrew": "בלק",
+    "hDateInHebrew": "יד-תמוז-תשצ״א"
+  },
+  "2031-07-12": {
+    "inEnglish": "Pinchas",
+    "hDate": "21 Tamuz 5791",
+    "inHebrew": "פנחס",
+    "hDateInHebrew": "כא-תמוז-תשצ״א"
+  },
+  "2031-07-19": {
+    "inEnglish": "Matot-Masei",
+    "hDate": "28 Tamuz 5791",
+    "inHebrew": "מטות־מסעי",
+    "hDateInHebrew": "כח-תמוז-תשצ״א"
+  },
+  "2031-07-26": {
+    "inEnglish": "Devarim",
+    "hDate": "6 Av 5791",
+    "inHebrew": "דברים",
+    "hDateInHebrew": "ו-אב-תשצ״א"
+  },
+  "2031-08-02": {
+    "inEnglish": "Vaetchanan",
+    "hDate": "13 Av 5791",
+    "inHebrew": "ואתחנן",
+    "hDateInHebrew": "יג-אב-תשצ״א"
+  },
+  "2031-08-09": {
+    "inEnglish": "Eikev",
+    "hDate": "20 Av 5791",
+    "inHebrew": "עקב",
+    "hDateInHebrew": "כ-אב-תשצ״א"
+  },
+  "2031-08-16": {
+    "inEnglish": "Re’eh",
+    "hDate": "27 Av 5791",
+    "inHebrew": "ראה",
+    "hDateInHebrew": "כז-אב-תשצ״א"
+  },
+  "2031-08-23": {
+    "inEnglish": "Shoftim",
+    "hDate": "4 Elul 5791",
+    "inHebrew": "שופטים",
+    "hDateInHebrew": "ד-אלול-תשצ״א"
+  },
+  "2031-08-30": {
+    "inEnglish": "Ki Teitzei",
+    "hDate": "11 Elul 5791",
+    "inHebrew": "כי תצא",
+    "hDateInHebrew": "יא-אלול-תשצ״א"
+  },
+  "2031-09-06": {
+    "inEnglish": "Ki Tavo",
+    "hDate": "18 Elul 5791",
+    "inHebrew": "כי תבוא",
+    "hDateInHebrew": "יח-אלול-תשצ״א"
+  },
+  "2031-09-13": {
+    "inEnglish": "Nitzavim-Vayeilech",
+    "hDate": "25 Elul 5791",
+    "inHebrew": "נצבים־וילך",
+    "hDateInHebrew": "כה-אלול-תשצ״א"
+  },
+  "2031-09-20": {
+    "inEnglish": "Ha’azinu",
+    "hDate": "3 Tishrei 5792",
+    "inHebrew": "האזינו",
+    "hDateInHebrew": "ג-תשרי-תשצ״ב"
+  },
+  "2031-10-11": {
+    "inEnglish": "Bereshit",
+    "hDate": "24 Tishrei 5792",
+    "inHebrew": "בראשית",
+    "hDateInHebrew": "כד-תשרי-תשצ״ב"
+  },
+  "2031-10-18": {
+    "inEnglish": "Noach",
+    "hDate": "1 Cheshvan 5792",
+    "inHebrew": "נח",
+    "hDateInHebrew": "א-חשוון-תשצ״ב"
+  },
+  "2031-10-25": {
+    "inEnglish": "Lech-Lecha",
+    "hDate": "8 Cheshvan 5792",
+    "inHebrew": "לך לך",
+    "hDateInHebrew": "ח-חשוון-תשצ״ב"
+  },
+  "2031-11-01": {
+    "inEnglish": "Vayera",
+    "hDate": "15 Cheshvan 5792",
+    "inHebrew": "וירא",
+    "hDateInHebrew": "טו-חשוון-תשצ״ב"
+  },
+  "2031-11-08": {
+    "inEnglish": "Chayei Sara",
+    "hDate": "22 Cheshvan 5792",
+    "inHebrew": "חיי שרה",
+    "hDateInHebrew": "כב-חשוון-תשצ״ב"
+  },
+  "2031-11-15": {
+    "inEnglish": "Toldot",
+    "hDate": "29 Cheshvan 5792",
+    "inHebrew": "תולדות",
+    "hDateInHebrew": "כט-חשוון-תשצ״ב"
+  },
+  "2031-11-22": {
+    "inEnglish": "Vayetzei",
+    "hDate": "7 Kislev 5792",
+    "inHebrew": "ויצא",
+    "hDateInHebrew": "ז-כסלו-תשצ״ב"
+  },
+  "2031-11-29": {
+    "inEnglish": "Vayishlach",
+    "hDate": "14 Kislev 5792",
+    "inHebrew": "וישלח",
+    "hDateInHebrew": "יד-כסלו-תשצ״ב"
+  },
+  "2031-12-06": {
+    "inEnglish": "Vayeshev",
+    "hDate": "21 Kislev 5792",
+    "inHebrew": "וישב",
+    "hDateInHebrew": "כא-כסלו-תשצ״ב"
+  },
+  "2031-12-13": {
+    "inEnglish": "Miketz",
+    "hDate": "28 Kislev 5792",
+    "inHebrew": "מקץ",
+    "hDateInHebrew": "כח-כסלו-תשצ״ב"
+  },
+  "2031-12-20": {
+    "inEnglish": "Vayigash",
+    "hDate": "5 Tevet 5792",
+    "inHebrew": "ויגש",
+    "hDateInHebrew": "ה-טבת-תשצ״ב"
+  },
+  "2031-12-27": {
+    "inEnglish": "Vayechi",
+    "hDate": "12 Tevet 5792",
+    "inHebrew": "ויחי",
+    "hDateInHebrew": "יב-טבת-תשצ״ב"
+  },
+  "2032-01-03": {
+    "inEnglish": "Shemot",
+    "hDate": "19 Tevet 5792",
+    "inHebrew": "שמות",
+    "hDateInHebrew": "יט-טבת-תשצ״ב"
+  },
+  "2032-01-10": {
+    "inEnglish": "Vaera",
+    "hDate": "26 Tevet 5792",
+    "inHebrew": "וארא",
+    "hDateInHebrew": "כו-טבת-תשצ״ב"
+  },
+  "2032-01-17": {
+    "inEnglish": "Bo",
+    "hDate": "4 Sh'vat 5792",
+    "inHebrew": "בא",
+    "hDateInHebrew": "ד-שבט-תשצ״ב"
+  },
+  "2032-01-24": {
+    "inEnglish": "Beshalach",
+    "hDate": "11 Sh'vat 5792",
+    "inHebrew": "בשלח",
+    "hDateInHebrew": "יא-שבט-תשצ״ב"
+  },
+  "2032-01-31": {
+    "inEnglish": "Yitro",
+    "hDate": "18 Sh'vat 5792",
+    "inHebrew": "יתרו",
+    "hDateInHebrew": "יח-שבט-תשצ״ב"
+  },
+  "2032-02-07": {
+    "inEnglish": "Mishpatim",
+    "hDate": "25 Sh'vat 5792",
+    "inHebrew": "משפטים",
+    "hDateInHebrew": "כה-שבט-תשצ״ב"
+  },
+  "2032-02-14": {
+    "inEnglish": "Terumah",
+    "hDate": "2 Adar 5792",
+    "inHebrew": "תרומה",
+    "hDateInHebrew": "ב-אדר-תשצ״ב"
+  },
+  "2032-02-21": {
+    "inEnglish": "Tetzaveh",
+    "hDate": "9 Adar 5792",
+    "inHebrew": "תצוה",
+    "hDateInHebrew": "ט-אדר-תשצ״ב"
+  },
+  "2032-02-28": {
+    "inEnglish": "Ki Tisa",
+    "hDate": "16 Adar 5792",
+    "inHebrew": "כי תשא",
+    "hDateInHebrew": "טז-אדר-תשצ״ב"
+  },
+  "2032-03-06": {
+    "inEnglish": "Vayakhel-Pekudei",
+    "hDate": "23 Adar 5792",
+    "inHebrew": "ויקהל־פקודי",
+    "hDateInHebrew": "כג-אדר-תשצ״ב"
+  },
+  "2032-03-13": {
+    "inEnglish": "Vayikra",
+    "hDate": "1 Nisan 5792",
+    "inHebrew": "ויקרא",
+    "hDateInHebrew": "א-ניסן-תשצ״ב"
+  },
+  "2032-03-20": {
+    "inEnglish": "Tzav",
+    "hDate": "8 Nisan 5792",
+    "inHebrew": "צו",
+    "hDateInHebrew": "ח-ניסן-תשצ״ב"
+  },
+  "2032-04-10": {
+    "inEnglish": "Shmini",
+    "hDate": "29 Nisan 5792",
+    "inHebrew": "שמיני",
+    "hDateInHebrew": "כט-ניסן-תשצ״ב"
+  },
+  "2032-04-17": {
+    "inEnglish": "Tazria-Metzora",
+    "hDate": "6 Iyyar 5792",
+    "inHebrew": "תזריע־מצורע",
+    "hDateInHebrew": "ו-אייר-תשצ״ב"
+  },
+  "2032-04-24": {
+    "inEnglish": "Achrei Mot-Kedoshim",
+    "hDate": "13 Iyyar 5792",
+    "inHebrew": "אחרי מות־קדושים",
+    "hDateInHebrew": "יג-אייר-תשצ״ב"
+  },
+  "2032-05-01": {
+    "inEnglish": "Emor",
+    "hDate": "20 Iyyar 5792",
+    "inHebrew": "אמור",
+    "hDateInHebrew": "כ-אייר-תשצ״ב"
+  },
+  "2032-05-08": {
+    "inEnglish": "Behar-Bechukotai",
+    "hDate": "27 Iyyar 5792",
+    "inHebrew": "בהר־בחוקותי",
+    "hDateInHebrew": "כז-אייר-תשצ״ב"
+  },
+  "2032-05-15": {
+    "inEnglish": "Bamidbar",
+    "hDate": "5 Sivan 5792",
+    "inHebrew": "במדבר",
+    "hDateInHebrew": "ה-סיוון-תשצ״ב"
+  },
+  "2032-05-22": {
+    "inEnglish": "Nasso",
+    "hDate": "12 Sivan 5792",
+    "inHebrew": "נשא",
+    "hDateInHebrew": "יב-סיוון-תשצ״ב"
+  },
+  "2032-05-29": {
+    "inEnglish": "Beha’alotcha",
+    "hDate": "19 Sivan 5792",
+    "inHebrew": "בהעלותך",
+    "hDateInHebrew": "יט-סיוון-תשצ״ב"
+  },
+  "2032-06-05": {
+    "inEnglish": "Sh’lach",
+    "hDate": "26 Sivan 5792",
+    "inHebrew": "שלח",
+    "hDateInHebrew": "כו-סיוון-תשצ״ב"
+  },
+  "2032-06-12": {
+    "inEnglish": "Korach",
+    "hDate": "3 Tamuz 5792",
+    "inHebrew": "קורח",
+    "hDateInHebrew": "ג-תמוז-תשצ״ב"
+  },
+  "2032-06-19": {
+    "inEnglish": "Chukat",
+    "hDate": "10 Tamuz 5792",
+    "inHebrew": "חוקת",
+    "hDateInHebrew": "י-תמוז-תשצ״ב"
+  },
+  "2032-06-26": {
+    "inEnglish": "Balak",
+    "hDate": "17 Tamuz 5792",
+    "inHebrew": "בלק",
+    "hDateInHebrew": "יז-תמוז-תשצ״ב"
+  },
+  "2032-07-03": {
+    "inEnglish": "Pinchas",
+    "hDate": "24 Tamuz 5792",
+    "inHebrew": "פנחס",
+    "hDateInHebrew": "כד-תמוז-תשצ״ב"
+  },
+  "2032-07-10": {
+    "inEnglish": "Matot-Masei",
+    "hDate": "2 Av 5792",
+    "inHebrew": "מטות־מסעי",
+    "hDateInHebrew": "ב-אב-תשצ״ב"
+  },
+  "2032-07-17": {
+    "inEnglish": "Devarim",
+    "hDate": "9 Av 5792",
+    "inHebrew": "דברים",
+    "hDateInHebrew": "ט-אב-תשצ״ב"
+  },
+  "2032-07-24": {
+    "inEnglish": "Vaetchanan",
+    "hDate": "16 Av 5792",
+    "inHebrew": "ואתחנן",
+    "hDateInHebrew": "טז-אב-תשצ״ב"
+  },
+  "2032-07-31": {
+    "inEnglish": "Eikev",
+    "hDate": "23 Av 5792",
+    "inHebrew": "עקב",
+    "hDateInHebrew": "כג-אב-תשצ״ב"
+  },
+  "2032-08-07": {
+    "inEnglish": "Re’eh",
+    "hDate": "30 Av 5792",
+    "inHebrew": "ראה",
+    "hDateInHebrew": "ל-אב-תשצ״ב"
+  },
+  "2032-08-14": {
+    "inEnglish": "Shoftim",
+    "hDate": "7 Elul 5792",
+    "inHebrew": "שופטים",
+    "hDateInHebrew": "ז-אלול-תשצ״ב"
+  },
+  "2032-08-21": {
+    "inEnglish": "Ki Teitzei",
+    "hDate": "14 Elul 5792",
+    "inHebrew": "כי תצא",
+    "hDateInHebrew": "יד-אלול-תשצ״ב"
+  },
+  "2032-08-28": {
+    "inEnglish": "Ki Tavo",
+    "hDate": "21 Elul 5792",
+    "inHebrew": "כי תבוא",
+    "hDateInHebrew": "כא-אלול-תשצ״ב"
+  },
+  "2032-09-04": {
+    "inEnglish": "Nitzavim",
+    "hDate": "28 Elul 5792",
+    "inHebrew": "נצבים",
+    "hDateInHebrew": "כח-אלול-תשצ״ב"
+  },
+  "2032-09-11": {
+    "inEnglish": "Vayeilech",
+    "hDate": "6 Tishrei 5793",
+    "inHebrew": "וילך",
+    "hDateInHebrew": "ו-תשרי-תשצ״ג"
+  },
+  "2032-09-18": {
+    "inEnglish": "Ha’azinu",
+    "hDate": "13 Tishrei 5793",
+    "inHebrew": "האזינו",
+    "hDateInHebrew": "יג-תשרי-תשצ״ג"
+  },
+  "2032-10-02": {
+    "inEnglish": "Bereshit",
+    "hDate": "27 Tishrei 5793",
+    "inHebrew": "בראשית",
+    "hDateInHebrew": "כז-תשרי-תשצ״ג"
+  },
+  "2032-10-09": {
+    "inEnglish": "Noach",
+    "hDate": "4 Cheshvan 5793",
+    "inHebrew": "נח",
+    "hDateInHebrew": "ד-חשוון-תשצ״ג"
+  },
+  "2032-10-16": {
+    "inEnglish": "Lech-Lecha",
+    "hDate": "11 Cheshvan 5793",
+    "inHebrew": "לך לך",
+    "hDateInHebrew": "יא-חשוון-תשצ״ג"
+  },
+  "2032-10-23": {
+    "inEnglish": "Vayera",
+    "hDate": "18 Cheshvan 5793",
+    "inHebrew": "וירא",
+    "hDateInHebrew": "יח-חשוון-תשצ״ג"
+  },
+  "2032-10-30": {
+    "inEnglish": "Chayei Sara",
+    "hDate": "25 Cheshvan 5793",
+    "inHebrew": "חיי שרה",
+    "hDateInHebrew": "כה-חשוון-תשצ״ג"
+  },
+  "2032-11-06": {
+    "inEnglish": "Toldot",
+    "hDate": "3 Kislev 5793",
+    "inHebrew": "תולדות",
+    "hDateInHebrew": "ג-כסלו-תשצ״ג"
+  },
+  "2032-11-13": {
+    "inEnglish": "Vayetzei",
+    "hDate": "10 Kislev 5793",
+    "inHebrew": "ויצא",
+    "hDateInHebrew": "י-כסלו-תשצ״ג"
+  },
+  "2032-11-20": {
+    "inEnglish": "Vayishlach",
+    "hDate": "17 Kislev 5793",
+    "inHebrew": "וישלח",
+    "hDateInHebrew": "יז-כסלו-תשצ״ג"
+  },
+  "2032-11-27": {
+    "inEnglish": "Vayeshev",
+    "hDate": "24 Kislev 5793",
+    "inHebrew": "וישב",
+    "hDateInHebrew": "כד-כסלו-תשצ״ג"
+  },
+  "2032-12-04": {
+    "inEnglish": "Miketz",
+    "hDate": "2 Tevet 5793",
+    "inHebrew": "מקץ",
+    "hDateInHebrew": "ב-טבת-תשצ״ג"
+  },
+  "2032-12-11": {
+    "inEnglish": "Vayigash",
+    "hDate": "9 Tevet 5793",
+    "inHebrew": "ויגש",
+    "hDateInHebrew": "ט-טבת-תשצ״ג"
+  },
+  "2032-12-18": {
+    "inEnglish": "Vayechi",
+    "hDate": "16 Tevet 5793",
+    "inHebrew": "ויחי",
+    "hDateInHebrew": "טז-טבת-תשצ״ג"
+  },
+  "2032-12-25": {
+    "inEnglish": "Shemot",
+    "hDate": "23 Tevet 5793",
+    "inHebrew": "שמות",
+    "hDateInHebrew": "כג-טבת-תשצ״ג"
+  },
+  "2033-01-01": {
+    "inEnglish": "Vaera",
+    "hDate": "1 Sh'vat 5793",
+    "inHebrew": "וארא",
+    "hDateInHebrew": "א-שבט-תשצ״ג"
+  },
+  "2033-01-08": {
+    "inEnglish": "Bo",
+    "hDate": "8 Sh'vat 5793",
+    "inHebrew": "בא",
+    "hDateInHebrew": "ח-שבט-תשצ״ג"
+  },
+  "2033-01-15": {
+    "inEnglish": "Beshalach",
+    "hDate": "15 Sh'vat 5793",
+    "inHebrew": "בשלח",
+    "hDateInHebrew": "טו-שבט-תשצ״ג"
+  },
+  "2033-01-22": {
+    "inEnglish": "Yitro",
+    "hDate": "22 Sh'vat 5793",
+    "inHebrew": "יתרו",
+    "hDateInHebrew": "כב-שבט-תשצ״ג"
+  },
+  "2033-01-29": {
+    "inEnglish": "Mishpatim",
+    "hDate": "29 Sh'vat 5793",
+    "inHebrew": "משפטים",
+    "hDateInHebrew": "כט-שבט-תשצ״ג"
+  },
+  "2033-02-05": {
+    "inEnglish": "Terumah",
+    "hDate": "6 Adar I 5793",
+    "inHebrew": "תרומה",
+    "hDateInHebrew": "ו-אדר-undefined"
+  },
+  "2033-02-12": {
+    "inEnglish": "Tetzaveh",
+    "hDate": "13 Adar I 5793",
+    "inHebrew": "תצוה",
+    "hDateInHebrew": "יג-אדר-undefined"
+  },
+  "2033-02-19": {
+    "inEnglish": "Ki Tisa",
+    "hDate": "20 Adar I 5793",
+    "inHebrew": "כי תשא",
+    "hDateInHebrew": "כ-אדר-undefined"
+  },
+  "2033-02-26": {
+    "inEnglish": "Vayakhel",
+    "hDate": "27 Adar I 5793",
+    "inHebrew": "ויקהל",
+    "hDateInHebrew": "כז-אדר-undefined"
+  },
+  "2033-03-05": {
+    "inEnglish": "Pekudei",
+    "hDate": "4 Adar II 5793",
+    "inHebrew": "פקודי",
+    "hDateInHebrew": "ד-אדר-undefined"
+  },
+  "2033-03-12": {
+    "inEnglish": "Vayikra",
+    "hDate": "11 Adar II 5793",
+    "inHebrew": "ויקרא",
+    "hDateInHebrew": "יא-אדר-undefined"
+  },
+  "2033-03-19": {
+    "inEnglish": "Tzav",
+    "hDate": "18 Adar II 5793",
+    "inHebrew": "צו",
+    "hDateInHebrew": "יח-אדר-undefined"
+  },
+  "2033-03-26": {
+    "inEnglish": "Shmini",
+    "hDate": "25 Adar II 5793",
+    "inHebrew": "שמיני",
+    "hDateInHebrew": "כה-אדר-undefined"
+  },
+  "2033-04-02": {
+    "inEnglish": "Tazria",
+    "hDate": "3 Nisan 5793",
+    "inHebrew": "תזריע",
+    "hDateInHebrew": "ג-ניסן-תשצ״ג"
+  },
+  "2033-04-09": {
+    "inEnglish": "Metzora",
+    "hDate": "10 Nisan 5793",
+    "inHebrew": "מצורע",
+    "hDateInHebrew": "י-ניסן-תשצ״ג"
+  },
+  "2033-04-23": {
+    "inEnglish": "Achrei Mot",
+    "hDate": "24 Nisan 5793",
+    "inHebrew": "אחרי מות",
+    "hDateInHebrew": "כד-ניסן-תשצ״ג"
+  },
+  "2033-04-30": {
+    "inEnglish": "Kedoshim",
+    "hDate": "1 Iyyar 5793",
+    "inHebrew": "קדושים",
+    "hDateInHebrew": "א-אייר-תשצ״ג"
+  },
+  "2033-05-07": {
+    "inEnglish": "Emor",
+    "hDate": "8 Iyyar 5793",
+    "inHebrew": "אמור",
+    "hDateInHebrew": "ח-אייר-תשצ״ג"
+  },
+  "2033-05-14": {
+    "inEnglish": "Behar",
+    "hDate": "15 Iyyar 5793",
+    "inHebrew": "בהר",
+    "hDateInHebrew": "טו-אייר-תשצ״ג"
+  },
+  "2033-05-21": {
+    "inEnglish": "Bechukotai",
+    "hDate": "22 Iyyar 5793",
+    "inHebrew": "בחוקותי",
+    "hDateInHebrew": "כב-אייר-תשצ״ג"
+  },
+  "2033-05-28": {
+    "inEnglish": "Bamidbar",
+    "hDate": "29 Iyyar 5793",
+    "inHebrew": "במדבר",
+    "hDateInHebrew": "כט-אייר-תשצ״ג"
+  },
+  "2033-06-11": {
+    "inEnglish": "Nasso",
+    "hDate": "14 Sivan 5793",
+    "inHebrew": "נשא",
+    "hDateInHebrew": "יד-סיוון-תשצ״ג"
+  },
+  "2033-06-18": {
+    "inEnglish": "Beha’alotcha",
+    "hDate": "21 Sivan 5793",
+    "inHebrew": "בהעלותך",
+    "hDateInHebrew": "כא-סיוון-תשצ״ג"
+  },
+  "2033-06-25": {
+    "inEnglish": "Sh’lach",
+    "hDate": "28 Sivan 5793",
+    "inHebrew": "שלח",
+    "hDateInHebrew": "כח-סיוון-תשצ״ג"
+  },
+  "2033-07-02": {
+    "inEnglish": "Korach",
+    "hDate": "5 Tamuz 5793",
+    "inHebrew": "קורח",
+    "hDateInHebrew": "ה-תמוז-תשצ״ג"
+  },
+  "2033-07-09": {
+    "inEnglish": "Chukat-Balak",
+    "hDate": "12 Tamuz 5793",
+    "inHebrew": "חוקת־בלק",
+    "hDateInHebrew": "יב-תמוז-תשצ״ג"
+  },
+  "2033-07-16": {
+    "inEnglish": "Pinchas",
+    "hDate": "19 Tamuz 5793",
+    "inHebrew": "פנחס",
+    "hDateInHebrew": "יט-תמוז-תשצ״ג"
+  },
+  "2033-07-23": {
+    "inEnglish": "Matot-Masei",
+    "hDate": "26 Tamuz 5793",
+    "inHebrew": "מטות־מסעי",
+    "hDateInHebrew": "כו-תמוז-תשצ״ג"
+  },
+  "2033-07-30": {
+    "inEnglish": "Devarim",
+    "hDate": "4 Av 5793",
+    "inHebrew": "דברים",
+    "hDateInHebrew": "ד-אב-תשצ״ג"
+  },
+  "2033-08-06": {
+    "inEnglish": "Vaetchanan",
+    "hDate": "11 Av 5793",
+    "inHebrew": "ואתחנן",
+    "hDateInHebrew": "יא-אב-תשצ״ג"
+  },
+  "2033-08-13": {
+    "inEnglish": "Eikev",
+    "hDate": "18 Av 5793",
+    "inHebrew": "עקב",
+    "hDateInHebrew": "יח-אב-תשצ״ג"
+  },
+  "2033-08-20": {
+    "inEnglish": "Re’eh",
+    "hDate": "25 Av 5793",
+    "inHebrew": "ראה",
+    "hDateInHebrew": "כה-אב-תשצ״ג"
+  },
+  "2033-08-27": {
+    "inEnglish": "Shoftim",
+    "hDate": "2 Elul 5793",
+    "inHebrew": "שופטים",
+    "hDateInHebrew": "ב-אלול-תשצ״ג"
+  },
+  "2033-09-03": {
+    "inEnglish": "Ki Teitzei",
+    "hDate": "9 Elul 5793",
+    "inHebrew": "כי תצא",
+    "hDateInHebrew": "ט-אלול-תשצ״ג"
+  },
+  "2033-09-10": {
+    "inEnglish": "Ki Tavo",
+    "hDate": "16 Elul 5793",
+    "inHebrew": "כי תבוא",
+    "hDateInHebrew": "טז-אלול-תשצ״ג"
+  },
+  "2033-09-17": {
+    "inEnglish": "Nitzavim-Vayeilech",
+    "hDate": "23 Elul 5793",
+    "inHebrew": "נצבים־וילך",
+    "hDateInHebrew": "כג-אלול-תשצ״ג"
+  },
+  "2033-10-01": {
+    "inEnglish": "Ha’azinu",
+    "hDate": "8 Tishrei 5794",
+    "inHebrew": "האזינו",
+    "hDateInHebrew": "ח-תשרי-תשצ״ד"
+  },
+  "2033-10-22": {
+    "inEnglish": "Bereshit",
+    "hDate": "29 Tishrei 5794",
+    "inHebrew": "בראשית",
+    "hDateInHebrew": "כט-תשרי-תשצ״ד"
+  },
+  "2033-10-29": {
+    "inEnglish": "Noach",
+    "hDate": "6 Cheshvan 5794",
+    "inHebrew": "נח",
+    "hDateInHebrew": "ו-חשוון-תשצ״ד"
+  },
+  "2033-11-05": {
+    "inEnglish": "Lech-Lecha",
+    "hDate": "13 Cheshvan 5794",
+    "inHebrew": "לך לך",
+    "hDateInHebrew": "יג-חשוון-תשצ״ד"
+  },
+  "2033-11-12": {
+    "inEnglish": "Vayera",
+    "hDate": "20 Cheshvan 5794",
+    "inHebrew": "וירא",
+    "hDateInHebrew": "כ-חשוון-תשצ״ד"
+  },
+  "2033-11-19": {
+    "inEnglish": "Chayei Sara",
+    "hDate": "27 Cheshvan 5794",
+    "inHebrew": "חיי שרה",
+    "hDateInHebrew": "כז-חשוון-תשצ״ד"
+  },
+  "2033-11-26": {
+    "inEnglish": "Toldot",
+    "hDate": "4 Kislev 5794",
+    "inHebrew": "תולדות",
+    "hDateInHebrew": "ד-כסלו-תשצ״ד"
+  },
+  "2033-12-03": {
+    "inEnglish": "Vayetzei",
+    "hDate": "11 Kislev 5794",
+    "inHebrew": "ויצא",
+    "hDateInHebrew": "יא-כסלו-תשצ״ד"
+  },
+  "2033-12-10": {
+    "inEnglish": "Vayishlach",
+    "hDate": "18 Kislev 5794",
+    "inHebrew": "וישלח",
+    "hDateInHebrew": "יח-כסלו-תשצ״ד"
+  },
+  "2033-12-17": {
+    "inEnglish": "Vayeshev",
+    "hDate": "25 Kislev 5794",
+    "inHebrew": "וישב",
+    "hDateInHebrew": "כה-כסלו-תשצ״ד"
+  },
+  "2033-12-24": {
+    "inEnglish": "Miketz",
+    "hDate": "2 Tevet 5794",
+    "inHebrew": "מקץ",
+    "hDateInHebrew": "ב-טבת-תשצ״ד"
+  },
+  "2033-12-31": {
+    "inEnglish": "Vayigash",
+    "hDate": "9 Tevet 5794",
+    "inHebrew": "ויגש",
+    "hDateInHebrew": "ט-טבת-תשצ״ד"
+  },
+  "2034-01-07": {
+    "inEnglish": "Vayechi",
+    "hDate": "16 Tevet 5794",
+    "inHebrew": "ויחי",
+    "hDateInHebrew": "טז-טבת-תשצ״ד"
+  },
+  "2034-01-14": {
+    "inEnglish": "Shemot",
+    "hDate": "23 Tevet 5794",
+    "inHebrew": "שמות",
+    "hDateInHebrew": "כג-טבת-תשצ״ד"
+  },
+  "2034-01-21": {
+    "inEnglish": "Vaera",
+    "hDate": "1 Sh'vat 5794",
+    "inHebrew": "וארא",
+    "hDateInHebrew": "א-שבט-תשצ״ד"
+  },
+  "2034-01-28": {
+    "inEnglish": "Bo",
+    "hDate": "8 Sh'vat 5794",
+    "inHebrew": "בא",
+    "hDateInHebrew": "ח-שבט-תשצ״ד"
+  },
+  "2034-02-04": {
+    "inEnglish": "Beshalach",
+    "hDate": "15 Sh'vat 5794",
+    "inHebrew": "בשלח",
+    "hDateInHebrew": "טו-שבט-תשצ״ד"
+  },
+  "2034-02-11": {
+    "inEnglish": "Yitro",
+    "hDate": "22 Sh'vat 5794",
+    "inHebrew": "יתרו",
+    "hDateInHebrew": "כב-שבט-תשצ״ד"
+  },
+  "2034-02-18": {
+    "inEnglish": "Mishpatim",
+    "hDate": "29 Sh'vat 5794",
+    "inHebrew": "משפטים",
+    "hDateInHebrew": "כט-שבט-תשצ״ד"
+  },
+  "2034-02-25": {
+    "inEnglish": "Terumah",
+    "hDate": "6 Adar 5794",
+    "inHebrew": "תרומה",
+    "hDateInHebrew": "ו-אדר-תשצ״ד"
+  },
+  "2034-03-04": {
+    "inEnglish": "Tetzaveh",
+    "hDate": "13 Adar 5794",
+    "inHebrew": "תצוה",
+    "hDateInHebrew": "יג-אדר-תשצ״ד"
+  },
+  "2034-03-11": {
+    "inEnglish": "Ki Tisa",
+    "hDate": "20 Adar 5794",
+    "inHebrew": "כי תשא",
+    "hDateInHebrew": "כ-אדר-תשצ״ד"
+  },
+  "2034-03-18": {
+    "inEnglish": "Vayakhel-Pekudei",
+    "hDate": "27 Adar 5794",
+    "inHebrew": "ויקהל־פקודי",
+    "hDateInHebrew": "כז-אדר-תשצ״ד"
+  },
+  "2034-03-25": {
+    "inEnglish": "Vayikra",
+    "hDate": "5 Nisan 5794",
+    "inHebrew": "ויקרא",
+    "hDateInHebrew": "ה-ניסן-תשצ״ד"
+  },
+  "2034-04-01": {
+    "inEnglish": "Tzav",
+    "hDate": "12 Nisan 5794",
+    "inHebrew": "צו",
+    "hDateInHebrew": "יב-ניסן-תשצ״ד"
+  },
+  "2034-04-15": {
+    "inEnglish": "Shmini",
+    "hDate": "26 Nisan 5794",
+    "inHebrew": "שמיני",
+    "hDateInHebrew": "כו-ניסן-תשצ״ד"
+  },
+  "2034-04-22": {
+    "inEnglish": "Tazria-Metzora",
+    "hDate": "3 Iyyar 5794",
+    "inHebrew": "תזריע־מצורע",
+    "hDateInHebrew": "ג-אייר-תשצ״ד"
+  },
+  "2034-04-29": {
+    "inEnglish": "Achrei Mot-Kedoshim",
+    "hDate": "10 Iyyar 5794",
+    "inHebrew": "אחרי מות־קדושים",
+    "hDateInHebrew": "י-אייר-תשצ״ד"
+  },
+  "2034-05-06": {
+    "inEnglish": "Emor",
+    "hDate": "17 Iyyar 5794",
+    "inHebrew": "אמור",
+    "hDateInHebrew": "יז-אייר-תשצ״ד"
+  },
+  "2034-05-13": {
+    "inEnglish": "Behar-Bechukotai",
+    "hDate": "24 Iyyar 5794",
+    "inHebrew": "בהר־בחוקותי",
+    "hDateInHebrew": "כד-אייר-תשצ״ד"
+  },
+  "2034-05-20": {
+    "inEnglish": "Bamidbar",
+    "hDate": "2 Sivan 5794",
+    "inHebrew": "במדבר",
+    "hDateInHebrew": "ב-סיוון-תשצ״ד"
+  },
+  "2034-05-27": {
+    "inEnglish": "Nasso",
+    "hDate": "9 Sivan 5794",
+    "inHebrew": "נשא",
+    "hDateInHebrew": "ט-סיוון-תשצ״ד"
+  },
+  "2034-06-03": {
+    "inEnglish": "Beha’alotcha",
+    "hDate": "16 Sivan 5794",
+    "inHebrew": "בהעלותך",
+    "hDateInHebrew": "טז-סיוון-תשצ״ד"
+  },
+  "2034-06-10": {
+    "inEnglish": "Sh’lach",
+    "hDate": "23 Sivan 5794",
+    "inHebrew": "שלח",
+    "hDateInHebrew": "כג-סיוון-תשצ״ד"
+  },
+  "2034-06-17": {
+    "inEnglish": "Korach",
+    "hDate": "30 Sivan 5794",
+    "inHebrew": "קורח",
+    "hDateInHebrew": "ל-סיוון-תשצ״ד"
+  },
+  "2034-06-24": {
+    "inEnglish": "Chukat",
+    "hDate": "7 Tamuz 5794",
+    "inHebrew": "חוקת",
+    "hDateInHebrew": "ז-תמוז-תשצ״ד"
+  },
+  "2034-07-01": {
+    "inEnglish": "Balak",
+    "hDate": "14 Tamuz 5794",
+    "inHebrew": "בלק",
+    "hDateInHebrew": "יד-תמוז-תשצ״ד"
+  },
+  "2034-07-08": {
+    "inEnglish": "Pinchas",
+    "hDate": "21 Tamuz 5794",
+    "inHebrew": "פנחס",
+    "hDateInHebrew": "כא-תמוז-תשצ״ד"
+  },
+  "2034-07-15": {
+    "inEnglish": "Matot-Masei",
+    "hDate": "28 Tamuz 5794",
+    "inHebrew": "מטות־מסעי",
+    "hDateInHebrew": "כח-תמוז-תשצ״ד"
+  },
+  "2034-07-22": {
+    "inEnglish": "Devarim",
+    "hDate": "6 Av 5794",
+    "inHebrew": "דברים",
+    "hDateInHebrew": "ו-אב-תשצ״ד"
+  },
+  "2034-07-29": {
+    "inEnglish": "Vaetchanan",
+    "hDate": "13 Av 5794",
+    "inHebrew": "ואתחנן",
+    "hDateInHebrew": "יג-אב-תשצ״ד"
+  },
+  "2034-08-05": {
+    "inEnglish": "Eikev",
+    "hDate": "20 Av 5794",
+    "inHebrew": "עקב",
+    "hDateInHebrew": "כ-אב-תשצ״ד"
+  },
+  "2034-08-12": {
+    "inEnglish": "Re’eh",
+    "hDate": "27 Av 5794",
+    "inHebrew": "ראה",
+    "hDateInHebrew": "כז-אב-תשצ״ד"
+  },
+  "2034-08-19": {
+    "inEnglish": "Shoftim",
+    "hDate": "4 Elul 5794",
+    "inHebrew": "שופטים",
+    "hDateInHebrew": "ד-אלול-תשצ״ד"
+  },
+  "2034-08-26": {
+    "inEnglish": "Ki Teitzei",
+    "hDate": "11 Elul 5794",
+    "inHebrew": "כי תצא",
+    "hDateInHebrew": "יא-אלול-תשצ״ד"
+  },
+  "2034-09-02": {
+    "inEnglish": "Ki Tavo",
+    "hDate": "18 Elul 5794",
+    "inHebrew": "כי תבוא",
+    "hDateInHebrew": "יח-אלול-תשצ״ד"
+  },
+  "2034-09-09": {
+    "inEnglish": "Nitzavim-Vayeilech",
+    "hDate": "25 Elul 5794",
+    "inHebrew": "נצבים־וילך",
+    "hDateInHebrew": "כה-אלול-תשצ״ד"
+  },
+  "2034-09-16": {
+    "inEnglish": "Ha’azinu",
+    "hDate": "3 Tishrei 5795",
+    "inHebrew": "האזינו",
+    "hDateInHebrew": "ג-תשרי-תשצ״ה"
+  },
+  "2034-10-07": {
+    "inEnglish": "Bereshit",
+    "hDate": "24 Tishrei 5795",
+    "inHebrew": "בראשית",
+    "hDateInHebrew": "כד-תשרי-תשצ״ה"
+  },
+  "2034-10-14": {
+    "inEnglish": "Noach",
+    "hDate": "1 Cheshvan 5795",
+    "inHebrew": "נח",
+    "hDateInHebrew": "א-חשוון-תשצ״ה"
+  },
+  "2034-10-21": {
+    "inEnglish": "Lech-Lecha",
+    "hDate": "8 Cheshvan 5795",
+    "inHebrew": "לך לך",
+    "hDateInHebrew": "ח-חשוון-תשצ״ה"
+  },
+  "2034-10-28": {
+    "inEnglish": "Vayera",
+    "hDate": "15 Cheshvan 5795",
+    "inHebrew": "וירא",
+    "hDateInHebrew": "טו-חשוון-תשצ״ה"
+  },
+  "2034-11-04": {
+    "inEnglish": "Chayei Sara",
+    "hDate": "22 Cheshvan 5795",
+    "inHebrew": "חיי שרה",
+    "hDateInHebrew": "כב-חשוון-תשצ״ה"
+  },
+  "2034-11-11": {
+    "inEnglish": "Toldot",
+    "hDate": "29 Cheshvan 5795",
+    "inHebrew": "תולדות",
+    "hDateInHebrew": "כט-חשוון-תשצ״ה"
+  },
+  "2034-11-18": {
+    "inEnglish": "Vayetzei",
+    "hDate": "6 Kislev 5795",
+    "inHebrew": "ויצא",
+    "hDateInHebrew": "ו-כסלו-תשצ״ה"
+  },
+  "2034-11-25": {
+    "inEnglish": "Vayishlach",
+    "hDate": "13 Kislev 5795",
+    "inHebrew": "וישלח",
+    "hDateInHebrew": "יג-כסלו-תשצ״ה"
+  },
+  "2034-12-02": {
+    "inEnglish": "Vayeshev",
+    "hDate": "20 Kislev 5795",
+    "inHebrew": "וישב",
+    "hDateInHebrew": "כ-כסלו-תשצ״ה"
+  },
+  "2034-12-09": {
+    "inEnglish": "Miketz",
+    "hDate": "27 Kislev 5795",
+    "inHebrew": "מקץ",
+    "hDateInHebrew": "כז-כסלו-תשצ״ה"
+  },
+  "2034-12-16": {
+    "inEnglish": "Vayigash",
+    "hDate": "4 Tevet 5795",
+    "inHebrew": "ויגש",
+    "hDateInHebrew": "ד-טבת-תשצ״ה"
+  },
+  "2034-12-23": {
+    "inEnglish": "Vayechi",
+    "hDate": "11 Tevet 5795",
+    "inHebrew": "ויחי",
+    "hDateInHebrew": "יא-טבת-תשצ״ה"
+  },
+  "2034-12-30": {
+    "inEnglish": "Shemot",
+    "hDate": "18 Tevet 5795",
+    "inHebrew": "שמות",
+    "hDateInHebrew": "יח-טבת-תשצ״ה"
+  },
+  "2035-01-06": {
+    "inEnglish": "Vaera",
+    "hDate": "25 Tevet 5795",
+    "inHebrew": "וארא",
+    "hDateInHebrew": "כה-טבת-תשצ״ה"
+  },
+  "2035-01-13": {
+    "inEnglish": "Bo",
+    "hDate": "3 Sh'vat 5795",
+    "inHebrew": "בא",
+    "hDateInHebrew": "ג-שבט-תשצ״ה"
+  },
+  "2035-01-20": {
+    "inEnglish": "Beshalach",
+    "hDate": "10 Sh'vat 5795",
+    "inHebrew": "בשלח",
+    "hDateInHebrew": "י-שבט-תשצ״ה"
+  },
+  "2035-01-27": {
+    "inEnglish": "Yitro",
+    "hDate": "17 Sh'vat 5795",
+    "inHebrew": "יתרו",
+    "hDateInHebrew": "יז-שבט-תשצ״ה"
+  },
+  "2035-02-03": {
+    "inEnglish": "Mishpatim",
+    "hDate": "24 Sh'vat 5795",
+    "inHebrew": "משפטים",
+    "hDateInHebrew": "כד-שבט-תשצ״ה"
+  },
+  "2035-02-10": {
+    "inEnglish": "Terumah",
+    "hDate": "1 Adar I 5795",
+    "inHebrew": "תרומה",
+    "hDateInHebrew": "א-אדר-undefined"
+  },
+  "2035-02-17": {
+    "inEnglish": "Tetzaveh",
+    "hDate": "8 Adar I 5795",
+    "inHebrew": "תצוה",
+    "hDateInHebrew": "ח-אדר-undefined"
+  },
+  "2035-02-24": {
+    "inEnglish": "Ki Tisa",
+    "hDate": "15 Adar I 5795",
+    "inHebrew": "כי תשא",
+    "hDateInHebrew": "טו-אדר-undefined"
+  },
+  "2035-03-03": {
+    "inEnglish": "Vayakhel",
+    "hDate": "22 Adar I 5795",
+    "inHebrew": "ויקהל",
+    "hDateInHebrew": "כב-אדר-undefined"
+  },
+  "2035-03-10": {
+    "inEnglish": "Pekudei",
+    "hDate": "29 Adar I 5795",
+    "inHebrew": "פקודי",
+    "hDateInHebrew": "כט-אדר-undefined"
+  },
+  "2035-03-17": {
+    "inEnglish": "Vayikra",
+    "hDate": "6 Adar II 5795",
+    "inHebrew": "ויקרא",
+    "hDateInHebrew": "ו-אדר-undefined"
+  },
+  "2035-03-24": {
+    "inEnglish": "Tzav",
+    "hDate": "13 Adar II 5795",
+    "inHebrew": "צו",
+    "hDateInHebrew": "יג-אדר-undefined"
+  },
+  "2035-03-31": {
+    "inEnglish": "Shmini",
+    "hDate": "20 Adar II 5795",
+    "inHebrew": "שמיני",
+    "hDateInHebrew": "כ-אדר-undefined"
+  },
+  "2035-04-07": {
+    "inEnglish": "Tazria",
+    "hDate": "27 Adar II 5795",
+    "inHebrew": "תזריע",
+    "hDateInHebrew": "כז-אדר-undefined"
+  },
+  "2035-04-14": {
+    "inEnglish": "Metzora",
+    "hDate": "5 Nisan 5795",
+    "inHebrew": "מצורע",
+    "hDateInHebrew": "ה-ניסן-תשצ״ה"
+  },
+  "2035-04-21": {
+    "inEnglish": "Achrei Mot",
+    "hDate": "12 Nisan 5795",
+    "inHebrew": "אחרי מות",
+    "hDateInHebrew": "יב-ניסן-תשצ״ה"
+  },
+  "2035-05-05": {
+    "inEnglish": "Kedoshim",
+    "hDate": "26 Nisan 5795",
+    "inHebrew": "קדושים",
+    "hDateInHebrew": "כו-ניסן-תשצ״ה"
+  },
+  "2035-05-12": {
+    "inEnglish": "Emor",
+    "hDate": "3 Iyyar 5795",
+    "inHebrew": "אמור",
+    "hDateInHebrew": "ג-אייר-תשצ״ה"
+  },
+  "2035-05-19": {
+    "inEnglish": "Behar",
+    "hDate": "10 Iyyar 5795",
+    "inHebrew": "בהר",
+    "hDateInHebrew": "י-אייר-תשצ״ה"
+  },
+  "2035-05-26": {
+    "inEnglish": "Bechukotai",
+    "hDate": "17 Iyyar 5795",
+    "inHebrew": "בחוקותי",
+    "hDateInHebrew": "יז-אייר-תשצ״ה"
+  },
+  "2035-06-02": {
+    "inEnglish": "Bamidbar",
+    "hDate": "24 Iyyar 5795",
+    "inHebrew": "במדבר",
+    "hDateInHebrew": "כד-אייר-תשצ״ה"
+  },
+  "2035-06-09": {
+    "inEnglish": "Nasso",
+    "hDate": "2 Sivan 5795",
+    "inHebrew": "נשא",
+    "hDateInHebrew": "ב-סיוון-תשצ״ה"
+  },
+  "2035-06-16": {
+    "inEnglish": "Beha’alotcha",
+    "hDate": "9 Sivan 5795",
+    "inHebrew": "בהעלותך",
+    "hDateInHebrew": "ט-סיוון-תשצ״ה"
+  },
+  "2035-06-23": {
+    "inEnglish": "Sh’lach",
+    "hDate": "16 Sivan 5795",
+    "inHebrew": "שלח",
+    "hDateInHebrew": "טז-סיוון-תשצ״ה"
+  },
+  "2035-06-30": {
+    "inEnglish": "Korach",
+    "hDate": "23 Sivan 5795",
+    "inHebrew": "קורח",
+    "hDateInHebrew": "כג-סיוון-תשצ״ה"
+  },
+  "2035-07-07": {
+    "inEnglish": "Chukat",
+    "hDate": "30 Sivan 5795",
+    "inHebrew": "חוקת",
+    "hDateInHebrew": "ל-סיוון-תשצ״ה"
+  },
+  "2035-07-14": {
+    "inEnglish": "Balak",
+    "hDate": "7 Tamuz 5795",
+    "inHebrew": "בלק",
+    "hDateInHebrew": "ז-תמוז-תשצ״ה"
+  },
+  "2035-07-21": {
+    "inEnglish": "Pinchas",
+    "hDate": "14 Tamuz 5795",
+    "inHebrew": "פנחס",
+    "hDateInHebrew": "יד-תמוז-תשצ״ה"
+  },
+  "2035-07-28": {
+    "inEnglish": "Matot",
+    "hDate": "21 Tamuz 5795",
+    "inHebrew": "מטות",
+    "hDateInHebrew": "כא-תמוז-תשצ״ה"
+  },
+  "2035-08-04": {
+    "inEnglish": "Masei",
+    "hDate": "28 Tamuz 5795",
+    "inHebrew": "מסעי",
+    "hDateInHebrew": "כח-תמוז-תשצ״ה"
+  },
+  "2035-08-11": {
+    "inEnglish": "Devarim",
+    "hDate": "6 Av 5795",
+    "inHebrew": "דברים",
+    "hDateInHebrew": "ו-אב-תשצ״ה"
+  },
+  "2035-08-18": {
+    "inEnglish": "Vaetchanan",
+    "hDate": "13 Av 5795",
+    "inHebrew": "ואתחנן",
+    "hDateInHebrew": "יג-אב-תשצ״ה"
+  },
+  "2035-08-25": {
+    "inEnglish": "Eikev",
+    "hDate": "20 Av 5795",
+    "inHebrew": "עקב",
+    "hDateInHebrew": "כ-אב-תשצ״ה"
+  },
+  "2035-09-01": {
+    "inEnglish": "Re’eh",
+    "hDate": "27 Av 5795",
+    "inHebrew": "ראה",
+    "hDateInHebrew": "כז-אב-תשצ״ה"
+  },
+  "2035-09-08": {
+    "inEnglish": "Shoftim",
+    "hDate": "4 Elul 5795",
+    "inHebrew": "שופטים",
+    "hDateInHebrew": "ד-אלול-תשצ״ה"
+  },
+  "2035-09-15": {
+    "inEnglish": "Ki Teitzei",
+    "hDate": "11 Elul 5795",
+    "inHebrew": "כי תצא",
+    "hDateInHebrew": "יא-אלול-תשצ״ה"
+  },
+  "2035-09-22": {
+    "inEnglish": "Ki Tavo",
+    "hDate": "18 Elul 5795",
+    "inHebrew": "כי תבוא",
+    "hDateInHebrew": "יח-אלול-תשצ״ה"
+  },
+  "2035-09-29": {
+    "inEnglish": "Nitzavim-Vayeilech",
+    "hDate": "25 Elul 5795",
+    "inHebrew": "נצבים־וילך",
+    "hDateInHebrew": "כה-אלול-תשצ״ה"
+  },
+  "2035-10-06": {
+    "inEnglish": "Ha’azinu",
+    "hDate": "3 Tishrei 5796",
+    "inHebrew": "האזינו",
+    "hDateInHebrew": "ג-תשרי-תשצ״ו"
+  },
+  "2035-10-27": {
+    "inEnglish": "Bereshit",
+    "hDate": "24 Tishrei 5796",
+    "inHebrew": "בראשית",
+    "hDateInHebrew": "כד-תשרי-תשצ״ו"
+  },
+  "2035-11-03": {
+    "inEnglish": "Noach",
+    "hDate": "1 Cheshvan 5796",
+    "inHebrew": "נח",
+    "hDateInHebrew": "א-חשוון-תשצ״ו"
+  },
+  "2035-11-10": {
+    "inEnglish": "Lech-Lecha",
+    "hDate": "8 Cheshvan 5796",
+    "inHebrew": "לך לך",
+    "hDateInHebrew": "ח-חשוון-תשצ״ו"
+  },
+  "2035-11-17": {
+    "inEnglish": "Vayera",
+    "hDate": "15 Cheshvan 5796",
+    "inHebrew": "וירא",
+    "hDateInHebrew": "טו-חשוון-תשצ״ו"
+  },
+  "2035-11-24": {
+    "inEnglish": "Chayei Sara",
+    "hDate": "22 Cheshvan 5796",
+    "inHebrew": "חיי שרה",
+    "hDateInHebrew": "כב-חשוון-תשצ״ו"
+  },
+  "2035-12-01": {
+    "inEnglish": "Toldot",
+    "hDate": "29 Cheshvan 5796",
+    "inHebrew": "תולדות",
+    "hDateInHebrew": "כט-חשוון-תשצ״ו"
+  },
+  "2035-12-08": {
+    "inEnglish": "Vayetzei",
+    "hDate": "7 Kislev 5796",
+    "inHebrew": "ויצא",
+    "hDateInHebrew": "ז-כסלו-תשצ״ו"
+  },
+  "2035-12-15": {
+    "inEnglish": "Vayishlach",
+    "hDate": "14 Kislev 5796",
+    "inHebrew": "וישלח",
+    "hDateInHebrew": "יד-כסלו-תשצ״ו"
+  },
+  "2035-12-22": {
+    "inEnglish": "Vayeshev",
+    "hDate": "21 Kislev 5796",
+    "inHebrew": "וישב",
+    "hDateInHebrew": "כא-כסלו-תשצ״ו"
+  },
+  "2035-12-29": {
+    "inEnglish": "Miketz",
+    "hDate": "28 Kislev 5796",
+    "inHebrew": "מקץ",
+    "hDateInHebrew": "כח-כסלו-תשצ״ו"
+  },
+  "2036-01-05": {
+    "inEnglish": "Vayigash",
+    "hDate": "5 Tevet 5796",
+    "inHebrew": "ויגש",
+    "hDateInHebrew": "ה-טבת-תשצ״ו"
+  },
+  "2036-01-12": {
+    "inEnglish": "Vayechi",
+    "hDate": "12 Tevet 5796",
+    "inHebrew": "ויחי",
+    "hDateInHebrew": "יב-טבת-תשצ״ו"
+  },
+  "2036-01-19": {
+    "inEnglish": "Shemot",
+    "hDate": "19 Tevet 5796",
+    "inHebrew": "שמות",
+    "hDateInHebrew": "יט-טבת-תשצ״ו"
+  },
+  "2036-01-26": {
+    "inEnglish": "Vaera",
+    "hDate": "26 Tevet 5796",
+    "inHebrew": "וארא",
+    "hDateInHebrew": "כו-טבת-תשצ״ו"
+  },
+  "2036-02-02": {
+    "inEnglish": "Bo",
+    "hDate": "4 Sh'vat 5796",
+    "inHebrew": "בא",
+    "hDateInHebrew": "ד-שבט-תשצ״ו"
+  },
+  "2036-02-09": {
+    "inEnglish": "Beshalach",
+    "hDate": "11 Sh'vat 5796",
+    "inHebrew": "בשלח",
+    "hDateInHebrew": "יא-שבט-תשצ״ו"
+  },
+  "2036-02-16": {
+    "inEnglish": "Yitro",
+    "hDate": "18 Sh'vat 5796",
+    "inHebrew": "יתרו",
+    "hDateInHebrew": "יח-שבט-תשצ״ו"
+  },
+  "2036-02-23": {
+    "inEnglish": "Mishpatim",
+    "hDate": "25 Sh'vat 5796",
+    "inHebrew": "משפטים",
+    "hDateInHebrew": "כה-שבט-תשצ״ו"
+  },
+  "2036-03-01": {
+    "inEnglish": "Terumah",
+    "hDate": "2 Adar 5796",
+    "inHebrew": "תרומה",
+    "hDateInHebrew": "ב-אדר-תשצ״ו"
+  },
+  "2036-03-08": {
+    "inEnglish": "Tetzaveh",
+    "hDate": "9 Adar 5796",
+    "inHebrew": "תצוה",
+    "hDateInHebrew": "ט-אדר-תשצ״ו"
+  },
+  "2036-03-15": {
+    "inEnglish": "Ki Tisa",
+    "hDate": "16 Adar 5796",
+    "inHebrew": "כי תשא",
+    "hDateInHebrew": "טז-אדר-תשצ״ו"
+  },
+  "2036-03-22": {
+    "inEnglish": "Vayakhel-Pekudei",
+    "hDate": "23 Adar 5796",
+    "inHebrew": "ויקהל־פקודי",
+    "hDateInHebrew": "כג-אדר-תשצ״ו"
+  },
+  "2036-03-29": {
+    "inEnglish": "Vayikra",
+    "hDate": "1 Nisan 5796",
+    "inHebrew": "ויקרא",
+    "hDateInHebrew": "א-ניסן-תשצ״ו"
+  },
+  "2036-04-05": {
+    "inEnglish": "Tzav",
+    "hDate": "8 Nisan 5796",
+    "inHebrew": "צו",
+    "hDateInHebrew": "ח-ניסן-תשצ״ו"
+  },
+  "2036-04-26": {
+    "inEnglish": "Shmini",
+    "hDate": "29 Nisan 5796",
+    "inHebrew": "שמיני",
+    "hDateInHebrew": "כט-ניסן-תשצ״ו"
+  },
+  "2036-05-03": {
+    "inEnglish": "Tazria-Metzora",
+    "hDate": "6 Iyyar 5796",
+    "inHebrew": "תזריע־מצורע",
+    "hDateInHebrew": "ו-אייר-תשצ״ו"
+  },
+  "2036-05-10": {
+    "inEnglish": "Achrei Mot-Kedoshim",
+    "hDate": "13 Iyyar 5796",
+    "inHebrew": "אחרי מות־קדושים",
+    "hDateInHebrew": "יג-אייר-תשצ״ו"
+  },
+  "2036-05-17": {
+    "inEnglish": "Emor",
+    "hDate": "20 Iyyar 5796",
+    "inHebrew": "אמור",
+    "hDateInHebrew": "כ-אייר-תשצ״ו"
+  },
+  "2036-05-24": {
+    "inEnglish": "Behar-Bechukotai",
+    "hDate": "27 Iyyar 5796",
+    "inHebrew": "בהר־בחוקותי",
+    "hDateInHebrew": "כז-אייר-תשצ״ו"
+  },
+  "2036-05-31": {
+    "inEnglish": "Bamidbar",
+    "hDate": "5 Sivan 5796",
+    "inHebrew": "במדבר",
+    "hDateInHebrew": "ה-סיוון-תשצ״ו"
+  },
+  "2036-06-07": {
+    "inEnglish": "Nasso",
+    "hDate": "12 Sivan 5796",
+    "inHebrew": "נשא",
+    "hDateInHebrew": "יב-סיוון-תשצ״ו"
+  },
+  "2036-06-14": {
+    "inEnglish": "Beha’alotcha",
+    "hDate": "19 Sivan 5796",
+    "inHebrew": "בהעלותך",
+    "hDateInHebrew": "יט-סיוון-תשצ״ו"
+  },
+  "2036-06-21": {
+    "inEnglish": "Sh’lach",
+    "hDate": "26 Sivan 5796",
+    "inHebrew": "שלח",
+    "hDateInHebrew": "כו-סיוון-תשצ״ו"
+  },
+  "2036-06-28": {
+    "inEnglish": "Korach",
+    "hDate": "3 Tamuz 5796",
+    "inHebrew": "קורח",
+    "hDateInHebrew": "ג-תמוז-תשצ״ו"
+  },
+  "2036-07-05": {
+    "inEnglish": "Chukat",
+    "hDate": "10 Tamuz 5796",
+    "inHebrew": "חוקת",
+    "hDateInHebrew": "י-תמוז-תשצ״ו"
+  },
+  "2036-07-12": {
+    "inEnglish": "Balak",
+    "hDate": "17 Tamuz 5796",
+    "inHebrew": "בלק",
+    "hDateInHebrew": "יז-תמוז-תשצ״ו"
+  },
+  "2036-07-19": {
+    "inEnglish": "Pinchas",
+    "hDate": "24 Tamuz 5796",
+    "inHebrew": "פנחס",
+    "hDateInHebrew": "כד-תמוז-תשצ״ו"
+  },
+  "2036-07-26": {
+    "inEnglish": "Matot-Masei",
+    "hDate": "2 Av 5796",
+    "inHebrew": "מטות־מסעי",
+    "hDateInHebrew": "ב-אב-תשצ״ו"
+  },
+  "2036-08-02": {
+    "inEnglish": "Devarim",
+    "hDate": "9 Av 5796",
+    "inHebrew": "דברים",
+    "hDateInHebrew": "ט-אב-תשצ״ו"
+  },
+  "2036-08-09": {
+    "inEnglish": "Vaetchanan",
+    "hDate": "16 Av 5796",
+    "inHebrew": "ואתחנן",
+    "hDateInHebrew": "טז-אב-תשצ״ו"
+  },
+  "2036-08-16": {
+    "inEnglish": "Eikev",
+    "hDate": "23 Av 5796",
+    "inHebrew": "עקב",
+    "hDateInHebrew": "כג-אב-תשצ״ו"
+  },
+  "2036-08-23": {
+    "inEnglish": "Re’eh",
+    "hDate": "30 Av 5796",
+    "inHebrew": "ראה",
+    "hDateInHebrew": "ל-אב-תשצ״ו"
+  },
+  "2036-08-30": {
+    "inEnglish": "Shoftim",
+    "hDate": "7 Elul 5796",
+    "inHebrew": "שופטים",
+    "hDateInHebrew": "ז-אלול-תשצ״ו"
+  },
+  "2036-09-06": {
+    "inEnglish": "Ki Teitzei",
+    "hDate": "14 Elul 5796",
+    "inHebrew": "כי תצא",
+    "hDateInHebrew": "יד-אלול-תשצ״ו"
+  },
+  "2036-09-13": {
+    "inEnglish": "Ki Tavo",
+    "hDate": "21 Elul 5796",
+    "inHebrew": "כי תבוא",
+    "hDateInHebrew": "כא-אלול-תשצ״ו"
+  },
+  "2036-09-20": {
+    "inEnglish": "Nitzavim",
+    "hDate": "28 Elul 5796",
+    "inHebrew": "נצבים",
+    "hDateInHebrew": "כח-אלול-תשצ״ו"
+  },
+  "2036-09-27": {
+    "inEnglish": "Vayeilech",
+    "hDate": "6 Tishrei 5797",
+    "inHebrew": "וילך",
+    "hDateInHebrew": "ו-תשרי-תשצ״ז"
+  },
+  "2036-10-04": {
+    "inEnglish": "Ha’azinu",
+    "hDate": "13 Tishrei 5797",
+    "inHebrew": "האזינו",
+    "hDateInHebrew": "יג-תשרי-תשצ״ז"
+  },
+  "2036-10-18": {
+    "inEnglish": "Bereshit",
+    "hDate": "27 Tishrei 5797",
+    "inHebrew": "בראשית",
+    "hDateInHebrew": "כז-תשרי-תשצ״ז"
+  },
+  "2036-10-25": {
+    "inEnglish": "Noach",
+    "hDate": "4 Cheshvan 5797",
+    "inHebrew": "נח",
+    "hDateInHebrew": "ד-חשוון-תשצ״ז"
+  },
+  "2036-11-01": {
+    "inEnglish": "Lech-Lecha",
+    "hDate": "11 Cheshvan 5797",
+    "inHebrew": "לך לך",
+    "hDateInHebrew": "יא-חשוון-תשצ״ז"
+  },
+  "2036-11-08": {
+    "inEnglish": "Vayera",
+    "hDate": "18 Cheshvan 5797",
+    "inHebrew": "וירא",
+    "hDateInHebrew": "יח-חשוון-תשצ״ז"
+  },
+  "2036-11-15": {
+    "inEnglish": "Chayei Sara",
+    "hDate": "25 Cheshvan 5797",
+    "inHebrew": "חיי שרה",
+    "hDateInHebrew": "כה-חשוון-תשצ״ז"
+  },
+  "2036-11-22": {
+    "inEnglish": "Toldot",
+    "hDate": "3 Kislev 5797",
+    "inHebrew": "תולדות",
+    "hDateInHebrew": "ג-כסלו-תשצ״ז"
+  },
+  "2036-11-29": {
+    "inEnglish": "Vayetzei",
+    "hDate": "10 Kislev 5797",
+    "inHebrew": "ויצא",
+    "hDateInHebrew": "י-כסלו-תשצ״ז"
+  },
+  "2036-12-06": {
+    "inEnglish": "Vayishlach",
+    "hDate": "17 Kislev 5797",
+    "inHebrew": "וישלח",
+    "hDateInHebrew": "יז-כסלו-תשצ״ז"
+  },
+  "2036-12-13": {
+    "inEnglish": "Vayeshev",
+    "hDate": "24 Kislev 5797",
+    "inHebrew": "וישב",
+    "hDateInHebrew": "כד-כסלו-תשצ״ז"
+  },
+  "2036-12-20": {
+    "inEnglish": "Miketz",
+    "hDate": "2 Tevet 5797",
+    "inHebrew": "מקץ",
+    "hDateInHebrew": "ב-טבת-תשצ״ז"
+  },
+  "2036-12-27": {
+    "inEnglish": "Vayigash",
+    "hDate": "9 Tevet 5797",
+    "inHebrew": "ויגש",
+    "hDateInHebrew": "ט-טבת-תשצ״ז"
+  },
+  "2037-01-03": {
+    "inEnglish": "Vayechi",
+    "hDate": "16 Tevet 5797",
+    "inHebrew": "ויחי",
+    "hDateInHebrew": "טז-טבת-תשצ״ז"
+  },
+  "2037-01-10": {
+    "inEnglish": "Shemot",
+    "hDate": "23 Tevet 5797",
+    "inHebrew": "שמות",
+    "hDateInHebrew": "כג-טבת-תשצ״ז"
+  },
+  "2037-01-17": {
+    "inEnglish": "Vaera",
+    "hDate": "1 Sh'vat 5797",
+    "inHebrew": "וארא",
+    "hDateInHebrew": "א-שבט-תשצ״ז"
+  },
+  "2037-01-24": {
+    "inEnglish": "Bo",
+    "hDate": "8 Sh'vat 5797",
+    "inHebrew": "בא",
+    "hDateInHebrew": "ח-שבט-תשצ״ז"
+  },
+  "2037-01-31": {
+    "inEnglish": "Beshalach",
+    "hDate": "15 Sh'vat 5797",
+    "inHebrew": "בשלח",
+    "hDateInHebrew": "טו-שבט-תשצ״ז"
+  },
+  "2037-02-07": {
+    "inEnglish": "Yitro",
+    "hDate": "22 Sh'vat 5797",
+    "inHebrew": "יתרו",
+    "hDateInHebrew": "כב-שבט-תשצ״ז"
+  },
+  "2037-02-14": {
+    "inEnglish": "Mishpatim",
+    "hDate": "29 Sh'vat 5797",
+    "inHebrew": "משפטים",
+    "hDateInHebrew": "כט-שבט-תשצ״ז"
+  },
+  "2037-02-21": {
+    "inEnglish": "Terumah",
+    "hDate": "6 Adar 5797",
+    "inHebrew": "תרומה",
+    "hDateInHebrew": "ו-אדר-תשצ״ז"
+  },
+  "2037-02-28": {
+    "inEnglish": "Tetzaveh",
+    "hDate": "13 Adar 5797",
+    "inHebrew": "תצוה",
+    "hDateInHebrew": "יג-אדר-תשצ״ז"
+  },
+  "2037-03-07": {
+    "inEnglish": "Ki Tisa",
+    "hDate": "20 Adar 5797",
+    "inHebrew": "כי תשא",
+    "hDateInHebrew": "כ-אדר-תשצ״ז"
+  },
+  "2037-03-14": {
+    "inEnglish": "Vayakhel-Pekudei",
+    "hDate": "27 Adar 5797",
+    "inHebrew": "ויקהל־פקודי",
+    "hDateInHebrew": "כז-אדר-תשצ״ז"
+  },
+  "2037-03-21": {
+    "inEnglish": "Vayikra",
+    "hDate": "5 Nisan 5797",
+    "inHebrew": "ויקרא",
+    "hDateInHebrew": "ה-ניסן-תשצ״ז"
+  },
+  "2037-03-28": {
+    "inEnglish": "Tzav",
+    "hDate": "12 Nisan 5797",
+    "inHebrew": "צו",
+    "hDateInHebrew": "יב-ניסן-תשצ״ז"
+  },
+  "2037-04-11": {
+    "inEnglish": "Shmini",
+    "hDate": "26 Nisan 5797",
+    "inHebrew": "שמיני",
+    "hDateInHebrew": "כו-ניסן-תשצ״ז"
+  },
+  "2037-04-18": {
+    "inEnglish": "Tazria-Metzora",
+    "hDate": "3 Iyyar 5797",
+    "inHebrew": "תזריע־מצורע",
+    "hDateInHebrew": "ג-אייר-תשצ״ז"
+  },
+  "2037-04-25": {
+    "inEnglish": "Achrei Mot-Kedoshim",
+    "hDate": "10 Iyyar 5797",
+    "inHebrew": "אחרי מות־קדושים",
+    "hDateInHebrew": "י-אייר-תשצ״ז"
+  },
+  "2037-05-02": {
+    "inEnglish": "Emor",
+    "hDate": "17 Iyyar 5797",
+    "inHebrew": "אמור",
+    "hDateInHebrew": "יז-אייר-תשצ״ז"
+  },
+  "2037-05-09": {
+    "inEnglish": "Behar-Bechukotai",
+    "hDate": "24 Iyyar 5797",
+    "inHebrew": "בהר־בחוקותי",
+    "hDateInHebrew": "כד-אייר-תשצ״ז"
+  },
+  "2037-05-16": {
+    "inEnglish": "Bamidbar",
+    "hDate": "2 Sivan 5797",
+    "inHebrew": "במדבר",
+    "hDateInHebrew": "ב-סיוון-תשצ״ז"
+  },
+  "2037-05-23": {
+    "inEnglish": "Nasso",
+    "hDate": "9 Sivan 5797",
+    "inHebrew": "נשא",
+    "hDateInHebrew": "ט-סיוון-תשצ״ז"
+  },
+  "2037-05-30": {
+    "inEnglish": "Beha’alotcha",
+    "hDate": "16 Sivan 5797",
+    "inHebrew": "בהעלותך",
+    "hDateInHebrew": "טז-סיוון-תשצ״ז"
+  },
+  "2037-06-06": {
+    "inEnglish": "Sh’lach",
+    "hDate": "23 Sivan 5797",
+    "inHebrew": "שלח",
+    "hDateInHebrew": "כג-סיוון-תשצ״ז"
+  },
+  "2037-06-13": {
+    "inEnglish": "Korach",
+    "hDate": "30 Sivan 5797",
+    "inHebrew": "קורח",
+    "hDateInHebrew": "ל-סיוון-תשצ״ז"
+  },
+  "2037-06-20": {
+    "inEnglish": "Chukat",
+    "hDate": "7 Tamuz 5797",
+    "inHebrew": "חוקת",
+    "hDateInHebrew": "ז-תמוז-תשצ״ז"
+  },
+  "2037-06-27": {
+    "inEnglish": "Balak",
+    "hDate": "14 Tamuz 5797",
+    "inHebrew": "בלק",
+    "hDateInHebrew": "יד-תמוז-תשצ״ז"
+  },
+  "2037-07-04": {
+    "inEnglish": "Pinchas",
+    "hDate": "21 Tamuz 5797",
+    "inHebrew": "פנחס",
+    "hDateInHebrew": "כא-תמוז-תשצ״ז"
+  },
+  "2037-07-11": {
+    "inEnglish": "Matot-Masei",
+    "hDate": "28 Tamuz 5797",
+    "inHebrew": "מטות־מסעי",
+    "hDateInHebrew": "כח-תמוז-תשצ״ז"
+  },
+  "2037-07-18": {
+    "inEnglish": "Devarim",
+    "hDate": "6 Av 5797",
+    "inHebrew": "דברים",
+    "hDateInHebrew": "ו-אב-תשצ״ז"
+  },
+  "2037-07-25": {
+    "inEnglish": "Vaetchanan",
+    "hDate": "13 Av 5797",
+    "inHebrew": "ואתחנן",
+    "hDateInHebrew": "יג-אב-תשצ״ז"
+  },
+  "2037-08-01": {
+    "inEnglish": "Eikev",
+    "hDate": "20 Av 5797",
+    "inHebrew": "עקב",
+    "hDateInHebrew": "כ-אב-תשצ״ז"
+  },
+  "2037-08-08": {
+    "inEnglish": "Re’eh",
+    "hDate": "27 Av 5797",
+    "inHebrew": "ראה",
+    "hDateInHebrew": "כז-אב-תשצ״ז"
+  },
+  "2037-08-15": {
+    "inEnglish": "Shoftim",
+    "hDate": "4 Elul 5797",
+    "inHebrew": "שופטים",
+    "hDateInHebrew": "ד-אלול-תשצ״ז"
+  },
+  "2037-08-22": {
+    "inEnglish": "Ki Teitzei",
+    "hDate": "11 Elul 5797",
+    "inHebrew": "כי תצא",
+    "hDateInHebrew": "יא-אלול-תשצ״ז"
+  },
+  "2037-08-29": {
+    "inEnglish": "Ki Tavo",
+    "hDate": "18 Elul 5797",
+    "inHebrew": "כי תבוא",
+    "hDateInHebrew": "יח-אלול-תשצ״ז"
+  },
+  "2037-09-05": {
+    "inEnglish": "Nitzavim-Vayeilech",
+    "hDate": "25 Elul 5797",
+    "inHebrew": "נצבים־וילך",
+    "hDateInHebrew": "כה-אלול-תשצ״ז"
+  },
+  "2037-09-12": {
+    "inEnglish": "Ha’azinu",
+    "hDate": "3 Tishrei 5798",
+    "inHebrew": "האזינו",
+    "hDateInHebrew": "ג-תשרי-תשצ״ח"
+  },
+  "2037-10-03": {
+    "inEnglish": "Bereshit",
+    "hDate": "24 Tishrei 5798",
+    "inHebrew": "בראשית",
+    "hDateInHebrew": "כד-תשרי-תשצ״ח"
+  },
+  "2037-10-10": {
+    "inEnglish": "Noach",
+    "hDate": "1 Cheshvan 5798",
+    "inHebrew": "נח",
+    "hDateInHebrew": "א-חשוון-תשצ״ח"
+  },
+  "2037-10-17": {
+    "inEnglish": "Lech-Lecha",
+    "hDate": "8 Cheshvan 5798",
+    "inHebrew": "לך לך",
+    "hDateInHebrew": "ח-חשוון-תשצ״ח"
+  },
+  "2037-10-24": {
+    "inEnglish": "Vayera",
+    "hDate": "15 Cheshvan 5798",
+    "inHebrew": "וירא",
+    "hDateInHebrew": "טו-חשוון-תשצ״ח"
+  },
+  "2037-10-31": {
+    "inEnglish": "Chayei Sara",
+    "hDate": "22 Cheshvan 5798",
+    "inHebrew": "חיי שרה",
+    "hDateInHebrew": "כב-חשוון-תשצ״ח"
+  },
+  "2037-11-07": {
+    "inEnglish": "Toldot",
+    "hDate": "29 Cheshvan 5798",
+    "inHebrew": "תולדות",
+    "hDateInHebrew": "כט-חשוון-תשצ״ח"
+  },
+  "2037-11-14": {
+    "inEnglish": "Vayetzei",
+    "hDate": "6 Kislev 5798",
+    "inHebrew": "ויצא",
+    "hDateInHebrew": "ו-כסלו-תשצ״ח"
+  },
+  "2037-11-21": {
+    "inEnglish": "Vayishlach",
+    "hDate": "13 Kislev 5798",
+    "inHebrew": "וישלח",
+    "hDateInHebrew": "יג-כסלו-תשצ״ח"
+  },
+  "2037-11-28": {
+    "inEnglish": "Vayeshev",
+    "hDate": "20 Kislev 5798",
+    "inHebrew": "וישב",
+    "hDateInHebrew": "כ-כסלו-תשצ״ח"
+  },
+  "2037-12-05": {
+    "inEnglish": "Miketz",
+    "hDate": "27 Kislev 5798",
+    "inHebrew": "מקץ",
+    "hDateInHebrew": "כז-כסלו-תשצ״ח"
+  },
+  "2037-12-12": {
+    "inEnglish": "Vayigash",
+    "hDate": "4 Tevet 5798",
+    "inHebrew": "ויגש",
+    "hDateInHebrew": "ד-טבת-תשצ״ח"
+  },
+  "2037-12-19": {
+    "inEnglish": "Vayechi",
+    "hDate": "11 Tevet 5798",
+    "inHebrew": "ויחי",
+    "hDateInHebrew": "יא-טבת-תשצ״ח"
+  },
+  "2037-12-26": {
+    "inEnglish": "Shemot",
+    "hDate": "18 Tevet 5798",
+    "inHebrew": "שמות",
+    "hDateInHebrew": "יח-טבת-תשצ״ח"
+  },
+  "2038-01-02": {
+    "inEnglish": "Vaera",
+    "hDate": "25 Tevet 5798",
+    "inHebrew": "וארא",
+    "hDateInHebrew": "כה-טבת-תשצ״ח"
+  },
+  "2038-01-09": {
+    "inEnglish": "Bo",
+    "hDate": "3 Sh'vat 5798",
+    "inHebrew": "בא",
+    "hDateInHebrew": "ג-שבט-תשצ״ח"
+  },
+  "2038-01-16": {
+    "inEnglish": "Beshalach",
+    "hDate": "10 Sh'vat 5798",
+    "inHebrew": "בשלח",
+    "hDateInHebrew": "י-שבט-תשצ״ח"
+  },
+  "2038-01-23": {
+    "inEnglish": "Yitro",
+    "hDate": "17 Sh'vat 5798",
+    "inHebrew": "יתרו",
+    "hDateInHebrew": "יז-שבט-תשצ״ח"
+  },
+  "2038-01-30": {
+    "inEnglish": "Mishpatim",
+    "hDate": "24 Sh'vat 5798",
+    "inHebrew": "משפטים",
+    "hDateInHebrew": "כד-שבט-תשצ״ח"
+  },
+  "2038-02-06": {
+    "inEnglish": "Terumah",
+    "hDate": "1 Adar I 5798",
+    "inHebrew": "תרומה",
+    "hDateInHebrew": "א-אדר-undefined"
+  },
+  "2038-02-13": {
+    "inEnglish": "Tetzaveh",
+    "hDate": "8 Adar I 5798",
+    "inHebrew": "תצוה",
+    "hDateInHebrew": "ח-אדר-undefined"
+  },
+  "2038-02-20": {
+    "inEnglish": "Ki Tisa",
+    "hDate": "15 Adar I 5798",
+    "inHebrew": "כי תשא",
+    "hDateInHebrew": "טו-אדר-undefined"
+  },
+  "2038-02-27": {
+    "inEnglish": "Vayakhel",
+    "hDate": "22 Adar I 5798",
+    "inHebrew": "ויקהל",
+    "hDateInHebrew": "כב-אדר-undefined"
+  },
+  "2038-03-06": {
+    "inEnglish": "Pekudei",
+    "hDate": "29 Adar I 5798",
+    "inHebrew": "פקודי",
+    "hDateInHebrew": "כט-אדר-undefined"
+  },
+  "2038-03-13": {
+    "inEnglish": "Vayikra",
+    "hDate": "6 Adar II 5798",
+    "inHebrew": "ויקרא",
+    "hDateInHebrew": "ו-אדר-undefined"
+  },
+  "2038-03-20": {
+    "inEnglish": "Tzav",
+    "hDate": "13 Adar II 5798",
+    "inHebrew": "צו",
+    "hDateInHebrew": "יג-אדר-undefined"
+  },
+  "2038-03-27": {
+    "inEnglish": "Shmini",
+    "hDate": "20 Adar II 5798",
+    "inHebrew": "שמיני",
+    "hDateInHebrew": "כ-אדר-undefined"
+  },
+  "2038-04-03": {
+    "inEnglish": "Tazria",
+    "hDate": "27 Adar II 5798",
+    "inHebrew": "תזריע",
+    "hDateInHebrew": "כז-אדר-undefined"
+  },
+  "2038-04-10": {
+    "inEnglish": "Metzora",
+    "hDate": "5 Nisan 5798",
+    "inHebrew": "מצורע",
+    "hDateInHebrew": "ה-ניסן-תשצ״ח"
+  },
+  "2038-04-17": {
+    "inEnglish": "Achrei Mot",
+    "hDate": "12 Nisan 5798",
+    "inHebrew": "אחרי מות",
+    "hDateInHebrew": "יב-ניסן-תשצ״ח"
+  },
+  "2038-05-01": {
+    "inEnglish": "Kedoshim",
+    "hDate": "26 Nisan 5798",
+    "inHebrew": "קדושים",
+    "hDateInHebrew": "כו-ניסן-תשצ״ח"
+  },
+  "2038-05-08": {
+    "inEnglish": "Emor",
+    "hDate": "3 Iyyar 5798",
+    "inHebrew": "אמור",
+    "hDateInHebrew": "ג-אייר-תשצ״ח"
+  },
+  "2038-05-15": {
+    "inEnglish": "Behar",
+    "hDate": "10 Iyyar 5798",
+    "inHebrew": "בהר",
+    "hDateInHebrew": "י-אייר-תשצ״ח"
+  },
+  "2038-05-22": {
+    "inEnglish": "Bechukotai",
+    "hDate": "17 Iyyar 5798",
+    "inHebrew": "בחוקותי",
+    "hDateInHebrew": "יז-אייר-תשצ״ח"
+  },
+  "2038-05-29": {
+    "inEnglish": "Bamidbar",
+    "hDate": "24 Iyyar 5798",
+    "inHebrew": "במדבר",
+    "hDateInHebrew": "כד-אייר-תשצ״ח"
+  },
+  "2038-06-05": {
+    "inEnglish": "Nasso",
+    "hDate": "2 Sivan 5798",
+    "inHebrew": "נשא",
+    "hDateInHebrew": "ב-סיוון-תשצ״ח"
+  },
+  "2038-06-12": {
+    "inEnglish": "Beha’alotcha",
+    "hDate": "9 Sivan 5798",
+    "inHebrew": "בהעלותך",
+    "hDateInHebrew": "ט-סיוון-תשצ״ח"
+  },
+  "2038-06-19": {
+    "inEnglish": "Sh’lach",
+    "hDate": "16 Sivan 5798",
+    "inHebrew": "שלח",
+    "hDateInHebrew": "טז-סיוון-תשצ״ח"
+  },
+  "2038-06-26": {
+    "inEnglish": "Korach",
+    "hDate": "23 Sivan 5798",
+    "inHebrew": "קורח",
+    "hDateInHebrew": "כג-סיוון-תשצ״ח"
+  },
+  "2038-07-03": {
+    "inEnglish": "Chukat",
+    "hDate": "30 Sivan 5798",
+    "inHebrew": "חוקת",
+    "hDateInHebrew": "ל-סיוון-תשצ״ח"
+  },
+  "2038-07-10": {
+    "inEnglish": "Balak",
+    "hDate": "7 Tamuz 5798",
+    "inHebrew": "בלק",
+    "hDateInHebrew": "ז-תמוז-תשצ״ח"
+  },
+  "2038-07-17": {
+    "inEnglish": "Pinchas",
+    "hDate": "14 Tamuz 5798",
+    "inHebrew": "פנחס",
+    "hDateInHebrew": "יד-תמוז-תשצ״ח"
+  },
+  "2038-07-24": {
+    "inEnglish": "Matot",
+    "hDate": "21 Tamuz 5798",
+    "inHebrew": "מטות",
+    "hDateInHebrew": "כא-תמוז-תשצ״ח"
+  },
+  "2038-07-31": {
+    "inEnglish": "Masei",
+    "hDate": "28 Tamuz 5798",
+    "inHebrew": "מסעי",
+    "hDateInHebrew": "כח-תמוז-תשצ״ח"
+  },
+  "2038-08-07": {
+    "inEnglish": "Devarim",
+    "hDate": "6 Av 5798",
+    "inHebrew": "דברים",
+    "hDateInHebrew": "ו-אב-תשצ״ח"
+  },
+  "2038-08-14": {
+    "inEnglish": "Vaetchanan",
+    "hDate": "13 Av 5798",
+    "inHebrew": "ואתחנן",
+    "hDateInHebrew": "יג-אב-תשצ״ח"
+  },
+  "2038-08-21": {
+    "inEnglish": "Eikev",
+    "hDate": "20 Av 5798",
+    "inHebrew": "עקב",
+    "hDateInHebrew": "כ-אב-תשצ״ח"
+  },
+  "2038-08-28": {
+    "inEnglish": "Re’eh",
+    "hDate": "27 Av 5798",
+    "inHebrew": "ראה",
+    "hDateInHebrew": "כז-אב-תשצ״ח"
+  },
+  "2038-09-04": {
+    "inEnglish": "Shoftim",
+    "hDate": "4 Elul 5798",
+    "inHebrew": "שופטים",
+    "hDateInHebrew": "ד-אלול-תשצ״ח"
+  },
+  "2038-09-11": {
+    "inEnglish": "Ki Teitzei",
+    "hDate": "11 Elul 5798",
+    "inHebrew": "כי תצא",
+    "hDateInHebrew": "יא-אלול-תשצ״ח"
+  },
+  "2038-09-18": {
+    "inEnglish": "Ki Tavo",
+    "hDate": "18 Elul 5798",
+    "inHebrew": "כי תבוא",
+    "hDateInHebrew": "יח-אלול-תשצ״ח"
+  },
+  "2038-09-25": {
+    "inEnglish": "Nitzavim-Vayeilech",
+    "hDate": "25 Elul 5798",
+    "inHebrew": "נצבים־וילך",
+    "hDateInHebrew": "כה-אלול-תשצ״ח"
+  },
+  "2038-10-02": {
+    "inEnglish": "Ha’azinu",
+    "hDate": "3 Tishrei 5799",
+    "inHebrew": "האזינו",
+    "hDateInHebrew": "ג-תשרי-תשצ״ט"
+  },
+  "2038-10-23": {
+    "inEnglish": "Bereshit",
+    "hDate": "24 Tishrei 5799",
+    "inHebrew": "בראשית",
+    "hDateInHebrew": "כד-תשרי-תשצ״ט"
+  },
+  "2038-10-30": {
+    "inEnglish": "Noach",
+    "hDate": "1 Cheshvan 5799",
+    "inHebrew": "נח",
+    "hDateInHebrew": "א-חשוון-תשצ״ט"
+  },
+  "2038-11-06": {
+    "inEnglish": "Lech-Lecha",
+    "hDate": "8 Cheshvan 5799",
+    "inHebrew": "לך לך",
+    "hDateInHebrew": "ח-חשוון-תשצ״ט"
+  },
+  "2038-11-13": {
+    "inEnglish": "Vayera",
+    "hDate": "15 Cheshvan 5799",
+    "inHebrew": "וירא",
+    "hDateInHebrew": "טו-חשוון-תשצ״ט"
+  },
+  "2038-11-20": {
+    "inEnglish": "Chayei Sara",
+    "hDate": "22 Cheshvan 5799",
+    "inHebrew": "חיי שרה",
+    "hDateInHebrew": "כב-חשוון-תשצ״ט"
+  },
+  "2038-11-27": {
+    "inEnglish": "Toldot",
+    "hDate": "29 Cheshvan 5799",
+    "inHebrew": "תולדות",
+    "hDateInHebrew": "כט-חשוון-תשצ״ט"
+  },
+  "2038-12-04": {
+    "inEnglish": "Vayetzei",
+    "hDate": "7 Kislev 5799",
+    "inHebrew": "ויצא",
+    "hDateInHebrew": "ז-כסלו-תשצ״ט"
+  },
+  "2038-12-11": {
+    "inEnglish": "Vayishlach",
+    "hDate": "14 Kislev 5799",
+    "inHebrew": "וישלח",
+    "hDateInHebrew": "יד-כסלו-תשצ״ט"
+  },
+  "2038-12-18": {
+    "inEnglish": "Vayeshev",
+    "hDate": "21 Kislev 5799",
+    "inHebrew": "וישב",
+    "hDateInHebrew": "כא-כסלו-תשצ״ט"
+  },
+  "2038-12-25": {
+    "inEnglish": "Miketz",
+    "hDate": "28 Kislev 5799",
+    "inHebrew": "מקץ",
+    "hDateInHebrew": "כח-כסלו-תשצ״ט"
+  },
+  "2039-01-01": {
+    "inEnglish": "Vayigash",
+    "hDate": "5 Tevet 5799",
+    "inHebrew": "ויגש",
+    "hDateInHebrew": "ה-טבת-תשצ״ט"
+  },
+  "2039-01-08": {
+    "inEnglish": "Vayechi",
+    "hDate": "12 Tevet 5799",
+    "inHebrew": "ויחי",
+    "hDateInHebrew": "יב-טבת-תשצ״ט"
+  },
+  "2039-01-15": {
+    "inEnglish": "Shemot",
+    "hDate": "19 Tevet 5799",
+    "inHebrew": "שמות",
+    "hDateInHebrew": "יט-טבת-תשצ״ט"
+  },
+  "2039-01-22": {
+    "inEnglish": "Vaera",
+    "hDate": "26 Tevet 5799",
+    "inHebrew": "וארא",
+    "hDateInHebrew": "כו-טבת-תשצ״ט"
+  },
+  "2039-01-29": {
+    "inEnglish": "Bo",
+    "hDate": "4 Sh'vat 5799",
+    "inHebrew": "בא",
+    "hDateInHebrew": "ד-שבט-תשצ״ט"
+  },
+  "2039-02-05": {
+    "inEnglish": "Beshalach",
+    "hDate": "11 Sh'vat 5799",
+    "inHebrew": "בשלח",
+    "hDateInHebrew": "יא-שבט-תשצ״ט"
+  },
+  "2039-02-12": {
+    "inEnglish": "Yitro",
+    "hDate": "18 Sh'vat 5799",
+    "inHebrew": "יתרו",
+    "hDateInHebrew": "יח-שבט-תשצ״ט"
+  },
+  "2039-02-19": {
+    "inEnglish": "Mishpatim",
+    "hDate": "25 Sh'vat 5799",
+    "inHebrew": "משפטים",
+    "hDateInHebrew": "כה-שבט-תשצ״ט"
+  },
+  "2039-02-26": {
+    "inEnglish": "Terumah",
+    "hDate": "2 Adar 5799",
+    "inHebrew": "תרומה",
+    "hDateInHebrew": "ב-אדר-תשצ״ט"
+  },
+  "2039-03-05": {
+    "inEnglish": "Tetzaveh",
+    "hDate": "9 Adar 5799",
+    "inHebrew": "תצוה",
+    "hDateInHebrew": "ט-אדר-תשצ״ט"
+  },
+  "2039-03-12": {
+    "inEnglish": "Ki Tisa",
+    "hDate": "16 Adar 5799",
+    "inHebrew": "כי תשא",
+    "hDateInHebrew": "טז-אדר-תשצ״ט"
+  },
+  "2039-03-19": {
+    "inEnglish": "Vayakhel-Pekudei",
+    "hDate": "23 Adar 5799",
+    "inHebrew": "ויקהל־פקודי",
+    "hDateInHebrew": "כג-אדר-תשצ״ט"
+  },
+  "2039-03-26": {
+    "inEnglish": "Vayikra",
+    "hDate": "1 Nisan 5799",
+    "inHebrew": "ויקרא",
+    "hDateInHebrew": "א-ניסן-תשצ״ט"
+  },
+  "2039-04-02": {
+    "inEnglish": "Tzav",
+    "hDate": "8 Nisan 5799",
+    "inHebrew": "צו",
+    "hDateInHebrew": "ח-ניסן-תשצ״ט"
+  },
+  "2039-04-23": {
+    "inEnglish": "Shmini",
+    "hDate": "29 Nisan 5799",
+    "inHebrew": "שמיני",
+    "hDateInHebrew": "כט-ניסן-תשצ״ט"
+  },
+  "2039-04-30": {
+    "inEnglish": "Tazria-Metzora",
+    "hDate": "6 Iyyar 5799",
+    "inHebrew": "תזריע־מצורע",
+    "hDateInHebrew": "ו-אייר-תשצ״ט"
+  },
+  "2039-05-07": {
+    "inEnglish": "Achrei Mot-Kedoshim",
+    "hDate": "13 Iyyar 5799",
+    "inHebrew": "אחרי מות־קדושים",
+    "hDateInHebrew": "יג-אייר-תשצ״ט"
+  },
+  "2039-05-14": {
+    "inEnglish": "Emor",
+    "hDate": "20 Iyyar 5799",
+    "inHebrew": "אמור",
+    "hDateInHebrew": "כ-אייר-תשצ״ט"
+  },
+  "2039-05-21": {
+    "inEnglish": "Behar-Bechukotai",
+    "hDate": "27 Iyyar 5799",
+    "inHebrew": "בהר־בחוקותי",
+    "hDateInHebrew": "כז-אייר-תשצ״ט"
+  },
+  "2039-05-28": {
+    "inEnglish": "Bamidbar",
+    "hDate": "5 Sivan 5799",
+    "inHebrew": "במדבר",
+    "hDateInHebrew": "ה-סיוון-תשצ״ט"
+  },
+  "2039-06-04": {
+    "inEnglish": "Nasso",
+    "hDate": "12 Sivan 5799",
+    "inHebrew": "נשא",
+    "hDateInHebrew": "יב-סיוון-תשצ״ט"
+  },
+  "2039-06-11": {
+    "inEnglish": "Beha’alotcha",
+    "hDate": "19 Sivan 5799",
+    "inHebrew": "בהעלותך",
+    "hDateInHebrew": "יט-סיוון-תשצ״ט"
+  },
+  "2039-06-18": {
+    "inEnglish": "Sh’lach",
+    "hDate": "26 Sivan 5799",
+    "inHebrew": "שלח",
+    "hDateInHebrew": "כו-סיוון-תשצ״ט"
+  },
+  "2039-06-25": {
+    "inEnglish": "Korach",
+    "hDate": "3 Tamuz 5799",
+    "inHebrew": "קורח",
+    "hDateInHebrew": "ג-תמוז-תשצ״ט"
+  },
+  "2039-07-02": {
+    "inEnglish": "Chukat",
+    "hDate": "10 Tamuz 5799",
+    "inHebrew": "חוקת",
+    "hDateInHebrew": "י-תמוז-תשצ״ט"
+  },
+  "2039-07-09": {
+    "inEnglish": "Balak",
+    "hDate": "17 Tamuz 5799",
+    "inHebrew": "בלק",
+    "hDateInHebrew": "יז-תמוז-תשצ״ט"
+  },
+  "2039-07-16": {
+    "inEnglish": "Pinchas",
+    "hDate": "24 Tamuz 5799",
+    "inHebrew": "פנחס",
+    "hDateInHebrew": "כד-תמוז-תשצ״ט"
+  },
+  "2039-07-23": {
+    "inEnglish": "Matot-Masei",
+    "hDate": "2 Av 5799",
+    "inHebrew": "מטות־מסעי",
+    "hDateInHebrew": "ב-אב-תשצ״ט"
+  },
+  "2039-07-30": {
+    "inEnglish": "Devarim",
+    "hDate": "9 Av 5799",
+    "inHebrew": "דברים",
+    "hDateInHebrew": "ט-אב-תשצ״ט"
+  },
+  "2039-08-06": {
+    "inEnglish": "Vaetchanan",
+    "hDate": "16 Av 5799",
+    "inHebrew": "ואתחנן",
+    "hDateInHebrew": "טז-אב-תשצ״ט"
+  },
+  "2039-08-13": {
+    "inEnglish": "Eikev",
+    "hDate": "23 Av 5799",
+    "inHebrew": "עקב",
+    "hDateInHebrew": "כג-אב-תשצ״ט"
+  },
+  "2039-08-20": {
+    "inEnglish": "Re’eh",
+    "hDate": "30 Av 5799",
+    "inHebrew": "ראה",
+    "hDateInHebrew": "ל-אב-תשצ״ט"
+  },
+  "2039-08-27": {
+    "inEnglish": "Shoftim",
+    "hDate": "7 Elul 5799",
+    "inHebrew": "שופטים",
+    "hDateInHebrew": "ז-אלול-תשצ״ט"
+  },
+  "2039-09-03": {
+    "inEnglish": "Ki Teitzei",
+    "hDate": "14 Elul 5799",
+    "inHebrew": "כי תצא",
+    "hDateInHebrew": "יד-אלול-תשצ״ט"
+  },
+  "2039-09-10": {
+    "inEnglish": "Ki Tavo",
+    "hDate": "21 Elul 5799",
+    "inHebrew": "כי תבוא",
+    "hDateInHebrew": "כא-אלול-תשצ״ט"
+  },
+  "2039-09-17": {
+    "inEnglish": "Nitzavim",
+    "hDate": "28 Elul 5799",
+    "inHebrew": "נצבים",
+    "hDateInHebrew": "כח-אלול-תשצ״ט"
+  },
+  "2039-09-24": {
+    "inEnglish": "Vayeilech",
+    "hDate": "6 Tishrei 5800",
+    "inHebrew": "וילך",
+    "hDateInHebrew": "ו-תשרי-ת״ת"
+  },
+  "2039-10-01": {
+    "inEnglish": "Ha’azinu",
+    "hDate": "13 Tishrei 5800",
+    "inHebrew": "האזינו",
+    "hDateInHebrew": "יג-תשרי-ת״ת"
+  },
+  "2039-10-15": {
+    "inEnglish": "Bereshit",
+    "hDate": "27 Tishrei 5800",
+    "inHebrew": "בראשית",
+    "hDateInHebrew": "כז-תשרי-ת״ת"
+  },
+  "2039-10-22": {
+    "inEnglish": "Noach",
+    "hDate": "4 Cheshvan 5800",
+    "inHebrew": "נח",
+    "hDateInHebrew": "ד-חשוון-ת״ת"
+  },
+  "2039-10-29": {
+    "inEnglish": "Lech-Lecha",
+    "hDate": "11 Cheshvan 5800",
+    "inHebrew": "לך לך",
+    "hDateInHebrew": "יא-חשוון-ת״ת"
+  },
+  "2039-11-05": {
+    "inEnglish": "Vayera",
+    "hDate": "18 Cheshvan 5800",
+    "inHebrew": "וירא",
+    "hDateInHebrew": "יח-חשוון-ת״ת"
+  },
+  "2039-11-12": {
+    "inEnglish": "Chayei Sara",
+    "hDate": "25 Cheshvan 5800",
+    "inHebrew": "חיי שרה",
+    "hDateInHebrew": "כה-חשוון-ת״ת"
+  },
+  "2039-11-19": {
+    "inEnglish": "Toldot",
+    "hDate": "2 Kislev 5800",
+    "inHebrew": "תולדות",
+    "hDateInHebrew": "ב-כסלו-ת״ת"
+  },
+  "2039-11-26": {
+    "inEnglish": "Vayetzei",
+    "hDate": "9 Kislev 5800",
+    "inHebrew": "ויצא",
+    "hDateInHebrew": "ט-כסלו-ת״ת"
+  },
+  "2039-12-03": {
+    "inEnglish": "Vayishlach",
+    "hDate": "16 Kislev 5800",
+    "inHebrew": "וישלח",
+    "hDateInHebrew": "טז-כסלו-ת״ת"
+  },
+  "2039-12-10": {
+    "inEnglish": "Vayeshev",
+    "hDate": "23 Kislev 5800",
+    "inHebrew": "וישב",
+    "hDateInHebrew": "כג-כסלו-ת״ת"
+  },
+  "2039-12-17": {
+    "inEnglish": "Miketz",
+    "hDate": "30 Kislev 5800",
+    "inHebrew": "מקץ",
+    "hDateInHebrew": "ל-כסלו-ת״ת"
+  },
+  "2039-12-24": {
+    "inEnglish": "Vayigash",
+    "hDate": "7 Tevet 5800",
+    "inHebrew": "ויגש",
+    "hDateInHebrew": "ז-טבת-ת״ת"
+  },
+  "2039-12-31": {
+    "inEnglish": "Vayechi",
+    "hDate": "14 Tevet 5800",
+    "inHebrew": "ויחי",
+    "hDateInHebrew": "יד-טבת-ת״ת"
+  },
+  "2040-01-07": {
+    "inEnglish": "Shemot",
+    "hDate": "21 Tevet 5800",
+    "inHebrew": "שמות",
+    "hDateInHebrew": "כא-טבת-ת״ת"
+  },
+  "2040-01-14": {
+    "inEnglish": "Vaera",
+    "hDate": "28 Tevet 5800",
+    "inHebrew": "וארא",
+    "hDateInHebrew": "כח-טבת-ת״ת"
+  },
+  "2040-01-21": {
+    "inEnglish": "Bo",
+    "hDate": "6 Sh'vat 5800",
+    "inHebrew": "בא",
+    "hDateInHebrew": "ו-שבט-ת״ת"
+  },
+  "2040-01-28": {
+    "inEnglish": "Beshalach",
+    "hDate": "13 Sh'vat 5800",
+    "inHebrew": "בשלח",
+    "hDateInHebrew": "יג-שבט-ת״ת"
+  },
+  "2040-02-04": {
+    "inEnglish": "Yitro",
+    "hDate": "20 Sh'vat 5800",
+    "inHebrew": "יתרו",
+    "hDateInHebrew": "כ-שבט-ת״ת"
+  },
+  "2040-02-11": {
+    "inEnglish": "Mishpatim",
+    "hDate": "27 Sh'vat 5800",
+    "inHebrew": "משפטים",
+    "hDateInHebrew": "כז-שבט-ת״ת"
+  },
+  "2040-02-18": {
+    "inEnglish": "Terumah",
+    "hDate": "4 Adar 5800",
+    "inHebrew": "תרומה",
+    "hDateInHebrew": "ד-אדר-ת״ת"
+  },
+  "2040-02-25": {
+    "inEnglish": "Tetzaveh",
+    "hDate": "11 Adar 5800",
+    "inHebrew": "תצוה",
+    "hDateInHebrew": "יא-אדר-ת״ת"
+  },
+  "2040-03-03": {
+    "inEnglish": "Ki Tisa",
+    "hDate": "18 Adar 5800",
+    "inHebrew": "כי תשא",
+    "hDateInHebrew": "יח-אדר-ת״ת"
+  },
+  "2040-03-10": {
+    "inEnglish": "Vayakhel-Pekudei",
+    "hDate": "25 Adar 5800",
+    "inHebrew": "ויקהל־פקודי",
+    "hDateInHebrew": "כה-אדר-ת״ת"
+  },
+  "2040-03-17": {
+    "inEnglish": "Vayikra",
+    "hDate": "3 Nisan 5800",
+    "inHebrew": "ויקרא",
+    "hDateInHebrew": "ג-ניסן-ת״ת"
+  },
+  "2040-03-24": {
+    "inEnglish": "Tzav",
+    "hDate": "10 Nisan 5800",
+    "inHebrew": "צו",
+    "hDateInHebrew": "י-ניסן-ת״ת"
+  },
+  "2040-04-07": {
+    "inEnglish": "Shmini",
+    "hDate": "24 Nisan 5800",
+    "inHebrew": "שמיני",
+    "hDateInHebrew": "כד-ניסן-ת״ת"
+  },
+  "2040-04-14": {
+    "inEnglish": "Tazria-Metzora",
+    "hDate": "1 Iyyar 5800",
+    "inHebrew": "תזריע־מצורע",
+    "hDateInHebrew": "א-אייר-ת״ת"
+  },
+  "2040-04-21": {
+    "inEnglish": "Achrei Mot-Kedoshim",
+    "hDate": "8 Iyyar 5800",
+    "inHebrew": "אחרי מות־קדושים",
+    "hDateInHebrew": "ח-אייר-ת״ת"
+  },
+  "2040-04-28": {
+    "inEnglish": "Emor",
+    "hDate": "15 Iyyar 5800",
+    "inHebrew": "אמור",
+    "hDateInHebrew": "טו-אייר-ת״ת"
+  },
+  "2040-05-05": {
+    "inEnglish": "Behar-Bechukotai",
+    "hDate": "22 Iyyar 5800",
+    "inHebrew": "בהר־בחוקותי",
+    "hDateInHebrew": "כב-אייר-ת״ת"
+  },
+  "2040-05-12": {
+    "inEnglish": "Bamidbar",
+    "hDate": "29 Iyyar 5800",
+    "inHebrew": "במדבר",
+    "hDateInHebrew": "כט-אייר-ת״ת"
+  },
+  "2040-05-26": {
+    "inEnglish": "Nasso",
+    "hDate": "14 Sivan 5800",
+    "inHebrew": "נשא",
+    "hDateInHebrew": "יד-סיוון-ת״ת"
+  },
+  "2040-06-02": {
+    "inEnglish": "Beha’alotcha",
+    "hDate": "21 Sivan 5800",
+    "inHebrew": "בהעלותך",
+    "hDateInHebrew": "כא-סיוון-ת״ת"
+  },
+  "2040-06-09": {
+    "inEnglish": "Sh’lach",
+    "hDate": "28 Sivan 5800",
+    "inHebrew": "שלח",
+    "hDateInHebrew": "כח-סיוון-ת״ת"
+  },
+  "2040-06-16": {
+    "inEnglish": "Korach",
+    "hDate": "5 Tamuz 5800",
+    "inHebrew": "קורח",
+    "hDateInHebrew": "ה-תמוז-ת״ת"
+  },
+  "2040-06-23": {
+    "inEnglish": "Chukat-Balak",
+    "hDate": "12 Tamuz 5800",
+    "inHebrew": "חוקת־בלק",
+    "hDateInHebrew": "יב-תמוז-ת״ת"
+  },
+  "2040-06-30": {
+    "inEnglish": "Pinchas",
+    "hDate": "19 Tamuz 5800",
+    "inHebrew": "פנחס",
+    "hDateInHebrew": "יט-תמוז-ת״ת"
+  },
+  "2040-07-07": {
+    "inEnglish": "Matot-Masei",
+    "hDate": "26 Tamuz 5800",
+    "inHebrew": "מטות־מסעי",
+    "hDateInHebrew": "כו-תמוז-ת״ת"
+  },
+  "2040-07-14": {
+    "inEnglish": "Devarim",
+    "hDate": "4 Av 5800",
+    "inHebrew": "דברים",
+    "hDateInHebrew": "ד-אב-ת״ת"
+  },
+  "2040-07-21": {
+    "inEnglish": "Vaetchanan",
+    "hDate": "11 Av 5800",
+    "inHebrew": "ואתחנן",
+    "hDateInHebrew": "יא-אב-ת״ת"
+  },
+  "2040-07-28": {
+    "inEnglish": "Eikev",
+    "hDate": "18 Av 5800",
+    "inHebrew": "עקב",
+    "hDateInHebrew": "יח-אב-ת״ת"
+  },
+  "2040-08-04": {
+    "inEnglish": "Re’eh",
+    "hDate": "25 Av 5800",
+    "inHebrew": "ראה",
+    "hDateInHebrew": "כה-אב-ת״ת"
+  },
+  "2040-08-11": {
+    "inEnglish": "Shoftim",
+    "hDate": "2 Elul 5800",
+    "inHebrew": "שופטים",
+    "hDateInHebrew": "ב-אלול-ת״ת"
+  },
+  "2040-08-18": {
+    "inEnglish": "Ki Teitzei",
+    "hDate": "9 Elul 5800",
+    "inHebrew": "כי תצא",
+    "hDateInHebrew": "ט-אלול-ת״ת"
+  },
+  "2040-08-25": {
+    "inEnglish": "Ki Tavo",
+    "hDate": "16 Elul 5800",
+    "inHebrew": "כי תבוא",
+    "hDateInHebrew": "טז-אלול-ת״ת"
+  },
+  "2040-09-01": {
+    "inEnglish": "Nitzavim-Vayeilech",
+    "hDate": "23 Elul 5800",
+    "inHebrew": "נצבים־וילך",
+    "hDateInHebrew": "כג-אלול-ת״ת"
+  },
+  "2040-09-15": {
+    "inEnglish": "Ha’azinu",
+    "hDate": "8 Tishrei 5801",
+    "inHebrew": "האזינו",
+    "hDateInHebrew": "ח-תשרי-תת״א"
+  },
+  "2040-10-06": {
+    "inEnglish": "Bereshit",
+    "hDate": "29 Tishrei 5801",
+    "inHebrew": "בראשית",
+    "hDateInHebrew": "כט-תשרי-תת״א"
+  },
+  "2040-10-13": {
+    "inEnglish": "Noach",
+    "hDate": "6 Cheshvan 5801",
+    "inHebrew": "נח",
+    "hDateInHebrew": "ו-חשוון-תת״א"
+  },
+  "2040-10-20": {
+    "inEnglish": "Lech-Lecha",
+    "hDate": "13 Cheshvan 5801",
+    "inHebrew": "לך לך",
+    "hDateInHebrew": "יג-חשוון-תת״א"
+  },
+  "2040-10-27": {
+    "inEnglish": "Vayera",
+    "hDate": "20 Cheshvan 5801",
+    "inHebrew": "וירא",
+    "hDateInHebrew": "כ-חשוון-תת״א"
+  },
+  "2040-11-03": {
+    "inEnglish": "Chayei Sara",
+    "hDate": "27 Cheshvan 5801",
+    "inHebrew": "חיי שרה",
+    "hDateInHebrew": "כז-חשוון-תת״א"
+  },
+  "2040-11-10": {
+    "inEnglish": "Toldot",
+    "hDate": "5 Kislev 5801",
+    "inHebrew": "תולדות",
+    "hDateInHebrew": "ה-כסלו-תת״א"
+  },
+  "2040-11-17": {
+    "inEnglish": "Vayetzei",
+    "hDate": "12 Kislev 5801",
+    "inHebrew": "ויצא",
+    "hDateInHebrew": "יב-כסלו-תת״א"
+  },
+  "2040-11-24": {
+    "inEnglish": "Vayishlach",
+    "hDate": "19 Kislev 5801",
+    "inHebrew": "וישלח",
+    "hDateInHebrew": "יט-כסלו-תת״א"
+  },
+  "2040-12-01": {
+    "inEnglish": "Vayeshev",
+    "hDate": "26 Kislev 5801",
+    "inHebrew": "וישב",
+    "hDateInHebrew": "כו-כסלו-תת״א"
+  },
+  "2040-12-08": {
+    "inEnglish": "Miketz",
+    "hDate": "4 Tevet 5801",
+    "inHebrew": "מקץ",
+    "hDateInHebrew": "ד-טבת-תת״א"
+  },
+  "2040-12-15": {
+    "inEnglish": "Vayigash",
+    "hDate": "11 Tevet 5801",
+    "inHebrew": "ויגש",
+    "hDateInHebrew": "יא-טבת-תת״א"
+  },
+  "2040-12-22": {
+    "inEnglish": "Vayechi",
+    "hDate": "18 Tevet 5801",
+    "inHebrew": "ויחי",
+    "hDateInHebrew": "יח-טבת-תת״א"
+  },
+  "2040-12-29": {
+    "inEnglish": "Shemot",
+    "hDate": "25 Tevet 5801",
+    "inHebrew": "שמות",
+    "hDateInHebrew": "כה-טבת-תת״א"
+  },
+  "2041-01-05": {
+    "inEnglish": "Vaera",
+    "hDate": "3 Sh'vat 5801",
+    "inHebrew": "וארא",
+    "hDateInHebrew": "ג-שבט-תת״א"
+  },
+  "2041-01-12": {
+    "inEnglish": "Bo",
+    "hDate": "10 Sh'vat 5801",
+    "inHebrew": "בא",
+    "hDateInHebrew": "י-שבט-תת״א"
+  },
+  "2041-01-19": {
+    "inEnglish": "Beshalach",
+    "hDate": "17 Sh'vat 5801",
+    "inHebrew": "בשלח",
+    "hDateInHebrew": "יז-שבט-תת״א"
+  },
+  "2041-01-26": {
+    "inEnglish": "Yitro",
+    "hDate": "24 Sh'vat 5801",
+    "inHebrew": "יתרו",
+    "hDateInHebrew": "כד-שבט-תת״א"
+  },
+  "2041-02-02": {
+    "inEnglish": "Mishpatim",
+    "hDate": "1 Adar I 5801",
+    "inHebrew": "משפטים",
+    "hDateInHebrew": "א-אדר-undefined"
+  },
+  "2041-02-09": {
+    "inEnglish": "Terumah",
+    "hDate": "8 Adar I 5801",
+    "inHebrew": "תרומה",
+    "hDateInHebrew": "ח-אדר-undefined"
+  },
+  "2041-02-16": {
+    "inEnglish": "Tetzaveh",
+    "hDate": "15 Adar I 5801",
+    "inHebrew": "תצוה",
+    "hDateInHebrew": "טו-אדר-undefined"
+  },
+  "2041-02-23": {
+    "inEnglish": "Ki Tisa",
+    "hDate": "22 Adar I 5801",
+    "inHebrew": "כי תשא",
+    "hDateInHebrew": "כב-אדר-undefined"
+  },
+  "2041-03-02": {
+    "inEnglish": "Vayakhel",
+    "hDate": "29 Adar I 5801",
+    "inHebrew": "ויקהל",
+    "hDateInHebrew": "כט-אדר-undefined"
+  },
+  "2041-03-09": {
+    "inEnglish": "Pekudei",
+    "hDate": "6 Adar II 5801",
+    "inHebrew": "פקודי",
+    "hDateInHebrew": "ו-אדר-undefined"
+  },
+  "2041-03-16": {
+    "inEnglish": "Vayikra",
+    "hDate": "13 Adar II 5801",
+    "inHebrew": "ויקרא",
+    "hDateInHebrew": "יג-אדר-undefined"
+  },
+  "2041-03-23": {
+    "inEnglish": "Tzav",
+    "hDate": "20 Adar II 5801",
+    "inHebrew": "צו",
+    "hDateInHebrew": "כ-אדר-undefined"
+  },
+  "2041-03-30": {
+    "inEnglish": "Shmini",
+    "hDate": "27 Adar II 5801",
+    "inHebrew": "שמיני",
+    "hDateInHebrew": "כז-אדר-undefined"
+  },
+  "2041-04-06": {
+    "inEnglish": "Tazria",
+    "hDate": "5 Nisan 5801",
+    "inHebrew": "תזריע",
+    "hDateInHebrew": "ה-ניסן-תת״א"
+  },
+  "2041-04-13": {
+    "inEnglish": "Metzora",
+    "hDate": "12 Nisan 5801",
+    "inHebrew": "מצורע",
+    "hDateInHebrew": "יב-ניסן-תת״א"
+  },
+  "2041-04-27": {
+    "inEnglish": "Achrei Mot",
+    "hDate": "26 Nisan 5801",
+    "inHebrew": "אחרי מות",
+    "hDateInHebrew": "כו-ניסן-תת״א"
+  },
+  "2041-05-04": {
+    "inEnglish": "Kedoshim",
+    "hDate": "3 Iyyar 5801",
+    "inHebrew": "קדושים",
+    "hDateInHebrew": "ג-אייר-תת״א"
+  },
+  "2041-05-11": {
+    "inEnglish": "Emor",
+    "hDate": "10 Iyyar 5801",
+    "inHebrew": "אמור",
+    "hDateInHebrew": "י-אייר-תת״א"
+  },
+  "2041-05-18": {
+    "inEnglish": "Behar",
+    "hDate": "17 Iyyar 5801",
+    "inHebrew": "בהר",
+    "hDateInHebrew": "יז-אייר-תת״א"
+  },
+  "2041-05-25": {
+    "inEnglish": "Bechukotai",
+    "hDate": "24 Iyyar 5801",
+    "inHebrew": "בחוקותי",
+    "hDateInHebrew": "כד-אייר-תת״א"
+  },
+  "2041-06-01": {
+    "inEnglish": "Bamidbar",
+    "hDate": "2 Sivan 5801",
+    "inHebrew": "במדבר",
+    "hDateInHebrew": "ב-סיוון-תת״א"
+  },
+  "2041-06-08": {
+    "inEnglish": "Nasso",
+    "hDate": "9 Sivan 5801",
+    "inHebrew": "נשא",
+    "hDateInHebrew": "ט-סיוון-תת״א"
+  },
+  "2041-06-15": {
+    "inEnglish": "Beha’alotcha",
+    "hDate": "16 Sivan 5801",
+    "inHebrew": "בהעלותך",
+    "hDateInHebrew": "טז-סיוון-תת״א"
+  },
+  "2041-06-22": {
+    "inEnglish": "Sh’lach",
+    "hDate": "23 Sivan 5801",
+    "inHebrew": "שלח",
+    "hDateInHebrew": "כג-סיוון-תת״א"
+  },
+  "2041-06-29": {
+    "inEnglish": "Korach",
+    "hDate": "30 Sivan 5801",
+    "inHebrew": "קורח",
+    "hDateInHebrew": "ל-סיוון-תת״א"
+  },
+  "2041-07-06": {
+    "inEnglish": "Chukat",
+    "hDate": "7 Tamuz 5801",
+    "inHebrew": "חוקת",
+    "hDateInHebrew": "ז-תמוז-תת״א"
+  },
+  "2041-07-13": {
+    "inEnglish": "Balak",
+    "hDate": "14 Tamuz 5801",
+    "inHebrew": "בלק",
+    "hDateInHebrew": "יד-תמוז-תת״א"
+  },
+  "2041-07-20": {
+    "inEnglish": "Pinchas",
+    "hDate": "21 Tamuz 5801",
+    "inHebrew": "פנחס",
+    "hDateInHebrew": "כא-תמוז-תת״א"
+  },
+  "2041-07-27": {
+    "inEnglish": "Matot-Masei",
+    "hDate": "28 Tamuz 5801",
+    "inHebrew": "מטות־מסעי",
+    "hDateInHebrew": "כח-תמוז-תת״א"
+  },
+  "2041-08-03": {
+    "inEnglish": "Devarim",
+    "hDate": "6 Av 5801",
+    "inHebrew": "דברים",
+    "hDateInHebrew": "ו-אב-תת״א"
+  },
+  "2041-08-10": {
+    "inEnglish": "Vaetchanan",
+    "hDate": "13 Av 5801",
+    "inHebrew": "ואתחנן",
+    "hDateInHebrew": "יג-אב-תת״א"
+  },
+  "2041-08-17": {
+    "inEnglish": "Eikev",
+    "hDate": "20 Av 5801",
+    "inHebrew": "עקב",
+    "hDateInHebrew": "כ-אב-תת״א"
+  },
+  "2041-08-24": {
+    "inEnglish": "Re’eh",
+    "hDate": "27 Av 5801",
+    "inHebrew": "ראה",
+    "hDateInHebrew": "כז-אב-תת״א"
+  },
+  "2041-08-31": {
+    "inEnglish": "Shoftim",
+    "hDate": "4 Elul 5801",
+    "inHebrew": "שופטים",
+    "hDateInHebrew": "ד-אלול-תת״א"
+  },
+  "2041-09-07": {
+    "inEnglish": "Ki Teitzei",
+    "hDate": "11 Elul 5801",
+    "inHebrew": "כי תצא",
+    "hDateInHebrew": "יא-אלול-תת״א"
+  },
+  "2041-09-14": {
+    "inEnglish": "Ki Tavo",
+    "hDate": "18 Elul 5801",
+    "inHebrew": "כי תבוא",
+    "hDateInHebrew": "יח-אלול-תת״א"
+  },
+  "2041-09-21": {
+    "inEnglish": "Nitzavim-Vayeilech",
+    "hDate": "25 Elul 5801",
+    "inHebrew": "נצבים־וילך",
+    "hDateInHebrew": "כה-אלול-תת״א"
+  },
+  "2041-09-28": {
+    "inEnglish": "Ha’azinu",
+    "hDate": "3 Tishrei 5802",
+    "inHebrew": "האזינו",
+    "hDateInHebrew": "ג-תשרי-תת״ב"
+  },
+  "2041-10-19": {
+    "inEnglish": "Bereshit",
+    "hDate": "24 Tishrei 5802",
+    "inHebrew": "בראשית",
+    "hDateInHebrew": "כד-תשרי-תת״ב"
+  },
+  "2041-10-26": {
+    "inEnglish": "Noach",
+    "hDate": "1 Cheshvan 5802",
+    "inHebrew": "נח",
+    "hDateInHebrew": "א-חשוון-תת״ב"
+  },
+  "2041-11-02": {
+    "inEnglish": "Lech-Lecha",
+    "hDate": "8 Cheshvan 5802",
+    "inHebrew": "לך לך",
+    "hDateInHebrew": "ח-חשוון-תת״ב"
+  },
+  "2041-11-09": {
+    "inEnglish": "Vayera",
+    "hDate": "15 Cheshvan 5802",
+    "inHebrew": "וירא",
+    "hDateInHebrew": "טו-חשוון-תת״ב"
+  },
+  "2041-11-16": {
+    "inEnglish": "Chayei Sara",
+    "hDate": "22 Cheshvan 5802",
+    "inHebrew": "חיי שרה",
+    "hDateInHebrew": "כב-חשוון-תת״ב"
+  },
+  "2041-11-23": {
+    "inEnglish": "Toldot",
+    "hDate": "29 Cheshvan 5802",
+    "inHebrew": "תולדות",
+    "hDateInHebrew": "כט-חשוון-תת״ב"
+  },
+  "2041-11-30": {
+    "inEnglish": "Vayetzei",
+    "hDate": "7 Kislev 5802",
+    "inHebrew": "ויצא",
+    "hDateInHebrew": "ז-כסלו-תת״ב"
+  },
+  "2041-12-07": {
+    "inEnglish": "Vayishlach",
+    "hDate": "14 Kislev 5802",
+    "inHebrew": "וישלח",
+    "hDateInHebrew": "יד-כסלו-תת״ב"
+  },
+  "2041-12-14": {
+    "inEnglish": "Vayeshev",
+    "hDate": "21 Kislev 5802",
+    "inHebrew": "וישב",
+    "hDateInHebrew": "כא-כסלו-תת״ב"
+  },
+  "2041-12-21": {
+    "inEnglish": "Miketz",
+    "hDate": "28 Kislev 5802",
+    "inHebrew": "מקץ",
+    "hDateInHebrew": "כח-כסלו-תת״ב"
+  },
+  "2041-12-28": {
+    "inEnglish": "Vayigash",
+    "hDate": "5 Tevet 5802",
+    "inHebrew": "ויגש",
+    "hDateInHebrew": "ה-טבת-תת״ב"
+  },
+  "2042-01-04": {
+    "inEnglish": "Vayechi",
+    "hDate": "12 Tevet 5802",
+    "inHebrew": "ויחי",
+    "hDateInHebrew": "יב-טבת-תת״ב"
+  },
+  "2042-01-11": {
+    "inEnglish": "Shemot",
+    "hDate": "19 Tevet 5802",
+    "inHebrew": "שמות",
+    "hDateInHebrew": "יט-טבת-תת״ב"
+  },
+  "2042-01-18": {
+    "inEnglish": "Vaera",
+    "hDate": "26 Tevet 5802",
+    "inHebrew": "וארא",
+    "hDateInHebrew": "כו-טבת-תת״ב"
+  },
+  "2042-01-25": {
+    "inEnglish": "Bo",
+    "hDate": "4 Sh'vat 5802",
+    "inHebrew": "בא",
+    "hDateInHebrew": "ד-שבט-תת״ב"
+  },
+  "2042-02-01": {
+    "inEnglish": "Beshalach",
+    "hDate": "11 Sh'vat 5802",
+    "inHebrew": "בשלח",
+    "hDateInHebrew": "יא-שבט-תת״ב"
+  },
+  "2042-02-08": {
+    "inEnglish": "Yitro",
+    "hDate": "18 Sh'vat 5802",
+    "inHebrew": "יתרו",
+    "hDateInHebrew": "יח-שבט-תת״ב"
+  },
+  "2042-02-15": {
+    "inEnglish": "Mishpatim",
+    "hDate": "25 Sh'vat 5802",
+    "inHebrew": "משפטים",
+    "hDateInHebrew": "כה-שבט-תת״ב"
+  },
+  "2042-02-22": {
+    "inEnglish": "Terumah",
+    "hDate": "2 Adar 5802",
+    "inHebrew": "תרומה",
+    "hDateInHebrew": "ב-אדר-תת״ב"
+  },
+  "2042-03-01": {
+    "inEnglish": "Tetzaveh",
+    "hDate": "9 Adar 5802",
+    "inHebrew": "תצוה",
+    "hDateInHebrew": "ט-אדר-תת״ב"
+  },
+  "2042-03-08": {
+    "inEnglish": "Ki Tisa",
+    "hDate": "16 Adar 5802",
+    "inHebrew": "כי תשא",
+    "hDateInHebrew": "טז-אדר-תת״ב"
+  },
+  "2042-03-15": {
+    "inEnglish": "Vayakhel-Pekudei",
+    "hDate": "23 Adar 5802",
+    "inHebrew": "ויקהל־פקודי",
+    "hDateInHebrew": "כג-אדר-תת״ב"
+  },
+  "2042-03-22": {
+    "inEnglish": "Vayikra",
+    "hDate": "1 Nisan 5802",
+    "inHebrew": "ויקרא",
+    "hDateInHebrew": "א-ניסן-תת״ב"
+  },
+  "2042-03-29": {
+    "inEnglish": "Tzav",
+    "hDate": "8 Nisan 5802",
+    "inHebrew": "צו",
+    "hDateInHebrew": "ח-ניסן-תת״ב"
+  },
+  "2042-04-19": {
+    "inEnglish": "Shmini",
+    "hDate": "29 Nisan 5802",
+    "inHebrew": "שמיני",
+    "hDateInHebrew": "כט-ניסן-תת״ב"
+  },
+  "2042-04-26": {
+    "inEnglish": "Tazria-Metzora",
+    "hDate": "6 Iyyar 5802",
+    "inHebrew": "תזריע־מצורע",
+    "hDateInHebrew": "ו-אייר-תת״ב"
+  },
+  "2042-05-03": {
+    "inEnglish": "Achrei Mot-Kedoshim",
+    "hDate": "13 Iyyar 5802",
+    "inHebrew": "אחרי מות־קדושים",
+    "hDateInHebrew": "יג-אייר-תת״ב"
+  },
+  "2042-05-10": {
+    "inEnglish": "Emor",
+    "hDate": "20 Iyyar 5802",
+    "inHebrew": "אמור",
+    "hDateInHebrew": "כ-אייר-תת״ב"
+  },
+  "2042-05-17": {
+    "inEnglish": "Behar-Bechukotai",
+    "hDate": "27 Iyyar 5802",
+    "inHebrew": "בהר־בחוקותי",
+    "hDateInHebrew": "כז-אייר-תת״ב"
+  },
+  "2042-05-24": {
+    "inEnglish": "Bamidbar",
+    "hDate": "5 Sivan 5802",
+    "inHebrew": "במדבר",
+    "hDateInHebrew": "ה-סיוון-תת״ב"
+  },
+  "2042-05-31": {
+    "inEnglish": "Nasso",
+    "hDate": "12 Sivan 5802",
+    "inHebrew": "נשא",
+    "hDateInHebrew": "יב-סיוון-תת״ב"
+  },
+  "2042-06-07": {
+    "inEnglish": "Beha’alotcha",
+    "hDate": "19 Sivan 5802",
+    "inHebrew": "בהעלותך",
+    "hDateInHebrew": "יט-סיוון-תת״ב"
+  },
+  "2042-06-14": {
+    "inEnglish": "Sh’lach",
+    "hDate": "26 Sivan 5802",
+    "inHebrew": "שלח",
+    "hDateInHebrew": "כו-סיוון-תת״ב"
+  },
+  "2042-06-21": {
+    "inEnglish": "Korach",
+    "hDate": "3 Tamuz 5802",
+    "inHebrew": "קורח",
+    "hDateInHebrew": "ג-תמוז-תת״ב"
+  },
+  "2042-06-28": {
+    "inEnglish": "Chukat",
+    "hDate": "10 Tamuz 5802",
+    "inHebrew": "חוקת",
+    "hDateInHebrew": "י-תמוז-תת״ב"
+  },
+  "2042-07-05": {
+    "inEnglish": "Balak",
+    "hDate": "17 Tamuz 5802",
+    "inHebrew": "בלק",
+    "hDateInHebrew": "יז-תמוז-תת״ב"
+  },
+  "2042-07-12": {
+    "inEnglish": "Pinchas",
+    "hDate": "24 Tamuz 5802",
+    "inHebrew": "פנחס",
+    "hDateInHebrew": "כד-תמוז-תת״ב"
+  },
+  "2042-07-19": {
+    "inEnglish": "Matot-Masei",
+    "hDate": "2 Av 5802",
+    "inHebrew": "מטות־מסעי",
+    "hDateInHebrew": "ב-אב-תת״ב"
+  },
+  "2042-07-26": {
+    "inEnglish": "Devarim",
+    "hDate": "9 Av 5802",
+    "inHebrew": "דברים",
+    "hDateInHebrew": "ט-אב-תת״ב"
+  },
+  "2042-08-02": {
+    "inEnglish": "Vaetchanan",
+    "hDate": "16 Av 5802",
+    "inHebrew": "ואתחנן",
+    "hDateInHebrew": "טז-אב-תת״ב"
+  },
+  "2042-08-09": {
+    "inEnglish": "Eikev",
+    "hDate": "23 Av 5802",
+    "inHebrew": "עקב",
+    "hDateInHebrew": "כג-אב-תת״ב"
+  },
+  "2042-08-16": {
+    "inEnglish": "Re’eh",
+    "hDate": "30 Av 5802",
+    "inHebrew": "ראה",
+    "hDateInHebrew": "ל-אב-תת״ב"
+  },
+  "2042-08-23": {
+    "inEnglish": "Shoftim",
+    "hDate": "7 Elul 5802",
+    "inHebrew": "שופטים",
+    "hDateInHebrew": "ז-אלול-תת״ב"
+  },
+  "2042-08-30": {
+    "inEnglish": "Ki Teitzei",
+    "hDate": "14 Elul 5802",
+    "inHebrew": "כי תצא",
+    "hDateInHebrew": "יד-אלול-תת״ב"
+  },
+  "2042-09-06": {
+    "inEnglish": "Ki Tavo",
+    "hDate": "21 Elul 5802",
+    "inHebrew": "כי תבוא",
+    "hDateInHebrew": "כא-אלול-תת״ב"
+  },
+  "2042-09-13": {
+    "inEnglish": "Nitzavim",
+    "hDate": "28 Elul 5802",
+    "inHebrew": "נצבים",
+    "hDateInHebrew": "כח-אלול-תת״ב"
+  },
+  "2042-09-20": {
+    "inEnglish": "Vayeilech",
+    "hDate": "6 Tishrei 5803",
+    "inHebrew": "וילך",
+    "hDateInHebrew": "ו-תשרי-תת״ג"
+  },
+  "2042-09-27": {
+    "inEnglish": "Ha’azinu",
+    "hDate": "13 Tishrei 5803",
+    "inHebrew": "האזינו",
+    "hDateInHebrew": "יג-תשרי-תת״ג"
+  },
+  "2042-10-11": {
+    "inEnglish": "Bereshit",
+    "hDate": "27 Tishrei 5803",
+    "inHebrew": "בראשית",
+    "hDateInHebrew": "כז-תשרי-תת״ג"
+  },
+  "2042-10-18": {
+    "inEnglish": "Noach",
+    "hDate": "4 Cheshvan 5803",
+    "inHebrew": "נח",
+    "hDateInHebrew": "ד-חשוון-תת״ג"
+  },
+  "2042-10-25": {
+    "inEnglish": "Lech-Lecha",
+    "hDate": "11 Cheshvan 5803",
+    "inHebrew": "לך לך",
+    "hDateInHebrew": "יא-חשוון-תת״ג"
+  },
+  "2042-11-01": {
+    "inEnglish": "Vayera",
+    "hDate": "18 Cheshvan 5803",
+    "inHebrew": "וירא",
+    "hDateInHebrew": "יח-חשוון-תת״ג"
+  },
+  "2042-11-08": {
+    "inEnglish": "Chayei Sara",
+    "hDate": "25 Cheshvan 5803",
+    "inHebrew": "חיי שרה",
+    "hDateInHebrew": "כה-חשוון-תת״ג"
+  },
+  "2042-11-15": {
+    "inEnglish": "Toldot",
+    "hDate": "2 Kislev 5803",
+    "inHebrew": "תולדות",
+    "hDateInHebrew": "ב-כסלו-תת״ג"
+  },
+  "2042-11-22": {
+    "inEnglish": "Vayetzei",
+    "hDate": "9 Kislev 5803",
+    "inHebrew": "ויצא",
+    "hDateInHebrew": "ט-כסלו-תת״ג"
+  },
+  "2042-11-29": {
+    "inEnglish": "Vayishlach",
+    "hDate": "16 Kislev 5803",
+    "inHebrew": "וישלח",
+    "hDateInHebrew": "טז-כסלו-תת״ג"
+  },
+  "2042-12-06": {
+    "inEnglish": "Vayeshev",
+    "hDate": "23 Kislev 5803",
+    "inHebrew": "וישב",
+    "hDateInHebrew": "כג-כסלו-תת״ג"
+  },
+  "2042-12-13": {
+    "inEnglish": "Miketz",
+    "hDate": "30 Kislev 5803",
+    "inHebrew": "מקץ",
+    "hDateInHebrew": "ל-כסלו-תת״ג"
+  },
+  "2042-12-20": {
+    "inEnglish": "Vayigash",
+    "hDate": "7 Tevet 5803",
+    "inHebrew": "ויגש",
+    "hDateInHebrew": "ז-טבת-תת״ג"
+  },
+  "2042-12-27": {
+    "inEnglish": "Vayechi",
+    "hDate": "14 Tevet 5803",
+    "inHebrew": "ויחי",
+    "hDateInHebrew": "יד-טבת-תת״ג"
+  },
+  "2043-01-03": {
+    "inEnglish": "Shemot",
+    "hDate": "21 Tevet 5803",
+    "inHebrew": "שמות",
+    "hDateInHebrew": "כא-טבת-תת״ג"
+  },
+  "2043-01-10": {
+    "inEnglish": "Vaera",
+    "hDate": "28 Tevet 5803",
+    "inHebrew": "וארא",
+    "hDateInHebrew": "כח-טבת-תת״ג"
+  },
+  "2043-01-17": {
+    "inEnglish": "Bo",
+    "hDate": "6 Sh'vat 5803",
+    "inHebrew": "בא",
+    "hDateInHebrew": "ו-שבט-תת״ג"
+  },
+  "2043-01-24": {
+    "inEnglish": "Beshalach",
+    "hDate": "13 Sh'vat 5803",
+    "inHebrew": "בשלח",
+    "hDateInHebrew": "יג-שבט-תת״ג"
+  },
+  "2043-01-31": {
+    "inEnglish": "Yitro",
+    "hDate": "20 Sh'vat 5803",
+    "inHebrew": "יתרו",
+    "hDateInHebrew": "כ-שבט-תת״ג"
+  },
+  "2043-02-07": {
+    "inEnglish": "Mishpatim",
+    "hDate": "27 Sh'vat 5803",
+    "inHebrew": "משפטים",
+    "hDateInHebrew": "כז-שבט-תת״ג"
+  },
+  "2043-02-14": {
+    "inEnglish": "Terumah",
+    "hDate": "4 Adar I 5803",
+    "inHebrew": "תרומה",
+    "hDateInHebrew": "ד-אדר-undefined"
+  },
+  "2043-02-21": {
+    "inEnglish": "Tetzaveh",
+    "hDate": "11 Adar I 5803",
+    "inHebrew": "תצוה",
+    "hDateInHebrew": "יא-אדר-undefined"
+  },
+  "2043-02-28": {
+    "inEnglish": "Ki Tisa",
+    "hDate": "18 Adar I 5803",
+    "inHebrew": "כי תשא",
+    "hDateInHebrew": "יח-אדר-undefined"
+  },
+  "2043-03-07": {
+    "inEnglish": "Vayakhel",
+    "hDate": "25 Adar I 5803",
+    "inHebrew": "ויקהל",
+    "hDateInHebrew": "כה-אדר-undefined"
+  },
+  "2043-03-14": {
+    "inEnglish": "Pekudei",
+    "hDate": "2 Adar II 5803",
+    "inHebrew": "פקודי",
+    "hDateInHebrew": "ב-אדר-undefined"
+  },
+  "2043-03-21": {
+    "inEnglish": "Vayikra",
+    "hDate": "9 Adar II 5803",
+    "inHebrew": "ויקרא",
+    "hDateInHebrew": "ט-אדר-undefined"
+  },
+  "2043-03-28": {
+    "inEnglish": "Tzav",
+    "hDate": "16 Adar II 5803",
+    "inHebrew": "צו",
+    "hDateInHebrew": "טז-אדר-undefined"
+  },
+  "2043-04-04": {
+    "inEnglish": "Shmini",
+    "hDate": "23 Adar II 5803",
+    "inHebrew": "שמיני",
+    "hDateInHebrew": "כג-אדר-undefined"
+  },
+  "2043-04-11": {
+    "inEnglish": "Tazria",
+    "hDate": "1 Nisan 5803",
+    "inHebrew": "תזריע",
+    "hDateInHebrew": "א-ניסן-תת״ג"
+  },
+  "2043-04-18": {
+    "inEnglish": "Metzora",
+    "hDate": "8 Nisan 5803",
+    "inHebrew": "מצורע",
+    "hDateInHebrew": "ח-ניסן-תת״ג"
+  },
+  "2043-05-09": {
+    "inEnglish": "Achrei Mot",
+    "hDate": "29 Nisan 5803",
+    "inHebrew": "אחרי מות",
+    "hDateInHebrew": "כט-ניסן-תת״ג"
+  },
+  "2043-05-16": {
+    "inEnglish": "Kedoshim",
+    "hDate": "6 Iyyar 5803",
+    "inHebrew": "קדושים",
+    "hDateInHebrew": "ו-אייר-תת״ג"
+  },
+  "2043-05-23": {
+    "inEnglish": "Emor",
+    "hDate": "13 Iyyar 5803",
+    "inHebrew": "אמור",
+    "hDateInHebrew": "יג-אייר-תת״ג"
+  },
+  "2043-05-30": {
+    "inEnglish": "Behar",
+    "hDate": "20 Iyyar 5803",
+    "inHebrew": "בהר",
+    "hDateInHebrew": "כ-אייר-תת״ג"
+  },
+  "2043-06-06": {
+    "inEnglish": "Bechukotai",
+    "hDate": "27 Iyyar 5803",
+    "inHebrew": "בחוקותי",
+    "hDateInHebrew": "כז-אייר-תת״ג"
+  },
+  "2043-06-13": {
+    "inEnglish": "Bamidbar",
+    "hDate": "5 Sivan 5803",
+    "inHebrew": "במדבר",
+    "hDateInHebrew": "ה-סיוון-תת״ג"
+  },
+  "2043-06-20": {
+    "inEnglish": "Nasso",
+    "hDate": "12 Sivan 5803",
+    "inHebrew": "נשא",
+    "hDateInHebrew": "יב-סיוון-תת״ג"
+  },
+  "2043-06-27": {
+    "inEnglish": "Beha’alotcha",
+    "hDate": "19 Sivan 5803",
+    "inHebrew": "בהעלותך",
+    "hDateInHebrew": "יט-סיוון-תת״ג"
+  },
+  "2043-07-04": {
+    "inEnglish": "Sh’lach",
+    "hDate": "26 Sivan 5803",
+    "inHebrew": "שלח",
+    "hDateInHebrew": "כו-סיוון-תת״ג"
+  },
+  "2043-07-11": {
+    "inEnglish": "Korach",
+    "hDate": "3 Tamuz 5803",
+    "inHebrew": "קורח",
+    "hDateInHebrew": "ג-תמוז-תת״ג"
+  },
+  "2043-07-18": {
+    "inEnglish": "Chukat",
+    "hDate": "10 Tamuz 5803",
+    "inHebrew": "חוקת",
+    "hDateInHebrew": "י-תמוז-תת״ג"
+  },
+  "2043-07-25": {
+    "inEnglish": "Balak",
+    "hDate": "17 Tamuz 5803",
+    "inHebrew": "בלק",
+    "hDateInHebrew": "יז-תמוז-תת״ג"
+  },
+  "2043-08-01": {
+    "inEnglish": "Pinchas",
+    "hDate": "24 Tamuz 5803",
+    "inHebrew": "פנחס",
+    "hDateInHebrew": "כד-תמוז-תת״ג"
+  },
+  "2043-08-08": {
+    "inEnglish": "Matot-Masei",
+    "hDate": "2 Av 5803",
+    "inHebrew": "מטות־מסעי",
+    "hDateInHebrew": "ב-אב-תת״ג"
+  },
+  "2043-08-15": {
+    "inEnglish": "Devarim",
+    "hDate": "9 Av 5803",
+    "inHebrew": "דברים",
+    "hDateInHebrew": "ט-אב-תת״ג"
+  },
+  "2043-08-22": {
+    "inEnglish": "Vaetchanan",
+    "hDate": "16 Av 5803",
+    "inHebrew": "ואתחנן",
+    "hDateInHebrew": "טז-אב-תת״ג"
+  },
+  "2043-08-29": {
+    "inEnglish": "Eikev",
+    "hDate": "23 Av 5803",
+    "inHebrew": "עקב",
+    "hDateInHebrew": "כג-אב-תת״ג"
+  },
+  "2043-09-05": {
+    "inEnglish": "Re’eh",
+    "hDate": "30 Av 5803",
+    "inHebrew": "ראה",
+    "hDateInHebrew": "ל-אב-תת״ג"
+  },
+  "2043-09-12": {
+    "inEnglish": "Shoftim",
+    "hDate": "7 Elul 5803",
+    "inHebrew": "שופטים",
+    "hDateInHebrew": "ז-אלול-תת״ג"
+  },
+  "2043-09-19": {
+    "inEnglish": "Ki Teitzei",
+    "hDate": "14 Elul 5803",
+    "inHebrew": "כי תצא",
+    "hDateInHebrew": "יד-אלול-תת״ג"
+  },
+  "2043-09-26": {
+    "inEnglish": "Ki Tavo",
+    "hDate": "21 Elul 5803",
+    "inHebrew": "כי תבוא",
+    "hDateInHebrew": "כא-אלול-תת״ג"
+  },
+  "2043-10-03": {
+    "inEnglish": "Nitzavim",
+    "hDate": "28 Elul 5803",
+    "inHebrew": "נצבים",
+    "hDateInHebrew": "כח-אלול-תת״ג"
+  },
+  "2043-10-10": {
+    "inEnglish": "Vayeilech",
+    "hDate": "6 Tishrei 5804",
+    "inHebrew": "וילך",
+    "hDateInHebrew": "ו-תשרי-תת״ד"
+  },
+  "2043-10-17": {
+    "inEnglish": "Ha’azinu",
+    "hDate": "13 Tishrei 5804",
+    "inHebrew": "האזינו",
+    "hDateInHebrew": "יג-תשרי-תת״ד"
+  },
+  "2043-10-31": {
+    "inEnglish": "Bereshit",
+    "hDate": "27 Tishrei 5804",
+    "inHebrew": "בראשית",
+    "hDateInHebrew": "כז-תשרי-תת״ד"
+  },
+  "2043-11-07": {
+    "inEnglish": "Noach",
+    "hDate": "4 Cheshvan 5804",
+    "inHebrew": "נח",
+    "hDateInHebrew": "ד-חשוון-תת״ד"
+  },
+  "2043-11-14": {
+    "inEnglish": "Lech-Lecha",
+    "hDate": "11 Cheshvan 5804",
+    "inHebrew": "לך לך",
+    "hDateInHebrew": "יא-חשוון-תת״ד"
+  },
+  "2043-11-21": {
+    "inEnglish": "Vayera",
+    "hDate": "18 Cheshvan 5804",
+    "inHebrew": "וירא",
+    "hDateInHebrew": "יח-חשוון-תת״ד"
+  },
+  "2043-11-28": {
+    "inEnglish": "Chayei Sara",
+    "hDate": "25 Cheshvan 5804",
+    "inHebrew": "חיי שרה",
+    "hDateInHebrew": "כה-חשוון-תת״ד"
+  },
+  "2043-12-05": {
+    "inEnglish": "Toldot",
+    "hDate": "3 Kislev 5804",
+    "inHebrew": "תולדות",
+    "hDateInHebrew": "ג-כסלו-תת״ד"
+  },
+  "2043-12-12": {
+    "inEnglish": "Vayetzei",
+    "hDate": "10 Kislev 5804",
+    "inHebrew": "ויצא",
+    "hDateInHebrew": "י-כסלו-תת״ד"
+  },
+  "2043-12-19": {
+    "inEnglish": "Vayishlach",
+    "hDate": "17 Kislev 5804",
+    "inHebrew": "וישלח",
+    "hDateInHebrew": "יז-כסלו-תת״ד"
+  },
+  "2043-12-26": {
+    "inEnglish": "Vayeshev",
+    "hDate": "24 Kislev 5804",
+    "inHebrew": "וישב",
+    "hDateInHebrew": "כד-כסלו-תת״ד"
+  },
+  "2044-01-02": {
+    "inEnglish": "Miketz",
+    "hDate": "2 Tevet 5804",
+    "inHebrew": "מקץ",
+    "hDateInHebrew": "ב-טבת-תת״ד"
+  },
+  "2044-01-09": {
+    "inEnglish": "Vayigash",
+    "hDate": "9 Tevet 5804",
+    "inHebrew": "ויגש",
+    "hDateInHebrew": "ט-טבת-תת״ד"
+  },
+  "2044-01-16": {
+    "inEnglish": "Vayechi",
+    "hDate": "16 Tevet 5804",
+    "inHebrew": "ויחי",
+    "hDateInHebrew": "טז-טבת-תת״ד"
+  },
+  "2044-01-23": {
+    "inEnglish": "Shemot",
+    "hDate": "23 Tevet 5804",
+    "inHebrew": "שמות",
+    "hDateInHebrew": "כג-טבת-תת״ד"
+  },
+  "2044-01-30": {
+    "inEnglish": "Vaera",
+    "hDate": "1 Sh'vat 5804",
+    "inHebrew": "וארא",
+    "hDateInHebrew": "א-שבט-תת״ד"
+  },
+  "2044-02-06": {
+    "inEnglish": "Bo",
+    "hDate": "8 Sh'vat 5804",
+    "inHebrew": "בא",
+    "hDateInHebrew": "ח-שבט-תת״ד"
+  },
+  "2044-02-13": {
+    "inEnglish": "Beshalach",
+    "hDate": "15 Sh'vat 5804",
+    "inHebrew": "בשלח",
+    "hDateInHebrew": "טו-שבט-תת״ד"
+  },
+  "2044-02-20": {
+    "inEnglish": "Yitro",
+    "hDate": "22 Sh'vat 5804",
+    "inHebrew": "יתרו",
+    "hDateInHebrew": "כב-שבט-תת״ד"
+  },
+  "2044-02-27": {
+    "inEnglish": "Mishpatim",
+    "hDate": "29 Sh'vat 5804",
+    "inHebrew": "משפטים",
+    "hDateInHebrew": "כט-שבט-תת״ד"
+  },
+  "2044-03-05": {
+    "inEnglish": "Terumah",
+    "hDate": "6 Adar 5804",
+    "inHebrew": "תרומה",
+    "hDateInHebrew": "ו-אדר-תת״ד"
+  },
+  "2044-03-12": {
+    "inEnglish": "Tetzaveh",
+    "hDate": "13 Adar 5804",
+    "inHebrew": "תצוה",
+    "hDateInHebrew": "יג-אדר-תת״ד"
+  },
+  "2044-03-19": {
+    "inEnglish": "Ki Tisa",
+    "hDate": "20 Adar 5804",
+    "inHebrew": "כי תשא",
+    "hDateInHebrew": "כ-אדר-תת״ד"
+  },
+  "2044-03-26": {
+    "inEnglish": "Vayakhel-Pekudei",
+    "hDate": "27 Adar 5804",
+    "inHebrew": "ויקהל־פקודי",
+    "hDateInHebrew": "כז-אדר-תת״ד"
+  },
+  "2044-04-02": {
+    "inEnglish": "Vayikra",
+    "hDate": "5 Nisan 5804",
+    "inHebrew": "ויקרא",
+    "hDateInHebrew": "ה-ניסן-תת״ד"
+  },
+  "2044-04-09": {
+    "inEnglish": "Tzav",
+    "hDate": "12 Nisan 5804",
+    "inHebrew": "צו",
+    "hDateInHebrew": "יב-ניסן-תת״ד"
+  },
+  "2044-04-23": {
+    "inEnglish": "Shmini",
+    "hDate": "26 Nisan 5804",
+    "inHebrew": "שמיני",
+    "hDateInHebrew": "כו-ניסן-תת״ד"
+  },
+  "2044-04-30": {
+    "inEnglish": "Tazria-Metzora",
+    "hDate": "3 Iyyar 5804",
+    "inHebrew": "תזריע־מצורע",
+    "hDateInHebrew": "ג-אייר-תת״ד"
+  },
+  "2044-05-07": {
+    "inEnglish": "Achrei Mot-Kedoshim",
+    "hDate": "10 Iyyar 5804",
+    "inHebrew": "אחרי מות־קדושים",
+    "hDateInHebrew": "י-אייר-תת״ד"
+  },
+  "2044-05-14": {
+    "inEnglish": "Emor",
+    "hDate": "17 Iyyar 5804",
+    "inHebrew": "אמור",
+    "hDateInHebrew": "יז-אייר-תת״ד"
+  },
+  "2044-05-21": {
+    "inEnglish": "Behar-Bechukotai",
+    "hDate": "24 Iyyar 5804",
+    "inHebrew": "בהר־בחוקותי",
+    "hDateInHebrew": "כד-אייר-תת״ד"
+  },
+  "2044-05-28": {
+    "inEnglish": "Bamidbar",
+    "hDate": "2 Sivan 5804",
+    "inHebrew": "במדבר",
+    "hDateInHebrew": "ב-סיוון-תת״ד"
+  },
+  "2044-06-04": {
+    "inEnglish": "Nasso",
+    "hDate": "9 Sivan 5804",
+    "inHebrew": "נשא",
+    "hDateInHebrew": "ט-סיוון-תת״ד"
+  },
+  "2044-06-11": {
+    "inEnglish": "Beha’alotcha",
+    "hDate": "16 Sivan 5804",
+    "inHebrew": "בהעלותך",
+    "hDateInHebrew": "טז-סיוון-תת״ד"
+  },
+  "2044-06-18": {
+    "inEnglish": "Sh’lach",
+    "hDate": "23 Sivan 5804",
+    "inHebrew": "שלח",
+    "hDateInHebrew": "כג-סיוון-תת״ד"
+  },
+  "2044-06-25": {
+    "inEnglish": "Korach",
+    "hDate": "30 Sivan 5804",
+    "inHebrew": "קורח",
+    "hDateInHebrew": "ל-סיוון-תת״ד"
+  },
+  "2044-07-02": {
+    "inEnglish": "Chukat",
+    "hDate": "7 Tamuz 5804",
+    "inHebrew": "חוקת",
+    "hDateInHebrew": "ז-תמוז-תת״ד"
+  },
+  "2044-07-09": {
+    "inEnglish": "Balak",
+    "hDate": "14 Tamuz 5804",
+    "inHebrew": "בלק",
+    "hDateInHebrew": "יד-תמוז-תת״ד"
+  },
+  "2044-07-16": {
+    "inEnglish": "Pinchas",
+    "hDate": "21 Tamuz 5804",
+    "inHebrew": "פנחס",
+    "hDateInHebrew": "כא-תמוז-תת״ד"
+  },
+  "2044-07-23": {
+    "inEnglish": "Matot-Masei",
+    "hDate": "28 Tamuz 5804",
+    "inHebrew": "מטות־מסעי",
+    "hDateInHebrew": "כח-תמוז-תת״ד"
+  }
+}

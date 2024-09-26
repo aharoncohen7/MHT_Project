@@ -4,6 +4,7 @@ import Stack from '@mui/material/Stack';
 import UserContext from '../contexts';
 import Cookies from "js-cookie";
 import DataContext from '../contexts/dataContext';
+const SERVER_HOST = import.meta.env.VITE_SERVER_HOST;
 
 export default function MyRating({ item }) {
     const { logOut, setMessage } = useContext(UserContext)
@@ -14,7 +15,7 @@ export default function MyRating({ item }) {
             const newRating = event.target.value;
             console.log(newRating);
             try {
-                const response = await fetch(`https://vortly-db.onrender.com/api/posts/rating/${item.id}`, {
+                const response = await fetch(`${SERVER_HOST}/posts/rating/${item.id}`, {
                     method: 'PATCH',
                     body: JSON.stringify({
                         newRating,

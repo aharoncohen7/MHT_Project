@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import Cookies from "js-cookie";
+const SERVER_HOST = import.meta.env.VITE_SERVER_HOST;
+
 
 // בקשת שרת גנרית
 export const axiosReq = async ({ method = 'POST', body, url }) => {
@@ -8,7 +10,7 @@ export const axiosReq = async ({ method = 'POST', body, url }) => {
        // axios.defaults.baseURL = 'http://localhost:4000/api/'
        console.log('api req 😘 \n', { url, method, body })
        const { data: result } = await axios({
-          baseURL: 'https://vortly-db.onrender.com/api/',
+          baseURL: `${SERVER_HOST}/`,
           method,
           data: body || {},
           url,

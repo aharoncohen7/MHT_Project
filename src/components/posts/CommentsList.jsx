@@ -1,15 +1,16 @@
 import Cookies from "js-cookie";
 import React, { useEffect, useState } from "react";
 import Swal from "sweetalert2";
+const SERVER_HOST = import.meta.env.VITE_SERVER_HOST;
 
 const CommentList = ({ postId, showComments, setMessage }) => {
-  const urlComments = `s://vortly-db.onrender.com/api/comments/${postId}`;
+  const urlComments = `${SERVER_HOST}/comments/${postId}`;
   const [comments, setComments] = useState([]);
 
   function logOut() {
     localStorage.removeItem("Authorization");
     Cookies.remove("Authorization");
-    window.location.href = "https://vortly.onrender.com/";
+    // window.location.href = "https://vortly.onrender.com/";
   }
 
   // הוספת חדש
@@ -32,7 +33,7 @@ const CommentList = ({ postId, showComments, setMessage }) => {
       if (result.value) {
         const { body } = result.value;
         const response = await fetch(
-          "https://vortly-db.onrender.com/api/comments",
+          `${SERVER_HOST}/comments`,
           {
             method: "POST",
             body: JSON.stringify({
@@ -72,7 +73,7 @@ const CommentList = ({ postId, showComments, setMessage }) => {
   // מחיקה
   async function deleteComment(commentId, email) {
     const response = await fetch(
-      `https://vortly-db.onrender.com/api/comments/${commentId}`,
+      `${SERVER_HOST}/comments/${commentId}`,
       {
         method: "DELETE",
         headers: {
