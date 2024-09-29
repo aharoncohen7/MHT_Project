@@ -121,6 +121,8 @@
   font-weight: 700;
   font-size: 1.1rem;
   color: #034077;
+  cursor: pointer;
+
 }
 
 .link {
@@ -128,6 +130,7 @@
   font-weight: 700;
   font-size: 1rem;
   color: #002651;
+  cursor: pointer;
 }
 
 .containerList {

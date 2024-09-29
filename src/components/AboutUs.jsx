@@ -72,7 +72,7 @@ export default function AboutUs() {
            gap-x-8 gap-y-6 sm:grid-cols-2 md:flex lg:gap-x-10`}>
             {links.map((link) => (
            
-                <span key={link.name} onClick={()=>navigator(link.href)} className="px-2" >{link.name}</span>
+                <span key={link.name} onClick={()=>navigator(link.href)} className="px-2 cursor-pointer" >{link.name}</span>
          
             ))}
           </div>

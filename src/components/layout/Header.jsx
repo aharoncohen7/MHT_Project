@@ -95,11 +95,11 @@ export default function Navbar({ parasha }) {
                     {navButtons.map((item, index) => {
                       if (true) {
                         return (
-                          <a
+                          <span
                             key={item.name}
                             // href={item.href}
-                            onClick={(e) => {
-                              e.preventDefault(); // מונע רענון דף
+                            onClick={() => {
+                              // e.preventDefault(); // מונע רענון דף
                               handleNavigationClick(item);
                             }}
                             className={classNames(
@@ -115,7 +115,7 @@ export default function Navbar({ parasha }) {
                             }
                           >
                             {item.name}
-                          </a>
+                          </span>
                         );
                       }
                       return null;
@@ -138,13 +138,13 @@ export default function Navbar({ parasha }) {
 
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 {/* <button
-                                    type="button"
-                                    className="relative hidden p-1 text-gray-400 bg-gray-800 rounded-full hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 sm:block"
-                                >
-                                    <span className="absolute -inset-1.5" />
-                                    <span className="sr-only">View notifications</span>
-                                    <BellIcon className="w-6 h-6" aria-hidden="true" />
-                                </button> */}
+                  type="button"
+                  className="relative hidden p-1 text-gray-400 bg-gray-800 rounded-full hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 sm:block"
+                >
+                  <span className="absolute -inset-1.5" />
+                  <span className="sr-only">View notifications</span>
+                  <BellIcon className="w-6 h-6" aria-hidden="true" />
+                </button> */}
 
                 {!!isAdmin && (
                   <span className="text-white hidden sm:ml-2 sm:inline select-none">
@@ -210,7 +210,7 @@ export default function Navbar({ parasha }) {
                                             </Menu.Item> */}
                       <Menu.Item>
                         {({ active }) => (
-                          <a
+                          <span
                             onClick={isLoggedIn ? logOut : goToLoginAndBack}
                             className={classNames(
                               active ? "bg-gray-100" : "",
@@ -218,12 +218,12 @@ export default function Navbar({ parasha }) {
                             )}
                           >
                             {isLoggedIn ? " התנתק" : "התחבר/הרשם"}
-                          </a>
+                          </span>
                         )}
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
-                          <a
+                          <span
                             onClick={() => setIsDarkMode(!isDarkMode)}
                             className={classNames(
                               active ? "bg-gray-100" : "",
@@ -231,7 +231,7 @@ export default function Navbar({ parasha }) {
                             )}
                           >
                             {isDarkMode ? "מצב יום" : "מצב לילה"}
-                          </a>
+                          </span>
                         )}
                       </Menu.Item>
                     </Menu.Items>
@@ -246,8 +246,10 @@ export default function Navbar({ parasha }) {
               {navButtons.map((item, index) => (
                 <Disclosure.Button
                   key={item.name}
-                  as="a"
-                  href={item.href}
+                  onClick={(e) => {
+                    e.preventDefault(); // מונע רענון דף
+                    handleNavigationClick(item);
+                  }}
                   className={classNames(
                     // item.current
                     index === activeIndex

@@ -87,7 +87,7 @@ export default function ContactUsForm() {
       <Text as="h3" fontStyle="b">
         <span className={styles.header}>
           <SiTheconversation size={26} />
-          {`  צור קשר  `}
+          {`  צור קשר לפניות והערות  `}
         </span>
       </Text>
 
@@ -101,12 +101,12 @@ export default function ContactUsForm() {
       <form ref={formRef} onSubmit={handleSubmit} className={styles.form}>
         <div className={styles.formGroup}>
           <label className={styles.label}>
-            <Text as="h5" fontStyle="b">כותרת</Text>
+            {/* <Text as="h5" fontStyle="b">כותרת הפנייה</Text> */}
           </label>
           <input
             type="text"
             name='subject'
-            placeholder="נסה לנסח את פנייתך במשפט אחד"
+            placeholder="נושא הפנייה"
             className={styles.input}
             minLength={10}
             pattern="^[\u0590-\u05FF\s]*$"

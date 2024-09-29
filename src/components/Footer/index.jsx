@@ -4,9 +4,9 @@ import { about, questions, WeeklyPortion } from "./text.js";
 import { useNavigate } from "react-router-dom";
 export default function Footer() {
   const navigate = useNavigate()
-  const RenderList = ({ items, title }) => (
+  const RenderList = ({ items, title, href }) => (
     <div className={styles.renderList}>
-      <h3 className={styles.title}>{title}</h3>
+      <h3 className={styles.title} onClick={href? ()=>navigate(`/${href}`) : ()=>{}}>{title}</h3>
       <ul>
         {items?.map((item, index) => (
           <li key={index}>
@@ -25,7 +25,7 @@ export default function Footer() {
       <nav className={styles.container}>
         <div className={styles.containerList}>
           <RenderList items={WeeklyPortion} title={"נושאים"} />
-          <RenderList items={about} title={"אודות"} />
+          <RenderList items={about} title={"אודות"} href={"about"}/>
           <RenderList items={questions} title={"שאלות"} />
         </div>
       </nav>
