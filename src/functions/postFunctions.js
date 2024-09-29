@@ -1,5 +1,6 @@
 import Swal from 'sweetalert2';
 import Cookies from "js-cookie";
+const SERVER_HOST = import.meta.env.VITE_SERVER_HOST;
 
 
 //פוסט חדש
@@ -58,6 +59,7 @@ export async function importedAddNew(userId, selectedBook, selectedPortion, titl
 // עריכה
 export async function importedEdit(postId, selectedBook, selectedPortion, title, body, tags, setOriginalData, setMessage, setSend, setShowEditor, logOut, navigate) {
   try {
+    
     const response = await fetch(`${SERVER_HOST}/posts/${postId}`, {
       method: 'PATCH',
       body: JSON.stringify({
