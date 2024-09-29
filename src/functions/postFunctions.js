@@ -44,6 +44,7 @@ export async function importedAddNew(userId, selectedBook, selectedPortion, titl
     setMessage(['Post created successfully', true]);
     setSend(false)
     setShowEditor(false);
+    // navigate(`/post/${newPost.id}`)
     window.location.href = `/post/${newPost.id}`
 
 

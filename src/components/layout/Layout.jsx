@@ -12,6 +12,7 @@ import {
   getCurrentDateInfoFromAPI,
   getCurrentDateInfoFromJson,
 } from "../../helpers/formatDate";
+import DataContext from "../../contexts/dataContext";
 
 const Layout = () => {
   const [parasha, setParasha] = useState(null);
@@ -43,9 +44,8 @@ const Layout = () => {
         "פרשת " + dataFromAPI.currentParasha || dataFromJSON.currentParasha
       );
       setHoliday(dataFromJSON.upcomingHoliday);
-      console.log(dataFromAPI.firstEvent)
+      console.log(dataFromAPI.firstEvent);
       setTitle(dataFromAPI.firstEvent);
-
     };
     fetchData();
   }, []);
@@ -69,21 +69,23 @@ const Layout = () => {
   }, []);
 
   // במקרה של שינוי במערך השמה מחדש
-  useEffect(() => {
-    setFilteredData(originalData);
-  }, [originalData]);
 
   return (
     <span>
       <Navbar parasha={parasha} holiday={holiday} title={title} />
       {/* <Navbar parasha={title} holiday={holiday} title={title} /> */}
-      <Content
-        parasha={parasha}
-        originalData={originalData}
-        setOriginalData={setOriginalData}
-        filteredData={filteredData}
-        setFilteredData={setFilteredData}
-      />
+      import DataContext from "../../contexts/dataContext";
+      <DataContext.Provider
+        value={{
+          originalData,
+          setOriginalData,
+          filteredData,
+          setFilteredData,
+          parasha,
+        }}
+      >
+        <Content/>
+      </DataContext.Provider>
       <div className="hidden md:fixed border-t mt-10 max-w-80 top-0 left-40">
         <ParashaNav />
       </div>

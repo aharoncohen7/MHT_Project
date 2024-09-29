@@ -10,6 +10,7 @@ import PopUp from "../PopUp";
 import ParashaNav from "../layout/ParashaNav";
 import { formatDate } from "./../../functions";
 import Search from "./Search";
+import DataContext from "../../contexts/dataContext";
 
 // // שינוי מבנה תאריך יצירת מאמר
 // function formatDate(dateString) {
@@ -17,10 +18,10 @@ import Search from "./Search";
 //     return `${parts[2]}-${parts[1]}-${parts[0].slice(2)}`;
 // }
 
-export default function AllPosts({ setOriginalData }) {
+export default function AllPosts({  }) {
   const { userId, adminMode, setMessage, message, logOut, navigate } =
     useContext(UserContext);
-  // const {setOriginalData} = useContext(DataContext)
+  const {setOriginalData} = useContext(DataContext)
   const [showEditor, setShowEditor] = useState(false);
   const [sortedList, setSortedList] = useState([]);
 
