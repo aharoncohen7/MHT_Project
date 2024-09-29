@@ -4,7 +4,7 @@ import Switch from "@mui/material/Switch";
 import { Fragment, useContext, useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import UserContext from "../../contexts";
-import { getCurrentDateInfo } from "../../helpers/formatDate";
+import {getCurrentDateInfoFromAPI } from "../../helpers/formatDate";
 
 const logo1 = "https://www.uploads.co.il/uploads/images/106030801.png";
 const logo2 = "https://img.uniquemu.co.il/upload/bIj1Npo.png";
@@ -13,7 +13,7 @@ const avatar = "http://img.uniquemu.co.il/upload/4BSyycN.jpeg";
 const avatar2 = "http://img.uniquemu.co.il/upload/udYCav4.jpeg";
 
 // סרגל ראשי עליון
-export default function Navbar({ parasha }) {
+export default function Navbar({ parasha, holiday, title }) {
   const {
     logOut,
     isAdmin,
@@ -30,6 +30,7 @@ export default function Navbar({ parasha }) {
 
   const navButtons = [
     { id: 0, name: parasha || "פרשת השבוע", href: `/` },
+    // { id: 1, name: holiday || "חגים", href: holiday ? `/home/?parasha=${holiday}` : `/`},
     { id: 1, name: "כל הפרשיות", href: "/home/?parasha=all" },
     {
       id: 2,
@@ -58,14 +59,8 @@ export default function Navbar({ parasha }) {
     navigate("/login", { state: { from: location } });
   };
 
-  useEffect(() => {
-    const login = async () => {
-      const aa = await getCurrentDateInfo();
-      console.log("login: ", aa);
-    };
 
-    login();
-  }, []);
+  
 
   return (
     <Disclosure as="nav" className={`fixed top-0 z-10 w-full blue-gradient`}>
@@ -90,22 +85,19 @@ export default function Navbar({ parasha }) {
                 <div className="flex items-center flex-shrink-0">
                   <img className="w-auto h-14 " src={logo2} alt="logo" />
                 </div>
-                <div className="hidden sm:ml-6 sm:block ">
-                  <div className="flex space-x-2  text-center items-center justify-center ">
+                <div className="hidden sm:ml-6 sm:block px-2">
+                  <div className="flex space-x-1 text-center items-center justify-center ">
                     {navButtons.map((item, index) => {
                       if (true) {
                         return (
                           <span
                             key={item.name}
-                            // href={item.href}
                             onClick={() => {
-                              // e.preventDefault(); // מונע רענון דף
                               handleNavigationClick(item);
                             }}
                             className={classNames(
-                              // item.current
                               index === activeIndex
-                                ? "bg-gray-900 text-white "
+                                ? "bg-yellow-900 text-white "
                                 : "text-gray-300 hover:bg-gray-700 ",
                               "rounded-md px-4 py-4 text-sm font-medium cursor-pointer select-none"
                             )}
@@ -129,10 +121,10 @@ export default function Navbar({ parasha }) {
                   onClick={() => {
                     navigate(navButtons[0].href);
                   }}
-                  className="text-center  font-bold leading-7 text-white sm:truncate sm:text-2xl sm:tracking-right select-none"
+                  className="text-center font-bold leading-7 text-white sm:truncate sm:text-2xl sm:tracking-right select-none"
                 >
                   {`וורטלי -`}
-                  <span>{parasha ? ` ${parasha}` : null}</span>
+                  <span>{title ? ` ${title}` : null}</span>
                 </h2>
               </div>
 
@@ -148,7 +140,7 @@ export default function Navbar({ parasha }) {
 
                 {!!isAdmin && (
                   <span className="text-white hidden sm:ml-2 sm:inline select-none">
-                    {adminMode ? "Admin" : "User"}
+                    {adminMode ? "מצב ניהול" : "מצב רגיל"}
                     <Switch
                       className="hidden sm:ml-2 sm:block"
                       checked={adminMode}
@@ -157,7 +149,7 @@ export default function Navbar({ parasha }) {
                         setAdminMode(!adminMode);
                       }}
                       name="loading"
-                      color="primary"
+                      color="secondary"
                     />
                   </span>
                 )}

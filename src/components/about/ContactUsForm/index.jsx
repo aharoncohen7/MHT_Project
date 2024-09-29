@@ -87,7 +87,7 @@ export default function ContactUsForm() {
       <Text as="h3" fontStyle="b">
         <span className={styles.header}>
           <SiTheconversation size={26} />
-          {`  צור קשר לפניות והערות  `}
+          {`  טופס יצירת קשר `}
         </span>
       </Text>
 

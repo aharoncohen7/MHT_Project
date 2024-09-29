@@ -1,4 +1,3 @@
-import Login from "../components/login/Login";
 
 // תאריך נוכחי
 export function getCurrentDate() {
@@ -80,7 +79,7 @@ export const phoneValidator = (phone) => {
 };
 
 
-const parshiot = {
+export const parshiot = {
   "בראשית": "בראשית",
   "נח": "נח",
   "לך לך": "לך לך",

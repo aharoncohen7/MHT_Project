@@ -8,16 +8,22 @@ import Footer from "../Footer";
 import Content from "./Content";
 import Navbar from "./Header";
 import ParashaNav from "./ParashaNav";
+import {
+  getCurrentDateInfoFromAPI,
+  getCurrentDateInfoFromJson,
+} from "../../helpers/formatDate";
 
 const Layout = () => {
   const [parasha, setParasha] = useState(null);
+  const [holiday, setHoliday] = useState(null);
+  const [title, setTitle] = useState(null);
   const [originalData, setOriginalData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
   const { logOut, setMessage, message } = useContext(UserContext);
 
   // קבלת פרשה
   useEffect(() => {
-    async function fetchData() {
+    async function fetchData1() {
       try {
         const response = await axios.get(
           `https://www.hebcal.com/hebcal?cfg=json&s=on&start=${getCurrentDate()}&end=${getNextWeekDate()}`
@@ -28,9 +34,21 @@ const Layout = () => {
         console.error("Error fetching data:", error);
       }
     }
+    const fetchData = async () => {
+      const dataFromAPI = await getCurrentDateInfoFromAPI();
+      console.log(dataFromAPI);
+      const dataFromJSON = await getCurrentDateInfoFromJson();
+      console.log(dataFromJSON);
+      setParasha(
+        "פרשת " + dataFromAPI.currentParasha || dataFromJSON.currentParasha
+      );
+      setHoliday(dataFromJSON.upcomingHoliday);
+      console.log(dataFromAPI.firstEvent)
+      setTitle(dataFromAPI.firstEvent);
+
+    };
     fetchData();
   }, []);
-
 
   // קיבוע פוסטים
   useEffect(() => {
@@ -50,7 +68,6 @@ const Layout = () => {
     fetchData();
   }, []);
 
-
   // במקרה של שינוי במערך השמה מחדש
   useEffect(() => {
     setFilteredData(originalData);
@@ -58,7 +75,8 @@ const Layout = () => {
 
   return (
     <span>
-      <Navbar parasha={parasha} />
+      <Navbar parasha={parasha} holiday={holiday} title={title} />
+      {/* <Navbar parasha={title} holiday={holiday} title={title} /> */}
       <Content
         parasha={parasha}
         originalData={originalData}
