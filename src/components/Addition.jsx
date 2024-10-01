@@ -5,17 +5,87 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import SendIcon from "@mui/icons-material/Send";
 import UserContext from "../contexts";
 import { FiFeather } from "react-icons/fi";
+import { Box, Dialog } from "@mui/material";
+import ClearIcon from "@mui/icons-material/Clear";
+import { ButtonClick } from "./about/ButtonClick";
+
 
 export default function Addition() {
   const { navigate, setMessage, userId } = useContext(UserContext);
-  const [showEditor, setShowEditor] = useState(false);
+  const [isPopUpOpen, setIsPopUpOpen] = useState(false);
   const [complete, setComplete] = useState(false);
   const [send, setSend] = useState(false);
+  const handleClosePopUp = () => {
+    setIsPopUpOpen(false);
+  };
+
+  const showPopUp = () => {
+    setIsPopUpOpen(true);
+  };
+
+
 
   return (
     <>
+      <Dialog
+        open={isPopUpOpen}
+        onClose={handleClosePopUp}
+        maxWidth="md"
+        fullWidth
+      >
+        <Box sx={{ display: "flex", justifyContent: "flex-end", mb: 1 }}>
+          <Button onClick={handleClosePopUp}>
+            <ClearIcon />
+          </Button>
+        </Box>
+
+        <>
+            {/* <div style={{ position: "fixed", top: "100px", minHeight: "400px"}}> */}
+              <Editor
+                setShowEditor={setIsPopUpOpen}
+                send={send}
+                setComplete={setComplete}
+                setSend={setSend}
+              />
+            {/* </div> */}
+            <div
+              style={{
+                position: "absolute",
+                left: "200px",
+                bottom: "10px",
+                display: "flex",
+                gap: "1rem",
+              }}
+            >
+              <Button
+                variant="outlined"
+                startIcon={<DeleteIcon />}
+                onClick={() => setIsPopUpOpen(false)}
+              >
+                סגור
+              </Button>
+              <ButtonClick
+                disabled={!complete}
+                variant="contained"
+                endIcon={<SendIcon />}
+                onClick={() => {
+                  if (userId) {
+                    setSend(true);
+                  } else {
+                    setMessage(["כדי לפרסם פוסט עליך להיות מחובר", false]);
+                    navigate(-1);
+                  }
+                }}
+              >
+                שלח
+              </ButtonClick>
+            </div>
+          </>
+
+      
+      </Dialog>
       <div className=" max-w-md p-6 mx-auto bg-white rounded-lg shadow-md ">
-        {!showEditor && (
+        {!isPopUpOpen && (
           <>
             <h2 className="mb-6 text-2xl font-bold text-center text-gray-900">
               הוראות לפני יצירת מאמר חדש
@@ -45,10 +115,9 @@ export default function Addition() {
             </p>
 
             <div className="flex justify-center mt-8 gap-4">
-              
               <button
                 className="px-10 py-2 font-bold text-white bg-blue-500 border rounded hover:bg-blue-700"
-                onClick={() => setShowEditor(true)}
+                onClick={() => setIsPopUpOpen(true)}
               >
                 <svg
                   className="w-20 h-6 mr-4"
@@ -64,17 +133,17 @@ export default function Addition() {
                 className="px-10 py-2 font-bold text-white bg-blue-500 border rounded hover:bg-blue-700"
                 onClick={() => navigate("/")}
               >
-              ביטול
+                ביטול
               </button>
             </div>
           </>
         )}
 
-        {showEditor && (
+        {isPopUpOpen && (
           <>
             <div style={{ position: "fixed", top: "100px" }}>
               <Editor
-                setShowEditor={setShowEditor}
+                setShowEditor={setIsPopUpOpen}
                 send={send}
                 setComplete={setComplete}
                 setSend={setSend}
@@ -92,7 +161,7 @@ export default function Addition() {
               <Button
                 variant="outlined"
                 startIcon={<DeleteIcon />}
-                onClick={() => setShowEditor(false)}
+                onClick={() => setIsPopUpOpen(false)}
               >
                 סגור
               </Button>

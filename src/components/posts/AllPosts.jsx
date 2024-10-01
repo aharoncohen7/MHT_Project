@@ -2,8 +2,8 @@ import React, { useContext, useState } from "react";
 import { FiFeather, FiTrash2 } from "react-icons/fi";
 import UserContext from "../../contexts";
 import {
-    importedAdminEdit,
-    importedDelete,
+  importedAdminEdit,
+  importedDelete,
 } from "../../functions/postFunctions";
 import ErrorBoundary from "../ErrorBoundary";
 import PopUp from "../PopUp";
@@ -11,6 +11,7 @@ import ParashaNav from "../layout/ParashaNav";
 import { formatDate } from "./../../functions";
 import Search from "./Search";
 import DataContext from "../../contexts/dataContext";
+import { Tooltip } from "@mui/material";
 
 // // שינוי מבנה תאריך יצירת מאמר
 // function formatDate(dateString) {
@@ -18,10 +19,10 @@ import DataContext from "../../contexts/dataContext";
 //     return `${parts[2]}-${parts[1]}-${parts[0].slice(2)}`;
 // }
 
-export default function AllPosts({  }) {
+export default function AllPosts({}) {
   const { userId, adminMode, setMessage, message, logOut, navigate } =
     useContext(UserContext);
-  const {setOriginalData} = useContext(DataContext)
+  const { setOriginalData } = useContext(DataContext);
   const [showEditor, setShowEditor] = useState(false);
   const [sortedList, setSortedList] = useState([]);
 
@@ -79,63 +80,117 @@ export default function AllPosts({  }) {
             {sortedList.map((post) => (
               <article
                 key={post.id}
-                className="cursor-pointer bg-white flex flex-col items-center justify-between max-w-xl hover:bg-gray-100 border border-gray-300 shadow-md truncate rounded-xl"
+                style={{ direction: "ltr" }}
+                className=" bg-white flex flex-col items-center justify-between max-w-xl hover:bg-gray-100 border border-gray-300 shadow-md truncate rounded-xl"
               >
-                <div className="flex items-center text-xs gap-x-4">
+                <div className="flex items-center text-xs gap-x-4 py-4">
                   <p className="text-gray-500">{formatDate(post.created_at)}</p>
                   <div className="text-sm leading-6">
-                    <p className="font-semibold text-gray-900">
-                      {/* <span className="absolute inset-0" /> */}
-                      {post.author} :מחבר
-                    </p>
+                    <Tooltip
+                      title="מצא עוד פוסטים של מחבר זה"
+                      placement="top"
+                      arrow
+                    >
+                      <p
+                        className="font-semibold text-gray-900 cursor-pointer"
+                        onClick={() => {
+                          navigate(`/home/?author=${post.userId}`);
+                        }}
+                      >
+                        {/* <span className="absolute inset-0" /> */}
+                        {post.author}
+                      </p>
+                    </Tooltip>
                   </div>
-                  <a className="relative z-1 rounded-full bg-gray-50 px-4 py-4  mt-2 font-medium text-gray-600 hover:bg-gray-100 ">
-                    {post.subtopic}
-                  </a>
+                  <Tooltip
+                    title="מצא עוד מאמרים בנושא זה"
+                    placement="top"
+                    arrow
+                  >
+                    <a
+                      className="relative z-1 rounded-full bg-red-50 px-4 py-4  mt-2 font-medium text-gray-600 hover:bg-gray-300 "
+                      onClick={() => {
+                        if (post.subtopic)
+                          navigate(`/home/?parasha=${post.subtopic}`);
+                      }}
+                    >
+                      {post.subtopic}
+                    </a>
+                  </Tooltip>
                 </div>
                 <div
                   onClick={() => {
                     navigate(`/post/${post.id}`);
                   }}
-                  className="relative group"
+                  className="relative group px-6"
+                  style={{ width: "100%" }}
                 >
                   <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
-                    <span className="absolute inset-0 " />
+                    {/* <span 
+                    className="absolute inset-0" 
+                    /> */}
                     <p
-                      style={{ wordWrap: "break-word" }}
-                      className=" ml-20 mr-20 text-right m-6 overflow-wrap-normal "
+                      style={
+                        // {   }
+                        {
+                          direction: "rtl",
+                          // wordWrap: "break-word",
+                          whiteSace: "nowrap" /* מונע מהטקסט לרדת שורה */,
+                          overflow:
+                            "hidden" /* מוודא שהטקסט ייחתך אם הוא עובר את גבול הקופסה */,
+                          textOverflow:
+                            "ellipsis" /* מציג שלוש נקודות אם הטקסט לא נכנס */,
+                          display:
+                            "block" /* מאפשר תכונות overflow ו-text-overflow לעבוד */,
+                          width: "100%" /* הגדר רוחב שתואם ל-DIV */,
+                        }
+                      }
+                      className="text-right overflow-wrap-normal "
                     >
                       {post.title}
                     </p>
-                    <p className="ml-20 mr-20 text-sm leading-6 text-gray-600 line-clamp-3">
+                    <p className="py-2 text-sm leading-8 text-gray-600 line-clamp-4">
                       {extractTextBetweenTags(post.body)}
                     </p>
                   </h3>
-                  <p className="ml-20 mt-5  text-sm leading-6 text-gray-600 line-clamp-3">
-                    {"<<קרא עוד"}
+                  <p className="cursor-pointer ml-2 mt-3  text-sm leading-6 text-gray-600 line-clamp-3">
+                    {"<< קרא עוד"}
                   </p>
                 </div>
                 <div className="relative flex items-center mt-8 gap-x-4">
                   {adminMode && (
                     <>
+                     <Tooltip
+                        title="מחיקה"
+                        placement="top"
+                        arrow
+                      >
+
                       <button
                         type="button"
                         className="flex items-center justify-center w-8 h-8 bg-gray-200 rounded-full hover:bg-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500"
                         onClick={() => deletePost(post)}
-                      >
+                        >
                         <span className="text-lg font-bold text-gray-500">
                           <FiTrash2 />
                         </span>
                       </button>
-                      <button
-                        type="button"
-                        className="flex items-center justify-center w-8 h-8 bg-gray-200 rounded-full hover:bg-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500"
-                        onClick={() => edit_as_admin(post)}
+                        </Tooltip>
+                      <Tooltip
+                        title="עריכה"
+                        placement="top"
+                        arrow
                       >
-                        <span className="text-lg font-bold text-gray-500">
-                          ✏️
-                        </span>
-                      </button>
+                        <button
+                          type="button"
+                          className="flex items-center justify-center w-8 h-8 bg-gray-200 rounded-full hover:bg-gray-400 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                          onClick={() => edit_as_admin(post)}
+                        >
+                          <span className="text-lg font-bold text-gray-500">
+                            ✏️
+                          </span>
+                        </button>
+                      </Tooltip>
                     </>
                   )}
                 </div>

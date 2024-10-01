@@ -180,12 +180,12 @@ export default function Search({ setSortedList }) {
               </div>
             )}
 
-            <div className="flex items-center justify-center mb-2">
+            <div className="flex items-center justify-center gap-4">
               <div className={selectedOption ? "hidden" : "block mt-6 "}>
                 <input
                   id="input1"
                   type="text"
-                  className="block w-full px-4 py-2 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 text-right rtl"
+                  className="block w-full px-2 py-2 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 text-right rtl"
                   onChange={(event) => setIdToSearch(event.target.value)}
                   placeholder="חפש לפי מזהה"
                 />
@@ -193,13 +193,13 @@ export default function Search({ setSortedList }) {
 
               <div
                 className={
-                  !selectedOption ? "hidden" : "block mt-5 text-center rtl"
+                  !selectedOption ? "hidden" : "block mt-4 text-center rtl"
                 }
               >
                 <input
                   id="input2"
                   type="text"
-                  className="block w-full  px-2 py-2 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 text-right "
+                  className="block w-full px-2 py-2 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 text-right "
                   onChange={(event) => setInput(event.target.value)}
                   placeholder=" חפש בתוכן מאמר"
                 />

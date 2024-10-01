@@ -7,6 +7,7 @@ import { importedDelete } from "../../functions/postFunctions";
 import ParashaNav from "../layout/ParashaNav";
 import MyRating from "../MyRating";
 import TagList from "./TagList";
+import { ButtonClick } from "../about/ButtonClick";
 
 // פוסט בודד בעמוד נפרד - חדש
 export default function SinglePost() {
@@ -151,9 +152,9 @@ export default function SinglePost() {
 
                 {/* כפתורי עריכה */}
                 <div className="EditButtons">
-                  <Button variant="contained" onClick={() => navigate(-1)}>
+                  <ButtonClick  onClick={() => navigate(-1)}>
                     חזור
-                  </Button>
+                  </ButtonClick>
                   {message && <p style={{ color: "red" }}>{message}</p>}
                   {adminMode && (
                     <>

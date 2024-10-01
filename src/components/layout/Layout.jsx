@@ -54,7 +54,7 @@ const Layout = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await axiosReq({ method: "GET", body: {}, url: `/posts` });
+        const data = await axiosReq({ method: "GET", body: {}, url: `/public-posts` });
         if (data) {
           console.log(data);
           setOriginalData(data);

@@ -26,31 +26,34 @@ export default function MyRating({ item }) {
                         'authorization': Cookies.get('Authorization') || ''
                     }
                 })
-                if (!response.ok) {
+                if (response.ok==false) {
                     if (response.status == 401) {
-                        setMessage(["פעולת הדירוג לא הצליחה", false])
-                        logOut()
+                        setMessage(["כדי לדרג תוכן באתר עליך להיוך מחובר", false])
+                        return
                     }
                     if (response.status == 404) {
-                        setMessage(["דירוג כפול נחסם", false])
+                        setMessage(["לא ניתן לדרג פעמיים", false])
                         return
             
                     }
 
                     setMessage(["פעולת הדירוג לא הצליחה", false])
+                    return
                     // throw new Error(`Failed to update rating! Status: ${response.status}`);
                 }
-                const editedPost = await response.json();
-                setOriginalData(prevOriginalData => {
-                    const updatedOriginalData = [...prevOriginalData].map(obj => {
-                        if (obj.id === item.id) {
-                            return { ...obj, rating: editedPost.rating };
-                        }
-                        return obj;
+                else{
+                    const editedPost = await response.json();
+                    setOriginalData(prevOriginalData => {
+                        const updatedOriginalData = [...prevOriginalData].map(obj => {
+                            if (obj.id === item.id) {
+                                return { ...obj, rating: editedPost.rating };
+                            }
+                            return obj;
+                        });
+                        return updatedOriginalData;
                     });
-                    return updatedOriginalData;
-                });
-                setMessage(["דירוג בוצע בהצלחה", true])
+                    setMessage(["דירוג בוצע בהצלחה", true])
+                }
             }
             catch (error) {
                 setMessage(["שגיאה" + error.message, false]);
