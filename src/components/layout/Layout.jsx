@@ -41,7 +41,7 @@ const Layout = () => {
       const dataFromJSON = await getCurrentDateInfoFromJson();
       console.log(dataFromJSON);
       setParasha(
-        "פרשת " + dataFromAPI.currentParasha || dataFromJSON.currentParasha
+        dataFromAPI.currentParasha || dataFromJSON.currentParasha
       );
       setHoliday(dataFromJSON.upcomingHoliday);
       console.log(dataFromAPI.firstEvent);

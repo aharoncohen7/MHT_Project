@@ -30,7 +30,7 @@ export default function Navbar({ parasha, holiday, title }) {
   const isLoggedIn = !!userId;
 
   const navButtons = [
-    { id: 0, name: parasha || "פרשת השבוע", href:   parasha ? `/` : "/home/?parasha=all" },
+    { id: 0, name: parasha ? "פרשת " + parasha : "פרשת השבוע", href:   parasha ? `/` : "/home/?parasha=all" },
     { id: 1, name: holiday || "חגים", href: holiday ? `/home/?parasha=${holiday}` : `/`},
     { id: 1, name: "כל הפרשיות", href: "/home/?parasha=all" },
     // {
@@ -130,7 +130,7 @@ export default function Navbar({ parasha, holiday, title }) {
                 >
                   {`וורטלי`}
                   {/* <span>{title ? ` - ${title}` : ""}</span> */}
-                  <span>{parasha ? ` - ${parasha}` : ""}</span>
+                  <span>{parasha ? ` - ${parasha}` : ` - ${holiday}`}</span>
                 </h2>
               </div>
 
