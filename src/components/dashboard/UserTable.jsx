@@ -26,7 +26,8 @@ const UserTable = () => {
 
 useEffect(()=>{
   if(error){
-    setMessage(['הפעולה נכשלה' + error.message, false]);
+    setMessage(['שגיאה בקבלת הנתונים', false]);
+    console.log('הפעולה נכשלה' + error.message)
   }
 
 },[error])
