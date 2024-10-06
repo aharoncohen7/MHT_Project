@@ -68,11 +68,11 @@ const Layout = () => {
     fetchData();
   }, []);
 
-  // במקרה של שינוי במערך השמה מחדש
+
 
   return (
     <span>
-      <Navbar parasha={parasha} holiday={holiday} title={title} />
+      <Navbar parasha={parasha} holiday={holiday} title={title}/>
       {/* <Navbar parasha={title} holiday={holiday} title={title} /> */}
       import DataContext from "../../contexts/dataContext";
       <DataContext.Provider

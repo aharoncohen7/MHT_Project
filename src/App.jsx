@@ -12,6 +12,7 @@ import { dark } from '@mui/material/styles/createPalette';
 function App() {
   const navigate = useNavigate();
   const [userId, setUserId] = useState(null);
+  const [userName, setUserName] = useState("אורח");
   const [isAdmin, setIsAdmin] = useState(0)
   const [adminMode, setAdminMode] = useState(Boolean(sessionStorage.getItem('isAdminMode')) || false);
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -32,8 +33,10 @@ function App() {
     if (Cookies.get('Authorization')) {
       try {
         const userData = await axiosReq({ method: 'POST', body: {}, url: `/login/checkToken` })
+        console.log(userData)
         setIsAdmin(userData.isAdmin)
         setUserId(userData.userId)
+        setUserName(userData.userName)
         setAdminMode(Boolean(sessionStorage.getItem('isAdminMode')) || false)
         sessionStorage
 
@@ -58,6 +61,7 @@ function App() {
      Cookies.remove('Authorization');
     sessionStorage.removeItem('isAdminMode')
     setUserId(null);
+    setUserName("אורח")
     setIsAdmin(0)
     setAdminMode(false)
   }
@@ -72,7 +76,9 @@ function App() {
     setIsAdmin,
     setAdminMode,
     setIsDarkMode,
+    setUserName,
     message,
+    userName,
     userId,
     isAdmin,
     adminMode,

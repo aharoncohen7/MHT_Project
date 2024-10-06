@@ -48,7 +48,7 @@ export default function Login({ setIsExists }) {
           console.log(user);
           setMessage(["Login successful", true]);
           setUserId(user.id);
-          // setUserName(user.username)
+          setUserName(user.username)
           setIsAdmin(user.isAdmin);
           // sessionStorage.setItem("Authorization", user.token)
           Cookies.set("Authorization", user.token);
@@ -76,8 +76,7 @@ export default function Login({ setIsExists }) {
       }
     } catch (error) {
       setMessage([
-        `אירעה שגיאה לא צפויה במהלך ההתחברות: ${error.message}`,
-        false,
+        `אירעה שגיאה לא צפויה במהלך ההתחברות`, false,
       ]);
       console.error(`Error during login: ${error.message}`);
     }

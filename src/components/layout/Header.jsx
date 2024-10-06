@@ -22,6 +22,7 @@ export default function Navbar({ parasha, holiday, title }) {
     userId,
     setIsDarkMode,
     isDarkMode,
+     userName
   } = useContext(UserContext);
   const [activeIndex, setActiveIndex] = useState(0);
   const navigate = useNavigate();
@@ -29,14 +30,14 @@ export default function Navbar({ parasha, holiday, title }) {
   const isLoggedIn = !!userId;
 
   const navButtons = [
-    { id: 0, name: parasha || "פרשת השבוע", href: `/` },
-    // { id: 1, name: holiday || "חגים", href: holiday ? `/home/?parasha=${holiday}` : `/`},
+    { id: 0, name: parasha || "פרשת השבוע", href:   parasha ? `/` : "/home/?parasha=all" },
+    { id: 1, name: holiday || "חגים", href: holiday ? `/home/?parasha=${holiday}` : `/`},
     { id: 1, name: "כל הפרשיות", href: "/home/?parasha=all" },
-    {
-      id: 2,
-      name: isLoggedIn ? "הוספת מאמר" : "התחבר",
-      href: isLoggedIn ? "/addition" : "/login",
-    },
+    // {
+    //   id: 2,
+    //   name: isLoggedIn ? "הוספת מאמר" : "התחבר",
+    //   href: isLoggedIn ? "/addition" : "/login",
+    // },
     {
       id: 3,
       name: adminMode ? "טבלת משתמשים" : "אודות",
@@ -82,7 +83,11 @@ export default function Navbar({ parasha, holiday, title }) {
               </div>
 
               <div className="hidden sm:ml-6 sm:flex items-center justify-center flex-1 sm:items-stretch sm:justify-start">
-                <div className="flex items-center flex-shrink-0">
+                <div className="flex items-center flex-shrink-0"
+                onClick={() => {
+                  navigate("/");
+                }}
+                >
                   <img className="w-auto h-14 " src={logo2} alt="logo" />
                 </div>
                 <div className="hidden sm:ml-6 sm:block px-2">
@@ -123,8 +128,9 @@ export default function Navbar({ parasha, holiday, title }) {
                   }}
                   className="text-center font-bold leading-7 text-white sm:truncate sm:text-2xl sm:tracking-right select-none"
                 >
-                  {`וורטלי -`}
-                  <span>{title ? ` ${title}` : null}</span>
+                  {`וורטלי`}
+                  {/* <span>{title ? ` - ${title}` : ""}</span> */}
+                  <span>{parasha ? ` - ${parasha}` : ""}</span>
                 </h2>
               </div>
 
@@ -153,6 +159,9 @@ export default function Navbar({ parasha, holiday, title }) {
                     />
                   </span>
                 )}
+              {!isAdmin ? <span className="text-white hidden sm:ml-2 sm:inline select-none">
+                {userName}
+                </span> : null}
 
                 {/* Profile dropdown */}
                 <Menu as="div" className="relative ml-3">
