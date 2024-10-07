@@ -46,7 +46,7 @@ export default function Login({ setIsExists }) {
         const user = await response.json();
         if (user) {
           console.log(user);
-          setMessage(["Login successful", true]);
+          setMessage(["הנך מחובר", true]);
           setUserId(user.id);
           setUserName(user.username)
           setIsAdmin(user.isAdmin);

@@ -1,4 +1,4 @@
-import { Button } from "@mui/material";
+import { Button, Chip, Tooltip } from "@mui/material";
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import UserContext from "../../contexts";
@@ -37,77 +37,37 @@ export default function SinglePost() {
   return (
     <>
       {item && (
-        <div className="relative flex items-center justify-center px-6 py-24 overflow-hidden isolate sm:py-12 lg:overflow-visible lg:px-24">
-          {item.subtopic && (
-            <div className="flex items-center flex-shrink-0">
-              {/* <img
-              className="w-auto h-20 hidden sm:ml-6 sm:block"
-              src={`https://www.breslev.org/wp-content/uploads/2019/07/${item.subtopic.replace(" ", "-")}.jpg`}
-              alt="הפרשה"
-            /> */}
-            </div>
-          )}
-          <div className="absolute inset-0 overflow-hidden -z-10">
-            <svg
-              className="absolute left-[max(50%,25rem)] top-0 h-[44rem] w-[128rem] -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
-              aria-hidden="true"
-            >
-              {/* משבצות */}
-              {/* <defs>
-                <pattern
-                  id="e813992c-7d03-4cc4-a2bd-151760b470a0"
-                  width={200}
-                  height={200}
-                  x="50%"
-                  y={-1}
-                  patternUnits="userSpaceOnUse"
-                >
-                  <path d="M100 200V.5M.5 .5H200" fill="none" />
-                </pattern>
-              </defs> */}
-              //lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid
-              lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8
-              <rect
-                width="100%"
-                height="100%"
-                strokeWidth={0}
-                fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)"
-              />
-            </svg>
-          </div>
+        <div className="relative flex items-center justify-center px-6 overflow-hidden isolate sm:py-2 lg:overflow-visible lg:px-14">
           <div className="grid max-w-2xl grid-cols-1 mx-auto text-right gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-center lg:gap-y-10">
             <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
-              <div className="lg:pr-38">
+              <div className="lg:pr-8 mt-20 lg:-mt-40">
                 <div className="lg:max-w-lg mr-6 ">
-                  <Button
-                    onClick={() => {
+                 <Tooltip label="תגית נושא" title="תגית נושא">
+                 <Chip label={item.subtopic ? item.subtopic : "שם הפרשה"} color="primary" variant="outlined"   onClick={() => {
                       if (item.subtopic)
                         navigate(`/home/?parasha=${item.subtopic}`);
-                    }}
-                    className="ml-20   leading-7 text-indigo-800 font-bold text-xl"
-                  >
-                    {item.subtopic ? item.subtopic : "שם הפרשה"}
-                  </Button>
+                    }}/>
 
+                 </Tooltip>
                   <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                     {item.title}
                   </h2>
-                  <Button
+                  <Tooltip  title="מחבר">
+
+                  <Chip label={item.author } color="primary" variant="outlined" 
                     onClick={() => {
                       navigate(`/home/?author=${item.userId}`);
                     }}
-                    className="mt-6 text-xl font-bold leading-8 text-indigo-800"
-                  >
-                    {" "}
-                    {item.author} :מחבר
-                  </Button>
+                    />
+                 </Tooltip>
+
                 </div>
               </div>
             </div>
             <div className="z-10 -ml-8 -mt-12 p-12 lg:sticky lg:top-12 lg:col-start-2  lg:row-start-1 lg:overflow-hidden">
               {item.subtopic && (
                 <img
-                  className=" mb-5
+                  className="mb-12 lg:mr-10
                 w-[48rem]  rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[26rem]"
                   src={`https://www.breslev.org/wp-content/uploads/2019/07/${item.subtopic.replace(
                     " ",
@@ -124,15 +84,10 @@ export default function SinglePost() {
                 <ParashaNav />
               </span>
             </div>
-            {/* <span className='hidden lg:col-start-2 lg:row-start-2  lg:block mr-10  lg:sticky mb-5 
-                w-[48rem] rounded-xl shadow-xl sm:w-[26rem]
-                '>
-                <ParashaNav /></span> */}
             <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
-              <div className="lg:pr-4 -mt-20">
+              <div className="lg:pr-4 lg:-mt-60">
                 <div className="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
                   <ul role="list" className="mt-8 space-y-8 text-gray-600">
-                    {/* <p className="mt-8">{item.id}</p> */}
                   </ul>
                   <div className="mt-8">
                     <div
@@ -142,12 +97,11 @@ export default function SinglePost() {
                     />
                   </div>
                 </div>
-                <div>
-                  <MyRating item={item} />
-                </div>
+              
 
-                <div>
+                <div className="flex justify-between pt-8 pb-8">
                   {item.tags !== null && <TagList postTags={item.tags} />}
+                  <MyRating item={item} />
                 </div>
 
                 {/* כפתורי עריכה */}

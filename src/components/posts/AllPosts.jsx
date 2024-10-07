@@ -56,7 +56,7 @@ export default function AllPosts({}) {
   return (
     <ErrorBoundary>
       {/* <> */}
-      <div className="py-24 sm:py-32">
+      <div className="py-12">
         <div className="px-6 mx-auto max-w-7xl lg:px-8">
           <div className="max-w-2xl mx-auto lg:mx-0">
             {/* <h2 className="text-3xl font-bold tracking-tight text-center text-gray-900 sm:text-4xl">{parasha || "פרשת השבוע"}</h2>
@@ -76,12 +76,12 @@ export default function AllPosts({}) {
           )}
 
           {message && <p style={{ color: "red" }}>{message}</p>}
-          <div className="mb-20 grid max-w-2xl grid-cols-1 pt-10 mx-auto border-t border-gray-200 gap-x-8 gap-y-16 sm:mt-36 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3  ">
+          <div className="mb-20 grid max-w-2xl grid-cols-1 pt-10 mx-auto border-t border-gray-200 gap-x-8 gap-y-8 sm:mt-36 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3  ">
             {sortedList.map((post) => (
               <article
                 key={post.id}
                 style={{ direction: "ltr" }}
-                className=" bg-white flex flex-col items-center justify-between max-w-xl hover:bg-gray-100 border border-gray-300 shadow-md truncate rounded-xl"
+                className="Py-132 bg-white flex flex-col items-center justify-between max-w-xl hover:bg-gray-100 border border-gray-300 shadow-md truncate rounded-xl"
               >
                 <div className="flex items-center text-xs gap-x-4 py-4">
                   <p className="text-gray-500">{formatDate(post.created_at)}</p>

@@ -145,9 +145,9 @@ export default function Search({ setSortedList }) {
   return (
     <>
       <div
-        className={`hidden sm:ml-6 sm:block fixed left-1/2 w-3/6 ${
+        className={`hidden sm:block fixed left-1/2 w-4/6 ${
           showSearch ? "top-32" : "top-24"
-        } text-center transform -translate-x-1/2 -translate-y-1/2 bg-gray-300 rounded-lg shadow-md z-10`}
+        }  text-center transform -translate-x-1/2 -translate-y-1/2 bg-gray-300 border border-gray-400 rounded-xl shadow-md z-10 `}
       >
         {showSearch && (
           <>

@@ -41,7 +41,7 @@ export async function importedAddNew(userId, selectedBook, selectedPortion, titl
     const newPost = await response.json();
     console.log(newPost);
     setOriginalData(prevOriginalData => [...prevOriginalData, newPost]);
-    setMessage(['Post created successfully', true]);
+    setMessage(['המאמר נוצר בהצלחה, הנך מועבר אליו', true]);
     setSend(false)
     setShowEditor(false);
     // navigate(`/post/${newPost.id}`)
@@ -97,7 +97,7 @@ export async function importedEdit(postId, selectedBook, selectedPortion, title,
 
     const newPost = await response.json();
     setOriginalData(prevOriginalData => [...prevOriginalData, newPost]);
-    setMessage(['Post updated successfully', true]);
+    setMessage(['המאמר עודכן בהצלחה', true]);
     setSend(false)
     setShowEditor(false)
     // navigate(`/post/${postId}`)
@@ -203,7 +203,7 @@ export async function importedDelete(item, setOriginalData, setMessage, logOut, 
         // console.log(newPost);
         setOriginalData(prevOriginalData => prevOriginalData.filter(obj => obj.id !== item.id));
         setOriginalData(prevOriginalData => [...prevOriginalData, newPost]);
-        setMessage(['Post updated successfully', true]);
+        setMessage(['המאמר עודכן בהצלחה', true]);
         // window.location.href = `/`
     }
     catch (error) {
