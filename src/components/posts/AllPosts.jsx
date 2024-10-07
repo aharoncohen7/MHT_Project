@@ -23,7 +23,7 @@ import Spinner from "../Spinner";
 export default function AllPosts({}) {
   const { userId, adminMode, setMessage, message, logOut, navigate } =
     useContext(UserContext);
-  const { setOriginalData } = useContext(DataContext);
+  const { setOriginalData, loading } = useContext(DataContext);
   const [showEditor, setShowEditor] = useState(false);
   const [sortedList, setSortedList] = useState([]);
 
@@ -78,7 +78,15 @@ export default function AllPosts({}) {
 
           {message && <p style={{ color: "red" }}>{message}</p>}
           <div className="mb-20 grid max-w-2xl grid-cols-1 pt-10 mx-auto border-t border-gray-200 gap-x-8 gap-y-8 sm:mt-36 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3  ">
-            {sortedList.length > 0 ? (
+            {loading ? ( <Spinner/>)
+              :(
+              sortedList.length == 0? (
+                <p className="text-center text-gray-600">
+                  עדיין אין מאמרים לנושא זה, הנך מוזמן להוסיף
+
+
+                </p>
+              ) :
               sortedList.map((post) => (
                 <article
                   key={post.id}
@@ -191,8 +199,6 @@ export default function AllPosts({}) {
                   </div>
                 </article>
               ))
-            ) : (
-              <Spinner/>
             )}
           </div>
           <div className="border-t mt-10 ">

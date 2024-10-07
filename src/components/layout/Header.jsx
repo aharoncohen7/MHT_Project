@@ -32,7 +32,7 @@ export default function Navbar({ parasha, holiday, title }) {
   const navButtons = [
     { id: 0, name: parasha ? "פרשת " + parasha : "פרשת השבוע", href:   parasha ? `/` : "/home/?parasha=all" },
     { id: 1, name: holiday || "חגים", href: holiday ? `/home/?parasha=${holiday}` : `/`},
-    { id: 1, name: "כל הפרשיות", href: "/home/?parasha=all" },
+    { id: 2, name: "כל הפרשיות", href: "/home/?parasha=all" },
     // {
     //   id: 2,
     //   name: isLoggedIn ? "הוספת מאמר" : "התחבר",
@@ -71,7 +71,7 @@ export default function Navbar({ parasha, holiday, title }) {
             <div className="relative flex items-center justify-between h-16">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className=" relative inline-flex items-center justify-center p-2 text-gray-400 rounded-md hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className=" relative  items-center justify-center p-2 text-gray-400 rounded-md hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="absolute -inset-0.5" />
                   <span className="sr-only">Open main menu</span>
                   {open ? (
@@ -82,7 +82,7 @@ export default function Navbar({ parasha, holiday, title }) {
                 </Disclosure.Button>
               </div>
 
-              <div className="hidden sm:ml-6 sm:flex items-center justify-center flex-1 sm:items-stretch sm:justify-start">
+              <div className="hidden sm:flex items-center justify-center flex-1 sm:items-stretch sm:justify-start">
                 <div className="flex items-center flex-shrink-0"
                 onClick={() => {
                   navigate("/");
@@ -90,7 +90,7 @@ export default function Navbar({ parasha, holiday, title }) {
                 >
                   <img className="w-auto h-14 " src={logo2} alt="logo" />
                 </div>
-                <div className="hidden sm:ml-6 sm:block px-2">
+                <div className="hidden sm:ml-0 sm:block px-2">
                   <div className="flex space-x-1 text-center items-center justify-center ">
                     {navButtons.map((item, index) => {
                       if (true) {
@@ -104,7 +104,7 @@ export default function Navbar({ parasha, holiday, title }) {
                               index === activeIndex
                                 ? "bg-yellow-900 text-white "
                                 : "text-gray-300 hover:bg-gray-700 ",
-                              "rounded-md px-4 py-4 text-sm font-medium cursor-pointer select-none"
+                              "rounded-md px-2 py-4 text-sm font-medium cursor-pointer select-none"
                             )}
                             aria-current={
                               // item.current
@@ -121,7 +121,7 @@ export default function Navbar({ parasha, holiday, title }) {
                 </div>
               </div>
 
-              <div className="min-w-0 flex-1">
+              <div className="min-w-0 flex-1 lg:ml-28">
                 <h2
                   onClick={() => {
                     navigate(navButtons[0].href);
