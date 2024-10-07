@@ -89,7 +89,7 @@ const Layout = () => {
       <div className="hidden md:fixed border-t mt-10 max-w-80 top-0 left-40">
         <ParashaNav />
       </div>
-      {message[0] && <Message message={message} />}
+      {message[0] && <Message/>}
       <Footer />
       {/* <div
         className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"

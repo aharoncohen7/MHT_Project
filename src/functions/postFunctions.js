@@ -41,7 +41,7 @@ export async function importedAddNew(userId, selectedBook, selectedPortion, titl
     const newPost = await response.json();
     console.log(newPost);
     setOriginalData(prevOriginalData => [...prevOriginalData, newPost]);
-    setMessage(['המאמר נוצר בהצלחה, הנך מועבר אליו', true]);
+    setMessage(['המאמר נוצר בהצלחה, הנך מופנה אליו', true]);
     setSend(false)
     setShowEditor(false);
     // navigate(`/post/${newPost.id}`)

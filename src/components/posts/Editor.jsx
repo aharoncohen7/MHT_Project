@@ -330,7 +330,7 @@ export default function Editor({
       selectedBook &&
       selectedPortion &&
       title &&
-      title.length >= 20 &&
+      title.length >= 10 &&
       body &&
       checkBody()
     );
@@ -390,16 +390,16 @@ export default function Editor({
         selectedPortion={selectedPortion}
         setSelectedPortion={setSelectedPortion}
       />
-      {selectedBook && selectedPortion && (
+      {/* {selectedBook && selectedPortion && ( */}
         <div className="mt-6 space-y-4">
           <input
             className="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none focus:border-blue-500"
             type="text"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            placeholder="בחר כותרת למאמר באורך של 20 תווים ומעלה"
+            placeholder="בחר כותרת למאמר באורך של 10 תווים ומעלה"
+            disabled={!selectedBook || !selectedPortion}
           />
-          {title && title.length > 19 && (
             <div className="mt-4">
               <ReactQuill
                 ref={quillRef}
@@ -410,7 +410,7 @@ export default function Editor({
                 className="h-64 mb-12"
               />
             </div>
-          )}
+
 
           <div className="mt-6">
             {checkBody() && isAddingTag ? (
@@ -459,7 +459,7 @@ export default function Editor({
             )}
           </div>
         </div>
-      )}
+      {/* )} */}
       {message && <p className="mt-4 text-red-500">{message}</p>}
     </div>
   );

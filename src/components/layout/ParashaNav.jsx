@@ -31,7 +31,7 @@ export default function ParashaNav() {
   };
 
   return (
-    <div className='mt-6'>
+    <div className='mt-6 w-min-300'>
       {Object.entries(torah).map(([chometName, parshiot], index) => (
         <Accordion expanded={expanded === `panel${index + 4}`} onChange={handleChange(`panel${index + 4}`)} key={chometName}>
           <AccordionSummary

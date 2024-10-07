@@ -11,7 +11,7 @@ export default function Select({
   function buildOptions(data) {
     return Object.keys(data).map((book) => (
       <option key={book} value={book}>
-        {book}
+        { book}
       </option>
     ));
   }
@@ -23,25 +23,12 @@ export default function Select({
   };
 
   return (
-    <div className=" flex flex-row-reverse w-full">
-      {/* סלקט החומשים */}
-      <select
-        className="relative py-2 pl-3 pr-10 text-right bg-white rounded-md shadow-sm cursor-pointer focus:outline-none focus:ring focus:ring-blue-500 focus:ring-opacity-50"
-        value={selectedBook}
-        onChange={handleBookChange}
-      >
-        <option
-          className="block w-full px-4 text-right text-gray-900 bg-gray-100 py-21"
-          value=""
-        >
-          בחר חומש
-        </option>
-        {buildOptions(torah)}
-      </select>
+    <div className="ltr mt-4 flex flex-row-reverse w-full gap-4 justify-center">
+     
 
       {/* סלקט הפרשיות  */}
       <select
-        className="relative py-2 pl-3 pr-10 mr-2 text-right bg-white rounded-md shadow-sm cursor-pointer focus:outline-none focus:ring focus:ring-blue-500 focus:ring-opacity-50"
+        className="ltr relative py-2 pl-6 pr-10 text-right bg-white rounded-md shadow-sm cursor-pointer focus:outline-none focus:ring focus:ring-blue-500 focus:ring-opacity-50"
         disabled={!selectedBook}
         value={selectedPortion}
         onChange={(event) => {
@@ -49,7 +36,7 @@ export default function Select({
         }}
       >
         <option className="" value="">
-          בחר פרשה
+       {!selectedBook ? "בחר נושא" : selectedBook.split(" ")[0] == "חומש" ? "בחר פרשה" : "בחר חג או אירוע"}
         </option>
         {selectedBook &&
           torah[selectedBook].map((portion) => (
@@ -61,6 +48,23 @@ export default function Select({
               {portion}
             </option>
           ))}
+      </select>
+
+
+
+       {/* סלקט החומשים */}
+       <select
+        className="relative py-2 pl-30 pr-10 text-right bg-white rounded-md shadow-sm cursor-pointer focus:outline-none focus:ring focus:ring-blue-500 focus:ring-opacity-50"
+        value={selectedBook}
+        onChange={handleBookChange}
+      >
+        <option
+          className="block w-full px-4 text-right text-gray-900 bg-gray-100 py-21"
+          value=""
+        >
+          בחר נושא ראשי
+        </option>
+        {buildOptions(torah)}
       </select>
     </div>
   );

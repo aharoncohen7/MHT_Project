@@ -32,7 +32,7 @@ export default function MyRating({ item }) {
           return;
         }
         if (response.status == 404) {
-          setMessage(["לא ניתן לדרג פעמיים", false]);
+          setMessage(["לא ניתן לדרג יותר מפעם אחת", false]);
           return;
         }
 

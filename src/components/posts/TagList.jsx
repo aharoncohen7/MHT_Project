@@ -1,4 +1,4 @@
-import { Chip, Stack } from "@mui/material";
+import { Chip, Stack, Tooltip } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 export default function TagList({ postTags }) {
@@ -7,20 +7,21 @@ export default function TagList({ postTags }) {
 
   return (
     postTags != null && (
-
       <Stack direction="row" spacing={1}>
-      {tags.map((tag, index) => (
-        <Chip
-          
-          color="primary" 
-          label={tag}
-          onClick={() => {
-            nav(`/home/?tag=${tag}`);
-          }}
-        />
-      ))}
-    </Stack>
-    
+        {tags.map((tag, index) => (
+          <Tooltip title="חפש נושאים קשורים">
+            <Chip
+              color="primary"
+              key={tag}
+              label={tag}
+              onClick={() => {
+                nav(`/home/?tag=${tag}`);
+              }}
+            />
+          </Tooltip>
+        ))}
+      </Stack>
+
       // <div className="items-center rounded-md bg-gray-300 px-2 py-1 font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
       //   {tags.map((tag, index) => (
       //     <ButtonClick
@@ -34,8 +35,6 @@ export default function TagList({ postTags }) {
       //     </ButtonClick>
       //   ))}
       // </div>
-
-    
     )
   );
 }
