@@ -4,7 +4,8 @@ import Switch from "@mui/material/Switch";
 import { Fragment, useContext, useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import UserContext from "../../contexts";
-import {getCurrentDateInfoFromAPI } from "../../helpers/formatDate";
+import { getCurrentDateInfoFromAPI } from "../../helpers/formatDate";
+import { Tooltip } from "@mui/material";
 
 const logo1 = "https://www.uploads.co.il/uploads/images/106030801.png";
 const logo2 = "https://img.uniquemu.co.il/upload/bIj1Npo.png";
@@ -22,7 +23,7 @@ export default function Navbar({ parasha, holiday, title }) {
     userId,
     setIsDarkMode,
     isDarkMode,
-     userName
+    userName,
   } = useContext(UserContext);
   const [activeIndex, setActiveIndex] = useState(0);
   const navigate = useNavigate();
@@ -30,8 +31,16 @@ export default function Navbar({ parasha, holiday, title }) {
   const isLoggedIn = !!userId;
 
   const navButtons = [
-    { id: 0, name: parasha ? "פרשת " + parasha : "פרשת השבוע", href:   parasha ? `/` : "/home/?parasha=all" },
-    { id: 1, name: holiday || "חגים", href: holiday ? `/home/?parasha=${holiday}` : `/`},
+    {
+      id: 0,
+      name: parasha ? "פרשת " + parasha : "פרשת השבוע",
+      href: parasha ? `/` : "/home/?parasha=all",
+    },
+    {
+      id: 1,
+      name: holiday || "חגים",
+      href: holiday ? `/home/?parasha=${holiday}` : `/`,
+    },
     { id: 2, name: "כל הפרשיות", href: "/home/?parasha=all" },
     // {
     //   id: 2,
@@ -60,9 +69,6 @@ export default function Navbar({ parasha, holiday, title }) {
     navigate("/login", { state: { from: location } });
   };
 
-
-  
-
   return (
     <Disclosure as="nav" className={`fixed top-0 z-10 w-full blue-gradient`}>
       {({ open }) => (
@@ -83,13 +89,16 @@ export default function Navbar({ parasha, holiday, title }) {
               </div>
 
               <div className="hidden sm:flex items-center justify-center flex-1 sm:items-stretch sm:justify-start">
-                <div className="flex items-center flex-shrink-0"
-                onClick={() => {
-                  navigate("/");
-                }}
-                >
-                  <img className="w-auto h-14 " src={logo2} alt="logo" />
-                </div>
+                <Tooltip title={"לדף הבית"} placement="bottom" arrow>
+                  <div
+                    className="cursor-pointer flex items-center flex-shrink-0"
+                    onClick={() => {
+                      navigate("/");
+                    }}
+                  >
+                    <img className="w-auto h-14 " src={logo2} alt="logo" />
+                  </div>
+                </Tooltip>
                 <div className="hidden sm:ml-0 sm:block px-2">
                   <div className="flex space-x-1 text-center items-center justify-center ">
                     {navButtons.map((item, index) => {
@@ -146,7 +155,7 @@ export default function Navbar({ parasha, holiday, title }) {
 
                 {!!isAdmin && (
                   <span className="text-white hidden sm:ml-2 sm:inline select-none">
-                    {adminMode ? "מצב ניהול" : "מצב רגיל"}
+                    {adminMode ? "מצב עורך" : "מצב רגיל"}
                     <Switch
                       className="hidden sm:ml-2 sm:block"
                       checked={adminMode}
@@ -159,24 +168,28 @@ export default function Navbar({ parasha, holiday, title }) {
                     />
                   </span>
                 )}
-              {!isAdmin ? <span className="text-white hidden sm:ml-2 sm:inline select-none">
-                {userName}
-                </span> : null}
+                {!isAdmin ? (
+                  <span className="text-white hidden sm:ml-2 sm:inline select-none">
+                    {userName}
+                  </span>
+                ) : null}
 
                 {/* Profile dropdown */}
                 <Menu as="div" className="relative ml-3">
                   <div>
                     <Menu.Button className="relative flex text-sm bg-gray-800 rounded-full focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                      <Tooltip title={"הצג תפריט"} placement="right" arrow>
                       <span className="absolute -inset-1.5" />
                       <span className="sr-only">Open user menu</span>
-                      <img
-                        className={`${
-                          isLoggedIn ? "" : "grayscale opacity-50"
-                        } w-8 h-8 rounded-full`}
-                        src={avatar}
-                        alt=""
-                        title="הצג תפריט"
-                      />
+                        <img
+                          className={`${
+                            isLoggedIn ? "" : "grayscale opacity-50"
+                          } w-8 h-8 rounded-full`}
+                          src={avatar}
+                          alt="avatar"
+                          title="הצג תפריט"
+                        />
+                      </Tooltip>
                     </Menu.Button>
                   </div>
                   <Transition
