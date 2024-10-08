@@ -92,9 +92,9 @@ export default function Search({ setSortedList }) {
         return [...filteredData].sort((a, b) => a.title - b.title);
       case "alphabetical ↑":
         return [...filteredData].sort((a, b) => a.title - b.title).reverse();
-      case "rating ↓":
-        return [...filteredData].sort((a, b) => a.rating - b.rating);
       case "rating ↑":
+        return [...filteredData].sort((a, b) => a.rating - b.rating);
+      case "rating ↓":
         return [...filteredData].sort((a, b) => a.rating - b.rating).reverse();
       case "creation date ↓":
         return [...filteredData].sort(
@@ -185,17 +185,17 @@ export default function Search({ setSortedList }) {
                   <option className="" value="alphabetical ↓">א-ת </option>
                   <option className="" value="alphabetical ↑">ת-א </option> */}
               <option className="" value="random">
-                אקראי
+                מיין בסדר אקראי
               </option>
               <option className="" value="rating ↓">
-                המדורג ביותר
+                לפי דירוג משתמשים
               </option>
               {/* <option className="" value="rating ↑">מדורג נמוך</option> */}
               <option className="" value="creation date ↓">
-                מהישן לחדש
+                מיין מהישן לחדש
               </option>
               <option className="" value="creation date ↑">
-                מהחדש לישן
+                מיין מהחדש לישן
               </option>
             </select>
           </div>

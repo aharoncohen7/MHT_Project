@@ -1,11 +1,10 @@
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Tooltip } from "@mui/material";
 import Switch from "@mui/material/Switch";
-import { Fragment, useContext, useEffect, useState } from "react";
+import { Fragment, useContext, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import UserContext from "../../contexts";
-import { getCurrentDateInfoFromAPI } from "../../helpers/formatDate";
-import { Tooltip } from "@mui/material";
 
 const logo1 = "https://www.uploads.co.il/uploads/images/106030801.png";
 const logo2 = "https://img.uniquemu.co.il/upload/bIj1Npo.png";
@@ -41,7 +40,7 @@ export default function Navbar({ parasha, holiday, title }) {
       name: holiday || "חגים",
       href: holiday ? `/home/?parasha=${holiday}` : `/`,
     },
-    { id: 2, name: "כל הפרשיות", href: "/home/?parasha=all" },
+    { id: 2, name: "תוכן כללי", href: "/home/?parasha=all" },
     // {
     //   id: 2,
     //   name: isLoggedIn ? "הוספת מאמר" : "התחבר",
@@ -111,9 +110,9 @@ export default function Navbar({ parasha, holiday, title }) {
                             }}
                             className={classNames(
                               index === activeIndex
-                                ? "bg-yellow-900 text-white "
+                                ? "blue-gradient text-white shadow-sm shadow-white  "
                                 : "text-gray-300 hover:bg-gray-700 ",
-                              "rounded-md px-2 py-4 text-sm font-medium cursor-pointer select-none"
+                              "rounded-md px-2 py-4  font-semibold cursor-pointer select-none text-md"
                             )}
                             aria-current={
                               // item.current
@@ -144,15 +143,6 @@ export default function Navbar({ parasha, holiday, title }) {
               </div>
 
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                {/* <button
-                  type="button"
-                  className="relative hidden p-1 text-gray-400 bg-gray-800 rounded-full hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 sm:block"
-                >
-                  <span className="absolute -inset-1.5" />
-                  <span className="sr-only">View notifications</span>
-                  <BellIcon className="w-6 h-6" aria-hidden="true" />
-                </button> */}
-
                 {!!isAdmin && (
                   <span className="text-white hidden sm:ml-2 sm:inline select-none">
                     {adminMode ? "מצב עורך" : "מצב רגיל"}

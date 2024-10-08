@@ -54,7 +54,7 @@ export default function SinglePost() {
                       }}
                     />
                   </Tooltip>
-                  <h2 className="mt-2  mb-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                  <h2 className="pt-2  pb-8 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                     {item.title}
                   </h2>
                   <span className="flex justify-between">
@@ -68,6 +68,12 @@ export default function SinglePost() {
                         }}
                       />
                     </Tooltip>
+                    <span className="flex px-2 item-center justify-center gap-2">
+                      <Tooltip title={"לחץ כדי לדרג"}>
+                        {`דרג את תוכן המאמר :`}
+                      </Tooltip>
+                      <MyRating item={item} />
+                    </span>
                     <Tooltip title="תאריך יצירה">
                       <Chip
                         label={formatDate(item.created_at)}
@@ -112,11 +118,14 @@ export default function SinglePost() {
                   </div>
                 </div>
 
-                <div className="flex justify-between pt-8 pb-8">
-                  {item.tags !== null && <TagList postTags={item.tags} />}
-                  <MyRating item={item} />
+                <div className="">
+                  תגיות קשורות:
+                  {item.tags !== null && (
+                    <div className="flex justify-between py-4">
+                      <TagList postTags={item.tags} />
+                    </div>
+                  )}
                 </div>
-
                 {/* כפתורי עריכה */}
                 <div className="flex justify-between">
                   {adminMode && (

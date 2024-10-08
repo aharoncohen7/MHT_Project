@@ -11,7 +11,7 @@ import ParashaNav from "../layout/ParashaNav";
 import { formatDate } from "./../../functions";
 import Search from "./Search";
 import DataContext from "../../contexts/dataContext";
-import { Tooltip } from "@mui/material";
+import { Rating, Tooltip } from "@mui/material";
 import Spinner from "../Spinner";
 
 export default function AllPosts({}) {
@@ -98,7 +98,7 @@ export default function AllPosts({}) {
                       arrow
                     >
                       <a
-                        className="relative z-1 rounded-full bg-red-50 p-4  font-medium text-gray-600 hover:bg-gray-300 "
+                        className="relative z-1 rounded-2xl bg-blue-50 px-4 py-2 font-medium text-gray-600 hover:bg-gray-300 "
                         onClick={() => {
                           if (post.subtopic)
                             navigate(`/home/?parasha=${post.subtopic}`);
@@ -125,7 +125,7 @@ export default function AllPosts({}) {
                       </p>
                       <p
                         style={textStyle}
-                        className="py-2 text-sm leading-8 text-gray-600 line-clamp-8 text-right overflow-wrap-normal"
+                        className="py-2 text-sm leading-8 text-gray-500 line-clamp-8 text-right overflow-wrap-normal"
                       >
                         {extractTextBetweenTags(post.body)}
                       </p>
@@ -160,7 +160,7 @@ export default function AllPosts({}) {
                     </p>
 
                     <span className="flex justify-center items-center gap-2 h-10">
-                      {adminMode && (
+                      {adminMode ? (
                         <>
                           <Tooltip title="מחיקה" placement="top" arrow>
                             <button
@@ -185,7 +185,10 @@ export default function AllPosts({}) {
                             </button>
                           </Tooltip>
                         </>
-                      )}
+                      ):
+                      <Rating name="read-only" value={post.rating} size="small"  style={{ color: "rgba(6, 119, 221, 0.8)"
+                         , direction: "ltr" }} readOnly />
+                      }
                     </span>
                   </div>
                 </article>
