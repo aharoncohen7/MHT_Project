@@ -48,7 +48,7 @@ export default function Navbar({ parasha, holiday, title }) {
     // },
     {
       id: 3,
-      name: adminMode ? "טבלת משתמשים" : "אודות",
+      name: adminMode ? "יוזרים" : "אודות",
       href: adminMode ? "/dashboard" : "/about",
     },
     // { id: 3, name: isDarkMode ? 'LightMode' : "DarkMode", href: "/" }
@@ -69,7 +69,7 @@ export default function Navbar({ parasha, holiday, title }) {
   };
 
   return (
-    <Disclosure as="nav" className={`fixed top-0 z-10 w-full blue-gradient`}>
+    <Disclosure as="nav" className={`fixed top-0 z-20 w-full blue-gradient`}>
       {({ open }) => (
         <>
           <div className="px-2 mx-auto max-w-7xl sm:px-6 lg:px-8">
@@ -98,8 +98,8 @@ export default function Navbar({ parasha, holiday, title }) {
                     <img className="w-auto h-14 " src={logo2} alt="logo" />
                   </div>
                 </Tooltip>
-                <div className="hidden sm:ml-0 sm:block px-2">
-                  <div className="flex space-x-1 text-center items-center justify-center ">
+                <div className="hidden sm:ml-0 sm:block px-2 ">
+                  <div className="flex gap-1 text-center items-center justify-center ">
                     {navButtons.map((item, index) => {
                       if (true) {
                         return (
@@ -109,10 +109,10 @@ export default function Navbar({ parasha, holiday, title }) {
                               handleNavigationClick(item);
                             }}
                             className={classNames(
-                              index === activeIndex
-                                ? "blue-gradient text-white shadow-sm shadow-white  "
-                                : "text-gray-300 hover:bg-gray-700 ",
-                              "rounded-md px-2 py-4  font-semibold cursor-pointer select-none text-md"
+                              item.id === activeIndex
+                                ? "blue-gradient text-white shadow-sm shadow-white"
+                                : "text-gray-300 hover:bg-blue-700",
+                              " flex justify-center items-center whitespace-break-spaces h-14 w-14 rounded-md  cursor-pointer select-none text-md font-semibold"
                             )}
                             aria-current={
                               // item.current
@@ -134,7 +134,7 @@ export default function Navbar({ parasha, holiday, title }) {
                   onClick={() => {
                     navigate(navButtons[0].href);
                   }}
-                  className="text-center font-bold leading-7 text-white sm:truncate sm:text-2xl sm:tracking-right select-none"
+                  className="text-center font-bold font-bona_nova leading-7 text-white sm:truncate sm:text-3xl sm:tracking-right select-none"
                 >
                   {`וורטלי`}
                   {/* <span>{title ? ` - ${title}` : ""}</span> */}
@@ -245,8 +245,8 @@ export default function Navbar({ parasha, holiday, title }) {
             </div>
           </div>
 
-          <Disclosure.Panel className="sm:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1">
+          <Disclosure.Panel className="sm:hidden ">
+            <div className="px-2 pt-2 pb-3 space-y-1 ">
               {navButtons.map((item, index) => (
                 <Disclosure.Button
                   key={item.name}
@@ -257,7 +257,7 @@ export default function Navbar({ parasha, holiday, title }) {
                   className={classNames(
                     // item.current
                     index === activeIndex
-                      ? "bg-gray-900 text-white"
+                      ? "blue-gradient text-white"
                       : "text-gray-300 hover:bg-gray-700 hover:text-white",
                     "block rounded-md px-3 py-2 text-base font-medium cursor-pointer"
                   )}

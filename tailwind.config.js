@@ -15,9 +15,13 @@ export default {
       //   lightBlue: 'var(--light-blue)',
       //   white: 'var(--white)',
       //   gray: 'var(--gray)',
-      //   blueGradien:'var(--blue-gradien)',
+      //   blueGradient:'var(--blue-gradien)',
       //   txtColor: 'var(--txt-color)'
       // },
+      fontFamily: {
+        heebo: ['Heebo', 'sans-serif'],
+        bona_nova: ['Bona nova', 'sans-serif']
+      },
     },
   },
   plugins: [],

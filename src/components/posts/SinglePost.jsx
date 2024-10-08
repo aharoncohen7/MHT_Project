@@ -68,7 +68,7 @@ export default function SinglePost() {
                         }}
                       />
                     </Tooltip>
-                    <span className="flex px-2 item-center justify-center gap-2">
+                    <span className="flex px-2 items-center justify-center gap-2">
                       <Tooltip title={"לחץ כדי לדרג"}>
                         {`דרג את תוכן המאמר :`}
                       </Tooltip>

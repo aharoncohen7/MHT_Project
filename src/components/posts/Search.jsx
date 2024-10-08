@@ -135,7 +135,7 @@ export default function Search({ setSortedList }) {
 
   return (
     <div
-      className={`sm:flex fixed p-1 pr-2 left-1/2 w-4/5 sm:w-3/6  md:w-2/5 lg:w-2/5 xl:w-2/5 top-28 ${
+      className={`sm:flex fixed p-1 pr-2 left-1/2 w-5/5 sm:w-3/6  md:w-2/5 lg:w-2/5 xl:w-2/5 top-28 ${
         showSearch ? "bg-gray-300 border border-gray-400 shadow-md " : ""
       }  text-center justify
         items-center transform -translate-x-1/2 -translate-y-1/2  rounded-full z-10  `}

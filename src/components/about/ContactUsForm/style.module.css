@@ -2,7 +2,7 @@
 
 
     .container {
-        margin-top: 90px;
+        /* margin-top: 90px; */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -92,7 +92,7 @@
         direction: rtl;
       }
       
-      .input:focus {
+      .input:focus, .textarea:focus {
         outline: none;
         border: #0077CC solid 3px;
         box-shadow: 1px 1px 15px 2px #fff;

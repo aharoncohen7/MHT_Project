@@ -88,10 +88,6 @@ export default function AboutUs() {
           </dl>
         </div>
       </div>
-      {/* <section id="צור-קשר">
-        <span className="w-full py-20 flex my-22 justify-center text-base font-semibold leading-7 text-white">
-          <ContactUsForm /></span>
-      </section> */}
     </div>
   )
 }
