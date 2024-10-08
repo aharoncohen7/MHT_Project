@@ -14,6 +14,7 @@ import { formatDate } from "./../../functions";
 export default function SinglePost() {
   const navigate = useNavigate();
   const [item, setItem] = useState(null);
+  const [imgError, setImgError] = useState(false);
   const { postId } = useParams();
   const { setMessage, message, logOut, adminMode } = useContext(UserContext);
   const { setOriginalData, originalData } = useContext(DataContext);
@@ -39,9 +40,9 @@ export default function SinglePost() {
     <>
       {item && (
         <div className="relative flex items-center justify-center px-6 overflow-hidden isolate sm:py-2 lg:overflow-visible lg:px-14">
-          <div className="grid max-w-2xl grid-cols-1 mx-auto text-right gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-center lg:gap-y-10">
+          <div className="grid max-w-2xl grid-cols-1 mx-auto text-right sm:gap-x-8 sm:gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-center lg:gap-y-10">
             <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
-              <div className="mt-20 lg:-mt-40">
+              <div className="mt-10 lg:-mt-60">
                 <div className="lg:max-w-lg mr-6 flex-row gap-8">
                   <Tooltip label="תגית נושא" title="תגית נושא">
                     <Chip
@@ -54,10 +55,10 @@ export default function SinglePost() {
                       }}
                     />
                   </Tooltip>
-                  <h2 className="pt-2  pb-8 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                  <h2 className="pt-2 pb-8 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                     {item.title}
                   </h2>
-                  <span className="flex justify-between">
+                  <span className="flex justify-between pb-6">
                     <Tooltip title="מחבר">
                       <Chip
                         label={item.author}
@@ -68,7 +69,7 @@ export default function SinglePost() {
                         }}
                       />
                     </Tooltip>
-                    <span className="flex px-2 items-center justify-center gap-2">
+                    <span className="hidden sm:flex px-2 items-center justify-center gap-2">
                       <Tooltip title={"לחץ כדי לדרג"}>
                         {`דרג את תוכן המאמר :`}
                       </Tooltip>
@@ -84,19 +85,15 @@ export default function SinglePost() {
                   </span>
                 </div>
               </div>
+              <span className="flex p-4 px-10 items-center justify-between sm:hidden">
+                      <Tooltip title={"לחץ כדי לדרג"}>
+                        {`דרג את תוכן המאמר :`}
+                      </Tooltip>
+                      <MyRating item={item} />
+                    </span>
             </div>
-            <div className="z-10 -ml-8 -mt-12 p-12 lg:sticky lg:top-12 lg:col-start-2  lg:row-start-1 lg:overflow-hidden">
-              {item.subtopic && (
-                <img
-                  className="mb-12 lg:mr-10
-                w-[48rem]  rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[26rem]"
-                  src={`https://www.breslev.org/wp-content/uploads/2019/07/${item.subtopic.replace(
-                    " ",
-                    "-"
-                  )}.jpg`}
-                  alt="תמונת הפרשה"
-                />
-              )}
+
+            <div className="z-10 sm:-ml-8 -mt-12 sm:p-2 lg:sticky lg:top-12 lg:col-start-2  lg:row-start-1 lg:overflow-hidden">
               <span
                 className="hidden lg:col-start-2 lg:row-start-2  lg:block mr-10  lg:sticky mb-5 
                 w-[48rem] rounded-xl shadow-xl sm:w-[26rem]
@@ -104,12 +101,28 @@ export default function SinglePost() {
               >
                 <ParashaNav />
               </span>
+              {item.subtopic && !imgError ? (
+                <img
+                  className="sm:mb-12 lg:mr-10 min-h-60
+                w-[48rem]  rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[26rem]"
+                  src={`https://www.breslev.org/wp-content/uploads/2019/07/${item.subtopic.replace(
+                    " ",
+                    "-"
+                  )}.jpg`}
+                  onError={() => setImgError(true)}
+                  alt="תמונת הפרשה"
+                />
+              ):
+              <div className="h-60 hidden sm:block">
+              </div>
+              
+              }
             </div>
             <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
-              <div className="lg:pr-4 -mt-30 lg:-mt-60 ">
+              <div className="lg:pr-4 -mt-30 lg:-mt-40 ">
                 <div className="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
                   <ul role="list" className="mt-8 space-y-8 text-gray-600"></ul>
-                  <div className="mt-8">
+                  <div className="mt-8 lg:-mt-60">
                     <div
                       style={{ wordWrap: "break-word" }}
                       className=" whitespace-normal tracking-widest"
