@@ -10,10 +10,9 @@ import {
   getCurrentDateInfoFromAPI,
   getCurrentDateInfoFromJson,
 } from "../../helpers/formatDate";
-import Footer from "../Footer";
+import Footer from "./Footer";
 import Navbar from "./Header";
 import ParashaNav from "./ParashaNav";
-import ContactUsForm from "../about/ContactUsForm";
 import AboutUs from "../AboutUs";
 import Addition from "../Addition";
 import Dashboard from "../dashboard/Dashboard";
@@ -22,6 +21,7 @@ import SignIn from "../login/SignIn";
 import NotFound from "../NotFound";
 import AllPosts from "../posts/AllPosts";
 import SinglePost from "../posts/SinglePost";
+import ContactUsForm from "../about/ContactUsForm";
 
 const Layout = () => {
   const [parasha, setParasha] = useState(null);
@@ -103,6 +103,7 @@ const Layout = () => {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
+            marginTop: "63px",
           }}
         >
           <Routes>

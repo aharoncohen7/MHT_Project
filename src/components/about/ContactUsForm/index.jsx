@@ -2,13 +2,11 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import ReCAPTCHA from "react-google-recaptcha";
 import { SiTheconversation } from "react-icons/si";
 // import { createQuestionAction } from 'askQuestionAction.js'
-import { SubmitButton } from '../SubmitButton/SubmitButton';
-import Text from '../TextComponent';
 import styles from "./style.module.css";
 import { axiosReq } from '../../../functions/useAxiosReq';
-const RECAPTCHA_SITE_KEY = '6Ld8QxcqAAAAAF09ze43D1eSzgG0gBq4S4ky6bB_';
-
-
+import { SubmitButton } from '../../SubmitButton/SubmitButton';
+import Text from '../../TextComponent';
+const RECAPTCHA_SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
 
 export default function ContactUsForm() {
   const [state, setState] = useState({});

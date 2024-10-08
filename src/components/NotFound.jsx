@@ -1,6 +1,6 @@
 import { ButtonBase } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { ButtonClick } from "./about/ButtonClick";
+import { ButtonClick } from "./ButtonClick";
 
 export default function NotFound() {
   const navigate = useNavigate();

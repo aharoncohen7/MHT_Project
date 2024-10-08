@@ -7,7 +7,7 @@ import UserContext from "../contexts";
 import { FiFeather } from "react-icons/fi";
 import { Box, Dialog } from "@mui/material";
 import ClearIcon from "@mui/icons-material/Clear";
-import { ButtonClick } from "./about/ButtonClick";
+import { ButtonClick } from "./ButtonClick";
 
 
 export default function Addition() {

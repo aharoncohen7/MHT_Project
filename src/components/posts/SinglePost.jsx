@@ -7,7 +7,7 @@ import { importedDelete } from "../../functions/postFunctions";
 import ParashaNav from "../layout/ParashaNav";
 import MyRating from "../MyRating";
 import TagList from "./TagList";
-import { ButtonClick } from "../about/ButtonClick";
+import { ButtonClick } from "../ButtonClick";
 import { formatDate } from "./../../functions";
 
 // פוסט בודד בעמוד נפרד - חדש

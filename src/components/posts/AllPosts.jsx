@@ -57,7 +57,7 @@ export default function AllPosts({}) {
   return (
     <ErrorBoundary>
       {/* <> */}
-      <div className="py-12">
+      <div className={""}>
         <div className="px-6 mx-auto max-w-7xl lg:px-8">
           <div className="max-w-2xl mx-auto lg:mx-0">
             {/* <h2 className="text-3xl font-bold tracking-tight text-center text-gray-900 sm:text-4xl">{parasha || "פרשת השבוע"}</h2>
@@ -77,7 +77,7 @@ export default function AllPosts({}) {
           )}
 
           {message && <p style={{ color: "red" }}>{message}</p>}
-          <div className="mb-20 grid max-w-2xl grid-cols-1 pt-10 mx-auto border-t border-gray-200 gap-x-8 gap-y-8 sm:mt-36 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3  ">
+          <div className="grid py-24 grid-cols-1 lg:grid-cols-3 max-w-2xl mx-auto border-t border-gray-300 gap-x-8 gap-y-8 sm:mt-30 lg:mt-30 lg:max-w-none ">
             {loading ? ( <Spinner/>)
               :(
               sortedList.length == 0? (

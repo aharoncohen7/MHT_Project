@@ -1,15 +1,15 @@
 import React, { useContext, useEffect, useState } from "react";
 import { CiCircleChevDown, CiCircleChevUp } from "react-icons/ci";
-import UserContext from "../../contexts";
+import { CiSearch } from "react-icons/ci";
+import { IoMdSearch } from "react-icons/io";
+import { IoIosCloseCircleOutline } from "react-icons/io";
 import DataContext from "../../contexts/dataContext";
+import { Tooltip } from "@mui/material";
 
 export default function Search({ setSortedList }) {
-  const { adminMode } = useContext(UserContext);
   const { originalData, filteredData, setFilteredData, parasha } =
     useContext(DataContext);
-  // console.log(parasha);
   const [showSearch, setShowSearch] = useState(true);
-  const [selectedOption, setSelectedOption] = useState(true);
   const [filter, setFilter] = useState("creation date ↑");
   const [input, setInput] = useState("");
   const [idToSearch, setIdToSearch] = useState("");
@@ -109,15 +109,6 @@ export default function Search({ setSortedList }) {
     }
   };
 
-  //  סינון
-  // בורר סוג סינון
-  const handleOptionChange = (event) => {
-    document.getElementById("input1").value = "";
-    document.getElementById("input2").value = "";
-    setSelectedOption(event.target.value === "true");
-    setFilteredData(originalData);
-  };
-
   //  סינון לפי תוכן
   useEffect(() => {
     if (input === "") {
@@ -143,123 +134,73 @@ export default function Search({ setSortedList }) {
   }, [idToSearch]);
 
   return (
-    <>
-      <div
-        className={`hidden sm:block fixed left-1/2 w-4/6 ${
-          showSearch ? "top-32" : "top-24"
-        }  text-center transform -translate-x-1/2 -translate-y-1/2 bg-gray-300 border border-gray-400 rounded-xl shadow-md z-10 `}
-      >
-        {showSearch && (
-          <>
-            {adminMode && (
-              <div className="flex items-center justify-center mb-2 ">
-                <label htmlFor="search-by-id">
-                  <input
-                    type="radio"
-                    name="options"
-                    value="false"
-                    id="search-by-id"
-                    className="w-4 h-4 mr-2"
-                    checked={selectedOption === false}
-                    onChange={handleOptionChange}
-                  />{" "}
-                  חפש לפי מזהה
-                </label>
-                <label htmlFor="search-by-title">
-                  <input
-                    type="radio"
-                    name="options"
-                    value="true"
-                    id="search-by-title"
-                    className="w-4 h-4 ml-2 mr-2"
-                    checked={selectedOption === true}
-                    onChange={handleOptionChange}
-                  />{" "}
-                  חפש לפי כותרת
-                </label>{" "}
-              </div>
+    <div
+      className={`sm:flex fixed p-1 pr-2 left-1/2 w-4/5 sm:w-3/6  md:w-2/5 lg:w-2/5 xl:w-2/5 top-28 ${
+        showSearch ? "bg-gray-300 border border-gray-400 shadow-md " : ""
+      }  text-center justify
+        items-center transform -translate-x-1/2 -translate-y-1/2  rounded-full z-10  `}
+    >
+      <Tooltip title={showSearch ? "סגור" : "לחץ כדי להציג אפשרויות חיפםוש ומיון"}>
+          <button
+            type="button"
+            className="hidden sm:flex items-center justify-center w-10 h-10 bg-gray-200 rounded-full hover:bg-gray-400 focus:outline-none focus:ring-1"
+            onClick={() => setShowSearch(!showSearch)}
+          >
+            {showSearch ? (
+              <IoIosCloseCircleOutline size="40px" />
+            ) : (
+              <span>
+                <CiSearch size="30px" />
+              </span>
             )}
+          </button>
+      </Tooltip>
 
-            <div className="flex items-center justify-center gap-4">
-              <div className={selectedOption ? "hidden" : "block mt-6 "}>
-                <input
-                  id="input1"
-                  type="text"
-                  className="block w-full px-2 py-2 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 text-right rtl"
-                  onChange={(event) => setIdToSearch(event.target.value)}
-                  placeholder="חפש לפי מזהה"
-                />
-              </div>
+      {showSearch && (
+        <div className="flex items-center justify-center gap-2 p-2">
+          <input
+            id="input1"
+            type="text"
+            className="hidden xl:block w-full p-2 rounded-3xl focus:outline-none focus:ring-1 focus:ring-blue-500 text-right "
+            onChange={(event) => setIdToSearch(event.target.value)}
+            placeholder="חפש לפי מזהה"
+          />
 
-              <div
-                className={
-                  !selectedOption ? "hidden" : "block mt-4 text-center rtl"
-                }
-              >
-                <input
-                  id="input2"
-                  type="text"
-                  className="block w-full px-2 py-2 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 text-right "
-                  onChange={(event) => setInput(event.target.value)}
-                  placeholder=" חפש בתוכן מאמר"
-                />
-              </div>
+          <input
+            id="input2"
+            type="text"
+            className="block w-44 sm:w-full p-2 rounded-3xl focus:outline-none focus:ring-1 focus:ring-blue-500 text-right "
+            onChange={(event) => setInput(event.target.value)}
+            placeholder=" חפש בתוכן מאמר"
+          />
 
-              <div className="flex items-center justify-center rtl mt-4">
-                {selectedOption}
-                <select
-                  id="sort"
-                  onChange={handleSortChange}
-                  className="px-2 py-1 ml-2 h-10 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
-                  value={filter}
-                >
-                  {/* <option className="" value="sequential">Sequential</option> */}
-                  {/* <option className="" value="alphabetical ↓">א-ת </option> */}
-                  {/* <option className="" value="alphabetical ↑">ת-א </option> */}
-                  <option className="" value="random">
-                    אקראי
-                  </option>
-                  <option className="" value="rating ↓">
-                    המדורג ביותר
-                  </option>
-                  {/* <option className="" value="rating ↑">מדורג נמוך</option> */}
-                  <option className="" value="creation date ↓">
-                    מהישן לחדש
-                  </option>
-                  <option className="" value="creation date ↑">
-                    מהחדש לישן
-                  </option>
-                </select>
-              </div>
-            </div>
-          </>
-        )}
-
-        <button
-          type="button"
-          className="flex items-center justify-center w-8 h-8 bg-gray-200 rounded-full hover:bg-gray-400 focus:outline-none focus:ring-1"
-          onClick={() => setShowSearch(!showSearch)}
-        >
-          {showSearch ? (
-            <CiCircleChevUp size="40px" />
-          ) : (
-            <CiCircleChevDown size="40px" />
-          )}
-          {/* <span className="text-lg font-bold text-gray-500"><CiCircleChevUp /></span> */}
-        </button>
-
-        {/* <ButtonGroup
-                        color="green"
-                        orientation="horizontal"
-                        // variant="elevated" 
-
-                        variant="filled"
-                        aria-label="Basic button group">
-                        <Button>One</Button>
-                        <Button>Two</Button>
-                        <Button>Three</Button>
-                    </ButtonGroup> */}
-      </div>
-    </>
+          <div className="flex items-center justify-center rtl  ">
+            <select
+              id="sort"
+              onChange={handleSortChange}
+              className=" px-2 py-1 h-10 border rounded-3xl focus:outline-none focus:ring-1 focus:ring-blue-500"
+              value={filter}
+            >
+              {/* <option className="" value="sequential">Sequential</option>
+                  <option className="" value="alphabetical ↓">א-ת </option>
+                  <option className="" value="alphabetical ↑">ת-א </option> */}
+              <option className="" value="random">
+                אקראי
+              </option>
+              <option className="" value="rating ↓">
+                המדורג ביותר
+              </option>
+              {/* <option className="" value="rating ↑">מדורג נמוך</option> */}
+              <option className="" value="creation date ↓">
+                מהישן לחדש
+              </option>
+              <option className="" value="creation date ↑">
+                מהחדש לישן
+              </option>
+            </select>
+          </div>
+        </div>
+      )}
+    </div>
   );
 }
