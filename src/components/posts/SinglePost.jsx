@@ -1,14 +1,15 @@
-import { Button, Chip, Tooltip } from "@mui/material";
+import { Chip, Tooltip } from "@mui/material";
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import UserContext from "../../contexts";
 import DataContext from "../../contexts/dataContext";
 import { importedDelete } from "../../functions/postFunctions";
+import { ButtonClick } from "../ButtonClick";
 import ParashaNav from "../layout/ParashaNav";
 import MyRating from "../MyRating";
-import TagList from "./TagList";
-import { ButtonClick } from "../ButtonClick";
 import { formatDate } from "./../../functions";
+import SanitizedHTML from "./SanitizedHTML";
+import TagList from "./TagList";
 
 // פוסט בודד בעמוד נפרד - חדש
 export default function SinglePost() {
@@ -123,15 +124,16 @@ export default function SinglePost() {
                 <div className="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
                   <ul role="list" className="mt-8 space-y-8 text-gray-600"></ul>
                   <div className="mt-8 lg:-mt-60">
-                    <div
+                    {/* <div
                       style={{ wordWrap: "break-word" }}
                       className=" whitespace-normal tracking-widest"
                       dangerouslySetInnerHTML={{ __html: item.body }}
-                    />
+                    /> */}
+                    <SanitizedHTML htmlContent={item.body}/>
                   </div>
                 </div>
 
-                <div className="">
+                <div className="h3 bg-gray-200 py-2 my-2 font-semibold">
                   תגיות קשורות:
                   {item.tags !== null && (
                     <div className="flex justify-between py-4">
@@ -175,47 +177,3 @@ export default function SinglePost() {
   );
 }
 
-// function processString(string) {
-//   const words = string.split(" ");
-//   if (words.length >= 2) {
-//     if (words.length >= 3) {
-//       words[1] = words[2].replace(" ", "-");
-//     } else {
-//       words[0] = words[1];
-//     }
-//     return words.slice(1).join(" ");
-//   }
-//   return string;
-// }
-
-// useEffect(() => { console.log(originalData, userId) }
-//   ,[postId, originalData])
-
-// // מחיקה
-// async function deletePost() {
-
-//   try {
-//     let response = await fetch(`${SERVER_HOST}/posts/${item.id}`, {
-//       method: 'DELETE',
-//       headers: {
-//         'Content-Type': 'application/json',
-//
-//         'authorization': localStorage.getItem('Authorization') || ''
-//       },
-//     });
-//     if (!response.ok) {
-//       console.log("problem deleting post");
-//       throw new Error(`Failed to delete post! Status: ${response.status}`);
-//     }
-//     // alert(`Post ${item.id} deleted`)
-//     setOriginalData(prevOriginalData => prevOriginalData.filter(obj => obj.id !== item.id));
-//     setMessage([`Post ${item.id} deleted`, true])
-//     alert(`Post ${item.id} deleted`)
-//     navigate(`/`)
-//   }
-//   catch (error) {
-//     alert(`Post ${item.id} not deleted`)
-//     console.error(error.message);
-
-//   }
-// }
