@@ -31,7 +31,8 @@ export default function AllPosts({}) {
 
   function handleNewPost() {
     if (userId) {
-      setShowEditor(true);
+      navigate("/addition")
+      // setShowEditor(true);
     } else {
       setMessage(["כדי לפרסם פוסט עליך להיות מחובר", false]);
     }

@@ -23,7 +23,7 @@ export default function Select({
   };
 
   return (
-    <div className="ltr mt-4 flex flex-row-reverse w-full gap-4 justify-center">
+    <div className="ltr flex flex-row-reverse w-full gap-4 justify-center">
      
 
       {/* סלקט הפרשיות  */}

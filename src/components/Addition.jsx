@@ -31,6 +31,7 @@ export default function Addition() {
         open={isPopUpOpen}
         onClose={handleClosePopUp}
         maxWidth="md"
+        fullHeight
         fullWidth
       >
         <Box sx={{ display: "flex", justifyContent: "flex-end", mb: 1 }}>
@@ -48,7 +49,7 @@ export default function Addition() {
                 setSend={setSend}
               />
             {/* </div> */}
-            <div
+            {/* <div
               style={{
                 position: "absolute",
                 left: "200px",
@@ -79,12 +80,12 @@ export default function Addition() {
               >
                 שלח
               </ButtonClick>
-            </div>
+            </div> */}
           </>
 
       
       </Dialog>
-      <div className=" max-w-md p-6 mx-auto bg-white rounded-lg shadow-md ">
+      <div className=" max-w-lg p-6 mx-auto bg-white rounded-lg shadow-md ">
         {!isPopUpOpen && (
           <>
             <h2 className="mb-6 text-2xl font-bold text-center text-gray-900">
@@ -139,7 +140,7 @@ export default function Addition() {
           </>
         )}
 
-        {isPopUpOpen && (
+        {/* {isPopUpOpen && (
           <>
             <div style={{ position: "fixed", top: "100px" }}>
               <Editor
@@ -182,7 +183,7 @@ export default function Addition() {
               </Button>
             </div>
           </>
-        )}
+        )} */}
       </div>
     </>
   );

@@ -37,12 +37,12 @@ export default function PopUp({ showEditor, setShowEditor}) {
     >
 
       <Editor send={send} setSend={setSend} setComplete={setComplete} setShowEditor={setShowEditor} />
-      <div style={{ position: "absolute", bottom: "10px", display: "flex", gap: "1rem" }}>
+      {/* <div style={{ position: "absolute", bottom: "10px", display: "flex", gap: "1rem" }}>
         <Button variant="outlined" startIcon={<DeleteIcon />} onClick={() => setShowEditor(false)}>ביטול</Button>
         <Button disabled={!complete} variant="contained" endIcon={<SendIcon />} onClick={() => {
           setSend(true)
         }}  >שלח</Button>
-      </div>
+      </div> */}
     </Modal>
 
 

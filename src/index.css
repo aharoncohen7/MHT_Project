@@ -134,10 +134,58 @@ input, textarea, [contenteditable="true"] {
 }
 
 
-.ql-editor {
-  direction: rtl;
-  text-align: right;
-  max-width: 400px;
+
+
+
+
+/* מסגרת כללית */
+.quill{
+  direction: rtl !important;
+  /* border: solid 1px green !important; */
+
+}
+
+/* תיבת הטקסט */
+.ql-container{
+  padding: 10px;  
+  /* border: solid 1px red !important */
+}
+
+.ql-editor{
+  /* border: solid 1px yellow !important; */
+
+  direction: rtl !important;
+  text-align: right !important;
+  padding: 5px;
+  /* font-size: large; */
+  
+  /* color: #374151; */
+}
+ /* סמלי עריכה */
+.ql-toolbar{
+  background-color:  #e9ebee66;
+  margin-bottom: 10px;
+
+  /* color: #ffffff; */
+}
+
+.ql-toolbar:hover{
+  background-color:  #e9ebee;
+}
+
+/* מסגרת כאשר אין הקלדה */
+.ql-blank{
+  border: solid 1px #e9ebee;
+  /* background-color: #045197; */
+
+}
+
+
+.ql-snow{
+  border: 2px solid #e5e7eb;
+  border-radius: 0.5rem;
+
+
 }
 
 
@@ -145,8 +193,8 @@ input, textarea, [contenteditable="true"] {
   background: linear-gradient(to right, #0677dd, #045197, #034077);
 }
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .ql-editor {
     max-width: 320px;
   }
-}
+} */
