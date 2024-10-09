@@ -48,7 +48,7 @@ export default function Navbar({ parasha, holiday, title }) {
     // },
     {
       id: 3,
-      name: adminMode ? "יוזרים" : "אודות",
+      name: adminMode ? "ניהול" : "אודות",
       href: adminMode ? "/dashboard" : "/about",
     },
     // { id: 3, name: isDarkMode ? 'LightMode' : "DarkMode", href: "/" }

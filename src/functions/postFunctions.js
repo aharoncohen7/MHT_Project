@@ -19,7 +19,7 @@ export async function importedAddNew(userId, selectedBook, selectedPortion, titl
       }),
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
-        // 'authorization': localStorage.getItem('Authorization') || ''
+        
         'authorization': Cookies.get('Authorization') || ''
       },
     });
@@ -72,7 +72,7 @@ export async function importedEdit(postId, selectedBook, selectedPortion, title,
       }),
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
-        // 'authorization': localStorage.getItem('Authorization') || ''
+        
         'authorization': Cookies.get('Authorization') || ''
       },
     });
@@ -121,7 +121,7 @@ export async function importedDelete(item, setOriginalData, setMessage, logOut, 
       headers: {
         'Content-Type': 'application/json',
 
-        // 'authorization': localStorage.getItem('Authorization') || ''
+        
         'authorization': Cookies.get('Authorization') || ''
       },
     });
@@ -183,7 +183,7 @@ export async function importedDelete(item, setOriginalData, setMessage, logOut, 
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
                
-                // 'authorization': localStorage.getItem('Authorization') || ''
+                
                 'authorization': Cookies.get('Authorization') || ''
             },
         });
@@ -192,7 +192,7 @@ export async function importedDelete(item, setOriginalData, setMessage, logOut, 
             console.log("400/404");
             const errorMessage = await response.text();
             console.log('Post not updated' + errorMessage);
-            setMessage(['Post not updated ' + errorMessage, false])
+            setMessage(['שגיאה בעדכון המאמר', false])
             if (response.status == 401) {
                 logOut()
                 return
