@@ -5,10 +5,9 @@ import UserContext from "../../contexts";
 import { Button } from "../buttons/Button";
 const SERVER_HOST = import.meta.env.VITE_SERVER_HOST;
 
-const CommentList = ({ postId, userEmail, showComments }) => {
-  const urlComments = `${SERVER_HOST}/comments/${postId}`;
+const CommentList = ({ postId, showComments }) => {
   const [comments, setComments] = useState([]);
-  const {setMessage} = useContext(UserContext)
+  const { setMessage, userId } = useContext(UserContext);
 
   function logOut() {
     localStorage.removeItem("Authorization");
@@ -35,20 +34,17 @@ const CommentList = ({ postId, userEmail, showComments }) => {
       });
       if (result.value) {
         const { body } = result.value;
-        const response = await fetch(
-          `${SERVER_HOST}/comments`,
-          {
-            method: "POST",
-            body: JSON.stringify({
-              postId,
-              body,
-            }),
-            headers: {
-              "Content-Type": "application/json",
-              authorization: Cookies.get("Authorization") || "",
-            },
-          }
-        );
+        const response = await fetch(`${SERVER_HOST}/comments`, {
+          method: "POST",
+          body: JSON.stringify({
+            postId,
+            body,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+            authorization: Cookies.get("Authorization") || "",
+          },
+        });
         if (!response.ok) {
           console.log(response);
           setMessage(["Failed to add comment", false]);
@@ -74,16 +70,13 @@ const CommentList = ({ postId, userEmail, showComments }) => {
 
   // מחיקה
   async function deleteComment(commentId) {
-    const response = await fetch(
-      `${SERVER_HOST}/comments/${commentId}`,
-      {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-          authorization: Cookies.get("Authorization") || "",
-        },
-      }
-    );
+    const response = await fetch(`${SERVER_HOST}/comments/${commentId}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+        authorization: Cookies.get("Authorization") || "",
+      },
+    });
     if (!response.ok) {
       setMessage([
         `Failed to delete comment! Status: ${response.status}`,
@@ -94,7 +87,7 @@ const CommentList = ({ postId, userEmail, showComments }) => {
     setComments((prevFilteredData) =>
       prevFilteredData.filter((obj) => obj.id !== commentId)
     );
-    setMessage([`comment ${commentId} deleted`, true]);
+    // setMessage([`comment ${commentId} deleted`, true]);
   }
 
   // קבלת תגובות לפוסט
@@ -106,15 +99,15 @@ const CommentList = ({ postId, userEmail, showComments }) => {
           headers: {
             "Content-Type": "application/json",
             // 'auth': localStorage.getItem('auth') || ''.getItem('auth') || '',
-            
+
             authorization: Cookies.get("Authorization") || "",
           },
         };
-        const response = await fetch(urlComments, requestOptions);
+        const response = await fetch(`${SERVER_HOST}/public-comments/${postId}`, requestOptions);
         const data = await response.json();
         setComments(data);
       } catch (error) {
-        setMessage(["Error fetching comments!", false]);
+        setMessage(["שליחה נכשלה, נא להתחבר", false]);
         console.error("Error fetching comments:", error);
       }
     };
@@ -122,33 +115,38 @@ const CommentList = ({ postId, userEmail, showComments }) => {
   }, [postId]);
 
   return (
-    <ul className={`mt-4 space-y-4 ${showComments ? 'block' : 'hidden'}`}>
-      <button 
+    <ul className={`mt-4 space-y-4 ${showComments ? "block" : "hidden"}`}>
+      { !comments.length &&
+      <p className="text-center text-gray-500">עדיין אין תגובות</p>
+
+      }
+      <button
         onClick={addNewComment}
         className="mb-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
       >
         הוסף תגובה
       </button>
-
-      {comments.map((comment) => (
-        <li key={comment.id} className="bg-white shadow-md rounded-lg p-4">
-          <div className="flex justify-between items-start">
-            <div className="space-y-1">
-              {/* <p className="text-gray-600 text-sm">#{comment.id}</p> */}
-              <p className="text-lg font-medium">{comment.body}</p>
-              <p className="text-sm text-gray-500">שם: {comment.name}</p>
-              <p className="text-sm text-gray-500">אימייל: {comment.email}</p>
+      
+      {comments.length ?
+        comments.map((comment) => (
+          <li key={comment.id} className="bg-white shadow-md rounded-lg p-4">
+            <div className="flex justify-between items-start">
+              <div className="space-y-1">
+                {/* <p className="text-gray-600 text-sm">#{comment.id}</p> */}
+                <p className="text-lg font-medium">{comment.body}</p>
+                <p className="text-sm text-gray-500">שם: {comment.name}</p>
+                <p className="text-sm text-gray-500">אימייל: {comment.email}</p>
+              </div>
+              <Button
+                onClick={() => deleteComment(comment.id)}
+                className="text-white font-bold py-1 px-2 rounded text-sm"
+                disabled={comment.userId !== userId}
+              >
+                מחיקה
+              </Button>
             </div>
-            <Button 
-              onClick={() => deleteComment(comment.id)}
-              className="text-white font-bold py-1 px-2 rounded text-sm"
-              disabled={comment.email !== userEmail}
-            >
-              מחיקה
-            </Button>
-          </div>
-        </li>
-      ))}
+          </li>
+        )): null}
     </ul>
   );
 };
