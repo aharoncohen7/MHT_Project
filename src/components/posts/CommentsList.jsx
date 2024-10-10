@@ -17,6 +17,7 @@ const CommentList = ({ postId, showComments }) => {
 
   // הוספת חדש
   async function addNewComment() {
+    if (!userId) return;
     try {
       const result = await Swal.fire({
         title: "כתוב תגובה",
@@ -103,7 +104,10 @@ const CommentList = ({ postId, showComments }) => {
             authorization: Cookies.get("Authorization") || "",
           },
         };
-        const response = await fetch(`${SERVER_HOST}/public-comments/${postId}`, requestOptions);
+        const response = await fetch(
+          `${SERVER_HOST}/public-comments/${postId}`,
+          requestOptions
+        );
         const data = await response.json();
         setComments(data);
       } catch (error) {
@@ -116,37 +120,41 @@ const CommentList = ({ postId, showComments }) => {
 
   return (
     <ul className={`mt-4 space-y-4 ${showComments ? "block" : "hidden"}`}>
-      { !comments.length &&
-      <p className="text-center text-gray-500">עדיין אין תגובות</p>
+      {!comments.length && (
+        <p className="text-center text-gray-500">עדיין אין תגובות</p>
+      )}
+      {userId && (
+        <button
+          onClick={addNewComment}
+          className="mb-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          הוסף תגובה
+        </button>
+      )}
 
-      }
-      <button
-        onClick={addNewComment}
-        className="mb-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-      >
-        הוסף תגובה
-      </button>
-      
-      {comments.length ?
-        comments.map((comment) => (
-          <li key={comment.id} className="bg-white shadow-md rounded-lg p-4">
-            <div className="flex justify-between items-start">
-              <div className="space-y-1">
-                {/* <p className="text-gray-600 text-sm">#{comment.id}</p> */}
-                <p className="text-lg font-medium">{comment.body}</p>
-                <p className="text-sm text-gray-500">שם: {comment.name}</p>
-                <p className="text-sm text-gray-500">אימייל: {comment.email}</p>
+      {comments.length
+        ? comments.map((comment) => (
+            <li key={comment.id} className="bg-white shadow-md rounded-lg p-4">
+              <div className="flex justify-between items-start">
+                <div className="space-y-1">
+                  {/* <p className="text-gray-600 text-sm">#{comment.id}</p> */}
+                  <p className="text-lg font-medium">{comment.body}</p>
+                  <p className="text-sm text-gray-500">שם: {comment.name}</p>
+                  <p className="text-sm text-gray-500">
+                    אימייל: {comment.email}
+                  </p>
+                </div>
+                <Button
+                  onClick={() => deleteComment(comment.id)}
+                  className="text-white font-bold py-1 px-2 rounded text-sm"
+                  disabled={comment.userId !== userId}
+                >
+                  מחיקה
+                </Button>
               </div>
-              <Button
-                onClick={() => deleteComment(comment.id)}
-                className="text-white font-bold py-1 px-2 rounded text-sm"
-                disabled={comment.userId !== userId}
-              >
-                מחיקה
-              </Button>
-            </div>
-          </li>
-        )): null}
+            </li>
+          ))
+        : null}
     </ul>
   );
 };
