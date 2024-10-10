@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import Rating from "@mui/material/Rating";
 import Stack from "@mui/material/Stack";
-import UserContext from "../contexts";
+import UserContext from "../../contexts";
 import Cookies from "js-cookie";
-import DataContext from "../contexts/dataContext";
+import DataContext from "../../contexts/dataContext";
 const SERVER_HOST = import.meta.env.VITE_SERVER_HOST;
 
 export default function MyRating({ item }) {
@@ -59,12 +59,11 @@ export default function MyRating({ item }) {
   }
 
   return (
-    <span className="ltr">
+
       <Stack spacing={1}>
         <Rating
           name="half-rating"
           style={{ color: "rgba(6, 119, 221, 0.8)"
-            //  "linear-gradient(to right, rgba(6, 119, 221, 0.8), rgba(4, 81, 151, 0.8), rgba(3, 64, 119, 0.8))"
              , direction: "ltr" }}
           value={parseFloat(item.rating)}
           defaultValue={0.0}
@@ -72,6 +71,6 @@ export default function MyRating({ item }) {
           onChange={updateRating}
         />
       </Stack>
-    </span>
+
   );
 }

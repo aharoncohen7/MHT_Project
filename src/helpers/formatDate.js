@@ -1,7 +1,7 @@
 import axios from "axios";
 import holidaysObject from "../dateData/holiday20Years.json";
 import parshiyotObject from "../dateData/parashot20Years.json";
-import { parshiot } from "../functions";
+import { parshiot } from ".";
 
 
 // מידע רלוונטי עבור היום הנוכחי

@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './style.module.css'
-// import Link from 'next/link';
 import { ButtonClick } from '../ButtonClick';
+// import Link from 'next/link';
 
 export const Button = ({ href, children, ...props }) => {
     if (!href) return <ButtonClick  {...props}  >

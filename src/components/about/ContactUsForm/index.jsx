@@ -3,9 +3,10 @@ import ReCAPTCHA from "react-google-recaptcha";
 import { SiTheconversation } from "react-icons/si";
 // import { createQuestionAction } from 'askQuestionAction.js'
 import styles from "./style.module.css";
-import { axiosReq } from '../../../functions/useAxiosReq';
-import { SubmitButton } from '../../SubmitButton/SubmitButton';
+import { axiosReq } from '../../../helpers/useAxiosReq';
+import { SubmitButton } from '../../buttons/SubmitButton/SubmitButton';
 import Text from '../../TextComponent';
+import Spinner from '../../Spinner';
 const RECAPTCHA_SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
 
 export default function ContactUsForm() {
@@ -193,7 +194,7 @@ export default function ContactUsForm() {
         <div className={styles.submitButton}>
           <div className={styles.recaptcha}>
             {isReCaptchaLoading && (
-              <div className={styles.loading}><div className={styles.spinner}></div></div>
+              <Spinner/>
             )}
             <div style={{ display: isReCaptchaLoading ? 'none' : 'block' }}>
               <ReCAPTCHA

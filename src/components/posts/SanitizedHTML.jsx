@@ -1,7 +1,6 @@
 import DomPurify from "dompurify";
 import React from "react";
-import { changeColorLinks } from "../../helpers";
-// import { changeColorLinks } from '../../helpers';
+import { changeColorLinks } from "../../helpers/helpers";
 
 // הודעה לדוגמה
 const htmlString = `<span  

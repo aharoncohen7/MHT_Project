@@ -4,8 +4,8 @@ import { Route, Routes } from "react-router-dom";
 import Message from "../../components/Message";
 import UserContext from "../../contexts";
 import DataContext from "../../contexts/dataContext";
-import { getCurrentDate, getNextWeekDate, getParasha } from "../../functions";
-import { axiosReq } from "../../functions/useAxiosReq";
+import { getCurrentDate, getNextWeekDate, getParasha } from "../../helpers";
+import { axiosReq } from "../../helpers/useAxiosReq";
 import {
   getCurrentDateInfoFromAPI,
   getCurrentDateInfoFromJson,
@@ -13,8 +13,8 @@ import {
 import Footer from "./Footer";
 import Navbar from "./Header";
 import ParashaNav from "./ParashaNav";
-import AboutUs from "../AboutUs";
-import Addition from "../Addition";
+import AboutUs from "../about/AboutUs";
+
 import Dashboard from "../dashboard/Dashboard";
 // import { Edit } from "../Edit";
 import SignIn from "../login/SignIn";
@@ -22,6 +22,7 @@ import NotFound from "../NotFound";
 import AllPosts from "../posts/AllPosts";
 import SinglePost from "../posts/SinglePost";
 import ContactUsForm from "../about/ContactUsForm";
+import NewPost from "../posts/NewPost";
 
 const Layout = () => {
   const [parasha, setParasha] = useState(null);
@@ -108,7 +109,7 @@ const Layout = () => {
         >
           <Routes>
             <Route path="login" element={<SignIn />} />
-            <Route path="addition" element={<Addition />} />
+            <Route path="addition" element={<NewPost />} />
             <Route
               path="dashboard/"
               element={isAdmin && adminMode ? <Dashboard /> : <NotFound />}

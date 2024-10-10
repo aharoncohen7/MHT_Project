@@ -5,7 +5,7 @@ import UserContext from './contexts/';
 import SignIn from './components/login/SignIn';
 import Layout from './components/layout/Layout';
 import Cookies from "js-cookie";
-import { axiosReq } from './functions/useAxiosReq';
+import { axiosReq } from './helpers/useAxiosReq';
 import { dark } from '@mui/material/styles/createPalette';
 // const CLIENT_HOST = import.meta.env.VITE_CLIENT_HOST;
 

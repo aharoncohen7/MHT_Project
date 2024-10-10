@@ -4,9 +4,9 @@ import "react-quill/dist/quill.snow.css";
 import { useParams } from "react-router-dom";
 import UserContext from "../../contexts";
 import DataContext from "../../contexts/dataContext";
-import { importedAddNew, importedEdit } from "../../functions/postFunctions";
+import { importedAddNew, importedEdit } from "../../helpers/postFunctions";
 import Select from "./Select";
-import { ButtonClick } from "../ButtonClick";
+import { ButtonClick } from "../buttons/ButtonClick";
 import DeleteIcon from "@mui/icons-material/Delete";
 import SendIcon from "@mui/icons-material/Send";
 
@@ -21,7 +21,6 @@ const module = {
 export default function Editor({
   send,
   setSend,
-  setComplete,
   setShowEditor,
   initialPost,
 }) {
@@ -35,33 +34,27 @@ export default function Editor({
   );
   const [title, setTitle] = useState(initialPost?.title || "");
   const [body, setBody] = useState(initialPost?.body || "");
-  // const [tags, setTags] = useState(initialPost?.tags.split(",") || []);
-  // const [tags, setTags] = useState(initialPost?.tags ? initialPost.tags.split(",") : []);
   const [tags, setTags] = useState([]);
 // 
   const [isAddingTag, setIsAddingTag] = useState(false);
   const quillRef = useRef(null);
 
-  useEffect(() => {
-    async function findPost() {
-      if (postId) {
-        console.log("Fetching data...");
-        const postToEdit = originalData.find((post) => post.id == postId);
-        if (postToEdit) {
-          console.log(postToEdit)
-          setTitle(postToEdit.title);
-          setBody(postToEdit.body);
-          setSelectedBook(postToEdit.topic || "");
-          setSelectedPortion(postToEdit.subtopic || "");
-        }
-        //  else {
-        //   navigate(`/`);
-        // }
-      }
-    }
-    findPost();
-  // }, [postId, originalData]);
-  }, []);
+  // useEffect(() => {
+  //   async function findPost() {
+  //     if (postId) {
+  //       console.log("Fetching data...");
+  //       const postToEdit = originalData.find((post) => post.id == postId);
+  //       if (postToEdit) {
+  //         console.log(postToEdit)
+  //         setTitle(postToEdit.title);
+  //         setBody(postToEdit.body);
+  //         setSelectedBook(postToEdit.topic || "");
+  //         setSelectedPortion(postToEdit.subtopic || "");
+  //       }
+  //     }
+  //   }
+  //   findPost();
+  // }, []);
 
   useEffect(() => {
     if (send) {
@@ -106,18 +99,6 @@ export default function Editor({
       checkBody()
     );
   }
-
-  useEffect(() => {
-    setComplete((prev) => {
-      if (!prev && checkFields()) {
-        return true;
-      }
-      if (prev && !checkFields()) {
-        return false;
-      }
-      return prev;
-    });
-  }, [selectedBook, selectedPortion, title, body]);
 
   function sendPost() {
     if (postId) {

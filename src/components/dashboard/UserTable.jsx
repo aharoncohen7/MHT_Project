@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Pagination from "./Pagination";
-import useAxiosReq, { axiosReq } from "../../functions/useAxiosReq";
+import useAxiosReq, { axiosReq } from "../../helpers/useAxiosReq";
 import { FaArrowDown } from "react-icons/fa";
 import { FaArrowUp } from "react-icons/fa";
 import Switch from "@mui/material/Switch";

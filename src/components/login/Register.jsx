@@ -9,7 +9,7 @@ import { debounce } from "lodash";
 import React, { useCallback, useContext, useState } from "react";
 import * as Yup from "yup";
 import UserContext from "../../contexts";
-import { phoneValidator } from "../../functions";
+import { phoneValidator } from "../../helpers";
 const SERVER_HOST = import.meta.env.VITE_SERVER_HOST;
 const CLIENT_HOST = import.meta.env.VITE_CLIENT_HOST;
 console.log(SERVER_HOST)

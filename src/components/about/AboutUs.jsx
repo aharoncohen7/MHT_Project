@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import { useNavigate } from "react-router-dom"
-import UserContext from "../contexts"
+import UserContext from "../../contexts"
 
 const links = [
   { name: 'להרחבה', href: '#' },

@@ -1,6 +1,6 @@
 import { ButtonBase } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { ButtonClick } from "./ButtonClick";
+import { ButtonClick } from "./buttons/ButtonClick";
 
 export default function NotFound() {
   const navigate = useNavigate();
@@ -19,13 +19,7 @@ export default function NotFound() {
             אופס! עמוד זה עדיין לא קיים. עמך הסליחה.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
-            <ButtonClick
-              // href="https://vortly.onrender.com/"
-              onClick={() => navigate("/")}
-            // className="inline-flex items-center rounded-md bg-indigo-200 px-3 py-3 text-xl font-medium text-blue-700 ring-1 ring-inset ring-blue-1900/10"
-
-              // className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-            >
+            <ButtonClick onClick={() => navigate("/")}>
               חזור לדף הבית
             </ButtonClick>
             {/* <a href="#" className="text-sm font-semibold text-gray-900">

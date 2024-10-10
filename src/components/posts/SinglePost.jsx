@@ -4,15 +4,15 @@ import React, { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import UserContext from "../../contexts";
 import DataContext from "../../contexts/dataContext";
-import { importedDelete } from "../../functions/postFunctions";
-
-import { ButtonClick } from "../ButtonClick";
+import { importedDelete } from "../../helpers/postFunctions";
+import { ButtonClick } from "../buttons/ButtonClick";
 import ParashaNav from "../layout/ParashaNav";
-import MyRating from "../MyRating";
-import { formatDate } from "./../../functions";
+
+import { formatDate } from "../../helpers";
 import Editor from "./Editor";
 import SanitizedHTML from "./SanitizedHTML";
 import TagList from "./TagList";
+import MyRating from "./MyRating";
 
 // פוסט בודד בעמוד נפרד - חדש
 export default function SinglePost() {
@@ -22,7 +22,6 @@ export default function SinglePost() {
   const { postId } = useParams();
   const { setMessage, message, logOut, adminMode } = useContext(UserContext);
   const { setOriginalData, originalData } = useContext(DataContext);
-  const [complete, setComplete] = useState(false);
   const [send, setSend] = useState(false);
   const [isPopUpOpen, setIsPopUpOpen] = useState(false);
 
@@ -40,7 +39,7 @@ export default function SinglePost() {
       const result = originalData.find((post) => post.id == postId);
       if (result) {
         setItem(result);
-        console.log(result);
+        // console.log(result);
       }
     }
     fetchData();
@@ -202,7 +201,6 @@ export default function SinglePost() {
         <Editor
           setShowEditor={setIsPopUpOpen}
           send={send}
-          setComplete={setComplete}
           setSend={setSend}
           initialPost={item}
         />

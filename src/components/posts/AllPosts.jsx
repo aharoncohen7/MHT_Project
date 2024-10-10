@@ -1,24 +1,22 @@
+import { Rating, Tooltip } from "@mui/material";
 import React, { useContext, useState } from "react";
 import { FiFeather, FiTrash2 } from "react-icons/fi";
 import UserContext from "../../contexts";
+import DataContext from "../../contexts/dataContext";
 import {
   importedAdminEdit,
   importedDelete,
-} from "../../functions/postFunctions";
+} from "../../helpers/postFunctions";
 import ErrorBoundary from "../ErrorBoundary";
-import PopUp from "../PopUp";
-import ParashaNav from "../layout/ParashaNav";
-import { formatDate } from "./../../functions";
-import Search from "./Search";
-import DataContext from "../../contexts/dataContext";
-import { Rating, Tooltip } from "@mui/material";
 import Spinner from "../Spinner";
+import ParashaNav from "../layout/ParashaNav";
+import { formatDate } from "../../helpers";
+import Search from "./Search";
 
 export default function AllPosts({}) {
   const { userId, adminMode, setMessage, message, logOut, navigate } =
     useContext(UserContext);
   const { setOriginalData, loading } = useContext(DataContext);
-  const [showEditor, setShowEditor] = useState(false);
   const [sortedList, setSortedList] = useState([]);
 
   function deletePost(item) {
@@ -32,7 +30,6 @@ export default function AllPosts({}) {
   function handleNewPost() {
     if (userId) {
       navigate("/addition")
-      // setShowEditor(true);
     } else {
       setMessage(["כדי לפרסם פוסט עליך להיות מחובר", false]);
     }
@@ -63,8 +60,8 @@ export default function AllPosts({}) {
     <ErrorBoundary>
       <div className={""}>
         <div className="px-6 mx-auto max-w-7xl lg:px-8">
-          {!showEditor && <Search setSortedList={setSortedList} />}
-          {!showEditor && userId && (
+          <Search setSortedList={setSortedList} />
+          {userId && (
             <button
               className="z-20 fixed bottom-6 sm:bottom-14 left-6 sm:left-14 bg-gray-700 rounded-full text-gray-700 hover:bg-gray-900 hover:text-gray h-14 sm:h-20 w-14 sm:w-20 px-4 sm:px-5 text-sm font-medium"
               onClick={() => handleNewPost()}
@@ -201,13 +198,6 @@ export default function AllPosts({}) {
           </div>
         </div>
       </div>
-      {showEditor && (
-        <PopUp
-          userId={userId}
-          showEditor={showEditor}
-          setShowEditor={setShowEditor}
-        />
-      )}
     </ErrorBoundary>
   );
 }

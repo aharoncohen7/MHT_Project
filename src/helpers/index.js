@@ -1,149 +1,3 @@
-import axios from "axios"
- const token = 
-"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzcsImlzQWRtaW4iOjEsInVzZXJuYW1lIjoiYV9jb2hlbiIsInBhc3N3b3JkIjoiYWMxOTg1IiwiaWF0IjoxNzE3MzE1MjMzLCJleHAiOjE3MTczMjcyMzN9.r61dH7cGArIf7f7smMBB5cuKQ5mQZfG9dzDlhuckDmA"
-// בקשת שרת גנרית
-export const axiosReqToRender = async ({ method = 'POST', body, url }) => {
-    try {
-       // axios.defaults.baseURL = 'http://localhost:4000/api/'
-       console.log('api req 😘 \n', { url, method, body })
-       const { data: result } = await axios({
-          baseURL: `https://vortly-db.onrender.com/api/`,
-          method,
-          data: body || {},
-          url,
-          headers: {
-            //  Authorization: localStorage.token || ''
-             authorization: token
-          }
-       })
-       console.log('api req result 🐱 \n', { result })
-       return result;
-    } catch (error) {
-       console.log('api error 🤢 \n', { error })
-       throw error.response?.data?.my  ? error.response?.data?.message || 'something went wrong' : 'something went wrong'
-    }
- }
-
-
-
- // בקשת שרת גנרית
-export const axiosReq = async ({ method = 'POST', body, url }) => {
-    try {
-       // axios.defaults.baseURL = 'http://localhost:4000/api/'
-       console.log('api req 😘 \n', { url, method, body })
-       const { data: result } = await axios({
-          baseURL: 'http://localhost:3000/api/',
-          method,
-          data: body || {},
-          url,
-          headers: {
-            //  Authorization: localStorage.token || ''
-             authorization: token
-          }
-       })
-       console.log('api req result 🐱 \n', { result })
-       return result;
-    } catch (error) {
-       console.log('api error 🤢 \n', { error })
-       throw error.response?.data?.my  ? error.response?.data?.message || 'something went wrong' : 'something went wrong'
-    }
- }
-
-
-// פונקציה לקבלת תיאור יחסי לתאריך
-function getRelativeDate(date) {
-    const currentDate = new Date();
-    const inputDate = new Date(date);
-    const timeDifference = currentDate.getTime() - inputDate.getTime();
-    const oneDay = 24 * 60 * 60 * 1000; // milliseconds in a day
-    const oneWeek = 7 * oneDay; // milliseconds in a week
-
-    if (timeDifference < oneDay) {
-        return "Today";
-    } else if (timeDifference < 2 * oneDay) {
-        return "Yesterday";
-    } else if (timeDifference < oneWeek) {
-        const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-        return daysOfWeek[inputDate.getDay()];
-    } else {
-        return "Last week";
-    }
-}
-
-// פונקציה לקבלת השעה במבנה של 00:00
-function getTime(timeString) {
-    const parts = timeString.split("T")[1].split(":");
-    const hours = parts[0].padStart(2, "0");
-    const minutes = parts[1].padStart(2, "0");
-    return `${hours}:${minutes}`;
-}
-
-// פונקציה לקבלת התאריך במבנה של כיוונית 23/04/24
-function getDate(dateString) {
-    const parts = dateString.split("T")[0].split("-");
-    const year = parts[0].slice(-2);
-    const month = parts[1];
-    const day = parts[2];
-    return `${day}/${month}/${year}`;
-}
-
-// פונקציה המשלבת את תוצאות שלשת הפונקציות הקודמות 
-export function formatDateTime(dateTimeString) {
-    const relativeDate = getRelativeDate(dateTimeString);
-    const time = getTime(dateTimeString);
-    const date = getDate(dateTimeString);
-    return `${relativeDate}, ${date}, ${time}`;
-}
-
-
-
-export function getDescriptionOrTime(timeString) {
-    const currentDate = new Date();
-    const inputDate = new Date(timeString);
-    const timeDifference = currentDate.getTime() - inputDate.getTime();
-    const oneDay = 24 * 60 * 60 * 1000; // milliseconds in a day
-
-    if (timeDifference < oneDay) {
-        const parts = timeString.split("T")[1].split(":");
-        const hours = parts[0].padStart(2, "0");
-        const minutes = parts[1].padStart(2, "0");
-        return `${hours}:${minutes}`;
-    } else {
-        return getRelativeDate(timeString);
-    }
-}
-
-
-export function changeColorLinks(htmlString) {
-  // רגקס שמוצא את כל תגיות ה-<a> עם קישורים
-  const linkTagRegex = /<a\s+[^>]*href="https?:\/\/[^"]+"[^>]*>(.*?)<\/a>/gi;
-
-  // מציאת כל הקישורים בתוך הטקסט (תגיות <a> עם href)
-  const links = htmlString.match(linkTagRegex);
-  console.log(links);
-
-  // החלפת כל תגית <a> עם הוספת סגנון CSS על הקישור
-  const coloredText = htmlString.replace(linkTagRegex, function(match) {
-    return match.replace(/(<a\s+[^>]*)(href="https?:\/\/[^"]+")([^>]*>)/i, '$1$2 style="color: #045197; text-decoration: underline; cursor: pointer;"$3');
-  });
-
-  return coloredText;
-}
-
-
-// export function changeColorLinks(htmlString){
-// const linkRegex = /https?:\/\/[^<\s]+/gi;
-
-// // מציאת כל הקישורים בתוך הטקסט
-// const links = htmlString.match(linkRegex);
-// console.log(links)
-
-// // החלת סגנון CSS על כל קישור בתוך הטקסט
-// const coloredText = htmlString.replace(linkRegex, '<a href="$&" style="color: #00A389;" target="_blank">$&</a>');
-// return coloredText 
-// }
-
-
 
 // תאריך נוכחי
 export function getCurrentDate() {
@@ -172,8 +26,10 @@ export function getParasha(apiResponse) {
     for (const item of apiResponse.items) {
       if (item.category === 'parashat') {
         const parashaHebrew = item.hebrew;
-        console.log(parashaHebrew);
-        return parashaHebrew;
+        console.log("פרשת השבוע:", parashaHebrew)
+        const parasha = parashaHebrew.split(' ')[0] + " " + parshiot[parashaHebrew.split(' ')[1]];
+        console.log("🚀 ~ getParasha ~ parasha:", parasha)
+        return parasha;
       }
     }
   }
@@ -187,92 +43,127 @@ export function formatDate(dateString) {
 }
 
 
+export const phoneValidator = (phone) => {
+  // Remove all non-digit characters except for the leading '+'
+  const cleanedValue = phone.replace(/[^\d+]/g, "");
+
+  // Check if the number starts with +972 or 0
+  if (!/^(\+972|0)/.test(cleanedValue)) {
+    return "מספר הטלפון חייב להתחיל ב-0 או +972";
+  }
+
+  // Remove the prefix for further validation
+  const numberWithoutPrefix = cleanedValue.replace(/^(\+972|0)/, "");
+
+  // Validate numbers starting with 2, 3, 4, 8, 9
+  if (/^[23489]\d{7}$/.test(numberWithoutPrefix)) {
+    return ""; // Valid number
+  }
+
+  // Validate numbers starting with 5 or 7
+  if (/^[57]\d{8}$/.test(numberWithoutPrefix)) {
+    return ""; // Valid number
+  }
+
+  // Check for invalid starting digits
+  if (/^[16]/.test(numberWithoutPrefix)) {
+    return "קידומת שגויה";
+  }
+
+  if (phone.length < 10) {
+    return "אנא השלם את המספר";
+  }
+
+  // If we've reached this point, the number is invalid
+  return "מספר טלפון לא תקין. אנא בדוק את המספר ונסה שוב";
+};
 
 
+export const parshiot = {
+  "בראשית": "בראשית",
+  "נח": "נח",
+  "לך לך": "לך לך",
+  "וירא": "וירא",
+  "חיי שרה": "חיי שרה",
+  "תולדות": "תולדות",
+  "ויצא": "ויצא",
+  "וישלח": "וישלח",
+  "וישב": "וישב",
+  "מקץ": "מקץ",
+  "ויגש": "ויגש",
+  "ויחי": "ויחי",
+  "שמות": "שמות",
+  "שמת": "שמות",
+  "וארא": "וארא",
+  "בא": "בא",
+  "בשלח": "בשלח",
+  "יתרו": "יתרו",
+  "משפטים": "משפטים",
+  "תרומה": "תרומה",
+  "תצווה": "תצווה",
+  "תצוה": "תצווה",
+  "כי תשא": "כי תשא",
+  "כי־תשא": "כי תשא",
+  "ויקהל": "ויקהל",
+  "פקודי": "פקודי",
+  "ויקהל־פקודי": "ויקהל-פקודי",
+  "ויקרא": "ויקרא",
+  "צו": "צו",
+  "שמיני": "שמיני",
+  "תזריע": "תזריע",
+  "מצורע": "מצורע",
+  "תזריע־מצורע": "תזריע-מצורע",
+  "אחרי מות": "אחרי מות",
+  "אחרי־מות": "אחרי מות",
+  "אחרי-מות": "אחרי מות",
+  "קדושים": "קדושים",
+  "קדשים": "קדושים",
+  "אחרי מות־קדושים": "אחרי מות-קדושים",
+  "אחרי־מות-קדושים": "אחרי מות-קדושים",
+  "אחרי־מות קדושים": "אחרי מות-קדושים",
+  "אמור": "אמור",
+  "אמר": "אמור",
+  "בהר": "בהר",
+  "בחקותי": "בחקותי",
+  "בחקתי": "בחקותי",
+  "במדבר": "במדבר",
+  "נשא": "נשא",
+  "בהעלותך": "בהעלותך",
+  "בהעלתך": "בהעלותך",
+  "שלח": "שלח",
+  "קרח": "קרח",
+  "חוקת": "חוקת",
+  "חקת": "חוקת",
+  "בלק": "בלק",
+  "פנחס": "פנחס",
+  "פינחס": "פנחס",
+  "מטות": "מטות",
+  "מטת": "מטות",
+  "מסעי": "מסעי",
+  "מטות־מסעי" : "מטות-מסעי",
+  "מטות-מסעי" : "מטות-מסעי",
+  "מטות מסעי" : "מטות-מסעי",
+  "דברים": "דברים",
+  "ואתחנן": "ואתחנן",
+  "עקב": "עקב",
+  "ראה": "ראה",
+  "שופטים": "שופטים",
+  "שפטים": "שופטים",
+  "כי־תצא": "כי תצא",
+  "כי תצא": "כי תצא",
+  "כי-תצא": "כי תצא",
+  "כי־תבא": "כי תבא",
+  "כי תבא": "כי תבא",
+  "כי-תבא": "כי תבא",
+  "נצבים": "נצבים",
+  "נצבים־וילך": "נצבים-וילך",
+  "נצבים וילך": "נצבים-וילך",
+  "נצבים-וילך": "נצבים-וילך",
+  "וילך": "וילך",
+  "האזינו": "האזינו",
+  "וזאת הברכה": "וזאת הברכה",
+  "וזאת־הברכה": "וזאת הברכה",
+  "וזאת-הברכה": "וזאת הברכה"
+};
 
 
-
-
-
-
-
-
-
-// export function formatDateTime(dateTimeString){
-//     var parts = dateTimeString.split("T"); // מפרק את המחרוזת לשני חלקים על פי התו 'T'
-//     var datePart = parts[0]; // חלק הראשון שמכיל את התאריך
-//     var timePart = parts[1]; // חלק השני שמכיל את השעה
-
-//     // מפרקים את התאריך לשנה, חודש ויום
-//     var dateParts = datePart.split("-");
-//     var year = dateParts[0].slice(-2); // משנה את השנה לצורת שני ספרות (כך שהתוצאה תהיה "24" במקרה זה)
-//     var month = dateParts[1];
-//     var day = dateParts[2];
-    
-//     // מרכיבים מחדש את התאריך בפורמט הרצוי (יום/חודש/שנה)
-//     var newDatePart = day + "/" + month + "/" + year;
-    
-    
-//     // מפרקים את החלק השני (שעות, דקות, שניות)
-//     var timeParts = timePart.split(":");
-//     var hours = timeParts[0];
-//     var minutes = timeParts[1];
-    
-//     // מפרקים את השעות לתצוגה במבנה של ארבע ספרות (כגון "23")
-//     hours = hours.padStart(2, "0"); // מוסיף אפס במידה והמספר קטן מ־10
-//     var newTimePart = hours + ":" + minutes; // מרכיב מחדש את חלק השעה
-//     var newString = newDatePart + ", " + newTimePart; // מרכיב מחדש את המחרוזת החדשה, מופרדת בפסיק
-//     var relativeDate = getRelativeDate(dateTimeString); // מרכי�� מחד
-//   return relativeDate  + newString
-// }
-
-
-
-
-// function getRelativeDate(date) {
-//   //השוואה לתאריך עדכני
-//   const currentDate = new Date();
-//   const inputDate = new Date(date);
-//   const timeDifference = currentDate.getTime() - inputDate.getTime();
-//   const oneDay = 24 * 60 * 60 * 1000; // milliseconds in a day
-//   const oneWeek = 7 * oneDay; // milliseconds in a week
-
-//   if (timeDifference < oneDay) {
-//       return "Today, ";
-//   } else if (timeDifference < 2 * oneDay) {
-//       return "Yesterday, ";
-//   } else if (timeDifference < oneWeek) {
-//       // Check the day of the week
-//       const daysOfWeek = ["Sunday, ", "Monday, ", "Tuesday, ", "Wednesday, ", "Thursday, ", "Friday, ", "Saturday, "];
-//       return daysOfWeek[inputDate.getDay()];
-//   } else {
-//       return "last week, ";
-//   }
-// }
-
-
- // const someElement = document.createElement('span');
-    // someElement.innerHTML = 'חוכמת אתונה';
-    // document.body.appendChild(someElement);
-    // const direction = window.getComputedStyle(someElement).direction;
-    // if (direction === 'rtl') {
-    //     // הגדרת המקלדת היא כנראה עברית
-    //     console.log("he");
-    // } else {
-    //     console.log("en");
-    //     // הגדרת המקלדת היא כנראה לא עברית
-    // }
-    // document.body.removeChild(someElement);
-
-
-    //   window.addEventListener('load', () => {
-    //   const userLanguage = navigator.language || navigator.languages[0];
-
-    //   if (userLanguage.startsWith('he')) {
-    //     // שפת המקלדת הנוכחית היא עברית
-    //     console.log('Hebrew keyboard layout detected');
-    //   } else {
-    //     // שפת המקלדת הנוכחית היא אנגלית או אחרת
-    //     console.log('Non-Hebrew keyboard layout detected');
-    //   }
-    // });
