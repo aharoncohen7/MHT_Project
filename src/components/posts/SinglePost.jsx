@@ -13,6 +13,7 @@ import Editor from "./Editor";
 import SanitizedHTML from "./SanitizedHTML";
 import TagList from "./TagList";
 import MyRating from "./MyRating";
+import CommentList from "./CommentsList";
 
 // פוסט בודד בעמוד נפרד - חדש
 export default function SinglePost() {
@@ -24,6 +25,7 @@ export default function SinglePost() {
   const { setOriginalData, originalData } = useContext(DataContext);
   const [send, setSend] = useState(false);
   const [isPopUpOpen, setIsPopUpOpen] = useState(false);
+  const [isCommentListOpen, setIsCommentListOpen] = useState(false);
 
   const handleClosePopUp = () => {
     setIsPopUpOpen(false);
@@ -173,11 +175,21 @@ export default function SinglePost() {
                     </span>
                   )}
 
-                  {message && <p style={{ color: "red" }}>{message}</p>}
-                  <ButtonClick onClick={() => navigate(-1)}>
+                  {/* {message && <p style={{ color: "red" }}>{message}</p>} */}
+                  <button
+                    onClick={() => setIsCommentListOpen(prev=>!prev)}
+                    className="mb-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                  >
+                 { isCommentListOpen ? "הסתר תגובות" : "הצג תגובות"}
+                  </button>
+                  <button 
+                  onClick={() => navigate(-1)}
+                  className="mb-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                  >
                     חזור אחורה
-                  </ButtonClick>
+                    </button>
                 </div>
+                {isCommentListOpen &&  <CommentList postId={item.id} showComments={true} />}
 
                 {/* <div className="hidden sm:ml-6 sm:block" style={{ top: '60px', right: '0px' }}><ParashaNav /></div> */}
               </div>
