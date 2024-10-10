@@ -45,14 +45,6 @@ html {
   scroll-behavior: smooth;
   font-family: 'Heebo', sans-serif;
   font-display: swap;
-}
-
-
-
-
-
-
-* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -132,11 +124,6 @@ button{
 input, textarea, [contenteditable="true"] {
   caret-color: auto;
 }
-
-
-
-
-
 
 /* מסגרת כללית */
 .quill{
