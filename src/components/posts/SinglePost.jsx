@@ -1,13 +1,16 @@
-import { Chip, Tooltip } from "@mui/material";
+import ClearIcon from "@mui/icons-material/Clear";
+import { Box, Button, Chip, Dialog, Tooltip } from "@mui/material";
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import UserContext from "../../contexts";
 import DataContext from "../../contexts/dataContext";
 import { importedDelete } from "../../functions/postFunctions";
+
 import { ButtonClick } from "../ButtonClick";
 import ParashaNav from "../layout/ParashaNav";
 import MyRating from "../MyRating";
 import { formatDate } from "./../../functions";
+import Editor from "./Editor";
 import SanitizedHTML from "./SanitizedHTML";
 import TagList from "./TagList";
 
@@ -19,6 +22,17 @@ export default function SinglePost() {
   const { postId } = useParams();
   const { setMessage, message, logOut, adminMode } = useContext(UserContext);
   const { setOriginalData, originalData } = useContext(DataContext);
+  const [complete, setComplete] = useState(false);
+  const [send, setSend] = useState(false);
+  const [isPopUpOpen, setIsPopUpOpen] = useState(false);
+
+  const handleClosePopUp = () => {
+    setIsPopUpOpen(false);
+  };
+
+  const showPopUp = () => {
+    setIsPopUpOpen(true);
+  };
 
   // מצא פוסט בודד מתוך הרשימה
   useEffect(() => {
@@ -87,11 +101,11 @@ export default function SinglePost() {
                 </div>
               </div>
               <span className="flex p-4 px-10 items-center justify-between sm:hidden">
-                      <Tooltip title={"לחץ כדי לדרג"}>
-                        {`דרג את תוכן המאמר :`}
-                      </Tooltip>
-                      <MyRating item={item} />
-                    </span>
+                <Tooltip title={"לחץ כדי לדרג"}>
+                  {`דרג את תוכן המאמר :`}
+                </Tooltip>
+                <MyRating item={item} />
+              </span>
             </div>
 
             <div className="z-10 sm:-ml-8 -mt-12 sm:p-2 lg:sticky lg:top-12 lg:col-start-2  lg:row-start-1 lg:overflow-hidden">
@@ -113,11 +127,9 @@ export default function SinglePost() {
                   onError={() => setImgError(true)}
                   alt="תמונת הפרשה"
                 />
-              ):
-              <div className="h-60 hidden sm:block">
-              </div>
-              
-              }
+              ) : (
+                <div className="h-60 hidden sm:block"></div>
+              )}
             </div>
             <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
               <div className="lg:pr-4 -mt-30 lg:-mt-40 ">
@@ -129,7 +141,7 @@ export default function SinglePost() {
                       className=" whitespace-normal tracking-widest"
                       dangerouslySetInnerHTML={{ __html: item.body }}
                     /> */}
-                    <SanitizedHTML htmlContent={item.body}/>
+                    <SanitizedHTML htmlContent={item.body} />
                   </div>
                 </div>
 
@@ -154,7 +166,8 @@ export default function SinglePost() {
                       </ButtonClick>
                       <ButtonClick
                         variant="contained"
-                        onClick={() => navigate(`/edit/${item.id}`)}
+                        // onClick={() => navigate(`/edit/${item.id}`)}
+                        onClick={showPopUp}
                       >
                         ערוך מאמר
                       </ButtonClick>
@@ -173,7 +186,27 @@ export default function SinglePost() {
           </div>
         </div>
       )}
+
+      <Dialog
+        open={isPopUpOpen}
+        onClose={handleClosePopUp}
+        maxWidth="md"
+        fullWidth
+      >
+        <Box sx={{ display: "flex", justifyContent: "flex-end", mb: 1 }}>
+          <Button onClick={handleClosePopUp}>
+            <ClearIcon />
+          </Button>
+        </Box>
+
+        <Editor
+          setShowEditor={setIsPopUpOpen}
+          send={send}
+          setComplete={setComplete}
+          setSend={setSend}
+          initialPost={item}
+        />
+      </Dialog>
     </>
   );
 }
-

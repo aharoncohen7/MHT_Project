@@ -1,5 +1,6 @@
 import DomPurify from "dompurify";
 import React from "react";
+import { changeColorLinks } from "../../helpers";
 // import { changeColorLinks } from '../../helpers';
 
 // הודעה לדוגמה
@@ -42,6 +43,8 @@ const SanitizedHTML = ({ htmlContent }) => {
   }
   // ניטור הודעה
   const sanitizedHTML = DomPurify.sanitize(htmlContent);
+  const sanitizedHTML1 = DomPurify.sanitize(('<p>abc<iframe//src=jAva&Tab;script:alert(3)>def</p>'));
+  console.log("🚀 ~ SanitizedHTML ~ sanitizedHTML1:", sanitizedHTML1)
 
   // אפשרויות להגבלות נוספות
   // const sanitizedHTML = DomPurify.sanitize(msg.content, {
@@ -56,9 +59,8 @@ const SanitizedHTML = ({ htmlContent }) => {
   return (
     <div
       style={getTextStyles(sanitizedHTML)}
-      dangerouslySetInnerHTML={{ __html: sanitizedHTML }}
-    />
-    // dangerouslySetInnerHTML={{ __html: changeColorLinks(sanitizedHTML) }} />
+      // dangerouslySetInnerHTML={{ __html: sanitizedHTML }}/>
+    dangerouslySetInnerHTML={{ __html: changeColorLinks(sanitizedHTML) }} />
   );
 };
 

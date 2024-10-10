@@ -114,16 +114,34 @@ export function getDescriptionOrTime(timeString) {
 }
 
 
-export function changeColorLinks(htmlString){
-const linkRegex = /https?:\/\/[^<\s]+/gi;
+export function changeColorLinks(htmlString) {
+  // רגקס שמוצא את כל תגיות ה-<a> עם קישורים
+  const linkTagRegex = /<a\s+[^>]*href="https?:\/\/[^"]+"[^>]*>(.*?)<\/a>/gi;
 
-// מציאת כל הקישורים בתוך הטקסט
-const links = htmlString.match(linkRegex);
+  // מציאת כל הקישורים בתוך הטקסט (תגיות <a> עם href)
+  const links = htmlString.match(linkTagRegex);
+  console.log(links);
 
-// החלת סגנון CSS על כל קישור בתוך הטקסט
-const coloredText = htmlString.replace(linkRegex, '<a href="$&" style="color: #00A389;" target="_blank">$&</a>');
-return coloredText 
+  // החלפת כל תגית <a> עם הוספת סגנון CSS על הקישור
+  const coloredText = htmlString.replace(linkTagRegex, function(match) {
+    return match.replace(/(<a\s+[^>]*)(href="https?:\/\/[^"]+")([^>]*>)/i, '$1$2 style="color: #045197; text-decoration: underline; cursor: pointer;"$3');
+  });
+
+  return coloredText;
 }
+
+
+// export function changeColorLinks(htmlString){
+// const linkRegex = /https?:\/\/[^<\s]+/gi;
+
+// // מציאת כל הקישורים בתוך הטקסט
+// const links = htmlString.match(linkRegex);
+// console.log(links)
+
+// // החלת סגנון CSS על כל קישור בתוך הטקסט
+// const coloredText = htmlString.replace(linkRegex, '<a href="$&" style="color: #00A389;" target="_blank">$&</a>');
+// return coloredText 
+// }
 
 
 

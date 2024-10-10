@@ -16,7 +16,7 @@ import ParashaNav from "./ParashaNav";
 import AboutUs from "../AboutUs";
 import Addition from "../Addition";
 import Dashboard from "../dashboard/Dashboard";
-import { Edit } from "../Edit";
+// import { Edit } from "../Edit";
 import SignIn from "../login/SignIn";
 import NotFound from "../NotFound";
 import AllPosts from "../posts/AllPosts";
@@ -118,7 +118,7 @@ const Layout = () => {
             <Route path="/" element={<AllPosts />} />
             <Route path="home/*" element={<AllPosts />} />
             <Route path="post/:postId" element={<SinglePost />} />
-            <Route path="edit/:postId" element={<Edit />} />
+            {/* <Route path="edit/:postId" element={<Edit />} /> */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </span>

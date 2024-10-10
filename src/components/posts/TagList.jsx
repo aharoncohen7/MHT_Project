@@ -9,10 +9,10 @@ export default function TagList({ postTags }) {
     postTags != null && (
       <Stack direction="row" spacing={1}>
         {tags.map((tag, index) => (
-          <Tooltip title="לחץ כדי להציג מאמרים נוספים בנושא זה">
+          <Tooltip key={tag} title="לחץ כדי להציג מאמרים נוספים בנושא זה">
             <Chip
               color="primary"
-              key={tag}
+              
               label={tag}
               onClick={() => {
                 nav(`/home/?tag=${tag}`);
