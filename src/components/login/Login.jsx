@@ -69,10 +69,10 @@ export default function Login({ setIsExists }) {
           setMessage([`המערכת ממתינה לאישור כתובת האימייל שלך`, false]);
           return;
         }
-        // if (response.status == 404) {
-        //   setMessage([`משתמש לא נמצא`, false]);
-        //   return;
-        // }
+        if (response.status == 404) {
+          setMessage([`לא נמצאה התאמה בין הנתונים, נא בדוק את הפרטים ונסה שוב`, false]);
+          return;
+        }
         setMessage([`אירעה שגיאה במהלך ההתחברות, נסה שוב מאוחר יותר`, false]);
         console.error(`Error during login: ${response.statusText}`);
       }

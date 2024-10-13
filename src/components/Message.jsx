@@ -44,7 +44,7 @@ export default function Message() {
                       {message[1] ? <CheckCircleIcon className="w-6 h-6 text-green-500" aria-hidden="true"/> :
                       <FiAlertTriangle className=" w-6 h-6 text-red-500" />}
                     </div>
-                    <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left px-4">
+                    <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-right px-4">
                       <Dialog.Title as="h3" className="text-xl font-semibold leading-6 text-gray-900">
                         {message[0]}
                       </Dialog.Title>
