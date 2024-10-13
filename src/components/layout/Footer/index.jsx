@@ -26,7 +26,7 @@ export default function Footer() {
         <div className={styles.containerList}>
           <RenderList items={WeeklyPortion} title={"נושאים"} />
           <RenderList items={about} title={"אודות"} href={"about"}/>
-          <RenderList items={questions} title={"שאלות"} />
+          <RenderList items={questions} title={"הפניות"} />
         </div>
       </nav>
       <p className={styles.rightsToUs}>

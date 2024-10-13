@@ -2,26 +2,20 @@ import Cookies from "js-cookie";
 import React, { useContext, useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import UserContext from "../../contexts";
+import { axiosReq } from "../../helpers/useAxiosReq";
 import { Button } from "../buttons/Button";
 const SERVER_HOST = import.meta.env.VITE_SERVER_HOST;
 
-const CommentList = ({ postId, showComments }) => {
+const CommentList = ({ postId, setLength }) => {
   const [comments, setComments] = useState([]);
   const { setMessage, userId } = useContext(UserContext);
 
-  function logOut() {
-    localStorage.removeItem("Authorization");
-    Cookies.remove("Authorization");
-    // window.location.href = "https://vortly.onrender.com/";
-  }
-
-  // הוספת חדש
   async function addNewComment() {
     if (!userId) return;
     try {
       const result = await Swal.fire({
-        title: "כתוב תגובה",
-        html: '<textarea id="body"  style=" background-color: rgba(172, 192, 389, 0.74); width: 350px; text-align: right; font-size: 26px;" class="swal2-input" placeholder="כתוב תגובה (עד 20 תווים)">',
+        title: "הגב למאמר",
+        html: '<textarea id="body"  style=" background-color: rgba(172, 192, 389, 0.14); width: 450px; height: 120px; box-shadow: 1px 1px 15px 2px #fff;  text-align: right; font-size: 18px;" class="swal2-input" placeholder=" תוכן תגובה (עד 50 תווים)">',
         showCancelButton: true,
         confirmButtonText: "אישור",
         cancelButtonText: "ביטול",
@@ -35,91 +29,68 @@ const CommentList = ({ postId, showComments }) => {
       });
       if (result.value) {
         const { body } = result.value;
-        const response = await fetch(`${SERVER_HOST}/comments`, {
+        const response = await axiosReq({
           method: "POST",
-          body: JSON.stringify({
+          body: {
             postId,
             body,
-          }),
-          headers: {
-            "Content-Type": "application/json",
-            authorization: Cookies.get("Authorization") || "",
           },
+          url: `/comments`,
         });
-        if (!response.ok) {
-          console.log(response);
-          setMessage(["Failed to add comment", false]);
-          if (response.status == 401) {
-            logOut();
-          }
-          throw new Error(`Failed to add comment! Status: ${response.status}`);
+        if (!response) {
+          throw new Error(`Failed to add comment: ${response}`);
         }
-        const [newComment] = await response.json();
-        // console.log(newComment);
-        setComments(
-          (prevOriginalData) => [...prevOriginalData, newComment],
-          () => {
-            console.log("Created", comments);
-          }
-        );
-        // setMessage(["Comment added successfully", true]);
+        const [newComment] = response;
+        console.log(newComment);
+        setComments((prevOriginalData) => [...prevOriginalData, newComment]);
       }
     } catch (error) {
       console.error(error.message);
     }
   }
 
-  // מחיקה
   async function deleteComment(commentId) {
-    const response = await fetch(`${SERVER_HOST}/comments/${commentId}`, {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",
-        authorization: Cookies.get("Authorization") || "",
-      },
-    });
-    if (!response.ok) {
+    try {
+      const response = await axiosReq({
+        method: "DELETE",
+        url: `/comments/${commentId}`,
+      });
+      console.log(response);
+      if (response) {
+        setComments((prevFilteredData) =>
+          prevFilteredData.filter((obj) => obj.id !== commentId)
+        );
+      }
+    } catch (error) {
+      console.error(error.message);
       setMessage([
-        `Failed to delete comment! Status: ${response.status}`,
+        `שגיאה בעת מחיקת תגובה, בדוק את החיבור או נסה מאוחד יותר`,
         false,
       ]);
-      return;
     }
-    setComments((prevFilteredData) =>
-      prevFilteredData.filter((obj) => obj.id !== commentId)
-    );
-    // setMessage([`comment ${commentId} deleted`, true]);
   }
 
   // קבלת תגובות לפוסט
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const requestOptions = {
+        const data = await axiosReq({
           method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-            // 'auth': localStorage.getItem('auth') || ''.getItem('auth') || '',
-
-            authorization: Cookies.get("Authorization") || "",
-          },
-        };
-        const response = await fetch(
-          `${SERVER_HOST}/public-comments/${postId}`,
-          requestOptions
-        );
-        const data = await response.json();
+          body: {},
+          url: `/public-comments/${postId}`,
+        });
+        console.log("🚀 ~ fetchData ~ data:", data);
         setComments(data);
+        setLength(data.length);
       } catch (error) {
-        setMessage(["שליחה נכשלה, נא להתחבר", false]);
         console.error("Error fetching comments:", error);
       }
     };
     fetchData();
-  }, [postId]);
+  }, []);
 
   return (
-    <ul className={`mt-4 space-y-4 ${showComments ? "block" : "hidden"}`}>
+    <ul className={`mt-4 space-y-4 block`}>
       {!comments.length && (
         <p className="text-center text-gray-500">עדיין אין תגובות</p>
       )}
@@ -138,11 +109,22 @@ const CommentList = ({ postId, showComments }) => {
               <div className="flex justify-between items-start">
                 <div className="space-y-1">
                   {/* <p className="text-gray-600 text-sm">#{comment.id}</p> */}
-                  <p className="text-lg font-medium">{comment.body}</p>
-                  <p className="text-sm text-gray-500">שם: {comment.name}</p>
-                  <p className="text-sm text-gray-500">
-                    אימייל: {comment.email}
+                  <p
+                    className="text-lg max-w-80 font-medium whitespace-break-spaces"
+                    style={{
+                      wordWrap: "break-word",
+                      wordwrap: "break-word",
+                      overflowWrap: "break-word",
+                      whiteSpace: "normal",
+                    }}
+                  >
+                    {comment.body}
                   </p>
+                  <p className="text-sm text-gray-500">שם: {comment.name}</p>
+                  <span className="flex gap-2 text-sm text-gray-500 items-left">
+                    <p>אימייל:</p>
+                    <p>{`${comment.email.substring(3, comment.email.length)}****`}</p>
+                  </span>
                 </div>
                 <Button
                   onClick={() => deleteComment(comment.id)}

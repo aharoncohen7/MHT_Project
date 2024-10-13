@@ -130,11 +130,18 @@ export default function AllPosts({}) {
 
                       <p
                         style={{ direction: "rtl" }}
-                        className="font-semibold text-gray-900 cursor-pointer text-sm leading-6"
+                        className="flex  justify-between font-semibold text-gray-900 cursor-pointer text-sm leading-6"
                         onClick={() => {
                           navigate(`/home/?author=${post.userId}`);
                         }}
                       >
+                        <Tooltip
+                          title="מצא עוד פוסטים של מחבר זה"
+                          placement="top"
+                          arrow
+                        >
+                          {"מאת: " + post.author}
+                        </Tooltip>
                         <Tooltip
                           title="מצא עוד פוסטים של מחבר זה"
                           placement="top"

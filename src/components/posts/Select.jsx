@@ -7,6 +7,13 @@ export default function Select({
   selectedPortion,
   setSelectedPortion,
 }) {
+  console.log(
+  selectedBook,
+  )
+
+
+
+  
   // פונקציה לבניית רשימת אפשרויות לסלקט
   function buildOptions(data) {
     return Object.keys(data).map((book) => (
@@ -38,7 +45,7 @@ export default function Select({
         <option className="" value="">
        {!selectedBook ? "בחר נושא" : selectedBook.split(" ")[0] == "חומש" ? "בחר פרשה" : "בחר חג או אירוע"}
         </option>
-        {selectedBook &&
+        {selectedBook && torah[selectedBook] &&
           torah[selectedBook].map((portion) => (
             <option
               className="block w-full px-4 py-2 text-right text-gray-900 bg-gray-100"

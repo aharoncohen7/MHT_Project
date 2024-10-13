@@ -1,14 +1,21 @@
-import React, { useContext } from "react";
 import Rating from "@mui/material/Rating";
 import Stack from "@mui/material/Stack";
-import UserContext from "../../contexts";
 import Cookies from "js-cookie";
+import React, { useContext, useEffect, useState } from "react";
 import DataContext from "../../contexts/dataContext";
 const SERVER_HOST = import.meta.env.VITE_SERVER_HOST;
 
 export default function MyRating({ item }) {
-  const { logOut, setMessage } = useContext(UserContext);
   const { setOriginalData } = useContext(DataContext);
+  const [message, setMessage] = useState(null);
+
+  useEffect(() => {
+    if (message) {
+      setTimeout(() => {
+        setMessage(null);
+      }, 3000);
+    }
+  }, [message]);
 
   // דירוג פוסט
   async function updateRating(event) {
@@ -22,7 +29,7 @@ export default function MyRating({ item }) {
         }),
         headers: {
           "Content-type": "application/json; charset=UTF-8",
-          
+
           authorization: Cookies.get("Authorization") || "",
         },
       });
@@ -59,18 +66,25 @@ export default function MyRating({ item }) {
   }
 
   return (
-
+    <span className="flex flex-col ">
       <Stack spacing={1}>
         <Rating
           name="half-rating"
-          style={{ color: "rgba(6, 119, 221, 0.8)"
-             , direction: "ltr" }}
+          style={{ color: "rgba(6, 119, 221, 0.8)", direction: "ltr" }}
           value={parseFloat(item.rating)}
           defaultValue={0.0}
           precision={0.5}
           onChange={updateRating}
         />
       </Stack>
-
+      {message && (
+        <div
+          className={`h-4 ${message[1] ? "text-green-300" : "text-red-300"} `}
+          style={{ color: message[1] ? "green" : "red" }}
+        >
+          {message[0]}
+        </div>
+      )}
+    </span>
   );
 }

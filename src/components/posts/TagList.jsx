@@ -7,12 +7,17 @@ export default function TagList({ postTags }) {
 
   return (
     postTags != null && (
-      <Stack direction="row" spacing={1}>
+      <Stack
+        direction="row"
+        paddingBottom={"10px"}
+        spacing={{ xs: 1 }}
+        useFlexGap
+        sx={{ flexWrap: "wrap" }}
+      >
         {tags.map((tag, index) => (
           <Tooltip key={tag} title="לחץ כדי להציג מאמרים נוספים בנושא זה">
             <Chip
               color="primary"
-              
               label={tag}
               onClick={() => {
                 nav(`/home/?tag=${tag}`);

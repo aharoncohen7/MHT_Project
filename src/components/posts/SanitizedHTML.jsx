@@ -42,8 +42,8 @@ const SanitizedHTML = ({ htmlContent }) => {
   }
   // ניטור הודעה
   const sanitizedHTML = DomPurify.sanitize(htmlContent);
-  const sanitizedHTML1 = DomPurify.sanitize(('<p>abc<iframe//src=jAva&Tab;script:alert(3)>def</p>'));
-  console.log("🚀 ~ SanitizedHTML ~ sanitizedHTML1:", sanitizedHTML1)
+  // const sanitizedHTML1 = DomPurify.sanitize(('<p>abc<iframe//src=jAva&Tab;script:alert(3)>def</p>'));
+  // console.log("🚀 ~ SanitizedHTML ~ sanitizedHTML1:", sanitizedHTML1)
 
   // אפשרויות להגבלות נוספות
   // const sanitizedHTML = DomPurify.sanitize(msg.content, {

@@ -40,7 +40,7 @@ export default function Navbar({ parasha, holiday, title }) {
       name: holiday || "חגים",
       href: holiday ? `/home/?parasha=${holiday}` : `/`,
     },
-    { id: 2, name: "תוכן כללי", href: "/home/?parasha=all" },
+    { id: 2, name: "כללי", href: "/home/?parasha=all" },
     // {
     //   id: 2,
     //   name: isLoggedIn ? "הוספת מאמר" : "התחבר",

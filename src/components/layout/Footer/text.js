@@ -1,18 +1,18 @@
 export const about = [
     { name: "צור קשר", href: "about/contact-us" },
-    { name: "בית המדרש", href: "בית המדרש" },
-    { name: "הצטרף לקהילה", href: "הצטרף לקהילה" }
+    { name: "פורום", href: "פורום" },
+    { name: "הצטרף כעורך", href: "הצטרף כעורך" }
   ];
   
   export const questions = [
     { name: "הלכה", href: "הלכה" },
-    { name: "אמונה", href: "אמונה" },
-    { name: "טהרה", href: "טהרה" }
+    { name: "זמני היום", href: "זמני היום" },
+    { name: "דף היומי", href: "דף היומי" }
   ];
   
   export const WeeklyPortion = [
     { name: "חגים", href: "חגים" },
-    { name: "פרשת השבוע", href: "פרשת השבוע" },
-    { name: "שמחות", href: "שמחות" }
+    { name: "פרשת השבוע", href: "" },
+    { name: "אירועים ושמחות", href: "אירועים ושמחות" }
   ];
   

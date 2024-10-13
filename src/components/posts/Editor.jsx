@@ -24,10 +24,11 @@ export default function Editor({
   setShowEditor,
   initialPost,
 }) {
+  console.log("🚀 ~ initialPost:", initialPost)
   const { postId } = useParams();
   const { logOut, userId, setMessage, message, navigate } =
     useContext(UserContext);
-  const { originalData, setOriginalData } = useContext(DataContext);
+  const { setOriginalData } = useContext(DataContext);
   const [selectedBook, setSelectedBook] = useState(initialPost?.topic || "");
   const [selectedPortion, setSelectedPortion] = useState(
     initialPost?.subtopic || ""
@@ -99,7 +100,6 @@ export default function Editor({
       checkBody()
     );
   }
-
   function sendPost() {
     if (postId) {
       importedEdit(

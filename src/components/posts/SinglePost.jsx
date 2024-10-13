@@ -7,7 +7,6 @@ import DataContext from "../../contexts/dataContext";
 import { importedDelete } from "../../helpers/postFunctions";
 import { ButtonClick } from "../buttons/ButtonClick";
 import ParashaNav from "../layout/ParashaNav";
-
 import { formatDate } from "../../helpers";
 import Editor from "./Editor";
 import SanitizedHTML from "./SanitizedHTML";
@@ -24,16 +23,9 @@ export default function SinglePost() {
   const { setMessage, message, logOut, adminMode } = useContext(UserContext);
   const { setOriginalData, originalData } = useContext(DataContext);
   const [send, setSend] = useState(false);
-  const [isPopUpOpen, setIsPopUpOpen] = useState(false);
+  const [isEditorOpen, setIsEditorOpen] = useState(false);
+  const [length, setLength] = useState(0);
   const [isCommentListOpen, setIsCommentListOpen] = useState(false);
-
-  const handleClosePopUp = () => {
-    setIsPopUpOpen(false);
-  };
-
-  const showPopUp = () => {
-    setIsPopUpOpen(true);
-  };
 
   // מצא פוסט בודד מתוך הרשימה
   useEffect(() => {
@@ -85,10 +77,11 @@ export default function SinglePost() {
                         }}
                       />
                     </Tooltip>
-                    <span className="hidden sm:flex px-2 items-center justify-center gap-2">
+                    <span className="hidden sm:flex px-2 justify-center gap-2">
                       <Tooltip title={"לחץ כדי לדרג"}>
                         {`דרג את המאמר :`}
                       </Tooltip>
+                      
                       <MyRating item={item} />
                     </span>
                     <Tooltip title="תאריך יצירה">
@@ -168,7 +161,7 @@ export default function SinglePost() {
                       <ButtonClick
                         variant="contained"
                         // onClick={() => navigate(`/edit/${item.id}`)}
-                        onClick={showPopUp}
+                        onClick={()=>setIsEditorOpen(true)}
                       >
                         ערוך מאמר
                       </ButtonClick>
@@ -189,7 +182,10 @@ export default function SinglePost() {
                     חזור אחורה
                     </button>
                 </div>
-                {isCommentListOpen &&  <CommentList postId={item.id} showComments={true} />}
+               <span className={`${isCommentListOpen ?"": "hidden" }`} >
+                  <CommentList postId={item.id} setLength={setLength} />
+               </span>
+                  
 
                 {/* <div className="hidden sm:ml-6 sm:block" style={{ top: '60px', right: '0px' }}><ParashaNav /></div> */}
               </div>
@@ -199,19 +195,19 @@ export default function SinglePost() {
       )}
 
       <Dialog
-        open={isPopUpOpen}
-        onClose={handleClosePopUp}
+        open={isEditorOpen}
+        onClose={()=>setIsEditorOpen(false)}
         maxWidth="md"
         fullWidth
       >
         <Box sx={{ display: "flex", justifyContent: "flex-end", mb: 1 }}>
-          <Button onClick={handleClosePopUp}>
+          <Button onClick={()=>setIsEditorOpen(false)}>
             <ClearIcon />
           </Button>
         </Box>
 
         <Editor
-          setShowEditor={setIsPopUpOpen}
+          setShowEditor={setIsEditorOpen}
           send={send}
           setSend={setSend}
           initialPost={item}
