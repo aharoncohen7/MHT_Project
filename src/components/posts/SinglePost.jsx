@@ -87,7 +87,7 @@ export default function SinglePost() {
                     </Tooltip>
                     <span className="hidden sm:flex px-2 items-center justify-center gap-2">
                       <Tooltip title={"לחץ כדי לדרג"}>
-                        {`דרג את תוכן המאמר :`}
+                        {`דרג את המאמר :`}
                       </Tooltip>
                       <MyRating item={item} />
                     </span>
@@ -103,7 +103,7 @@ export default function SinglePost() {
               </div>
               <span className="flex p-4 px-10 items-center justify-between sm:hidden">
                 <Tooltip title={"לחץ כדי לדרג"}>
-                  {`דרג את תוכן המאמר :`}
+                  {`דרג את המאמר :`}
                 </Tooltip>
                 <MyRating item={item} />
               </span>
