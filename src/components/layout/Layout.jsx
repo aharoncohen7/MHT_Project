@@ -11,7 +11,7 @@ import {
   getCurrentDateInfoFromJson,
 } from "../../helpers/formatDate";
 import Footer from "./Footer";
-import Navbar from "./Header";
+import Header from "./Header";
 import ParashaNav from "./ParashaNav";
 import AboutUs from "../about/AboutUs";
 
@@ -88,7 +88,7 @@ const Layout = () => {
 
   return (
     <>
-      <Navbar parasha={parasha} holiday={holiday} title={title} />
+      <Header parasha={parasha} holiday={holiday} title={title} />
       <DataContext.Provider
         value={{
           originalData,

@@ -1,10 +1,8 @@
+import { Tooltip } from "@mui/material";
 import React, { useContext, useEffect, useState } from "react";
-import { CiCircleChevDown, CiCircleChevUp } from "react-icons/ci";
 import { CiSearch } from "react-icons/ci";
-import { IoMdSearch } from "react-icons/io";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import DataContext from "../../contexts/dataContext";
-import { Tooltip } from "@mui/material";
 
 export default function Search({ setSortedList }) {
   const { originalData, filteredData, setFilteredData, parasha } =

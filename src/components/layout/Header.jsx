@@ -2,7 +2,7 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Tooltip } from "@mui/material";
 import Switch from "@mui/material/Switch";
-import { Fragment, useContext, useState } from "react";
+import { Fragment, useContext, useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import UserContext from "../../contexts";
 
@@ -13,7 +13,7 @@ const avatar = "http://img.uniquemu.co.il/upload/4BSyycN.jpeg";
 const avatar2 = "http://img.uniquemu.co.il/upload/udYCav4.jpeg";
 
 // סרגל ראשי עליון
-export default function Navbar({ parasha, holiday, title }) {
+export default function Header({ parasha, holiday, title }) {
   const {
     logOut,
     isAdmin,
@@ -63,6 +63,12 @@ export default function Navbar({ parasha, holiday, title }) {
     return classes.filter(Boolean).join(" ");
   }
 
+
+  useEffect(() => {
+
+
+  },[])
+
   // התחברות
   const goToLoginAndBack = () => {
     navigate("/login", { state: { from: location } });
@@ -95,13 +101,13 @@ export default function Navbar({ parasha, holiday, title }) {
                       navigate("/");
                     }}
                   >
-                    <img className="w-auto h-14 " src={logo2} alt="logo" />
+                    <img className="w-auto h-14 " src={logo3} alt="logo" />
                   </div>
                 </Tooltip>
                 <div className="hidden sm:ml-0 sm:block px-2 ">
                   <div className="flex gap-1 text-center items-center justify-center ">
                     {navButtons.map((item, index) => {
-                      if (true) {
+                      if (!(!item.id && !parasha)) {
                         return (
                           <span
                             key={item.name}

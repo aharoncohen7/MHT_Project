@@ -14,9 +14,10 @@ import TagList from "./TagList";
 export default function AllPosts({}) {
   const { userId, adminMode, setMessage, message, logOut, navigate } =
     useContext(UserContext);
-  const { setOriginalData, loading, setLoading } = useContext(DataContext); // נגיד שיש לנו את כל הפוסטים כאן
+  const { setOriginalData, loading, setLoading } = useContext(DataContext)
+  console.log("🚀 ~ AllPosts ~ loading:", loading)
   const [sortedList, setSortedList] = useState([]);
-  const [visiblePosts, setVisiblePosts] = useState(9); // נתחיל עם 9 פוסטים
+  const [visiblePosts, setVisiblePosts] = useState(9); 
   const observerRef = useRef(null); // רפרנס לתחתית הרשימה
 
   function deletePost(item) {
@@ -93,9 +94,11 @@ export default function AllPosts({}) {
 
           {message && <p style={{ color: "red" }}>{message}</p>}
           <div className="grid py-24 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 max-w-2xl mx-auto border-t border-gray-300 gap-x-8 gap-y-8 sm:mt-30 lg:mt-30 lg:max-w-none ">
-            {sortedList.length === 0 ? (
-              <>
-                {loading ? (
+            {sortedList.length === 0
+            //  && loading 
+             ? (
+              // <>
+              //   {loading ? (
                   Array.from(new Array(12)).map((_, index) => (
                     <article
                       key={index}
@@ -135,12 +138,12 @@ export default function AllPosts({}) {
                       </div>
                     </article>
                   ))
-                ) : (
-                  <p className="text-center text-gray-600">
-                    עדיין אין מאמרים לנושא זה, הנך מוזמן להוסיף
-                  </p>
-                )}
-              </>
+              //   ) : (
+              //     <p className="text-center text-gray-600">
+              //       עדיין אין מאמרים לנושא זה, הנך מוזמן 9
+              //     </p>
+              //   )}
+              // </>
             ) : (
               sortedList.slice(0, visiblePosts).map((post) => (
                 <article
@@ -356,7 +359,7 @@ export default function AllPosts({}) {
 //               <Spinner />
 //             ) : sortedList.length == 0 ? (
 //               <p className="text-center text-gray-600">
-//                 עדיין אין מאמרים לנושא זה, הנך מוזמן להוסיף
+//                 עדיין אין מאמרים לנושא זה, הנך מוזמן 9
 //               </p>
 //             ) : (
 //               sortedList.map((post) => (

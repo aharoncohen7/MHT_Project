@@ -4,15 +4,16 @@ import React, { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import UserContext from "../../contexts";
 import DataContext from "../../contexts/dataContext";
+import { formatDate } from "../../helpers";
 import { importedDelete } from "../../helpers/postFunctions";
 import { ButtonClick } from "../buttons/ButtonClick";
 import ParashaNav from "../layout/ParashaNav";
-import { formatDate } from "../../helpers";
+import CommentList from "./CommentsList";
 import Editor from "./Editor";
+import MyRating from "./MyRating";
 import SanitizedHTML from "./SanitizedHTML";
 import TagList from "./TagList";
-import MyRating from "./MyRating";
-import CommentList from "./CommentsList";
+import { FaRegComments } from "react-icons/fa";
 
 // פוסט בודד בעמוד נפרד - חדש
 export default function SinglePost() {
@@ -79,10 +80,18 @@ export default function SinglePost() {
                     </Tooltip>
                     <span className="hidden sm:flex px-2 justify-center gap-2">
                       <Tooltip title={"לחץ כדי לדרג"}>
-                        {`דרג את המאמר :`}
+                        <span>{`דרג את המאמר :`}</span>
                       </Tooltip>
-                      
+
                       <MyRating item={item} />
+                    </span>
+                    <span
+                      className={`flex gap-1 ${
+                        length ? "text-blue-400" : "text-gray-400"
+                      }`}
+                    >
+                      {`${length}`}
+                      <FaRegComments size={24} />
                     </span>
                     <Tooltip title="תאריך יצירה">
                       <Chip
@@ -96,7 +105,7 @@ export default function SinglePost() {
               </div>
               <span className="flex p-4 px-10 items-center justify-between sm:hidden">
                 <Tooltip title={"לחץ כדי לדרג"}>
-                  {`דרג את המאמר :`}
+                  <p>{`דרג את המאמר :`}</p>
                 </Tooltip>
                 <MyRating item={item} />
               </span>
@@ -161,7 +170,7 @@ export default function SinglePost() {
                       <ButtonClick
                         variant="contained"
                         // onClick={() => navigate(`/edit/${item.id}`)}
-                        onClick={()=>setIsEditorOpen(true)}
+                        onClick={() => setIsEditorOpen(true)}
                       >
                         ערוך מאמר
                       </ButtonClick>
@@ -170,22 +179,21 @@ export default function SinglePost() {
 
                   {/* {message && <p style={{ color: "red" }}>{message}</p>} */}
                   <button
-                    onClick={() => setIsCommentListOpen(prev=>!prev)}
+                    onClick={() => setIsCommentListOpen((prev) => !prev)}
                     className="mb-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                   >
-                 { isCommentListOpen ? "הסתר תגובות" : "הצג תגובות"}
+                    {isCommentListOpen ? "הסתר תגובות" : "הצג תגובות"}
                   </button>
-                  <button 
-                  onClick={() => navigate(-1)}
-                  className="mb-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                  <button
+                    onClick={() => navigate(-1)}
+                    className="mb-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                   >
                     חזור אחורה
-                    </button>
+                  </button>
                 </div>
-               <span className={`${isCommentListOpen ?"": "hidden" }`} >
+                <span className={`${isCommentListOpen ? "" : "hidden"}`}>
                   <CommentList postId={item.id} setLength={setLength} />
-               </span>
-                  
+                </span>
 
                 {/* <div className="hidden sm:ml-6 sm:block" style={{ top: '60px', right: '0px' }}><ParashaNav /></div> */}
               </div>
@@ -196,12 +204,12 @@ export default function SinglePost() {
 
       <Dialog
         open={isEditorOpen}
-        onClose={()=>setIsEditorOpen(false)}
+        onClose={() => setIsEditorOpen(false)}
         maxWidth="md"
         fullWidth
       >
         <Box sx={{ display: "flex", justifyContent: "flex-end", mb: 1 }}>
-          <Button onClick={()=>setIsEditorOpen(false)}>
+          <Button onClick={() => setIsEditorOpen(false)}>
             <ClearIcon />
           </Button>
         </Box>
