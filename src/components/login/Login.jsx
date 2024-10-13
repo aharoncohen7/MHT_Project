@@ -1,17 +1,20 @@
-import React, { useContext, useState } from "react";
-import Button from "@mui/material/Button";
-import TextField from "@mui/material/TextField";
-import Link from "@mui/material/Link";
-import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
+import Grid from "@mui/material/Grid";
+import Link from "@mui/material/Link";
+import TextField from "@mui/material/TextField";
+import Typography from "@mui/material/Typography";
 import Cookies from "js-cookie";
-import UserContext from "../../contexts";
+import React, { useContext, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
+import UserContext from "../../contexts";
+import ForgetPassword from "./ForgetPassword";
+
 const SERVER_HOST = import.meta.env.VITE_SERVER_HOST;
 
 export default function Login({ setIsExists }) {
+  const [isOpen, setIsOpen] = useState(false);
   sessionStorage.removeItem("isAdminMode");
   Cookies.remove("Authorization");
   const { setMessage, setUserId, setUserName, setIsAdmin, navigate, message } =
@@ -48,9 +51,8 @@ export default function Login({ setIsExists }) {
           console.log(user);
           setMessage(["הנך מחובר", true]);
           setUserId(user.id);
-          setUserName(user.username)
+          setUserName(user.username);
           setIsAdmin(user.isAdmin);
-          // sessionStorage.setItem("Authorization", user.token)
           Cookies.set("Authorization", user.token);
           handleSuccessfulLogin();
         }
@@ -75,9 +77,7 @@ export default function Login({ setIsExists }) {
         console.error(`Error during login: ${response.statusText}`);
       }
     } catch (error) {
-      setMessage([
-        `אירעה שגיאה לא צפויה במהלך ההתחברות`, false,
-      ]);
+      setMessage([`אירעה שגיאה לא צפויה במהלך ההתחברות`, false]);
       console.error(`Error during login: ${error.message}`);
     }
   };
@@ -145,9 +145,15 @@ export default function Login({ setIsExists }) {
           </Button>
           <Grid container>
             <Grid item xs>
-              {/* <Link href="#" variant="body2">
-                Forgot password?
-              </Link> */}
+              <Link
+                href="#"
+                variant="body2"
+                onClick={() => {
+                  setIsOpen(true);
+                }}
+              >
+                שכחת סיסמה?
+              </Link>
             </Grid>
             <Grid item>
               <Link
@@ -163,6 +169,9 @@ export default function Login({ setIsExists }) {
           </Grid>
         </Box>
       </Box>
+
+      <ForgetPassword isOpen={isOpen} setIsOpen={setIsOpen}/>
+
       {message && <p style={{ color: "red" }}>{message}</p>}
     </Container>
   );

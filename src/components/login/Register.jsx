@@ -12,7 +12,7 @@ import UserContext from "../../contexts";
 import { phoneValidator } from "../../helpers";
 const SERVER_HOST = import.meta.env.VITE_SERVER_HOST;
 const CLIENT_HOST = import.meta.env.VITE_CLIENT_HOST;
-console.log(SERVER_HOST)
+// console.log(SERVER_HOST)
 
 export default function Register({ setIsExists }) {
   const { setMessage, message } = useContext(UserContext);
@@ -124,13 +124,13 @@ export default function Register({ setIsExists }) {
           window.location.href = CLIENT_HOST;
         } else {
           // console.log("try > else");
-          console.log("משתמש נרשם: תקלה לא מזוהה", response);
-          setMessage([`משתמש נרשם: תקלה לא מזוהה`, false]);
+          console.log("תקלה לא מזוהה", response);
+          setMessage([`משתמש לא  נרשם - תקלה לא מזוהה`, false]);
         }
       }
     } catch (error) {
       console.log("catch");
-      setMessage([`${error.message} תקלה בתהליך הרישום`, false]);
+      setMessage([`לצערנו אריעה תקלה בתהליך הרישום, נסה מאוחד יותר`, false]);
       console.log(`תקלה בתהליך הרישום ${error.message}`);
     }
   };

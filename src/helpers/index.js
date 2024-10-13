@@ -42,6 +42,11 @@ export function formatDate(dateString) {
   return `${parts[2]}-${parts[1]}-${parts[0].slice(2)}`;
 }
 
+export const emailValidator = (value) => {
+  if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(value)) return "כתובת אימייל לא תקינה";
+  return "";
+};
+
 
 export const phoneValidator = (phone) => {
   // Remove all non-digit characters except for the leading '+'
