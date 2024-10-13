@@ -169,16 +169,18 @@ export default function Navbar({ parasha, holiday, title }) {
                   <div>
                     <Menu.Button className="relative flex text-sm bg-gray-800 rounded-full focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                       <Tooltip title={"הצג תפריט"} placement="right" arrow>
-                      <span className="absolute -inset-1.5" />
-                      <span className="sr-only">Open user menu</span>
-                        <img
-                          className={`${
-                            isLoggedIn ? "" : "grayscale opacity-50"
-                          } w-8 h-8 rounded-full`}
-                          src={avatar}
-                          alt="avatar"
-                          title="הצג תפריט"
-                        />
+                        <>
+                          <span className="absolute -inset-1.5" />
+                          <span className="sr-only">Open user menu</span>
+                          <img
+                            className={`${
+                              isLoggedIn ? "" : "grayscale opacity-50"
+                            } w-8 h-8 rounded-full`}
+                            src={avatar}
+                            alt="avatar"
+                            title="הצג תפריט"
+                          />
+                        </>
                       </Tooltip>
                     </Menu.Button>
                   </div>

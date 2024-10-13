@@ -97,6 +97,7 @@ const Layout = () => {
           setFilteredData,
           parasha,
           loading,
+          setLoading
         }}
       >
         <span
