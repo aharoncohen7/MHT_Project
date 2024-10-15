@@ -28,6 +28,7 @@ const Layout = () => {
   const [parasha, setParasha] = useState(null);
   const [loading, setLoading] = useState(false);
   const [holiday, setHoliday] = useState(null);
+  const [dayData, seDayData] = useState(null);
   const [title, setTitle] = useState(null);
   const [originalData, setOriginalData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
@@ -54,6 +55,7 @@ const Layout = () => {
       console.log(dataFromJSON);
       setParasha(dataFromAPI.currentParasha || dataFromJSON.currentParasha);
       setHoliday(dataFromJSON.upcomingHoliday);
+      seDayData(dataFromAPI)
       console.log(dataFromAPI.firstEvent);
       setTitle(dataFromAPI.firstEvent);
     };
@@ -88,7 +90,7 @@ const Layout = () => {
 
   return (
     <>
-      <Header parasha={parasha} holiday={holiday} title={title} />
+      <Header parasha={parasha} holiday={holiday} title={title} dayData={dayData}/>
       <DataContext.Provider
         value={{
           originalData,

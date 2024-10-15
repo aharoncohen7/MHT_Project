@@ -1,0 +1,1864 @@
+[{
+  "_id": {
+    "$oid": "66a18caa85fc79329953712e"
+  },
+  "name": "בראשית",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:18.241Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:42.799Z"
+  },
+  "__v": 0,
+  "parent": "66a0bfa67076bd7d83035f65",
+  "tags": [
+    {
+      "$oid": "66a259261b5ff16554220827"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18caa85fc793299537130"
+  },
+  "name": "נח",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:18.340Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:42.869Z"
+  },
+  "__v": 0,
+  "parent": "66a0bfa67076bd7d83035f65",
+  "tags": [
+    {
+      "$oid": "66a259271b5ff1655422082a"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18caa85fc793299537132"
+  },
+  "name": "לך לך",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:18.681Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:42.932Z"
+  },
+  "__v": 0,
+  "parent": "66a0bfa67076bd7d83035f65",
+  "tags": [
+    {
+      "$oid": "66a259271b5ff1655422082d"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18caa85fc793299537134"
+  },
+  "name": "וירא",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:18.784Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:42.997Z"
+  },
+  "__v": 0,
+  "parent": "66a0bfa67076bd7d83035f65",
+  "tags": [
+    {
+      "$oid": "66a259271b5ff16554220830"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18caa85fc793299537136"
+  },
+  "name": "חיי שרה",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:18.907Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:43.062Z"
+  },
+  "__v": 0,
+  "parent": "66a0bfa67076bd7d83035f65",
+  "tags": [
+    {
+      "$oid": "66a259271b5ff16554220833"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18caa85fc793299537138"
+  },
+  "name": "תולדות",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:18.976Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:43.126Z"
+  },
+  "__v": 0,
+  "parent": "66a0bfa67076bd7d83035f65",
+  "tags": [
+    {
+      "$oid": "66a259271b5ff16554220836"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cab85fc79329953713a"
+  },
+  "name": "ויצא",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:19.150Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:43.190Z"
+  },
+  "__v": 0,
+  "parent": "66a0bfa67076bd7d83035f65",
+  "tags": [
+    {
+      "$oid": "66a259271b5ff16554220839"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cab85fc79329953713c"
+  },
+  "name": "וישלח",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:19.284Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:43.252Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a259271b5ff1655422083c"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cab85fc79329953713e"
+  },
+  "name": "וישב",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:19.398Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:43.314Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a259271b5ff1655422083f"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cab85fc793299537140"
+  },
+  "name": "מקץ",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:19.505Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:43.378Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a259281b5ff16554220842"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cab85fc793299537142"
+  },
+  "name": "ויגש",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:19.666Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:43.441Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a259281b5ff16554220845"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cab85fc793299537144"
+  },
+  "name": "ויחי",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:19.996Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:43.504Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a259281b5ff16554220848"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cad85fc793299537146"
+  },
+  "name": "שמות",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:21.812Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:43.566Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a259281b5ff1655422084b"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cad85fc793299537148"
+  },
+  "name": "וארא",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:21.960Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:43.630Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a259281b5ff1655422084e"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cae85fc79329953714a"
+  },
+  "name": "בא",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:22.048Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:43.694Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a259281b5ff16554220851"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cae85fc79329953714c"
+  },
+  "name": "בשלח",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:22.125Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:43.757Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a259281b5ff16554220854"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cae85fc79329953714e"
+  },
+  "name": "יתרו",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:22.204Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:43.818Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a259291b5ff16554220857"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cae85fc793299537150"
+  },
+  "name": "משפטים",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:22.281Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:43.880Z"
+  },
+  "__v": 0,
+  "parent": "66a0bfa67076bd7d83035f65",
+  "tags": [
+    {
+      "$oid": "66a259291b5ff1655422085a"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cae85fc793299537152"
+  },
+  "name": "תרומה",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:22.358Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:43.944Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a259291b5ff1655422085d"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cae85fc793299537154"
+  },
+  "name": "תצוה",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:22.442Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:44.007Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a259291b5ff16554220860"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cae85fc793299537156"
+  },
+  "name": "כי תשא",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:22.580Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:44.071Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a259291b5ff16554220863"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cae85fc793299537158"
+  },
+  "name": "ויקהל",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:22.872Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:44.132Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a259291b5ff16554220866"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18caf85fc79329953715a"
+  },
+  "name": "פקודי",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:23.982Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:44.195Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a259291b5ff16554220869"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cb085fc79329953715c"
+  },
+  "name": "ויקהל־פקודי",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:24.057Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:44.260Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a259291b5ff1655422086c"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cb085fc79329953715e"
+  },
+  "name": "ויקרא",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:24.153Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:44.322Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a2592a1b5ff1655422086f"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cb085fc793299537160"
+  },
+  "name": "צו",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:24.226Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:44.383Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a2592a1b5ff16554220872"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cb085fc793299537162"
+  },
+  "name": "שמיני",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:24.308Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:44.446Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a2592a1b5ff16554220875"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cb085fc793299537164"
+  },
+  "name": "תזריע",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:24.385Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:44.508Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a2592a1b5ff16554220878"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cb085fc793299537166"
+  },
+  "name": "מצורע",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:24.484Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:44.570Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a2592a1b5ff1655422087b"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cb085fc793299537168"
+  },
+  "name": "תזריע־מצורע",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:24.612Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:44.633Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a2592a1b5ff1655422087e"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cb085fc79329953716a"
+  },
+  "name": "אחרי מות",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:24.685Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:44.696Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a2592a1b5ff16554220881"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cb085fc79329953716c"
+  },
+  "name": "קדושים",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:24.756Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:44.789Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a2592a1b5ff16554220884"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cb085fc79329953716e"
+  },
+  "name": "אחרי מות־קדושים",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:24.877Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:44.852Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a2592b1b5ff16554220887"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cb085fc793299537170"
+  },
+  "name": "אמור",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:24.967Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:44.913Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a2592b1b5ff1655422088a"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cb185fc793299537172"
+  },
+  "name": "בהר",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:25.039Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:44.983Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a2592b1b5ff1655422088d"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cb185fc793299537174"
+  },
+  "name": "בחוקותי",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:25.110Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:45.062Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a2592b1b5ff16554220890"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cb185fc793299537176"
+  },
+  "name": "בהר־בחוקותי",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:25.389Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:45.148Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a2592b1b5ff16554220893"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cb185fc793299537178"
+  },
+  "name": "במדבר",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:25.474Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:45.211Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a2592c1b5ff16554220896"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cb185fc79329953717a"
+  },
+  "name": "נשא",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:25.546Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:45.275Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a2592c1b5ff16554220899"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cb185fc79329953717c"
+  },
+  "name": "בהעלותך",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:25.673Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:45.337Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a2592c1b5ff1655422089c"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cb185fc79329953717e"
+  },
+  "name": "שלח",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:25.839Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:45.400Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a2592c1b5ff1655422089f"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cb285fc793299537180"
+  },
+  "name": "קורח",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:26.023Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:45.462Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a2592c1b5ff165542208a2"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cb285fc793299537182"
+  },
+  "name": "חוקת",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:26.093Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:45.522Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a2592c1b5ff165542208a5"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cb285fc793299537184"
+  },
+  "name": "בלק",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:26.165Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:45.584Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a2592d1b5ff165542208a8"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cb285fc793299537186"
+  },
+  "name": "חוקת־בלק",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:26.245Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:45.647Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a2592d1b5ff165542208ab"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cb285fc793299537188"
+  },
+  "name": "פנחס",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [
+    "66a1901a85fc7932995371d2",
+    "66a1906185fc7932995371d4"
+  ],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:26.322Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:45.710Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a2592d1b5ff165542208ae"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cb285fc79329953718a"
+  },
+  "name": "מטות",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:26.409Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:45.773Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a2592d1b5ff165542208b1"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cb285fc79329953718c"
+  },
+  "name": "מסעי",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:26.477Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:45.839Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a2592d1b5ff165542208b4"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cb285fc79329953718e"
+  },
+  "name": "מטות־מסעי",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:26.550Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:45.900Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a2592d1b5ff165542208b7"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cb285fc793299537190"
+  },
+  "name": "דברים",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:26.836Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:45.963Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a2592d1b5ff165542208ba"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cb285fc793299537192"
+  },
+  "name": "ואתחנן",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:26.914Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:46.025Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a2592d1b5ff165542208bd"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cb285fc793299537194"
+  },
+  "name": "עקב",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:26.985Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:46.088Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a2592e1b5ff165542208c0"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cb385fc793299537196"
+  },
+  "name": "ראה",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:27.057Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:46.150Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a2592e1b5ff165542208c3"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cb385fc793299537198"
+  },
+  "name": "שופטים",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:27.131Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:46.212Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a2592e1b5ff165542208c6"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cb385fc79329953719a"
+  },
+  "name": "כי תצא",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:27.202Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:46.275Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a2592e1b5ff165542208c9"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cb385fc79329953719c"
+  },
+  "name": "כי תבוא",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:27.288Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:46.340Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a2592e1b5ff165542208cc"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cb385fc79329953719e"
+  },
+  "name": "נצבים",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:27.358Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:46.402Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a2592e1b5ff165542208cf"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cb385fc7932995371a0"
+  },
+  "name": "וילך",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:27.436Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:46.465Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a2592e1b5ff165542208d2"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cb385fc7932995371a2"
+  },
+  "name": "נצבים־וילך",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:27.505Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:46.526Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a2592e1b5ff165542208d5"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cb385fc7932995371a4"
+  },
+  "name": "האזינו",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:27.576Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:46.588Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a2592f1b5ff165542208d8"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18cb385fc7932995371a6"
+  },
+  "name": "וזאת הברכה",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "parasha",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:22:27.655Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-25T15:19:46.650Z"
+  },
+  "__v": 0,
+  "tags": [
+    {
+      "$oid": "66a2592f1b5ff165542208db"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18d6d85fc7932995371a8"
+  },
+  "name": "ראש השנה",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "holiday",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:25:33.905Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T23:25:33.905Z"
+  },
+  "__v": 0,
+  "tags": [
+    "66a0bfa57076bd7d83035ee9",
+    "66a0bfa57076bd7d83035ee7",
+    "66a0bfa57076bd7d83035eea",
+    "66a0bfa57076bd7d83035ef7"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18d6d85fc7932995371aa"
+  },
+  "name": "צום גדליה",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "holiday",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:25:33.982Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T23:25:33.982Z"
+  },
+  "__v": 0,
+  "tags": [
+    "66a0bfa57076bd7d83035ef4",
+    "66a0bfa57076bd7d83035eea",
+    "66a0bfa57076bd7d83035ee8"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18d6e85fc7932995371ac"
+  },
+  "name": "יום כיפור",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "holiday",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:25:34.072Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T23:25:34.072Z"
+  },
+  "__v": 0,
+  "tags": [
+    "66a0bfa57076bd7d83035eeb",
+    "66a0bfa57076bd7d83035eea",
+    "66a0bfa57076bd7d83035ee8"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18d6e85fc7932995371ae"
+  },
+  "name": "סוכות",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "holiday",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:25:34.170Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T23:25:34.170Z"
+  },
+  "__v": 0,
+  "tags": [
+    "66a0bfa57076bd7d83035eec"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18d6e85fc7932995371b0"
+  },
+  "name": "הושענה רבא",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "holiday",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:25:34.245Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T23:25:34.245Z"
+  },
+  "__v": 0,
+  "tags": [
+    "66a0bfa57076bd7d83035eec"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18d6e85fc7932995371b2"
+  },
+  "name": "שמחת תורה",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "holiday",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:25:34.328Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T23:25:34.328Z"
+  },
+  "__v": 0,
+  "tags": [
+    "66a0bfa57076bd7d83035eed"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18d6e85fc7932995371b4"
+  },
+  "name": "חנוכה",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "holiday",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:25:34.410Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T23:25:34.410Z"
+  },
+  "__v": 0,
+  "tags": [
+    "66a0bfa57076bd7d83035ef0"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18d6e85fc7932995371b6"
+  },
+  "name": "עשרה בטבת",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "holiday",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:25:34.482Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T23:25:34.482Z"
+  },
+  "__v": 0,
+  "tags": [
+    "66a0bfa57076bd7d83035ef4"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18d6e85fc7932995371b8"
+  },
+  "name": "טו בשבט",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "holiday",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:25:34.556Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T23:25:34.556Z"
+  },
+  "__v": 0,
+  "tags": [
+    "66a0bfa57076bd7d83035efa"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18d6e85fc7932995371ba"
+  },
+  "name": "פורים",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "holiday",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:25:34.629Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T23:25:34.629Z"
+  },
+  "__v": 0,
+  "tags": [
+    "66a0bfa57076bd7d83035eef"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18d6e85fc7932995371bc"
+  },
+  "name": "פסח",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "holiday",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:25:34.702Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T23:25:34.702Z"
+  },
+  "__v": 0,
+  "tags": [
+    "66a0bfa57076bd7d83035eee"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18d6e85fc7932995371be"
+  },
+  "name": "שביעי של פסח",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "holiday",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:25:34.778Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T23:25:34.778Z"
+  },
+  "__v": 0,
+  "tags": [
+    "66a7443b700ac8064c4e0434"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18d6e85fc7932995371c0"
+  },
+  "name": "יום השואה",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "holiday",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:25:34.852Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T23:25:34.852Z"
+  },
+  "__v": 0,
+  "tags": [
+    "66a0bfa57076bd7d83035ef8"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18d6e85fc7932995371c2"
+  },
+  "name": "יום הזכרון",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "holiday",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:25:34.935Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T23:25:34.935Z"
+  },
+  "__v": 0,
+  "tags": [
+    "66a0bfa57076bd7d83035ef1"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18d6f85fc7932995371c4"
+  },
+  "name": "יום העצמאות",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "holiday",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:25:35.008Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T23:25:35.008Z"
+  },
+  "__v": 0,
+  "tags": [
+    "66a0bfa57076bd7d83035ef1"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18d6f85fc7932995371c6"
+  },
+  "name": "לג בעומר",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "holiday",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:25:35.077Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T23:25:35.077Z"
+  },
+  "__v": 0,
+  "tags": [
+    "66a0bfa57076bd7d83035ef9"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18d6f85fc7932995371c8"
+  },
+  "name": "יום ירושלים",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "holiday",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:25:35.148Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T23:25:35.148Z"
+  },
+  "__v": 0,
+  "tags": [
+    "66a0bfa57076bd7d83035ef3"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18d6f85fc7932995371ca"
+  },
+  "name": "שבועות",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "holiday",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:25:35.599Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T23:25:35.599Z"
+  },
+  "__v": 0,
+  "tags": [
+    "66a0bfa57076bd7d83035ef2"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18d6f85fc7932995371cc"
+  },
+  "name": "שבעה עשר בתמוז",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "holiday",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:25:35.677Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T23:25:35.677Z"
+  },
+  "__v": 0,
+  "tags": [
+    "66a0bfa57076bd7d83035ef4",
+    "66a0bfa57076bd7d83035ef5"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a18d6f85fc7932995371d0"
+  },
+  "name": "טו באב",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "holiday",
+  "questions": [],
+  "createdAt": {
+    "$date": "2024-07-24T23:25:35.821Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-24T23:25:35.821Z"
+  },
+  "__v": 0,
+  "tags": [
+    "66a0bfa57076bd7d83035efa"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66a780f0700ac8064c4e0467"
+  },
+  "name": "תשעה באב",
+  "topicImages": [],
+  "children": [],
+  "isActive": true,
+  "type": "holiday",
+  "questions": [
+    "66a11951fa2e12e9e83ccea0"
+  ],
+  "createdAt": {
+    "$date": "2024-07-28T13:25:35.821Z"
+  },
+  "updatedAt": {
+    "$date": "2024-07-28T13:25:35.821Z"
+  },
+  "tags": [
+    "66a74739700ac8064c4e044a"
+  ]
+}]

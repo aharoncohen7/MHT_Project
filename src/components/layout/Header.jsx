@@ -13,7 +13,7 @@ const avatar = "http://img.uniquemu.co.il/upload/4BSyycN.jpeg";
 const avatar2 = "http://img.uniquemu.co.il/upload/udYCav4.jpeg";
 
 // סרגל ראשי עליון
-export default function Header({ parasha, holiday, title }) {
+export default function Header({ parasha, holiday, title, dayData }) {
   const {
     logOut,
     isAdmin,
@@ -139,6 +139,7 @@ export default function Header({ parasha, holiday, title }) {
                   <span>{`וורטלי`}</span>
                   {/* <span>{title ? ` - ${title}` : ""}</span> */}
                   <span>{parasha ? ` - ${parasha}` : ` - ${holiday}`}</span>
+                <p className="hidden sm:block text-sm">{dayData?.currentHeDate ? dayData?.currentHeDate : null}</p>
                 </h2>
               </div>
 
