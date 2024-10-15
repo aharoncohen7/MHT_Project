@@ -8,8 +8,10 @@ import { useContext } from "react";
 import UserContext from "../../contexts";
 import { Button } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
+import FieldToCopy from "../CopiedField";
+import { formatDate } from "../../helpers";
 
-const UserTable = () => {
+const UsersTable = () => {
   const { setMessage } = useContext(UserContext);
   const [search, setSearch] = useState("");
   const [sortKey, setSortKey] = useState("");
@@ -89,7 +91,7 @@ const UserTable = () => {
   const filteredUsers = filterData(users, search, isAdmin);
   const sortedUsers = sortData(filteredUsers, sortKey, sortOrder);
   const totalPages = Math.ceil(sortedUsers.length / itemsPerPage);
-  console.log("🚀 ~ UserTable ~ totalPages:", totalPages);
+  console.log("🚀 ~ UsersTable ~ totalPages:", totalPages);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const currentUsers = sortedUsers.slice(startIndex, startIndex + itemsPerPage);
   console.log(currentUsers.length);
@@ -126,7 +128,7 @@ const UserTable = () => {
               onClick={() => handleSort("name")}
             >
               <span className="flex gap-4 items-center justify-center">
-                שם פרטי ומשפחה
+                שם
                 {sortKey == "name" && (
                   <>{sortOrder == "asc" ? <FaArrowDown /> : <FaArrowUp />}</>
                 )}
@@ -156,6 +158,8 @@ const UserTable = () => {
                 )}{" "}
               </span>
             </th>
+            <th className="py-2 px-4 border text-gray-600">מאמרים</th>
+            <th className="py-2 px-4 border text-gray-600">פעילות אחרונה</th>
             <th className="py-2 px-4 border text-gray-600">סטטוס משתמש</th>
             <th className="py-2 px-4 border text-gray-600">האם מנהל</th>
             <th className="py-2 px-4 border text-gray-600">מחיקת משתמש</th>
@@ -168,13 +172,17 @@ const UserTable = () => {
               ))
             : currentUsers.map((user) => (
                 <tr key={user.id} className="text-center">
+                  
                   <td className="py-2 px-4 border font-hebbo">{user.name}</td>
                   <td className="py-2 px-4 border font-hebbo">
                     {user.username}
                   </td>
                   <td className="py-2 px-4 border font-hebbo">{user.id}</td>
                   <td className="py-2 px-4 border font-hebbo">{user.phone}</td>
-                  <td className="py-2 px-4 border font-hebbo">{user.email}</td>
+                  {/* <td className="py-2 px-4 border font-hebbo">{user.email}</td> */}
+                  <td className="py-2 px-4 border font-hebbo"><FieldToCopy valueToCopy={user.email} valueToShow={"..."}/></td>
+                  <td className="py-2 px-4 border font-hebbo">{user.posts_sum}</td>
+                  <td className="py-2 px-4 border font-hebbo">{formatDate(user.last_post_date)}</td>
                   <td
                     className={`py-2 px-4 border ${
                       user.isAdmin > -1 ? "text-green-600" : "text-red-600"
@@ -229,7 +237,7 @@ const UserTable = () => {
   );
 };
 
-export default UserTable;
+export default UsersTable;
 
 const SkeletonRow = () => (
   <tr>

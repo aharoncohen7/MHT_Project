@@ -85,6 +85,7 @@ export default function SinglePost() {
 
                       <MyRating item={item} />
                     </span>
+                    <a href="#comments">
                     <span
                       className={`flex gap-1 ${
                         length ? "text-blue-400" : "text-gray-400"
@@ -93,6 +94,7 @@ export default function SinglePost() {
                       {`${length}`}
                       <FaRegComments size={24} />
                     </span>
+                    </a>
                     <Tooltip title="תאריך יצירה">
                       <Chip
                         label={formatDate(item.created_at)}
@@ -179,6 +181,8 @@ export default function SinglePost() {
 
                   {/* {message && <p style={{ color: "red" }}>{message}</p>} */}
                   <button
+                  id="comments"
+                  
                     onClick={() => setIsCommentListOpen((prev) => !prev)}
                     className="mb-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                   >

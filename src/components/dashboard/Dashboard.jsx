@@ -1,4 +1,4 @@
-import UserTable from "./UserTable";
+import UsersTable from "./UsersTable";
 
 
 export default function Dashboard() {
@@ -8,7 +8,7 @@ export default function Dashboard() {
             {/* <h1 className="text-xl font-bold font-mono">Users table</h1> */}
          </header>
          <main className="">
-            <UserTable />
+            <UsersTable />
          </main>
       </div>
    )

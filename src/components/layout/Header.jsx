@@ -41,13 +41,13 @@ export default function Header({ parasha, holiday, title }) {
       href: holiday ? `/home/?parasha=${holiday}` : `/`,
     },
     { id: 2, name: "כללי", href: "/home/?parasha=all" },
-    // {
-    //   id: 2,
-    //   name: isLoggedIn ? "הוספת מאמר" : "התחבר",
-    //   href: isLoggedIn ? "/addition" : "/login",
-    // },
     {
       id: 3,
+      name: isLoggedIn ? "כתוב מאמר" : "התחבר",
+      href: isLoggedIn ? "/addition" : "/login",
+    },
+    {
+      id: 4,
       name: adminMode ? "ניהול" : "אודות",
       href: adminMode ? "/dashboard" : "/about",
     },
@@ -62,12 +62,6 @@ export default function Header({ parasha, holiday, title }) {
   function classNames(...classes) {
     return classes.filter(Boolean).join(" ");
   }
-
-
-  useEffect(() => {
-
-
-  },[])
 
   // התחברות
   const goToLoginAndBack = () => {
@@ -93,7 +87,7 @@ export default function Header({ parasha, holiday, title }) {
                 </Disclosure.Button>
               </div>
 
-              <div className="hidden sm:flex items-center justify-center flex-1 sm:items-stretch sm:justify-start">
+              <div className="hidden sm:flex items-center justify-center flex-6 sm:items-stretch sm:justify-start">
                 <Tooltip title={"לדף הבית"} placement="bottom" arrow>
                   <div
                     className="cursor-pointer flex items-center flex-shrink-0"
@@ -135,14 +129,14 @@ export default function Header({ parasha, holiday, title }) {
                 </div>
               </div>
 
-              <div className="min-w-0 flex-1 lg:ml-28">
+              <div className="min-w-0 flex-1 lg:ml-12">
                 <h2
                   onClick={() => {
                     navigate(navButtons[0].href);
                   }}
-                  className="text-center font-bold font-bona_nova leading-7 text-white sm:truncate sm:text-3xl sm:tracking-right select-none"
+                  className="text-center text-2xl font-bold font-bona_nova leading-7 text-white sm:truncate sm:text-3xl sm:tracking-right select-none"
                 >
-                  {`וורטלי`}
+                  <span>{`וורטלי`}</span>
                   {/* <span>{title ? ` - ${title}` : ""}</span> */}
                   <span>{parasha ? ` - ${parasha}` : ` - ${holiday}`}</span>
                 </h2>
@@ -256,26 +250,30 @@ export default function Header({ parasha, holiday, title }) {
           <Disclosure.Panel className="sm:hidden ">
             <div className="px-2 pt-2 pb-3 space-y-1 ">
               {navButtons.map((item, index) => (
-                <Disclosure.Button
-                  key={item.name}
-                  onClick={(e) => {
-                    e.preventDefault(); // מונע רענון דף
-                    handleNavigationClick(item);
-                  }}
-                  className={classNames(
-                    // item.current
-                    index === activeIndex
-                      ? "blue-gradient text-white"
-                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                    "block rounded-md px-3 py-2 text-base font-medium cursor-pointer"
+                <>
+                  {!(!item.id && !parasha) && (
+                    <Disclosure.Button
+                      key={item.name}
+                      onClick={(e) => {
+                        e.preventDefault(); // מונע רענון דף
+                        handleNavigationClick(item);
+                      }}
+                      className={classNames(
+                        // item.current
+                        index === activeIndex
+                          ? "blue-gradient text-white"
+                          : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                        "block rounded-md px-3 py-2 text-base font-medium cursor-pointer"
+                      )}
+                      aria-current={
+                        // item.current
+                        index === activeIndex ? "page" : undefined
+                      }
+                    >
+                      {item.name}
+                    </Disclosure.Button>
                   )}
-                  aria-current={
-                    // item.current
-                    index === activeIndex ? "page" : undefined
-                  }
-                >
-                  {item.name}
-                </Disclosure.Button>
+                </>
               ))}
             </div>
           </Disclosure.Panel>
