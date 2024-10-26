@@ -6,7 +6,7 @@ import DataContext from "../../contexts/dataContext";
 
 export default function Search({ setSortedList }) {
   const { originalData, filteredData, setFilteredData, parasha } =
-    useContext(DataContext);
+  useContext(DataContext);
   const [showSearch, setShowSearch] = useState(true);
   const [filter, setFilter] = useState("creation date ↑");
   const [input, setInput] = useState("");
@@ -51,7 +51,9 @@ export default function Search({ setSortedList }) {
         return;
       }
       if (parasha) {
-        const parashaName = parasha.split(" ")[1];
+        const parashaName = parasha;
+        // console.log("🚀 ~ useEffect ~ parashaName:", parashaName)
+        
         if (parashaName.split("-").length) {
           const parashaName1 = parashaName.split("-")[0];
           const parashaName2 = parashaName.split("-")[1];

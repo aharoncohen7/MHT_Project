@@ -32,26 +32,50 @@ export default function Header({ parasha, holiday, title, dayData }) {
   const navButtons = [
     {
       id: 0,
-      name: parasha ? "פרשת " + parasha : "פרשת השבוע",
+      name: parasha ? "פרשת " + parasha : null,
       href: parasha ? `/` : "/home/?parasha=all",
     },
     {
       id: 1,
-      name: holiday || "חגים",
+      name: holiday || null,
       href: holiday ? `/home/?parasha=${holiday}` : `/`,
     },
     { id: 2, name: "כללי", href: "/home/?parasha=all" },
     {
       id: 3,
-      name: isLoggedIn ? "כתוב מאמר" : "התחבר",
-      href: isLoggedIn ? "/addition" : "/login",
-    },
-    {
-      id: 4,
       name: adminMode ? "ניהול" : "אודות",
       href: adminMode ? "/dashboard" : "/about",
     },
+    {
+      id: 4,
+      name: isLoggedIn ? "כתוב מאמר" : "התחבר",
+      href: isLoggedIn ? "/addition" : "/login",
+    },
     // { id: 3, name: isDarkMode ? 'LightMode' : "DarkMode", href: "/" }
+  ];
+  const navButtonsForMobile = [
+    {
+      id: 0,
+      name: parasha ? "וורטים על פרשת " + parasha : null,
+      href: parasha ? `/` : "/home/?parasha=all",
+    },
+    {
+      id: 1,
+      name: holiday ? "וורטים על " + holiday : null,
+      href: holiday ? `/home/?parasha=${holiday}` : `/`,
+    },
+    { id: 2, name: "לכל התוכן", href: "/home/?parasha=all" },
+    {
+      id: 3,
+      name: "אודות",
+      href: "/about",
+    },
+    {
+      id: 4,
+      name: isLoggedIn ? "כתוב מאמר" : "התחבר",
+      href: isLoggedIn ? "/addition" : "/login",
+    },
+    // { id: 4, name: isDarkMode ? 'LightMode' : "DarkMode", href: "/" }
   ];
 
   const handleNavigationClick = (button) => {
@@ -101,7 +125,7 @@ export default function Header({ parasha, holiday, title, dayData }) {
                 <div className="hidden sm:ml-0 sm:block px-2 ">
                   <div className="flex gap-1 text-center items-center justify-center ">
                     {navButtons.map((item, index) => {
-                      if (!(!item.id && !parasha)) {
+                      if (item.name) {
                         return (
                           <span
                             key={item.name}
@@ -138,7 +162,7 @@ export default function Header({ parasha, holiday, title, dayData }) {
                 >
                   <span>{`וורטלי`}</span>
                   {/* <span>{title ? ` - ${title}` : ""}</span> */}
-                  <span>{parasha ? ` - ${parasha}` : ` - ${holiday}`}</span>
+                  {(parasha || holiday) ?  <span>{parasha ? ` - ${parasha}` : ` - ${holiday}`}</span> : "פרשת השבוע"}
                 <p className="hidden sm:block text-sm">{dayData?.currentHeDate ? dayData?.currentHeDate : null}</p>
                 </h2>
               </div>
@@ -250,9 +274,9 @@ export default function Header({ parasha, holiday, title, dayData }) {
 
           <Disclosure.Panel className="sm:hidden ">
             <div className="px-2 pt-2 pb-3 space-y-1 ">
-              {navButtons.map((item, index) => (
+              {navButtonsForMobile.map((item, index) => (
                 <>
-                  {!(!item.id && !parasha) && (
+                  {item.name && (
                     <Disclosure.Button
                       key={item.name}
                       onClick={(e) => {
