@@ -1,5 +1,5 @@
 import ClearIcon from "@mui/icons-material/Clear";
-import { Box, Button, Chip, Dialog, Tooltip } from "@mui/material";
+import { Box, Button, Chip, Dialog, Tooltip, IconButton } from "@mui/material";
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import UserContext from "../../contexts";
@@ -14,6 +14,11 @@ import MyRating from "./MyRating";
 import SanitizedHTML from "./SanitizedHTML";
 import TagList from "./TagList";
 import { FaRegComments } from "react-icons/fa";
+import ShareIcon from "@mui/icons-material/Share";
+import ContentCopyIcon from "@mui/icons-material/ContentCopy";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 // פוסט בודד בעמוד נפרד - חדש
 export default function SinglePost() {
@@ -44,6 +49,18 @@ export default function SinglePost() {
   function deletePost() {
     importedDelete(item, setOriginalData, setMessage, logOut, navigate);
   }
+
+  // פונקציה להעתקת הקישור ללוח
+  const copyLinkToClipboard = () => {
+    navigator.clipboard.writeText(window.location.href);
+    setMessage(["הקישור הועתק ללוח!", true]);
+  };
+
+  // פונקציה להעתקת תוכן המאמר
+  const copyContentToClipboard = () => {
+    navigator.clipboard.writeText(item.body);
+    setMessage(["תוכן המאמר הועתק ללוח!", true]);
+  };
 
   return (
     <>
@@ -78,22 +95,22 @@ export default function SinglePost() {
                         }}
                       />
                     </Tooltip>
-                    <span className="hidden sm:flex px-2 justify-center gap-2">
+                    {/* <span className="hidden sm:flex px-2 justify-center gap-2">
                       <Tooltip title={"לחץ כדי לדרג"}>
                         <span>{`דרג את המאמר :`}</span>
                       </Tooltip>
 
                       <MyRating item={item} />
-                    </span>
+                    </span> */}
                     <a href="#comments">
-                    <span
-                      className={`flex gap-1 ${
-                        length ? "text-blue-400" : "text-gray-400"
-                      }`}
-                    >
-                      {`${length}`}
-                      <FaRegComments size={24} />
-                    </span>
+                      <span
+                        className={`flex gap-1 ${
+                          length ? "text-blue-400" : "text-gray-400"
+                        }`}
+                      >
+                        {`${length}`}
+                        <FaRegComments size={24} />
+                      </span>
                     </a>
                     <Tooltip title="תאריך יצירה">
                       <Chip
@@ -150,6 +167,75 @@ export default function SinglePost() {
                   </div>
                 </div>
 
+                {/* כפתורי שיתוף */}
+                <Box
+                  sx={{
+                    display: "flex",
+                    // justifyContent: "flex-end",
+                    justifyContent: "center",
+                    gap: 2,
+                    mt: 2,
+                  }}
+                >
+                   <span className="hidden sm:flex px-2 py-2 justify-center gap-2">
+                      <Tooltip title={"לחץ כדי לדרג את המאמר"}>
+                        <span>{`דרג`}</span>
+                      </Tooltip>
+
+                      <MyRating item={item} />
+                    </span>
+                  {/* העתקת קישור */}
+                  <Tooltip title="העתק קישור ללוח">
+                    <IconButton onClick={copyLinkToClipboard}>
+                      <ShareIcon />
+                    </IconButton>
+                  </Tooltip>
+
+                  {/* העתקת תוכן */}
+                  <Tooltip title="העתק תוכן ללוח">
+                    <IconButton onClick={copyContentToClipboard}>
+                      <ContentCopyIcon />
+                    </IconButton>
+                  </Tooltip>
+
+                  {/* שיתוף ברשתות חברתיות */}
+                  <Tooltip title="שיתוף ב-WhatsApp">
+                    <IconButton
+                      component="a"
+                      href={`https://wa.me/?text=${encodeURIComponent(
+                        window.location.href
+                      )}`}
+                      target="_blank"
+                    >
+                      <WhatsAppIcon />
+                    </IconButton>
+                  </Tooltip>
+
+                  <Tooltip title="שיתוף בטוויטר">
+                    <IconButton
+                      component="a"
+                      href={`https://twitter.com/share?url=${encodeURIComponent(
+                        window.location.href
+                      )}&text=${encodeURIComponent(item.title)}`}
+                      target="_blank"
+                    >
+                      <TwitterIcon />
+                    </IconButton>
+                  </Tooltip>
+
+                  <Tooltip title="שיתוף בפייסבוק">
+                    <IconButton
+                      component="a"
+                      href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+                        window.location.href
+                      )}`}
+                      target="_blank"
+                    >
+                      <FacebookIcon />
+                    </IconButton>
+                  </Tooltip>
+                </Box>
+
                 <div className="h3 bg-gray-200 py-2 my-2 font-semibold">
                   תגיות קשורות:
                   {item.tags !== null && (
@@ -181,8 +267,7 @@ export default function SinglePost() {
 
                   {/* {message && <p style={{ color: "red" }}>{message}</p>} */}
                   <button
-                  id="comments"
-                  
+                    id="comments"
                     onClick={() => setIsCommentListOpen((prev) => !prev)}
                     className="mb-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                   >
