@@ -35,15 +35,15 @@ export default function MyRating({ item }) {
       });
       if (response.ok == false) {
         if (response.status == 401) {
-          setMessage(["כדי לדרג תוכן באתר עליך להיוך מחובר", false]);
+          setMessage(["אינך מחובר", false]);
           return;
         }
         if (response.status == 404) {
-          setMessage(["לא ניתן לדרג יותר מפעם אחת", false]);
+          setMessage(["דירוג כפול נחסם", false]);
           return;
         }
 
-        setMessage(["פעולת הדירוג לא הצליחה", false]);
+        setMessage(["הפעולה נכשלה", false]);
         return;
         // throw new Error(`Failed to update rating! Status: ${response.status}`);
       } else {
@@ -67,23 +67,24 @@ export default function MyRating({ item }) {
 
   return (
     <span className="flex flex-col ">
-      <Stack spacing={1}>
-        <Rating
-          name="half-rating"
-          style={{ color: "rgba(6, 119, 221, 0.8)", direction: "ltr" }}
-          value={parseFloat(item.rating)}
-          defaultValue={0.0}
-          precision={0.5}
-          onChange={updateRating}
-        />
-      </Stack>
-      {message && (
+      {message ? (
         <div
-          className={`h-4 ${message[1] ? "text-green-300" : "text-red-300"} `}
+          className={`h-4 px-1 ${message[1] ? "text-green-300" : "text-red-300"} `}
           style={{ color: message[1] ? "green" : "red" }}
         >
           {message[0]}
         </div>
+      ) : (
+        <Stack spacing={1}>
+          <Rating
+            name="half-rating"
+            style={{ color: "rgba(6, 119, 221, 0.8)", direction: "ltr" }}
+            value={parseFloat(item.rating)}
+            defaultValue={0.0}
+            precision={0.5}
+            onChange={updateRating}
+          />
+        </Stack>
       )}
     </span>
   );
