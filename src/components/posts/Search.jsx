@@ -7,6 +7,7 @@ import DataContext from "../../contexts/dataContext";
 export default function Search({ setSortedList }) {
   const { originalData, filteredData, setFilteredData, parasha } =
   useContext(DataContext);
+
   const [showSearch, setShowSearch] = useState(true);
   const [filter, setFilter] = useState("creation date ↑");
   const [input, setInput] = useState("");
@@ -15,9 +16,12 @@ export default function Search({ setSortedList }) {
   const tag = searchParams.get("tag");
   const subtopic = searchParams.get("parasha");
   const authorId = searchParams.get("author");
+  const postId = searchParams.get("post");
+
 
   //פונקציית המיון
   useEffect(() => {
+  
     if (originalData !== "") {
       if (tag !== null) {
         setSortedList(
@@ -50,6 +54,10 @@ export default function Search({ setSortedList }) {
         setSortedList(sortBy(filter).filter((elm) => elm.userId == authorId));
         return;
       }
+      // if (postId !== null) {
+      //   setSortedList(filter((elm) => elm.id == postId));
+      //   return;
+      // }
       if (parasha) {
         const parashaName = parasha;
         // console.log("🚀 ~ useEffect ~ parashaName:", parashaName)

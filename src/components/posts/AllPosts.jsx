@@ -19,7 +19,12 @@ export default function AllPosts({}) {
   const [sortedList, setSortedList] = useState([]);
   const [visiblePosts, setVisiblePosts] = useState(9); 
   const observerRef = useRef(null); // רפרנס לתחתית הרשימה
-
+  const searchParams = new URLSearchParams(window.location.search);
+  const postId = searchParams.get("post");
+  if(postId){
+    navigate(`/post/${postId}`)
+  }
+  
   function deletePost(item) {
     importedDelete(item, setOriginalData, setMessage, logOut, navigate);
   }
