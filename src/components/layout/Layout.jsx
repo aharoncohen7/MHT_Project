@@ -116,13 +116,13 @@ const Layout = () => {
           }}
         >
           <Routes>
-            <Route path="login" element={<SignIn />} />
-            <Route path="addition" element={<NewPost />} />
+            <Route path="login/*" element={<SignIn />} />
+            <Route path="addition/*" element={<NewPost />} />
             <Route
               path="dashboard/"
               element={isAdmin && adminMode ? <Dashboard /> : <NotFound />}
             />
-            <Route path="about" element={<AboutUs />} />
+            <Route path="about/*" element={<AboutUs />} />
             <Route path="about/contact-us" element={<ContactUsForm />} />
             <Route path="home/*" element={<AllPosts />} />
             <Route path="post/:postId" element={<SinglePost />} />
