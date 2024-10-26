@@ -55,7 +55,7 @@ const Layout = () => {
       console.log(dataFromJSON);
       setParasha(dataFromAPI.currentParasha || dataFromJSON.currentParasha);
       setHoliday(dataFromJSON.upcomingHoliday);
-      seDayData(dataFromAPI)
+      seDayData(dataFromAPI);
       console.log(dataFromAPI.firstEvent);
       setTitle(dataFromAPI.firstEvent);
     };
@@ -90,7 +90,12 @@ const Layout = () => {
 
   return (
     <>
-      <Header parasha={parasha} holiday={holiday} title={title} dayData={dayData}/>
+      <Header
+        parasha={parasha}
+        holiday={holiday}
+        title={title}
+        dayData={dayData}
+      />
       <DataContext.Provider
         value={{
           originalData,
@@ -99,7 +104,7 @@ const Layout = () => {
           setFilteredData,
           parasha,
           loading,
-          setLoading
+          setLoading,
         }}
       >
         <span
@@ -119,10 +124,10 @@ const Layout = () => {
             />
             <Route path="about" element={<AboutUs />} />
             <Route path="about/contact-us" element={<ContactUsForm />} />
-            <Route path="/" element={<AllPosts />} />
             <Route path="home/*" element={<AllPosts />} />
             <Route path="post/:postId" element={<SinglePost />} />
             {/* <Route path="edit/:postId" element={<Edit />} /> */}
+            <Route path="/" element={<AllPosts />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </span>
