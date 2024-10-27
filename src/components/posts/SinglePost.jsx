@@ -19,6 +19,7 @@ import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+const CLIENT_HOST = import.meta.env.VITE_CLIENT_HOST;
 
 // פוסט בודד בעמוד נפרד - חדש
 export default function SinglePost() {
@@ -26,6 +27,7 @@ export default function SinglePost() {
   const [item, setItem] = useState(null);
   const [imgError, setImgError] = useState(false);
   const { postId } = useParams();
+  const link = `${CLIENT_HOST}?post=${postId}`
   const { setMessage, message, logOut, adminMode } = useContext(UserContext);
   const { setOriginalData, originalData } = useContext(DataContext);
   const [send, setSend] = useState(false);
@@ -52,7 +54,7 @@ export default function SinglePost() {
 
   // פונקציה להעתקת הקישור ללוח
   const copyLinkToClipboard = () => {
-    navigator.clipboard.writeText(window.location.href);
+    navigator.clipboard.writeText(link);
     setMessage(["הקישור הועתק ללוח!", true]);
   };
 
@@ -191,19 +193,21 @@ export default function SinglePost() {
                     </IconButton>
                   </Tooltip>
 
-                  {/* העתקת תוכן */}
-                  <Tooltip title="העתק תוכן ללוח">
+                  {adminMode &&
+
+                    <Tooltip title="העתק תוכן ללוח">
                     <IconButton onClick={copyContentToClipboard}>
                       <ContentCopyIcon />
                     </IconButton>
                   </Tooltip>
+                  }
 
                   {/* שיתוף ברשתות חברתיות */}
                   <Tooltip title="שיתוף ב-WhatsApp">
                     <IconButton
                       component="a"
                       href={`https://wa.me/?text=${encodeURIComponent(
-                        window.location.href
+                        link
                       )}`}
                       target="_blank"
                     >
@@ -215,7 +219,7 @@ export default function SinglePost() {
                     <IconButton
                       component="a"
                       href={`https://twitter.com/share?url=${encodeURIComponent(
-                        window.location.href
+                        link
                       )}&text=${encodeURIComponent(item.title)}`}
                       target="_blank"
                     >
@@ -227,7 +231,7 @@ export default function SinglePost() {
                     <IconButton
                       component="a"
                       href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-                        window.location.href
+                        link
                       )}`}
                       target="_blank"
                     >
