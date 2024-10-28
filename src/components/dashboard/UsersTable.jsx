@@ -16,7 +16,7 @@ const UsersTable = () => {
   const [search, setSearch] = useState("");
   const [sortKey, setSortKey] = useState("");
   const [sortOrder, setSortOrder] = useState("asc");
-  const [isAdmin, setIsAdmin] = useState("all");
+  const [permissionType, setPermissionType] = useState("all");
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 8;
   const {
@@ -88,7 +88,7 @@ const UsersTable = () => {
     }
   };
 
-  const filteredUsers = filterData(users, search, isAdmin);
+  const filteredUsers = filterData(users, search, permissionType);
   const sortedUsers = sortData(filteredUsers, sortKey, sortOrder);
   const totalPages = Math.ceil(sortedUsers.length / itemsPerPage);
   console.log("🚀 ~ UsersTable ~ totalPages:", totalPages);
@@ -101,12 +101,14 @@ const UsersTable = () => {
       <div className="flex mb-4">
         <select
           className="border p-2"
-          value={isAdmin}
-          onChange={(e) => setIsAdmin(e.target.value)}
+          value={permissionType}
+          onChange={(e) => setPermissionType(e.target.value)}
         >
           <option value="all">הצג הכל</option>
           <option value={1}>עורכים בלבד</option>
-          <option value={0}>משתמשים בלבד</option>
+          <option value={0}>פעילים</option>
+          <option value={-1}>ממתינים לאימות</option>
+          <option value={-5}>מחוקים</option>
         </select>
         <input
           type="text"
@@ -114,11 +116,12 @@ const UsersTable = () => {
           placeholder="חפש בשם משתמש או אימייל"
           value={search}
           onChange={(e) => {
-            setCurrentPage(1);
             setSearch(e.target.value);
           }}
         />
-        <h1 className="pr-20 text-xl font-bold font-mono">רשימת המשתמשים הרשומים</h1>
+        <h1 className="pr-20 text-xl font-bold font-mono">
+          רשימת המשתמשים הרשומים
+        </h1>
       </div>
       <table className="min-w-full cursor-arrow ">
         <thead>
@@ -162,7 +165,7 @@ const UsersTable = () => {
             <th className="py-2 px-4 border text-gray-600">פעילות אחרונה</th>
             <th className="py-2 px-4 border text-gray-600">סטטוס משתמש</th>
             <th className="py-2 px-4 border text-gray-600">האם מנהל</th>
-            <th className="py-2 px-4 border text-gray-600">מחיקת משתמש</th>
+            <th className={`py-2 px-4 border text-${permissionType == -5 ? "red" : "gray"}-600`}>{permissionType == -5 ? "מחיקה לצמיתות" : "מחיקה"}</th>
           </tr>
         </thead>
         <tbody>
@@ -172,7 +175,6 @@ const UsersTable = () => {
               ))
             : currentUsers.map((user) => (
                 <tr key={user.id} className="text-center">
-                  
                   <td className="py-2 px-4 border font-hebbo">{user.name}</td>
                   <td className="py-2 px-4 border font-hebbo">
                     {user.username}
@@ -180,9 +182,15 @@ const UsersTable = () => {
                   <td className="py-2 px-4 border font-hebbo">{user.id}</td>
                   <td className="py-2 px-4 border font-hebbo">{user.phone}</td>
                   {/* <td className="py-2 px-4 border font-hebbo">{user.email}</td> */}
-                  <td className="py-2 px-4 border font-hebbo"><FieldToCopy valueToCopy={user.email} valueToShow={"..."}/></td>
-                  <td className="py-2 px-4 border font-hebbo">{user.posts_sum}</td>
-                  <td className="py-2 px-4 border font-hebbo">{formatDate(user.last_post_date)}</td>
+                  <td className="py-2 px-4 border font-hebbo">
+                    <FieldToCopy valueToCopy={user.email} valueToShow={"..."} />
+                  </td>
+                  <td className="py-2 px-4 border font-hebbo">
+                    {user.posts_sum}
+                  </td>
+                  <td className="py-2 px-4 border font-hebbo">
+                    {formatDate(user.last_post_date)}
+                  </td>
                   <td
                     className={`py-2 px-4 border ${
                       user.isAdmin > -1 ? "text-green-600" : "text-red-600"
@@ -219,7 +227,13 @@ const UsersTable = () => {
                     <Button
                       variant="outlined"
                       startIcon={<DeleteIcon />}
-                      onClick={() => deleteUser(user.id)}
+                      onClick={() => {
+                        if (user.isAdmin === - 5) {
+                          deleteUser(user.id);
+                        } else {
+                          setPermission(user.id, -5);
+                        }
+                      }}
                     />
                   </td>
                 </tr>
@@ -267,7 +281,8 @@ export const filterData = (data, search, isAdmin) => {
       user.email.toLowerCase().includes(str) ||
       user.username.toLowerCase().includes(str);
     const matchesStatus =
-      isAdmin === "all" || user.isAdmin.toString() === isAdmin;
+      (isAdmin === "all" && user.isAdmin.toString() !== -5) ||
+      user.isAdmin.toString() === isAdmin;
     return matchesSearch && matchesStatus;
   });
 };
