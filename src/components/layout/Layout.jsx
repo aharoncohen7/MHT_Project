@@ -23,6 +23,7 @@ import AllPosts from "../posts/AllPosts";
 import SinglePost from "../posts/SinglePost";
 import ContactUsForm from "../about/ContactUsForm";
 import NewPost from "../posts/NewPost";
+import SupportTicketsDashboard from "../Questions";
 
 const Layout = () => {
   const [parasha, setParasha] = useState(null);
@@ -118,6 +119,7 @@ const Layout = () => {
           <Routes>
             <Route path="login/*" element={<SignIn />} />
             <Route path="addition/*" element={<NewPost />} />
+            <Route path="questions/" element={isAdmin && adminMode ? <SupportTicketsDashboard />: <NotFound />} />
             <Route
               path="dashboard/"
               element={isAdmin && adminMode ? <Dashboard /> : <NotFound />}

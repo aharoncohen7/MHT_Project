@@ -286,3 +286,4 @@ export const filterData = (data, search, isAdmin) => {
     return matchesSearch && matchesStatus;
   });
 };
+

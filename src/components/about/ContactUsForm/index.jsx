@@ -7,6 +7,7 @@ import { axiosReq } from '../../../helpers/useAxiosReq';
 import { SubmitButton } from '../../buttons/SubmitButton/SubmitButton';
 import Text from '../../TextComponent';
 import Spinner from '../../Spinner';
+import SupportTicketsDashboard from '../../Questions';
 const RECAPTCHA_SITE_KEY = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
 
 export default function ContactUsForm() {
@@ -65,7 +66,7 @@ export default function ContactUsForm() {
       
       // קריאה לפעולה עם הנתונים שנאספו
       const action = await axiosReq({
-        method: "POST",
+        method: "GET",
         body: formValues,
         url: "/questions"
       });
@@ -78,6 +79,8 @@ export default function ContactUsForm() {
       setState({ success:false, message: "שגיאה אירעה במהלך השליחה" });
     }
   }
+
+
   
 
   return (
@@ -218,6 +221,7 @@ export default function ContactUsForm() {
           )}
         </div>
       </form>
+
     </div>
   );
 }
