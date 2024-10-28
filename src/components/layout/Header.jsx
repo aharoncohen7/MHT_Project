@@ -48,8 +48,13 @@ export default function Header({ parasha, holiday, title, dayData }) {
     },
     {
       id: 4,
-      name: isLoggedIn ? "כתוב מאמר" : "התחבר",
+      name: !adminMode ? (isLoggedIn ? "כתוב מאמר" : "התחבר") : "",
       href: isLoggedIn ? "/addition" : "/login",
+    },
+    {
+      id: 5,
+      name: adminMode ? "פניות" : "",
+      href: adminMode ? "/questions" : "/about",
     },
     // { id: 3, name: isDarkMode ? 'LightMode' : "DarkMode", href: "/" }
   ];

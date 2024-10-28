@@ -165,7 +165,13 @@ const UsersTable = () => {
             <th className="py-2 px-4 border text-gray-600">פעילות אחרונה</th>
             <th className="py-2 px-4 border text-gray-600">סטטוס משתמש</th>
             <th className="py-2 px-4 border text-gray-600">האם מנהל</th>
-            <th className={`py-2 px-4 border text-${permissionType == -5 ? "red" : "gray"}-600`}>{permissionType == -5 ? "מחיקה לצמיתות" : "מחיקה"}</th>
+            <th
+              className={`py-2 px-4 border text-${
+                permissionType == -5 ? "red" : "gray"
+              }-600`}
+            >
+              {permissionType == -5 ? "מחיקה לצמיתות" : "מחיקה"}
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -228,7 +234,7 @@ const UsersTable = () => {
                       variant="outlined"
                       startIcon={<DeleteIcon />}
                       onClick={() => {
-                        if (user.isAdmin === - 5) {
+                        if (user.isAdmin === -5) {
                           deleteUser(user.id);
                         } else {
                           setPermission(user.id, -5);
@@ -286,4 +292,3 @@ export const filterData = (data, search, isAdmin) => {
     return matchesSearch && matchesStatus;
   });
 };
-
