@@ -86,8 +86,9 @@ export const getEventsFromAPI = async () => {
       for (const item of apiResponse.items) {
         if (item.category === "parashat" && !parasha) {
           const parashaHebrew = item.hebrew;
-          const [first, second] = parashaHebrew.split(" ");
-          parasha = `${first} ${parshiot[second] || second}`;
+          // const [first, second] = parashaHebrew.split(" ");
+          // parasha = `${first} ${parshiot[second] || second}`;
+          parasha = parashaHebrew.slice(5);
           parashaDate = new Date(item.date);
         } else if (item.category === "holiday" && !holiday) {
           holiday = item.hebrew;
@@ -99,11 +100,11 @@ export const getEventsFromAPI = async () => {
     }
 
     const firstEvent = parashaDate && holidayDate
-      ? (parashaDate <= holidayDate ? parasha : holiday)
-      : (parashaDate ? parasha : (holidayDate ? holiday : null));
+      ? (parashaDate <= holidayDate ? `${parasha} פרשת` : holiday)
+      : (parashaDate ? `${parasha} פרשת` : (holidayDate ? holiday : null));
 
     return { 
-      parasha: parasha ? parasha.split(" ")[1] : null, 
+      parasha, 
       holiday,
       firstEvent
     };

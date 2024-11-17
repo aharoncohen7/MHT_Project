@@ -45,7 +45,7 @@ export async function importedAddNew(userId, selectedBook, selectedPortion, titl
     setSend(false)
     setShowEditor(false);
     // navigate(`/post/${newPost.id}`)
-    window.location.href = `/post/${newPost.id}`
+    window.location.href = `/?post=${newPost.id}`
 
 
   }

@@ -142,6 +142,7 @@ const UsersTable = () => {
               onClick={() => handleSort("username")}
             >
               <span className="flex gap-4 items-center justify-center px-2">
+                
                 שם משתמש
                 {sortKey == "username" && (
                   <>{sortOrder == "asc" ? <FaArrowDown /> : <FaArrowUp />}</>
@@ -261,7 +262,7 @@ export default UsersTable;
 
 const SkeletonRow = () => (
   <tr>
-    {[...Array(6)].map((_, index) => (
+    {[...Array(10)].map((_, index) => (
       <td key={index} className="py-3 px-4 border">
         <div className="h-4 bg-gray-200 rounded animate-pulse"></div>
       </td>

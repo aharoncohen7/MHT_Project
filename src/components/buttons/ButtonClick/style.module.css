@@ -35,7 +35,7 @@
     /* Adjust this value to change the border radius */
     padding: 4px;
     /* This determines the border thickness */
-    background: linear-gradient(45deg, #003C66, #0077CC);
+    /* background: linear-gradient(45deg, #003C66, #0077CC); */
     -webkit-mask:
         linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);
@@ -46,6 +46,7 @@
 
 .gradientBorder:hover::before {
     opacity: 0.8;
+    background: linear-gradient(45deg, #003C66, #0077CC);
 }
 
 .gradientBorder span {

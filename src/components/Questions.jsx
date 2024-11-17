@@ -1,6 +1,10 @@
 
 import React, { useState, useMemo } from 'react';
-import useAxiosReq from '../helpers/useAxiosReq';
+import useAxiosReq, { axiosReq } from '../helpers/useAxiosReq';
+import Spinner from './Spinner';
+import { ButtonClick } from './buttons/ButtonClick';
+
+
 
 const SupportTicketsDashboard = () => {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -28,23 +32,28 @@ const SupportTicketsDashboard = () => {
     setActiveFilter(filter);
   };
 
-  const handleDelete = (ticketId) => {
+  const handleDelete = async (ticketId) => {
+    await axiosReq({ method: "DELETE", body: {}, url: `/questions/${ticketId}` })
+
     // פעולה למחיקת הפנייה
     console.log(`Deleting ticket with ID: ${ticketId}`);
+    fetchData()
   };
-
-  const handleUpdate = (ticketId) => {
+  
+  const handleUpdate = async(ticketId, newStatus) => {
+    await axiosReq({ method: "PUT", body: {status: newStatus}, url: `/questions/${ticketId}` })
+    fetchData()
     // פעולה לעדכון הפנייה
     console.log(`Updating ticket with ID: ${ticketId}`);
   };
 
   return (
     <>
-      {tickets && tickets.questions &&
+      
         <div className="w-full border rounded-lg shadow-md">
           <div className="bg-gray-200 px-4 py-3 flex justify-between items-center">
             <h2 className="text-lg font-medium">רשימת פניות</h2>
-            <div className="space-x-2">
+            <div className="space-x-3">
               <button
                 className={`px-4 py-2 rounded-md ${activeFilter === 'all' ? 'bg-blue-500 text-white' : 'bg-gray-300 text-gray-700'}`}
                 onClick={() => handleFilterChange('all')}
@@ -69,41 +78,48 @@ const SupportTicketsDashboard = () => {
             <table className="w-full border-collapse">
               <thead>
                 <tr>
-                  <th className="text-left p-2 border-b">נושא</th>
-                  <th className="text-left p-2 border-b">מצב</th>
-                  <th className="text-left p-2 border-b">תאריך</th>
-                  <th className="text-left p-2 border-b">פרטי התקשרות</th>
-                  <th className="text-left p-2 border-b">פעולות</th>
+                  <th className="text-right p-2 border-b">נושא</th>
+                  <th className="text-right p-2 border-b">סטטוס פנייה</th>
+                  <th className="text-right p-2 border-b">תאריך</th>
+                  <th className="text-right p-2 border-b">פרטי התקשרות</th>
+                  <th className="text-right p-2 border-b">פעולות</th>
                 </tr>
               </thead>
-              <tbody>
-                {!loading && filteredTickets.map((ticket, index) => (
+             {
+             loading ? <div className='w-300 flex text-center item-center justify-center'><Spinner/></div>
+                :
+             
+             <tbody>
+                { filteredTickets.map((ticket, index) => (
                   <tr key={index} className={index % 2 === 0 ? 'bg-gray-100' : ''}>
                     <td className="p-2">{ticket.subject}</td>
                     <td className="p-2">{ticket.status}</td>
                     <td className="p-2">{new Date(ticket.date).toLocaleString()}</td>
-                    <td className="p-2">{ticket.contactDetails.contactBy}: {ticket.contactDetails.email}</td>
+                    <td className="p-2">{ticket.contactDetails.contactBy}: {
+                    ticket.contactDetails.contactBy=="email" ? ticket.contactDetails.email : ticket.contactDetails.phone }</td>
                     <td className="p-2">
-                      <button
-                        className="text-blue-500 hover:text-blue-700 mr-2"
-                        onClick={() => handleUpdate(ticket.id)}
+                    <span className='flex gap-2'>
+                    <ButtonClick
+                        // className="text-blue-500 hover:text-blue-700 mr-2"
+                        onClick={() => handleUpdate(ticket._id, ticket.status=="closed" ? "pending": "closed")}
                       >
-                        עדכון
-                      </button>
-                      <button
+                          {ticket.status=="closed" ? "פתח פנייה": "סגור פנייה"}
+                      </ButtonClick>
+                      <ButtonClick
                         className="text-red-500 hover:text-red-700"
-                        onClick={() => handleDelete(ticket.id)}
+                        onClick={() => handleDelete(ticket._id)}
                       >
                         מחיקה
-                      </button>
+                      </ButtonClick>
+                    </span>
                     </td>
                   </tr>
                 ))}
-              </tbody>
+              </tbody>}
             </table>
           </div>
         </div>
-      }
+      
     </>
   );
 };

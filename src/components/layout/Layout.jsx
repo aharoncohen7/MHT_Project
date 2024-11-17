@@ -52,12 +52,13 @@ const Layout = () => {
     const fetchData = async () => {
       const dataFromAPI = await getCurrentDateInfoFromAPI();
       console.log(dataFromAPI);
-      const dataFromJSON = await getCurrentDateInfoFromJson();
+      const dataFromJSON = await getCurrentDateInfoFromJson()
       console.log(dataFromJSON);
       setParasha(dataFromAPI.currentParasha || dataFromJSON.currentParasha);
       setHoliday(dataFromJSON.upcomingHoliday);
       seDayData(dataFromAPI);
       console.log(dataFromAPI.firstEvent);
+      console.log(dataFromAPI.currentParasha)
       setTitle(dataFromAPI.firstEvent);
     };
     fetchData();

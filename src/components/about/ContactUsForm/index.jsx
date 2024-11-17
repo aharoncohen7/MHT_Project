@@ -66,7 +66,7 @@ export default function ContactUsForm() {
       
       // קריאה לפעולה עם הנתונים שנאספו
       const action = await axiosReq({
-        method: "GET",
+        method: "POST",
         body: formValues,
         url: "/questions"
       });
