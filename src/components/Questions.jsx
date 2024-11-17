@@ -52,8 +52,8 @@ const SupportTicketsDashboard = () => {
       
         <div className="w-full border rounded-lg shadow-md">
           <div className="bg-gray-200 px-4 py-3 flex justify-between items-center">
-            <h2 className="text-lg font-medium">רשימת פניות</h2>
             <div className="space-x-3">
+            <h2 className="text-lg font-medium">רשימת פניות</h2>
               <button
                 className={`px-4 py-2 rounded-md ${activeFilter === 'all' ? 'bg-blue-500 text-white' : 'bg-gray-300 text-gray-700'}`}
                 onClick={() => handleFilterChange('all')}
@@ -101,12 +101,13 @@ const SupportTicketsDashboard = () => {
                     <span className='flex gap-2'>
                     <ButtonClick
                         // className="text-blue-500 hover:text-blue-700 mr-2"
+                        style={{color:ticket.status=="closed" ? "yellow" :"green"  }}
                         onClick={() => handleUpdate(ticket._id, ticket.status=="closed" ? "pending": "closed")}
                       >
                           {ticket.status=="closed" ? "פתח פנייה": "סגור פנייה"}
                       </ButtonClick>
                       <ButtonClick
-                        className="text-red-500 hover:text-red-700"
+                        // className="text-red-500 hover:text-red-700"
                         onClick={() => handleDelete(ticket._id)}
                       >
                         מחיקה
