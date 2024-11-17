@@ -69,7 +69,7 @@ export default function Select({
           className="block w-full px-4 text-right text-gray-900 bg-gray-100 py-21"
           value=""
         >
-          בחר נושא ראשי
+          בחר נושא ראשי/חומש
         </option>
         {buildOptions(torah)}
       </select>

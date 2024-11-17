@@ -110,7 +110,7 @@ export default function ContactUsForm() {
             name='subject'
             placeholder="נושא הפנייה"
             className={styles.input}
-            minLength={10}
+            // minLength={10}
             pattern="^[\u0590-\u05FF\s]*$"
             title="אנא הכנס כותרת בעברית בלבד"
           />
