@@ -6,14 +6,14 @@ import { Fragment, useContext, useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import UserContext from "../../contexts";
 
+const logo = "https://img.uniquemu.co.il/upload/bIj1Npo.png";
+const logo3 = "http://img.uniquemu.co.il/upload/WrcvRJe.png";
 const logo1 = "https://www.uploads.co.il/uploads/images/106030801.png";
-const logo2 = "https://img.uniquemu.co.il/upload/bIj1Npo.png";
-const logo4 = "http://img.uniquemu.co.il/upload/WrcvRJe.png";
-const logo3 = "../../../public/logo3.webp";
+const logo4 = "../../../public/logo3.webp";
 const logo5 = "../../../public/logo1.webp";
 const logo6 = "../../../public/logo2.png";
-const avatar = "../../../public/user.jpg";
-const avatar1 = "http://img.uniquemu.co.il/upload/4BSyycN.jpeg";
+const avatar = "http://img.uniquemu.co.il/upload/4BSyycN.jpeg";
+const avatar1 = "../../../public/user.jpg";
 const avatar2 = "http://img.uniquemu.co.il/upload/udYCav4.jpeg";
 
 // סרגל ראשי עליון
@@ -128,7 +128,7 @@ export default function Header({ parasha, holiday, title, dayData }) {
                       navigate("/");
                     }}
                   >
-                    <img className="w-auto h-14 " src={logo3} alt="logo" />
+                    <img className="w-auto h-14 " src={logo} alt="logo" />
                   </div>
                 </Tooltip>
                 <div className="hidden sm:ml-0 sm:block px-2 ">
