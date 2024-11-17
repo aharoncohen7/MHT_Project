@@ -8,8 +8,12 @@ import UserContext from "../../contexts";
 
 const logo1 = "https://www.uploads.co.il/uploads/images/106030801.png";
 const logo2 = "https://img.uniquemu.co.il/upload/bIj1Npo.png";
-const logo3 = "http://img.uniquemu.co.il/upload/WrcvRJe.png";
-const avatar = "http://img.uniquemu.co.il/upload/4BSyycN.jpeg";
+const logo4 = "http://img.uniquemu.co.il/upload/WrcvRJe.png";
+const logo3 = "../../../public/logo3.webp";
+const logo5 = "../../../public/logo1.webp";
+const logo6 = "../../../public/logo2.png";
+const avatar = "../../../public/user.jpg";
+const avatar1 = "http://img.uniquemu.co.il/upload/4BSyycN.jpeg";
 const avatar2 = "http://img.uniquemu.co.il/upload/udYCav4.jpeg";
 
 // סרגל ראשי עליון
