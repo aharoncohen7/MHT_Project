@@ -33,7 +33,7 @@ export default function Header({ parasha, holiday, title, dayData }) {
   const location = useLocation();
 
   useEffect(() => {
-    if (location.pathname.split('/')[1].toUpperCase() === 'search') {
+    if (location.pathname.split('/')[1] === 'search') {
       setActiveIndex(2);
     }
   }, [location.pathname]);
