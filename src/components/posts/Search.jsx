@@ -31,7 +31,7 @@ export default function Search({ setSortedList }) {
               elm.tags.split(",").includes(
                 tag
                 // .trim()
-              ) || elm.subtopic != null && elm.subtopic == tag
+              ) || elm.subtopic && elm.subtopic == tag
           )
         );
         return;
