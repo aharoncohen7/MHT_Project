@@ -32,19 +32,39 @@ export default function Header({ parasha, holiday, title, dayData }) {
   const navigate = useNavigate();
   const location = useLocation();
   
+  // useEffect(() => {
+  //   const path = location.pathname.split('/')[1];
+  //   const searchParams = new URLSearchParams(window.location.search);
+   
+  //   const pathToIndex = {
+  //     '': 0,
+  //     'search': searchParams.get("holiday") ? 1 : 2,
+  //     'post': 2,
+  //     'about': 3,
+  //     'dashboard': 3,
+  //     'addition': 4,
+  //     'questions': 4
+  //   };
+   
+  //   setActiveIndex(pathToIndex[path] ?? 0);
+  //  }, [location.pathname]);
+
+
   useEffect(() => {
     const path = location.pathname.split('/')[1];
     const searchParams = new URLSearchParams(window.location.search);
-   
-    const pathToIndex = {
-      '': 0,
-      'search': searchParams.get("holiday") ? 1 : 2,
-      'about': 3,
-      'addition': 4
-    };
-   
-    setActiveIndex(pathToIndex[path] ?? 0);
-   }, [location.pathname]);
+    const searchHoliday = searchParams.get("holiday");
+  
+    const pathToButton = navButtons.find(button => {
+      if (path === '') return button.href === '/';
+      if (path === 'search') {
+        return searchHoliday ? button.href.includes('holiday') : button.href.includes('parasha=all');
+      }
+      return button.href.includes(path);
+    });
+  
+    setActiveIndex(pathToButton?.id ?? 0);
+  }, [location.pathname, navButtons]);
 
   const isLoggedIn = !!userId;
 
