@@ -36,6 +36,12 @@ export default function Header({ parasha, holiday, title, dayData }) {
     if (location.pathname.split('/')[1] === 'search') {
       setActiveIndex(2);
     }
+    if (location.pathname.split('/')[1] === 'about') {
+      setActiveIndex(3);
+    }
+    if (location.pathname.split('/')[1] === 'addition') {
+      setActiveIndex(4);
+    }
   }, [location.pathname]);
 
   const isLoggedIn = !!userId;
@@ -49,7 +55,7 @@ export default function Header({ parasha, holiday, title, dayData }) {
     {
       id: 1,
       name: holiday || null,
-      href: holiday ? `/search/?parasha=${holiday}` : `/`,
+      href: holiday ? `/search/?holiday=${holiday}` : `/`,
     },
     { id: 2, name: "כללי", href: "/search/?parasha=all" },
     {

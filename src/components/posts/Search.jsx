@@ -14,6 +14,7 @@ export default function Search({ setSortedList }) {
   const [idToSearch, setIdToSearch] = useState("");
   const searchParams = new URLSearchParams(window.location.search);
   const tag = searchParams.get("tag");
+  const holiday = searchParams.get("holiday");
   const subtopic = searchParams.get("parasha");
   const authorId = searchParams.get("author");
   const postId = searchParams.get("post");
@@ -37,14 +38,15 @@ export default function Search({ setSortedList }) {
         return;
       }
       // אם יש פרשה בנתיב
-      if (subtopic !== null) {
+      if (subtopic || holiday) {
         if (subtopic === "all") {
           setSortedList(sortBy(filter));
           return;
         }
+        const subject = subtopic ? subtopic : holiday
         setSortedList(
           sortBy(filter).filter(
-            (elm) => elm.subtopic != null && elm.subtopic == subtopic
+            (elm) => elm.subtopic != null && elm.subtopic == subject
           )
         );
         return;
@@ -84,7 +86,7 @@ export default function Search({ setSortedList }) {
       }
       setSortedList(sortBy(filter));
     }
-  }, [filteredData, filter, tag, authorId, subtopic]);
+  }, [filteredData, filter, tag, authorId, subtopic, holiday]);
 
   // קובע סוג מיון
   function handleSortChange(e) {
