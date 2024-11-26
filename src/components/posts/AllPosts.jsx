@@ -170,7 +170,7 @@ export default function AllPosts({}) {
                         className="relative z-1 rounded-2xl bg-blue-50 px-4 py-2 font-medium text-gray-600 hover:bg-gray-300 "
                         onClick={() => {
                           if (post.subtopic)
-                            navigate(`/home/?parasha=${post.subtopic}`);
+                            navigate(`/search/?parasha=${post.subtopic}`);
                         }}
                       >
                         {post.subtopic}
@@ -203,7 +203,7 @@ export default function AllPosts({}) {
                         style={{ direction: "rtl" }}
                         className="flex  justify-between font-semibold text-gray-900 cursor-pointer text-sm leading-6"
                         onClick={() => {
-                          navigate(`/home/?author=${post.userId}`);
+                          navigate(`/search/?author=${post.userId}`);
                         }}
                       >
                         <Tooltip
@@ -387,7 +387,7 @@ export default function AllPosts({}) {
 //                         className="relative z-1 rounded-2xl bg-blue-50 px-4 py-2 font-medium text-gray-600 hover:bg-gray-300 "
 //                         onClick={() => {
 //                           if (post.subtopic)
-//                             navigate(`/home/?parasha=${post.subtopic}`);
+//                             navigate(`/search/?parasha=${post.subtopic}`);
 //                         }}
 //                       >
 //                         {post.subtopic}
@@ -420,7 +420,7 @@ export default function AllPosts({}) {
 //                         style={{ direction: "rtl" }}
 //                         className="flex  justify-between font-semibold text-gray-900 cursor-pointer text-sm leading-6"
 //                         onClick={() => {
-//                           navigate(`/home/?author=${post.userId}`);
+//                           navigate(`/search/?author=${post.userId}`);
 //                         }}
 //                       >
 //                         <Tooltip

@@ -60,7 +60,7 @@ export default function TagList({ postTags }) {
                 color="primary"
                 label={tag}
                 onClick={() => {
-                  nav(`/home/?tag=${tag}`);
+                  nav(`/search/?tag=${tag}`);
                 }}
               />
             </Tooltip>
@@ -89,7 +89,7 @@ export default function TagList({ postTags }) {
                   color="primary"
                   label={tag.name}
                   onClick={() => {
-                    nav(`/home/?tag=${tag.name}`);
+                    nav(`/search/?tag=${tag.name}`);
                   }}
                 />
               </Tooltip>
@@ -123,7 +123,7 @@ export default function TagList({ postTags }) {
 //               color="primary"
 //               label={tag}
 //               onClick={() => {
-//                 nav(`/home/?tag=${tag}`);
+//                 nav(`/search/?tag=${tag}`);
 //               }}
 //             />
 //           </Tooltip>

@@ -31,20 +31,27 @@ export default function Header({ parasha, holiday, title, dayData }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const navigate = useNavigate();
   const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname.split('/')[1].toUpperCase() === 'search') {
+      setActiveIndex(2);
+    }
+  }, [location.pathname]);
+
   const isLoggedIn = !!userId;
 
   const navButtons = [
     {
       id: 0,
       name: parasha ? "פרשת " + parasha : null,
-      href: parasha ? `/` : "/home/?parasha=all",
+      href: parasha ? `/` : "/search/?parasha=all",
     },
     {
       id: 1,
       name: holiday || null,
-      href: holiday ? `/home/?parasha=${holiday}` : `/`,
+      href: holiday ? `/search/?parasha=${holiday}` : `/`,
     },
-    { id: 2, name: "כללי", href: "/home/?parasha=all" },
+    { id: 2, name: "כללי", href: "/search/?parasha=all" },
     {
       id: 3,
       name: adminMode ? "ניהול" : "אודות",
@@ -66,14 +73,14 @@ export default function Header({ parasha, holiday, title, dayData }) {
     {
       id: 0,
       name: parasha ? "וורטים על פרשת " + parasha : null,
-      href: parasha ? `/` : "/home/?parasha=all",
+      href: parasha ? `/` : "/search/?parasha=all",
     },
     {
       id: 1,
       name: holiday ? "וורטים על " + holiday : null,
-      href: holiday ? `/home/?parasha=${holiday}` : `/`,
+      href: holiday ? `/search/?parasha=${holiday}` : `/`,
     },
-    { id: 2, name: "לכל התוכן", href: "/home/?parasha=all" },
+    { id: 2, name: "לכל התוכן", href: "/search/?parasha=all" },
     {
       id: 3,
       name: "אודות",

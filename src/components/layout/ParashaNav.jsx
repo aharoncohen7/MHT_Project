@@ -43,7 +43,7 @@ export default function ParashaNav() {
     //       </AccordionSummary>
     //       <AccordionDetails >
     //         {parshiot.map((parasha) => (
-    //           <div className='cursor-pointer' onClick={() => navigate(`/home/?parasha=${parasha}`)} key={parasha}>
+    //           <div className='cursor-pointer' onClick={() => navigate(`/search/?parasha=${parasha}`)} key={parasha}>
     //             {parasha}
     //           </div>
     //         ))}
@@ -66,7 +66,7 @@ export default function ParashaNav() {
           <div
             className="cursor-pointer p-1 hover:bg-gray-100 transition duration-200"
             style={{ width: '100%' }}
-            onClick={() => navigate(`/home/?parasha=${parasha}`)}
+            onClick={() => navigate(`/search/?parasha=${parasha}`)}
             key={parasha}
           >
             {parasha}

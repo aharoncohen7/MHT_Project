@@ -79,7 +79,7 @@ export default function SinglePost() {
                       variant="outlined"
                       onClick={() => {
                         if (item.subtopic)
-                          navigate(`/home/?parasha=${item.subtopic}`);
+                          navigate(`/search/?parasha=${item.subtopic}`);
                       }}
                     />
                   </Tooltip>
@@ -93,7 +93,7 @@ export default function SinglePost() {
                         color="primary"
                         variant="outlined"
                         onClick={() => {
-                          navigate(`/home/?author=${item.userId}`);
+                          navigate(`/search/?author=${item.userId}`);
                         }}
                       />
                     </Tooltip>

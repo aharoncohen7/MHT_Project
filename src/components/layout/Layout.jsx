@@ -127,7 +127,7 @@ const Layout = () => {
             />
             <Route path="about/*" element={<AboutUs />} />
             <Route path="about/contact-us" element={<ContactUsForm />} />
-            <Route path="home/*" element={<AllPosts />} />
+            <Route path="search/*" element={<AllPosts />} />
             <Route path="post/:postId" element={<SinglePost />} />
             {/* <Route path="edit/:postId" element={<Edit />} /> */}
             <Route path="/" element={<AllPosts />} />
