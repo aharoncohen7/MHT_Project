@@ -31,10 +31,17 @@ export default function Header({ parasha, holiday, title, dayData }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const navigate = useNavigate();
   const location = useLocation();
+  const searchParams = new URLSearchParams(window.location.search);
+  const holiday = searchParams.get("holiday");
 
   useEffect(() => {
     if (location.pathname.split('/')[1] === 'search') {
-      setActiveIndex(2);
+      if(holiday){
+        setActiveIndex(1);
+      }
+      else{
+        setActiveIndex(2);
+      }
     }
     if (location.pathname.split('/')[1] === 'about') {
       setActiveIndex(3);

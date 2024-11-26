@@ -13,8 +13,8 @@ export default function Search({ setSortedList }) {
   const [input, setInput] = useState("");
   const [idToSearch, setIdToSearch] = useState("");
   const searchParams = new URLSearchParams(window.location.search);
-  const tag = searchParams.get("tag");
   const holiday = searchParams.get("holiday");
+  const tag = searchParams.get("tag");
   const subtopic = searchParams.get("parasha");
   const authorId = searchParams.get("author");
   const postId = searchParams.get("post");
