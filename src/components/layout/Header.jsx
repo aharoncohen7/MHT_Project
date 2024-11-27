@@ -50,21 +50,6 @@ export default function Header({ parasha, holiday, title, dayData }) {
   //  }, [location.pathname]);
 
 
-  useEffect(() => {
-    const path = location.pathname.split('/')[1];
-    const searchParams = new URLSearchParams(window.location.search);
-    const searchHoliday = searchParams.get("holiday");
-  
-    const pathToButton = navButtons.find(button => {
-      if (path === '' || path === 'post') return button.href === '/';
-      if (path === 'search') {
-        return searchHoliday ? button.href.includes('holiday') : button.href.includes('parasha=all');
-      }
-      return button.href.includes(path);
-    });
-  
-    setActiveIndex(pathToButton?.id ?? 0);
-  }, [location.pathname, navButtons]);
 
   const isLoggedIn = !!userId;
 
@@ -121,6 +106,24 @@ export default function Header({ parasha, holiday, title, dayData }) {
     },
     // { id: 4, name: isDarkMode ? 'LightMode' : "DarkMode", href: "/" }
   ];
+
+
+  
+  useEffect(() => {
+    const path = location.pathname.split('/')[1];
+    const searchParams = new URLSearchParams(window.location.search);
+    const searchHoliday = searchParams.get("holiday");
+  
+    const pathToButton = navButtons.find(button => {
+      if (path === '' || path === 'post') return button.href === '/';
+      if (path === 'search') {
+        return searchHoliday ? button.href.includes('holiday') : button.href.includes('parasha=all');
+      }
+      return button.href.includes(path);
+    });
+  
+    setActiveIndex(pathToButton?.id ?? 0);
+  }, [location.pathname]);
 
   const handleNavigationClick = (button) => {
     setActiveIndex(button.id);
