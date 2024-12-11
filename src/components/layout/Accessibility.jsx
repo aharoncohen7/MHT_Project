@@ -7,9 +7,9 @@ export default function Accessibility() {
   const { isDarkMode } = useContext(UserContext)
 
   return (
-    <div className={`relative py-4 overflow-hidden 
+    <div className={`relative py-24 overflow-hidden 
        ${isDarkMode ? "bg-gray-900" : ""}
-     isolate sm:py-12`}>
+     isolate sm:py-32`}>
       <img
         src={logo}
         className="absolute inset-0 object-cover object-right w-full h-full opacity-5 -z-10 md:object-center"
@@ -49,7 +49,14 @@ export default function Accessibility() {
           <p className={`mt-6 text-lg leading-8 
            ${isDarkMode ? "text-gray-300" : ""}
           `}>
-            נתקלתם בבעיה? נשמח לקבל פניות והצעות לשיפור נגישות האתר באמצעות המייל: [כתובת מייל]. אנו מתחייבים להתייחס לכל פנייה ברצינות ולפעול לתיקון הליקויים בהקדם האפשרי.
+            נתקלתם בבעיה? נשמח לקבל פניות והצעות לשיפור נגישות האתר באמצעות טופס יצירת קשר, או באמצעות כתובת המייל:{' '}
+            <a
+              href="mailto:a47546@gmail.com"
+              className={`font-medium hover:underline ${isDarkMode ? "text-blue-400" : "text-blue-600"}`}
+            >
+              a47546@gmail.com
+            </a>
+            . אנו מתחייבים להתייחס לכל פנייה ברצינות ולפעול לתיקון הליקויים בהקדם האפשרי.
           </p>
 
           <p className={`mt-6 text-lg leading-8 text-gray-600
