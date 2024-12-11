@@ -5,7 +5,7 @@ import { IoIosCloseCircleOutline } from "react-icons/io";
 import DataContext from "../../contexts/dataContext";
 
 export default function Search({ setSortedList }) {
-  const { originalData, filteredData, setFilteredData, parasha } =
+  const { originalData, filteredData, setFilteredData, parasha, adminMode, } =
   useContext(DataContext);
 
   const [showSearch, setShowSearch] = useState(true);
@@ -174,6 +174,7 @@ export default function Search({ setSortedList }) {
             className="hidden xl:block w-full p-2 rounded-3xl focus:outline-none focus:ring-1 focus:ring-blue-500 text-right "
             onChange={(event) => setIdToSearch(event.target.value)}
             placeholder="חפש לפי מזהה"
+            disabled={!adminMode}
           />
 
           <input

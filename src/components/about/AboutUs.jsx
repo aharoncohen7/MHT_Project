@@ -6,14 +6,15 @@ const links = [
   { name: 'להרחבה', href: '#' },
   { name: 'צור קשר', href: '/about/contact-us' },
   { name: 'הצטרף אלינו', href: '#' },
-  { name: 'לתרומות', href: '#' },
+  // { name: 'לתרומות', href: '#' },
 ]
 const stats = [
   { name: 'עורכי תוכן מקצועיים', value: '10+' },
   { name: 'כותבים רשומים', value: '80+' },
-  { name: 'מאמרים חדשים מדי שבוע', value: '300+' },
-  { name: 'תגיות בנושאים שונים', value: '500+' },
+  { name: 'מאמרים חדשים מדי שבוע', value: '20+' },
+  { name: 'תגיות בנושאים שונים', value: '150+' },
 ]
+const logo = "https://img.uniquemu.co.il/upload/bIj1Npo.png";
 
 export default function AboutUs() {
   const { isDarkMode } = useContext(UserContext)
@@ -23,10 +24,10 @@ export default function AboutUs() {
     <div className={`relative py-24 overflow-hidden 
        ${isDarkMode ? "bg-gray-900" : ""}
      isolate sm:py-32`}>
-      {/* <img
-        src=""
-        className="absolute inset-0 object-cover object-right w-full h-full -z-10 md:object-center"
-      /> */}
+      <img
+        src={logo}
+        className="absolute inset-0 object-cover object-right w-full h-full opacity-5 -z-10 md:object-center"
+      />
       {/* <div
         className="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
         aria-hidden="true"
@@ -62,6 +63,11 @@ export default function AboutUs() {
           `}>
             אתר וורטלי שם לעצמו למטרה להוות פלטפורמה נוחה ויעילה לפרסום חידושי תורה עצמיים.  האתר מתוכנן ונבנה בצורה נוחה ואינטואטיבית בדגש על חווית משתמש, על מנת לאפשר למשתמש להפיץ את חידושיו ולהגיע בקלות ובנוחות לקהלים אחרים. כעת אנו מתמקדים בתוכן על פרשיות השבוע ומועדי השנה, אך בעתיד אנו מקווים להתרחב לתחומי תוכן נוספים, ליצור פורום דיונים ועוד. האתר נבנה ללא מטרות רווח אלא להפצת תורה.
           </p>
+          <p className={`mt-6 text-lg leading-8 text-gray-600
+           ${isDarkMode ? "text-gray-300" : ""}
+          `}>
+            הבהרה: האתר מצוי עדיין בתהליכי פיתוח ולצערנו עדיין לא הגענו לנושא הנגישות. הנושא חשוב לנו והוא יטופל בהקדם האפשרי, עמכם הסליחה!
+            </p>
         </div>
         <div className="max-w-2xl mx-auto mt-10 lg:mx-0 lg:max-w-none">
           <div className={`grid grid-cols-1 
@@ -79,7 +85,7 @@ export default function AboutUs() {
           <dl className="grid grid-cols-1 gap-8 mt-16 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
             {stats.map((stat) => (
               <div key={stat.name} className="flex flex-col-reverse">
-                <dt className="text-base leading-7 text-gray-300">{stat.name}</dt>
+                <dt className="text-base leading-7 text-gray-500">{stat.name}</dt>
                 <dd className={`text-2xl font-bold leading-9 tracking-tight 
            ${isDarkMode ? "text-white" : ""}
                 `}>{stat.value}</dd>

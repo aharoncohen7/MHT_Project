@@ -70,7 +70,10 @@ export default function Login({ setIsExists }) {
           return;
         }
         if (response.status == 404) {
-          setMessage([`לא נמצאה התאמה בין הנתונים, נא בדוק את הפרטים ונסה שוב`, false]);
+          setMessage([
+            `לא נמצאה התאמה בין הנתונים, נא בדוק את הפרטים ונסה שוב`,
+            false,
+          ]);
           return;
         }
         setMessage([`אירעה שגיאה במהלך ההתחברות, נסה שוב מאוחר יותר`, false]);
@@ -140,6 +143,7 @@ export default function Login({ setIsExists }) {
             variant="contained"
             sx={{ mt: 3, mb: 2 }}
             onClick={handleLogin}
+            disabled={username === "" || password === ""}
           >
             הכנס
           </Button>
@@ -170,7 +174,7 @@ export default function Login({ setIsExists }) {
         </Box>
       </Box>
 
-      <ForgetPassword isOpen={isOpen} setIsOpen={setIsOpen}/>
+      <ForgetPassword isOpen={isOpen} setIsOpen={setIsOpen} />
 
       {message && <p style={{ color: "red" }}>{message}</p>}
     </Container>

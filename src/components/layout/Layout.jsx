@@ -24,6 +24,7 @@ import SinglePost from "../posts/SinglePost";
 import ContactUsForm from "../about/ContactUsForm";
 import NewPost from "../posts/NewPost";
 import SupportTicketsDashboard from "../Questions";
+import Accessibility from "../layout/Accessibility";
 
 const Layout = () => {
   const [parasha, setParasha] = useState(null);
@@ -127,6 +128,7 @@ const Layout = () => {
             />
             <Route path="about/*" element={<AboutUs />} />
             <Route path="about/contact-us" element={<ContactUsForm />} />
+            <Route path="about/accessibility" element={<Accessibility />} />
             <Route path="search/*" element={<AllPosts />} />
             <Route path="post/:postId" element={<SinglePost />} />
             {/* <Route path="edit/:postId" element={<Edit />} /> */}
