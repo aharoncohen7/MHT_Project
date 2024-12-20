@@ -115,7 +115,8 @@ export default function Header({ parasha, holiday, title, dayData }) {
     const searchHoliday = searchParams.get("holiday");
   
     const pathToButton = navButtons.find(button => {
-      if (path === '' || path === 'post') return button.href === '/';
+      console.log(path);
+      if (path === '' || path === 'post') return button.href === '';
       if (path === 'search') {
         return searchHoliday ? button.href.includes('holiday') : button.href.includes('parasha=all');
       }
