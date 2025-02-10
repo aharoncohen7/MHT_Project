@@ -15,14 +15,14 @@ const SupportTicketsDashboard = () => {
     setLoading,
     fetchData,
   } = useAxiosReq({ method: "GET", body: {}, url: "/questions" });
-  console.log(tickets);
+  console.log(tickets.questions.reverse());
 
   const filteredTickets = useMemo(() => {
     if (!tickets || !tickets.questions) {
       return [];
     }
     if (activeFilter === 'all') {
-      return tickets.questions;
+      return tickets.questions.reverse();
     } else {
       return tickets.questions.filter(ticket => ticket.status === activeFilter);
     }
