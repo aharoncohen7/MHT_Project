@@ -360,9 +360,9 @@ export const getCurrentParashaFromAPI = async () => {
 };
 //  קבלת חג קרוב
 export const getNextHolidayFromAPI = async () => {
-  const getCurrentDate = () => formatDateForAPI(new Date());
+  const getCurrentDate = () => formatDateForAPI(new Date(Date.now() - 1 * 14 * 60 * 60 * 1000));
   const getNextWeekDate = () =>
-    formatDateForAPI(new Date(Date.now() + 7 * 24 * 60 * 60 * 1000));
+    formatDateForAPI(new Date(Date.now() + 7 * 14 * 60 * 60 * 1000));
 
   const getHoliday = (apiResponse) => {
     if (apiResponse.items && apiResponse.items.length > 0) {
