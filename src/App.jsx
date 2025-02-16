@@ -1,21 +1,22 @@
-
-import React, { useEffect, useState } from 'react';
-import { Routes, Route, useNavigate } from 'react-router-dom';
-import UserContext from './contexts/';
-import SignIn from './components/login/SignIn';
-import Layout from './components/layout/Layout';
+import React, { useEffect, useState } from "react";
+import { Routes, Route, useNavigate } from "react-router-dom";
+import UserContext from "./contexts/";
+import SignIn from "./components/login/SignIn";
+import Layout from "./components/layout/Layout";
 import Cookies from "js-cookie";
-import { axiosReq } from './helpers/useAxiosReq';
-import { dark } from '@mui/material/styles/createPalette';
-import MetaTags from './components/MetaTags';
+import { axiosReq } from "./helpers/useAxiosReq";
+import { dark } from "@mui/material/styles/createPalette";
+import MetaTags from "./components/MetaTags";
 // const CLIENT_HOST = import.meta.env.VITE_CLIENT_HOST;
 
 function App() {
   const navigate = useNavigate();
   const [userId, setUserId] = useState(null);
   const [userName, setUserName] = useState("אורח");
-  const [isAdmin, setIsAdmin] = useState(0)
-  const [adminMode, setAdminMode] = useState(Boolean(sessionStorage.getItem('isAdminMode')) || false);
+  const [isAdmin, setIsAdmin] = useState(0);
+  const [adminMode, setAdminMode] = useState(
+    Boolean(sessionStorage.getItem("isAdminMode")) || false
+  );
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [message, setMessage] = useState([null, true]);
 
@@ -28,46 +29,44 @@ function App() {
     }
   }, [message]);
 
- // בדיקת טוקן
+  // בדיקת טוקן
   useEffect(() => {
-  const checkToken = async () => {
-    if (Cookies.get('Authorization')) {
-      try {
-        const userData = await axiosReq({ method: 'POST', body: {}, url: `/login/checkToken` })
-        console.log(userData)
-        setIsAdmin(userData.isAdmin)
-        setUserId(userData.userId)
-        setUserName(userData.userName)
-        setAdminMode(Boolean(sessionStorage.getItem('isAdminMode')) || false)
-        sessionStorage
-
-      } catch (e) {
-        console.log(e, "שגיאה באימות טוקן");
-        setAdminMode(false)
-        sessionStorage.removeItem('isAdminMode')
-        setMessage([" הסשן הסתיים, נא התחבר מחדש", false])
-        logOut();
-
-      }
-    }
-    else sessionStorage.removeItem('isAdminMode')
-    setAdminMode(false)
-  }
+    const checkToken = async () => {
+      if (Cookies.get("Authorization")) {
+        try {
+          const userData = await axiosReq({
+            method: "POST",
+            body: {},
+            url: `/login/checkToken`,
+          });
+          console.log(userData);
+          setIsAdmin(userData.isAdmin);
+          setUserId(userData.userId);
+          setUserName(userData.userName);
+          setAdminMode(Boolean(sessionStorage.getItem("isAdminMode")) || false);
+          sessionStorage;
+        } catch (e) {
+          console.log(e, "שגיאה באימות טוקן");
+          setAdminMode(false);
+          sessionStorage.removeItem("isAdminMode");
+          setMessage([" הסשן הסתיים, נא התחבר מחדש", false]);
+          logOut();
+        }
+      } else sessionStorage.removeItem("isAdminMode");
+      setAdminMode(false);
+    };
     checkToken();
-  }, [])
+  }, []);
 
-
-   // זריקה החוצה
-   function logOut() {
-     Cookies.remove('Authorization');
-    sessionStorage.removeItem('isAdminMode')
+  // זריקה החוצה
+  function logOut() {
+    Cookies.remove("Authorization");
+    sessionStorage.removeItem("isAdminMode");
     setUserId(null);
-    setUserName("אורח")
-    setIsAdmin(0)
-    setAdminMode(false)
+    setUserName("אורח");
+    setIsAdmin(0);
+    setAdminMode(false);
   }
-
-
 
   const contextsList = {
     navigate,
@@ -83,15 +82,14 @@ function App() {
     userId,
     isAdmin,
     adminMode,
-    isDarkMode
-  }
-
+    isDarkMode,
+  };
 
   return (
     <UserContext.Provider value={contextsList}>
-      <MetaTags 
-        title="הבית לחידושי התורה שלך"
-        description="אתר לשיתוף חידושי תורה"
+      <MetaTags
+        title="הבית לחידושי התורה שלך - VortLy"
+        description="אתר לשיתוף חידושי תורה ווורטים לפרשת השבוע" 
         image="https://img.uniquemu.co.il/upload/bIj1Npo.png"
         url={window.location.href}
       />
@@ -100,11 +98,10 @@ function App() {
         <Route path="/*" element={<Layout />} />
       </Routes>
     </UserContext.Provider>
-  )
+  );
 }
 
-export default App
-
+export default App;
 
 // TODO לאחד 3 סטייטים הבאים
 // const [userData, setUserData] = useState({
