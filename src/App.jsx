@@ -7,6 +7,7 @@ import Layout from './components/layout/Layout';
 import Cookies from "js-cookie";
 import { axiosReq } from './helpers/useAxiosReq';
 import { dark } from '@mui/material/styles/createPalette';
+import MetaTags from './components/MetaTags';
 // const CLIENT_HOST = import.meta.env.VITE_CLIENT_HOST;
 
 function App() {
@@ -88,6 +89,12 @@ function App() {
 
   return (
     <UserContext.Provider value={contextsList}>
+      <MetaTags 
+        title="הבית לחידושי התורה שלך"
+        description="אתר לשיתוף חידושי תורה"
+        image="https://img.uniquemu.co.il/upload/bIj1Npo.png"
+        url={window.location.href}
+      />
       <Routes>
         {/* <Route path="/login" element={<SignIn />} /> */}
         <Route path="/*" element={<Layout />} />

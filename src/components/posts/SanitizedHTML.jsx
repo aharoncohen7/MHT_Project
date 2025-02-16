@@ -33,7 +33,7 @@ const SanitizedHTML = ({ htmlContent }) => {
       return {
         textAlign: isHebrew ? "right" : "left",
         dir: isHebrew ? "rtl" : "ltr",
-        textAlign: "inherit",
+        // textAlign: "inherit",
         wordwrap: "break-word",
         overflowWrap: "break-word",
         whiteSpace:"normal"
