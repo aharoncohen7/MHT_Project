@@ -18,8 +18,70 @@ import ShareIcon from "@mui/icons-material/Share";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
+import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 const CLIENT_HOST = import.meta.env.VITE_CLIENT_HOST;
+
+// פונקציה להדפסת PDF
+const printToPDF = (title, body, author, date) => {
+  // יצירת חלון הדפסה חדש
+  const printWindow = window.open("", "_blank");
+
+  // תוכן המסמך להדפסה
+  const content = `
+    <!DOCTYPE html>
+    <html dir="rtl">
+    <head>
+      <title>${title}</title>
+      <style>
+        body {
+          font-family: Arial, sans-serif;
+          padding: 20px;
+          direction: rtl;
+        }
+        .header {
+          text-align: center;
+          margin-bottom: 20px;
+        }
+        .title {
+          font-size: 24px;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+        .metadata {
+          font-size: 14px;
+          color: #666;
+          margin-bottom: 20px;
+        }
+        .content {
+          font-size: 16px;
+          line-height: 1.6;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="header">
+        <div class="title">${title}</div>
+        <div class="metadata">
+          מאת: ${author} | תאריך: ${date}
+        </div>
+      </div>
+      <div class="content">
+        ${body}
+      </div>
+    </body>
+    </html>
+  `;
+
+  // כתיבת התוכן לחלון החדש
+  printWindow.document.write(content);
+  printWindow.document.close();
+
+  // הדפסה
+  printWindow.setTimeout(() => {
+    printWindow.print();
+  }, 250);
+};
 
 // פוסט בודד בעמוד נפרד - חדש
 export default function SinglePost() {
@@ -27,7 +89,7 @@ export default function SinglePost() {
   const [item, setItem] = useState(null);
   const [imgError, setImgError] = useState(false);
   const { postId } = useParams();
-  const link = `${CLIENT_HOST}?post=${postId}`
+  const link = `${CLIENT_HOST}?post=${postId}`;
   const { setMessage, message, logOut, adminMode } = useContext(UserContext);
   const { setOriginalData, originalData } = useContext(DataContext);
   const [send, setSend] = useState(false);
@@ -179,13 +241,13 @@ export default function SinglePost() {
                     mt: 2,
                   }}
                 >
-                   <span className="hidden sm:flex px-2 py-2 justify-center gap-2">
-                      <Tooltip title={"לחץ כדי לדרג את המאמר"}>
-                        <span>{`דרג`}</span>
-                      </Tooltip>
+                  <span className="hidden sm:flex px-2 py-2 justify-center gap-2">
+                    <Tooltip title={"לחץ כדי לדרג את המאמר"}>
+                      <span>{`דרג`}</span>
+                    </Tooltip>
 
-                      <MyRating item={item} />
-                    </span>
+                    <MyRating item={item} />
+                  </span>
                   {/* העתקת קישור */}
                   <Tooltip title="העתק קישור ללוח">
                     <IconButton onClick={copyLinkToClipboard}>
@@ -193,29 +255,24 @@ export default function SinglePost() {
                     </IconButton>
                   </Tooltip>
 
-                  
-
-                    <Tooltip title="העתק תוכן ללוח">
+                  <Tooltip title="העתק תוכן ללוח">
                     <IconButton onClick={copyContentToClipboard}>
                       <ContentCopyIcon />
                     </IconButton>
                   </Tooltip>
-                  
 
                   {/* שיתוף ברשתות חברתיות */}
                   <Tooltip title="שיתוף ב-WhatsApp">
                     <IconButton
                       component="a"
-                      href={`https://wa.me/?text=${encodeURIComponent(
-                        link
-                      )}`}
+                      href={`https://wa.me/?text=${encodeURIComponent(link)}`}
                       target="_blank"
                     >
                       <WhatsAppIcon />
                     </IconButton>
                   </Tooltip>
 
-                  <Tooltip title="שיתוף בטוויטר">
+                  {/* <Tooltip title="שיתוף בטוויטר">
                     <IconButton
                       component="a"
                       href={`https://twitter.com/share?url=${encodeURIComponent(
@@ -224,6 +281,21 @@ export default function SinglePost() {
                       target="_blank"
                     >
                       <TwitterIcon />
+                    </IconButton>
+                  </Tooltip> */}
+
+                  <Tooltip title="הדפס כ-PDF">
+                    <IconButton
+                      onClick={() =>
+                        printToPDF(
+                          item.title,
+                          item.body,
+                          item.author,
+                          formatDate(item.created_at)
+                        )
+                      }
+                    >
+                      <PictureAsPdfIcon />
                     </IconButton>
                   </Tooltip>
 
