@@ -196,8 +196,9 @@ export const getCurrentParashaFromJSON = () => {
 
 //  קבלת החג/אירוע המשמעותי הקרוב
 export const getUpcomingHolidayFromJSON = () => {
-  const today = new Date();
-  const twoWeeksFromNow = new Date(today.getTime() + 34 * 24 * 60 * 60 * 1000);
+  const day = new Date();
+  const today = new Date(day.getTime() - 1 * 24 * 60 * 60 * 1000);
+  const twoWeeksFromNow = new Date(today.getTime() + 14 * 24 * 60 * 60 * 1000);
   let upcomingHolidayWithTag = null;
 
   for (const [dateStr, holiday] of Object.entries(holidaysObject)) {
