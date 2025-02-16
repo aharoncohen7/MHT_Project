@@ -193,14 +193,14 @@ export default function SinglePost() {
                     </IconButton>
                   </Tooltip>
 
-                  {adminMode &&
+                  
 
                     <Tooltip title="העתק תוכן ללוח">
                     <IconButton onClick={copyContentToClipboard}>
                       <ContentCopyIcon />
                     </IconButton>
                   </Tooltip>
-                  }
+                  
 
                   {/* שיתוף ברשתות חברתיות */}
                   <Tooltip title="שיתוף ב-WhatsApp">
