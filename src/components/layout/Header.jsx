@@ -85,7 +85,7 @@ export default function Header({ parasha, holiday, title, dayData }) {
   const navButtonsForMobile = [
     {
       id: 0,
-      name: parasha ? "וורטים על פרשת " + parasha : null,
+      name: parasha ? " וורטים על פרשת " + parasha : null,
       href: parasha ? `/` : "/search/?parasha=all",
     },
     {
@@ -210,7 +210,7 @@ export default function Header({ parasha, holiday, title, dayData }) {
                 >
                   <span>{`וורטלי`}</span>
                   {/* <span>{title ? ` - ${title}` : ""}</span> */}
-                  {(parasha || holiday) ?  <span>{parasha ? ` - ${parasha}` : ` - ${holiday}`}</span> : "פרשת השבוע - "}
+                  {(parasha || holiday) ?  <span>{parasha ? ` - ${parasha}` : ` - ${holiday}`}</span> : `- פרשת השבוע `}
                 <p className="hidden sm:block text-sm">{dayData?.currentHeDate ? dayData?.currentHeDate : null}</p>
                 </h2>
               </div>

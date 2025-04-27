@@ -328,7 +328,7 @@ const formatDateForAPI = (date) => {
 
 // לא בשימוש
 // קבלת פרשת השבוע הקרוב
-export const getCurrentParashaFromAPI = async () => {
+const getCurrentParashaFromAPI = async () => {
   const getCurrentDate = () => formatDateForAPI(new Date());
   const getNextWeekDate = () =>
     formatDateForAPI(new Date(Date.now() + 7 * 24 * 60 * 60 * 1000));

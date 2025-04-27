@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import DataContext from "../../contexts/dataContext";
+import { parshiot } from "../../helpers";
 
 export default function Search({ setSortedList }) {
   const { originalData, filteredData, setFilteredData, parasha, adminMode, } =
@@ -62,16 +63,16 @@ export default function Search({ setSortedList }) {
       // }
       if (parasha) {
         const parashaName = parasha;
-        // console.log("🚀 ~ useEffect ~ parashaName:", parashaName)
+        console.log("🚀 ~ useEffect ~ parashaName:", parashaName)
         
         if (parashaName.split("-").length) {
-          const parashaName1 = parashaName.split("-")[0];
-          const parashaName2 = parashaName.split("-")[1];
+          const parashaName1 = parashaName.split("־")[0];
+          const parashaName2 = parashaName.split("־")[1];
           setSortedList(
             sortBy(filter).filter(
               (elm) =>
                 elm.subtopic != null &&
-                (elm.subtopic === parashaName1 || elm.subtopic === parashaName2)
+                (elm.subtopic === parshiot[parashaName1] || elm.subtopic === parshiot[parashaName2])
             )
           );
           return;
