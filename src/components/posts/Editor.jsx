@@ -197,7 +197,7 @@ export default function Editor({
                   onClick={() => setIsAddingTag(false)}
                   className="px-4 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600 focus:outline-none"
                 >
-                  שמור
+                  הוסף
                 </button>
               </div>
             ) : (
